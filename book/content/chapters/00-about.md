@@ -37,7 +37,7 @@ These materials are revised periodically. The edition date and version are print
 
 The latest version is always available from [biologymeetsengineering.org](https://www.biologymeetsengineering.org).
 
-Everything these materials are built from — the text, the images, and the scripts that produce this PDF — lives in a public repository at [github.com/dvanderelst/bme_teacher_resources](https://github.com/dvanderelst/bme_teacher_resources). You are welcome to look around, and if you spot an error you can report it there. If you plan to adapt the materials rather than just use them, starting from that repository will save you retyping.
+If you want to adapt these materials rather than simply use them, everything they are built from — the text, the images, the handouts and the robot programs — is kept in a public repository at [github.com/dvanderelst/bme_teacher_resources](https://github.com/dvanderelst/bme_teacher_resources), and starting from there will save you a good deal of retyping. To teach from the materials you need nothing but this document, and to tell us about a problem, please just write to us.
 
 ## Questions, corrections, and help {.unnumbered}
 

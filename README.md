@@ -10,9 +10,8 @@ and localize stimuli, then build and program mBot robots that do something compa
 ## Looking for the materials themselves?
 
 This repository holds the **source**. The finished document — a PDF to download and print, and a
-single-file web version — is published on the
-[**releases page**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest) and from
-[biologymeetsengineering.org](https://www.biologymeetsengineering.org).
+single-file web version — is published at
+[**biologymeetsengineering.org**](https://www.biologymeetsengineering.org).
 
 You do not need any of the rest of this if you just want to teach from it.
 
@@ -49,7 +48,7 @@ book/
 ```
 
 `book/render/` is deliberately not committed. It is a build artifact, and a 14 MB PDF that changes
-completely on every rebuild would bloat history fast. Publish it as a release asset instead.
+completely on every rebuild would bloat history fast. Build it and upload it to the website.
 
 ## Building
 

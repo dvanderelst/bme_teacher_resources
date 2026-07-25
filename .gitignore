@@ -10,7 +10,9 @@
 
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on
-# every rebuild would bloat history; publish via CI or Releases instead.
+# every rebuild would bloat history. The finished PDF and HTML are distributed
+# from biologymeetsengineering.org, which is where teachers go; nobody is being
+# asked to fetch them from here.
 /book/render/
 
 # --- deliberately excluded and why ------------------------------------------
