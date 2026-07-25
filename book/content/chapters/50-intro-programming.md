@@ -92,15 +92,13 @@ This program is quite silly. If the robot holds cheese and there is bread below,
 
 > **Tip**
 >
-> If students think the example is not realistic, you can reassure them. Robots often come with a specific set of instructions, which is a specialized programming language for this particular robot. For example, the robot arms distributed by ST Robotics use a custom programming language called Roboforth. The brave could [consult this manual](https://strobotics.com/manuals/manual17.htm) for the RoboForth language.
+> If students think the example is not realistic, you can reassure them. Robots often come with a specific set of instructions, which is a specialized programming language for this particular robot. For example, the robot arms distributed by ST Robotics use a custom programming language called Roboforth. The brave could [consult this manual](https://sandstechnology.com/manuals/manual17.htm) for the RoboForth language.
 
 ### Playing the game
 
-Below, we have linked two files that allow printing instructions on slips, particularly [Avery Template 16154 Tickets With Tear-Away Stubs](https://www.avery.com/templates/16154). We provide a file for printing on each sheet's front and back. Alternatively, the files can be printed on normal paper sheets and cut.
+The commands are printed one to a slip. They are laid out for [Avery Template 16154 Tickets With Tear-Away Stubs](https://www.avery.com/templates/16154), as a front sheet and a back sheet, but they print perfectly well on ordinary paper and can be cut out by hand.
 
-[Avery16154cheese_sandwich_front_windows.doc](files/Avery16154cheese_sandwich_front_windows.doc)
-
-[Avery16154cheese_sandwich_back_windows.doc](files/Avery16154cheese_sandwich_back_windows.doc)
+Ask us for them and we will send you either the files to print or a printed set. Write to **Dieter Vanderelst**, [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu).
 
 Before handing out the slips, ask students to write down in plain English how they would build a sandwich from a supply that arrives in a random order. That is Challenge 1 on its own, and doing it first is what keeps the activity from becoming trial and error with bits of paper. Only then give out the slips, and ask them to turn their plan into instructions.
 
