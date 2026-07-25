@@ -47,14 +47,14 @@ As mentioned in an earlier chapter, mBlock is the software we will use to progra
 
 ### Explore the mBlock interface
 
-Below, we show the mBlock interface. The interface looks very similar regardless of whether you use the installed program or the online version. We explain the use for each region in the interface below.
+Below, we show the mBlock interface. It looks much the same whether you use the installed program or the online version. The mBot has already been added in this screenshot, which is why it appears in the devices panel; on a fresh start it is not there and the block categories are different, so add it first and the window will look like this.
 
 1. This area is used for constructing a program. You will drag and drop blocks onto this field to form a program.
 2. This window area lists the blocks that can be used to create a program. The blocks are organized into categories such as [Sensing] and [Control]. To use a block, you drag and drop it to area (1). Notice the [extension] button at the bottom of this area (2). Additional blocks can be added by installing extensions.
 3. This part of the screen shows the values of variables in a program. This information is useful when trying to figure out why a program does not work as expected.
-4. Here, the robots for which blocks are available are listed. When the program first starts, the mBot is not listed, which means we have to load it. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
+4. The devices whose blocks are available. The mBot is listed here because it has been added; on a fresh start it is not, and adding it is the first thing to do. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
 
-![The four regions of the mBlock window: (1) where you build the program, (2) the blocks you build it from, (3) the stage, where variable values appear while a program runs, and (4) the devices the blocks belong to.](images/programming-the-robot-111bd9e8.png)
+![The four regions of the mBlock window, with the mBot already added: (1) where you build the program, (2) the blocks you build it from, listed by category, (3) the stage, where variable values appear while a program runs, and (4) the devices the blocks belong to.](images/programming-the-robot-interface.png)
 
 ### Useful blocks
 
@@ -62,7 +62,7 @@ The mBlock interface provides many blocks, organized in multiple categories. Bel
 
 1. Looks: These blocks are only relevant if you equip the robot with an LCD (sold separately). For
 our purposes, this category is irrelevant.
-2. Show: The onboard LEDs and the buzzer. You can set the LEDs to a color, or to a color for a fixed number of seconds, and play either a note or a frequency.
+2. Show: The onboard LEDs and the buzzer. As with the motor blocks below, there are two forms: `LED all shows color red` sets the LEDs and moves on, while `LED all shows color red for 1 secs` holds the program for that second and then switches them off again.
 3. Action: The motors. These blocks come in two forms, and the difference matters more than it looks: `move forward at power 50 % for 1 secs` moves for a set time and then hands control back, while `move forward at power 50 %` starts the motors and moves straight on to the next block. There is also `stop moving`.
 4. Sensing: These blocks read the robot's own sensors — the onboard light sensor, the ultrasonic (sonar) sensor, the line follower, the button. Blocks for sensors that do not come with the robot, such as the sound sensor and the color sensor, arrive as extensions.
 5. Events: These blocks say when a program should start. Two matter here. `when flag clicked` starts a program in Live mode, and is the one used almost everywhere in these materials. `when mBot (mcore) starts up` starts a program that has been uploaded to the robot, which is what the Color Vision lesson needs. See [Live versus Upload mode](#live-versus-upload-mode).
@@ -146,9 +146,9 @@ Students will still have to hunt for individual blocks, which is part of the exe
 
 In this challenge, students will construct a program to make the onboard LEDs of the robot blink. Blinking LEDs is a prevalent first example in tutorials about programming hardware. Here, we adhere to this tradition.  An example program is below.
 
-The program below repeatedly sets the value of the onboard LEDs to red. Then, it waits for a second before switching the LEDs off (turning their color to black). Next, the program pauses for a second before repeating this cycle. This program's backbone consists of the `when flag is clicked` and `forever` blocks.
+The program below needs only two blocks inside the loop. `LED all shows color red for 1 secs` lights the LEDs red, holds the program for a second, and then turns them off; the block below it does the same with black, which is how the LEDs are switched off for the second half of the cycle. Because each block holds the program while it runs, no `wait` blocks are needed — adding them would stretch the cycle rather than set it. The backbone is the usual `when flag clicked` and `forever`.
 
-![One solution to the blinking challenge. `when flag clicked` and `forever` form the backbone; the blocks inside set the LEDs red, pause, set them to black, and pause again.](images/programming-the-robot-2224f883.png)
+![One solution to the blinking challenge. Each `shows color ... for 1 secs` block holds the program for its second, so the two together give one second on and one second off.](images/programming-the-robot-blink-solution.png)
 
 ### Challenge: Reading a sensor
 
