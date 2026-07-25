@@ -1,8 +1,8 @@
 ---
 title: "Biology Meets Engineering"
-subtitle: "Teacher materials"
+
 author: "University of Cincinnati — Colleges of Arts and Sciences, Engineering, and the School of Education"
-date: "Draft — proof of concept"
+# date/subtitle are injected by build.sh from git — do not set here
 lang: en-GB
 
 # --- print ---
