@@ -37,8 +37,8 @@ ARGS=(
   --from=markdown+pipe_tables+tex_math_dollars+implicit_figures
   --toc --toc-depth=2 --number-sections
   --resource-path=content:content/images
-  --metadata "date=Edition of $EDITION"
-  --metadata "subtitle=Teacher materials · $FINGERPRINT"
+  --metadata "subtitle=Teacher materials"
+  --metadata "date=Edition of $EDITION · $FINGERPRINT"
   --metadata "subject=BmE teacher materials, edition of $EDITION ($FINGERPRINT)"
   --metadata "keywords=Biology Meets Engineering; mBot; mBlock; NGSS; ISTE; $FINGERPRINT"
 )
