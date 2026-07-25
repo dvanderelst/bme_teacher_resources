@@ -133,13 +133,13 @@ Submitted scores go to an instructor dashboard, reached from the `Instructor Das
 
 ![The dashboard asks for a password.](images/color-vision-dashboard-login.png)
 
-The password is **bme26**. Pick the date or dates your class is playing, and the dashboard lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard, which is worth doing: groups play again to climb it.
+Write to **Dieter Vanderelst** at [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu) for the password. Once you are in, pick the date or dates your class is playing, and the dashboard lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard, which is worth doing: groups play again to climb it.
 
 ![The dashboard, with team names blurred here. Choose one or more dates on the left, and the scores appear on the right, highest first.](images/color-vision-dashboard-scores.png)
 
 > **Note**
 >
-> The dashboard is protected only by that password, and the password is printed here, so treat anything submitted as public. Ask groups to invent a team name rather than use their own names — it makes for better team names anyway.
+> Every teacher using the dashboard shares the same one, so you will see other schools' scores alongside your own — picking your dates is what filters it down to your class. Ask groups to invent a team name rather than use their own names, which keeps the board readable and is more fun anyway.
 
 ## Activity: robot color discrimination
 
