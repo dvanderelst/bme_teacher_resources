@@ -98,7 +98,11 @@ This program is quite silly. If the robot holds cheese and there is bread below,
 
 The commands are printed one to a slip. They are laid out for [Avery Template 16154 Tickets With Tear-Away Stubs](https://www.avery.com/templates/16154), as a front sheet and a back sheet, but they print perfectly well on ordinary paper and can be cut out by hand.
 
-Ask us for them and we will send you either the files to print or a printed set. Write to **Dieter Vanderelst**, [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu).
+[Slips, front sheet (.doc)](files/Avery16154cheese_sandwich_front_windows.doc)
+
+[Slips, back sheet (.doc)](files/Avery16154cheese_sandwich_back_windows.doc)
+
+If you would rather not print and cut them yourself, ask us and we will send you a set. Write to **Dieter Vanderelst**, [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu).
 
 Before handing out the slips, ask students to write down in plain English how they would build a sandwich from a supply that arrives in a random order. That is Challenge 1 on its own, and doing it first is what keeps the activity from becoming trial and error with bits of paper. Only then give out the slips, and ask them to turn their plan into instructions.
 
