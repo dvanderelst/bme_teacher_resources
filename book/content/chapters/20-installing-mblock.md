@@ -7,21 +7,22 @@ There are two ways to use it, and either works for all our lesson plans:
 - **Install it on the computer.** Available for Windows and Mac only.
 - **Run it in a browser.** Works on Windows, Mac, Linux and Chromebooks, but needs a small helper program called mLink so the browser can talk to the robot.
 
-All downloads come from the same place: [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads)
+These are the same editor, not two different products. The blocks, menus and screens are the same either way, so the instructions and screenshots in these materials apply whichever route you take, and a program saved in one opens in the other. The differences are practical rather than functional: the installed version keeps working when the internet does not, while the browser version needs mLink running alongside it.
 
-### Which should I use?
+To install mBlock, mLink, or both, download them from Makeblock's download page: [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads). Everything below starts there.
+
+## Which should I use?
 
 | Your computers | Use |
 | --- | --- |
 | Windows | Either. Installing is a little more reliable. |
-| Mac | Either. Take care to pick the right build — see below. |
+| Mac | Either. Take care to pick the right version — see below. |
 | Chromebook | Browser only |
 | Linux | Browser only |
 
-If you are running a class on mixed hardware, the browser route keeps everyone on the same screens.
+If you are running a class on mixed hardware, the browser route keeps everyone using the same software.
 
-> Some school computers are locked down and will not allow either the mBlock installer or mLink to be installed. If that happens, you will need your school's IT staff to install it for you. It is worth checking this well before the first lesson.
->
+Some school computers are locked down and will not allow either the mBlock installer or mLink to be installed. If that happens, you will need your school's IT staff to install it for you. It is worth checking this well before the first lesson.
 
 ## Option A: Install mBlock on the computer
 
@@ -60,7 +61,6 @@ macOS may refuse to open the installer or the installed app because it was not d
 The browser version of mBlock cannot reach the robot on its own. A small program called **mLink** runs on the computer and bridges between the two. So this route is two steps: install mLink, then open the editor.
 
 > Use **Chrome**. The online editor is most reliable there, and on Linux mLink only works with Chrome and Chromium — not with other Chrome-based browsers.
->
 
 ### Step 1: Install mLink
 
@@ -87,7 +87,7 @@ mLink has to be running before the browser can find the robot.
 
 Go to [ide.mblock.cc](https://ide.mblock.cc). That is the block-based editor used throughout our lesson plans.
 
-(Makeblock also publishes a Python editor at [python.mblock.cc](http://python.mblock.cc). We do not use it.)
+(Makeblock also publishes a Python editor at [python.mblock.cc](https://python.mblock.cc). We do not use it.)
 
 ## What we do not use
 
