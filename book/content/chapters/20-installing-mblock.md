@@ -5,7 +5,7 @@ mBlock is the software used to write and run programs for the mBot. It is a bloc
 There are two ways to use it, and either works for all our lesson plans:
 
 - **Install it on the computer.** Available for Windows and Mac only.
-- **Run it in a browser.** Works on Windows, Mac, Linux and Chromebooks, but needs a small helper program called mLink so the browser can talk to the robot.
+- **Run it in a browser.** Works on Windows, Mac, Linux and Chromebooks. In Chrome the browser can talk to the robot on its own; other browsers need a small helper program called mLink.
 
 These are the same editor, not two different products. The blocks, menus and screens are the same either way, so the instructions and screenshots in these materials apply whichever route you take, and a program saved in one opens in the other. The differences are practical rather than functional: the installed version keeps working when the internet does not, while the browser version needs mLink running alongside it.
 
@@ -58,7 +58,9 @@ macOS may refuse to open the installer or the installed app because it was not d
 
 ## Option B: Run mBlock in a browser
 
-The browser version of mBlock cannot reach the robot on its own. A small program called **mLink** runs on the computer and bridges between the two. So this route is two steps: install mLink, then open the editor.
+Chrome can talk to a robot over a serial port by itself, and our instructions use that route — see [Direct connection or mLink?](#direct-connection-or-mlink) — so on Chrome you can skip straight to opening the editor. This matters on locked-down school computers, because it means the browser route needs **nothing installed at all**.
+
+If you are not on Chrome, a small program called **mLink** does the same job. Install it first, then open the editor.
 
 > Use **Chrome**. The online editor is most reliable there, and on Linux mLink only works with Chrome and Chromium — not with other Chrome-based browsers.
 

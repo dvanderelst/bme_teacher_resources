@@ -38,6 +38,7 @@ ARGS=(
   --toc --toc-depth=2 --number-sections
   --resource-path=content:content/images
   --lua-filter=tools/strip-notes.lua
+  --lua-filter=tools/xref.lua
   --metadata "subtitle=Teacher materials"
   --metadata "date=Edition of $EDITION · $FINGERPRINT"
   --metadata "subject=BmE teacher materials, edition of $EDITION ($FINGERPRINT)"

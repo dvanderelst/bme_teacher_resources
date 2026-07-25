@@ -246,7 +246,7 @@ Open the Sonar Directionality Program in mBlock 5 from the link below and connec
 >
 > You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
-> See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 The program is straightforward: It continuously measures the distance from the sonar and checks whether the returned value is smaller than 400 cm. If nothing is detected, the sensor returns a value of 400 cm. If the sensor detects something, the green LEDs on the robot are switched on. If nothing is detected, the red LEDs are switched on. Therefore, the robot’s color should indicate whether the sonar picks up an echo.
 
@@ -277,7 +277,7 @@ This effect can be observed by pointing the robot to a smooth surface (like a wa
 >
 > You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
-> See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 - Point the robot straight at the wall from about 30 cm. Can the robot detect the wall?
 - Now, point the robot at the wall at an angle of about 45 degrees.  Is the robot still able to detect the wall?  Experiment with different angles to see how well the robot can detect the wall at an angle.
@@ -319,7 +319,7 @@ Students could be asked to design a program for the robot that allows it to avoi
 >
 > You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
-> See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 The main program loop is shown first. This loop continuously goes through the same steps. It queries the sensors. If the left sonar sensor detects the smallest distance (`min_side = left`), the robot turns left as long as the left sonar returns a distance smaller than the safe distance. If the right sonar detects the shortest distance, the robot turns right as long as the right sonar returns a distance smaller than the safe distance.
 
@@ -422,7 +422,7 @@ We provide an example program. The program is linked and displayed below.
 >
 > You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
-> See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 The program continuously measures the distance recorded by a sonar sensor, [applies the correction](#sonar), and converts the measurement in cm to meters.
 

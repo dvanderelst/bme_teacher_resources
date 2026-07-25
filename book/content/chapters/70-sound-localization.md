@@ -268,7 +268,7 @@ Next, turn the robot to align it with the next direction and click the green but
 >
 > You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
-> See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 After collecting all measurements, students can create a graph of their data. Below, we have included a typical plot resulting from the measurements.
 

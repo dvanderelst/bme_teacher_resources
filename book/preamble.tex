@@ -26,6 +26,19 @@
 \renewenvironment{quote}{\begin{snugshade}\begin{oldquote}}%
                         {\end{oldquote}\end{snugshade}}
 
+% --- cross-references --------------------------------------------------------
+% These materials are meant to be printable, so an internal cross-reference has
+% to work on paper as well as under a mouse. tools/xref.lua appends \pageofref to
+% every internal link; varioref then phrases it the way a book does, saying "on
+% this page" or "on the next page" where that is true and giving a number only
+% when the target is further off.
+%
+% \unskip because the filter emits this immediately after the link text, and the
+% starred \vpageref* because the unstarred form supplies its own leading space --
+% which would land inside the parenthesis and give "( on page 21)".
+\usepackage{varioref}
+\newcommand{\pageofref}[1]{\unskip\ (\vpageref*{#1})}
+
 % --- long URLs --------------------------------------------------------------
 % Allow breaks anywhere in a URL rather than letting it run into the margin.
 \usepackage{xurl}
