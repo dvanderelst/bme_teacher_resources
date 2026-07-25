@@ -37,6 +37,7 @@ ARGS=(
   --from=markdown+pipe_tables+tex_math_dollars+implicit_figures
   --toc --toc-depth=2 --number-sections
   --resource-path=content:content/images
+  --lua-filter=tools/strip-notes.lua
   --metadata "subtitle=Teacher materials"
   --metadata "date=Edition of $EDITION · $FINGERPRINT"
   --metadata "subject=BmE teacher materials, edition of $EDITION ($FINGERPRINT)"
@@ -53,3 +54,13 @@ pandoc "${ARGS[@]}" --standalone --embed-resources --mathml \
   -o render/BmE-teacher-materials.html
 rm -f render/_version.tex
 ls -lh render/ | awk 'NR>1{print "  "$9"  "$5}'
+
+# safety net: a revision note must never reach a reader
+if pdftotext render/BmE-teacher-materials.pdf - 2>/dev/null | grep -q -- '<!--'; then
+  echo "  !! a revision note leaked into the PDF -- check the chapters"
+fi
+if grep -q -- '<!--' render/BmE-teacher-materials.html; then
+  echo "  !! a revision note leaked into the HTML source"
+fi
+N=$(python3 tools/notes.py --count)
+[ "$N" != "0" ] && echo "  $N outstanding revision note(s) -- python3 tools/notes.py"

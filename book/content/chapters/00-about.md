@@ -1,8 +1,8 @@
 # About these materials {.unnumbered}
 
-These are the teacher-facing materials for **Biology Meets Engineering**, a transdisciplinary STEM
-programme developed collaboratively by faculty from the University of Cincinnati's College of Arts
-and Sciences, College of Engineering, and School of Education.
+
+
+These are the teacher-facing materials for **Biology Meets Engineering**, a transdisciplinary STEM programme developed collaboratively by faculty from the University of Cincinnati's College of Arts and Sciences, College of Engineering, and School of Education.
 
 The lessons pair animal sensory biology with robotics: students investigate how animals detect and
 localise stimuli, then build and program mBot robots that do something comparable. They address

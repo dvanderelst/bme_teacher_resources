@@ -58,6 +58,18 @@ Produces `render/BmE-teacher-materials.pdf` and a single self-contained
 
 `book/content/` is the source of truth. Edit the markdown directly and rebuild.
 
+Leave revision notes to yourself as HTML comments, which pandoc drops from the PDF and a filter
+strips from the HTML, so they cannot reach a reader:
+
+```markdown
+<!-- D: this contradicts the paragraph above -->
+<!-- TODO: reshoot this photo once the dongle arrives -->
+```
+
+`python3 tools/notes.py` lists every outstanding note with its file, line and the heading it sits
+under. `build.sh` reports the count after each build and warns loudly if one ever leaks into the
+output.
+
 `convert.py` was the one-time migration from Notion and refuses to run again unless forced —
 re-running would discard hand edits. The original Notion pages are a **frozen archive**: they are
 no longer maintained and should not be edited.
