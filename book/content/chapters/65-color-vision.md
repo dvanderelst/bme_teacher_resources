@@ -177,7 +177,7 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 >
 >     You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
->     See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
+> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This will show the robot's code. Do not unplug the cable during this part of the activity.
 

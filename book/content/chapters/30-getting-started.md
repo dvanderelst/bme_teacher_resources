@@ -2,13 +2,7 @@
 
 This chapter assumes you already have **mBlock**, the software used to program the robot, either running in your browser or installed on your computer. If you do not, work through [Installing mBlock](#installing-mblock) first and then come back here.
 
-## Preliminary information
-
-> **Note**
->
-> Please read through this preliminary information before moving on. It contains the things that most often cause trouble later.
-
-### Connection options
+## Connection options
 
 To program and control your mBot, you need to connect it to your computer. There are two ways to do that:
 
@@ -21,7 +15,7 @@ Older mBots could also be connected using a 2.4 GHz module and dongle, or over d
 
 ![The USB cable that can be used to connect to the robot.](images/getting-started-draft-dd60485a.png)
 
-### Pairing the Bluetooth dongle and the robot
+## Pairing the Bluetooth dongle and the robot
 
 > **Note**
 >
@@ -41,7 +35,7 @@ Older mBots could also be connected using a 2.4 GHz module and dongle, or over d
 
 ![When the dongle and the robot are paired, the blue LEDs on both will stop blinking.](images/getting-started-draft-f62edb5b.jpg)
 
-### Checking whether a dongle and a robot are paired
+## Checking whether a dongle and a robot are paired
 
 Labels come off, and after a term of use you may not trust the ones that are left. You can check a pair without opening mBlock at all, using the fact that a paired device starts blinking as soon as it loses its partner.
 
@@ -52,7 +46,7 @@ Labels come off, and after a term of use you may not trust the ones that are lef
 
 If breaking the pair from either end makes the other one blink, the two belong together and you can relabel them with confidence. If a light never settles in the first place, or stays steady once its partner is gone, pair them again as described above.
 
-### Adding the mBot to mBlock
+## Adding the mBot to mBlock
 
 When you start creating programs from scratch, you must add the robot to mBlock to access the correct block to write programs. This is not needed if you use or start from our programs.
 
@@ -66,7 +60,7 @@ Look at the `Devices` area in mBlock. If the mBot is not listed in this area (li
 
 ![The devices area after adding the mBot.](images/getting-started-draft-7bfc097d.png)
 
-### Live versus Upload mode
+## Live versus Upload mode
 
 When programming your mBot, you can run your code in **Live mode** or **Upload mode**.
 
@@ -101,7 +95,7 @@ Before attempting to connect to the robot, ensure the following:
 3. If you use the Bluetooth dongle, ensure the dongle is paired with the robot. See [Pairing the Bluetooth dongle and the robot](#pairing-the-bluetooth-dongle-and-the-robot).
 4. Make sure you have added the mBot to mBlock. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
 
-### Connecting to the robot using mBlock in the browser
+### Using mBlock in the browser
 
 > **Note**
 >
@@ -135,7 +129,7 @@ The browser version of mBlock can reach the robot in two different ways, and a l
 
 Connecting over the USB cable works in exactly the same way. Plug the cable in instead of the dongle, leave mBlock on the direct connection, and choose `Serial` as above. The only difference is which port appears in the browser's dialog.
 
-### Connecting to the robot using locally installed mBlock
+### Using locally installed mBlock
 
 > **Note**
 >
@@ -188,34 +182,6 @@ You do **not** need to switch between `Live` and `Upload` mode first.
 
 ![Click `Updates`.](images/getting-started-draft-05ea3950.png)
 
-## Running your first program
+## Next step
 
-### Step 1: Open the example program
-
-Our lesson plans come with several example programs for the robot. We will run one of them here, so that the pattern is familiar when a lesson asks you to open another. All of them are published on the mBlock website, and all of them can be opened in the same two ways.
-
-[MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](https://drive.google.com/file/d/1XCEIlMv4KOro7h_ZQQajJ_j_5QhLtC34/view?usp=sharing) if your school blocks the Makeblock site.
-
-The two routes differ from here on.
-
-**From the mBlock website.** The link opens the project page shown below. Click `Source code`, and the program opens in the online version of mBlock.
-
-![The project page on the mBlock website. Click `Source code` to open the program.](images/getting-started-draft-0e4e97c5.png)
-
-![The program open in the online version of mBlock.](images/getting-started-draft-390bb096.png)
-
-**From the downloaded file.** There is no project page on this route. Open mBlock, choose `File > Open from my computer`, and select the `.mblock` file you downloaded. The program opens straight away.
-
-Either way, you can keep your own copy with `File > Save to my computer`. That lets you open and edit it in a locally installed mBlock — Windows and Mac only, as Chromebooks have to use the online version.
-
-### Step 2: Connect to the robot in Live mode
-
-Use the instructions to connect to the robot provided above using either the Bluetooth dongle or the USB cable. Ensure you have switched on the Live mode in mBlock. If you are connected to the robot and have switched to Live mode, you can click the green flag to start the program.
-
-![Make sure Live mode is selected.](images/getting-started-draft-65345555.png)
-
-![Once you have connected to the robot, you can run the program by clicking the green flag.](images/getting-started-draft-d0b359dd.png)
-
-The program is very simple. It sets the robot's LED light to blue for a second, then to green. This is repeated indefinitely. If you see the lights on the robot flashing blue and green, you have successfully run your first program. You can now edit the program by adding more blocks and rerunning it.
-
-![MyFirstProgram: the robot's LEDs alternate between blue and green, a second each, for as long as the program runs.](images/getting-started-draft-40ce24ad.png)
+Once you can connect to the robot, run the example program in [Running your first program](#running-your-first-program). It checks the whole chain — software, connection and robot — in a couple of minutes, and it introduces the pattern every lesson uses for opening its programs.

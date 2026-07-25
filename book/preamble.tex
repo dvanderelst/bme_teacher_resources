@@ -15,6 +15,14 @@
 \usepackage{graphicx}
 \setkeys{Gin}{width=0.85\linewidth,keepaspectratio}
 
+% Keep every figure exactly where it was written. LaTeX would otherwise float it
+% to wherever it fits best, which is right for a book of prose and wrong here:
+% these are step-by-step instructions, and a screenshot that says "click this"
+% has to sit beside the step that says it. The text says "the image below" in a
+% good many places, and with floats enabled that was often no longer true.
+\usepackage{float}
+\floatplacement{figure}{H}
+
 % --- callouts ---------------------------------------------------------------
 % Notion callouts arrive as blockquotes; give them a light shaded box so they
 % read as asides rather than as quotations.
