@@ -82,7 +82,7 @@ The use of sonar as a distance sensor is widespread. For example, parking sensor
 
 The sonar sensor used by the mBot is a typical example of sonar as a distance sensor. The device looks like it has two sensors. However, the sensor consists of two transducers with different functions. One of the tin cylinders is the emitter (marked with a T), and the other is the receiver (marked with an R). The emitter produces ultrasound sound bursts, while the receiver is a microphone listening for the echoes.
 
-![The mbot sonar sensor. One of the two cylinders is the emitter, while the other is the receiver.](images/sonar-lesson-plan-b7c001ad.png)
+![The mBot sonar sensor. One of the two cylinders is the emitter, while the other is the receiver.](images/sonar-lesson-plan-b7c001ad.png)
 
 The sensor reports distance: It uses the time delay between the emitted sound and the returning echo to estimate the distance to the object from which the sound is reflected. This is illustrated below. In this image, the same device is used as an emitter and receiver. Some sonar sensors can also use the emitter as a microphone. As said, the emitter and receiver are separated in our sensor.
 

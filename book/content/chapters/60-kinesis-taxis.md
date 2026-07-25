@@ -68,7 +68,7 @@ Students will use the following file, which provides the grids required for the 
 
 IMPORTANT: The grid is NOT for discrete Blue Arrow placement; the Blue Arrow moves in arrow lengths and lies across the grid in whichever place and orientation it wants! The grid only indicates the location of the arrow’s tip.
 
-![Example of a grid and Arrow placement. The printed grid and an inset of the grid are shown, with a pawn (blue) at coordinates (2,3).](images/kinesis-and-taxis-lesson-plan-c3db12bd.png)
+![Example of a grid and Blue Arrow placement. The printed grid and an inset of the grid are shown, with the Blue Arrow at coordinates (2,3).](images/kinesis-and-taxis-lesson-plan-c3db12bd.png)
 
 We also link an Excel file below that should make it easier for students to record their data.
 
