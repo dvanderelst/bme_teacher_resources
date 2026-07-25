@@ -1,0 +1,57 @@
+% LaTeX preamble for the PDF build.
+%
+% This lives in a .tex file rather than in metadata.yaml because pandoc parses
+% YAML `header-includes` as Markdown: simple \usepackage lines survive, but
+% comments become escaped \% literals and multi-line macro definitions get
+% reflowed into prose. --include-in-header is passed through raw.
+% It is also only applied to the PDF, where LaTeX means anything.
+
+% --- title block ------------------------------------------------------------
+% Stack the author entries vertically. Without this, multiple authors are set
+% side by side and the attribution runs off the page.
+\renewcommand{\and}{\\}
+
+% --- figures ----------------------------------------------------------------
+\usepackage{graphicx}
+\setkeys{Gin}{width=0.85\linewidth,keepaspectratio}
+
+% --- callouts ---------------------------------------------------------------
+% Notion callouts arrive as blockquotes; give them a light shaded box so they
+% read as asides rather than as quotations.
+\usepackage{framed}
+\usepackage{xcolor}
+\definecolor{shadecolor}{RGB}{242,244,247}
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}{\begin{snugshade}\begin{oldquote}}%
+                        {\end{oldquote}\end{snugshade}}
+
+% --- long URLs --------------------------------------------------------------
+% Allow breaks anywhere in a URL rather than letting it run into the margin.
+\usepackage{xurl}
+
+% --- table of contents ------------------------------------------------------
+% report.cls sizes the number and page-number boxes for single digits. With ten
+% or more chapters this collides: "10Sonar", "8.10Adding color sensor
+% extension", and a bold three-digit page number such as 130 overflows its box
+% and breaks the right-hand alignment. Widen all three.
+\makeatletter
+\renewcommand\@pnumwidth{2.6em}
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{3.2em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{4.7em}{4.1em}}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2.8em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\makeatother

@@ -51,10 +51,20 @@ The licence above covers our own writing, diagrams and photographs. It does **no
 These materials are revised periodically. The edition date and version are printed on the title
 page and at the foot of every page, so you can check whether the copy in your hand is current.
 
-The latest version is always available from **<https://www.biologymeetsengineering.org>**.
+The latest version is always available from
+[biologymeetsengineering.org](https://www.biologymeetsengineering.org).
 
 ## Questions, corrections, and help {.unnumbered}
 
 We would rather hear about a problem than have you work around it. If something does not work, is
-unclear, or is simply wrong, please tell us — contact details are in the *Feedback, contact and
-support* chapter at the end.
+unclear, or is simply wrong, please tell us.
+
+For help with the materials, the robots or the programs, write to **Dieter Vanderelst** —
+[vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu).
+
+The project team:
+
+- **Dr Stephanie Rollmann**, Principal Investigator — [rollmasm@ucmail.uc.edu](mailto:rollmasm@ucmail.uc.edu)
+- **Dr John Layne** — [laynejr@ucmail.uc.edu](mailto:laynejr@ucmail.uc.edu)
+- **Dr Anna DeJarnette** — [dejarnam@ucmail.uc.edu](mailto:dejarnam@ucmail.uc.edu)
+- **Dr Dieter Vanderelst** — [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu)

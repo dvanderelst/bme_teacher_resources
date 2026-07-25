@@ -1,7 +1,12 @@
 ---
 title: "Biology Meets Engineering"
 
-author: "University of Cincinnati — Colleges of Arts and Sciences, Engineering, and the School of Education"
+# Two entries so the attribution stacks on two lines instead of running off the
+# page. header-includes redefines LaTeX's \and as a line break; pandoc already
+# puts each author on its own line in HTML.
+author:
+  - "University of Cincinnati"
+  - "Colleges of Arts and Sciences and of Engineering, and the School of Education"
 # date/subtitle are injected by build.sh from git — do not set here
 lang: en-GB
 
@@ -22,13 +27,5 @@ toccolor: black
 figPrefix: "Figure"
 secnumdepth: 2
 
-header-includes: |
-  \usepackage{graphicx}
-  \setkeys{Gin}{width=0.85\linewidth,keepaspectratio}
-  \usepackage{framed}
-  \usepackage{xcolor}
-  \definecolor{shadecolor}{RGB}{242,244,247}
-  \let\oldquote\quote
-  \let\endoldquote\endquote
-  \renewenvironment{quote}{\begin{snugshade}\begin{oldquote}}{\end{oldquote}\end{snugshade}}
+
 ---

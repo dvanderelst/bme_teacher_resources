@@ -45,6 +45,7 @@ ARGS=(
 
 echo "--- PDF ---"
 pandoc "${ARGS[@]}" --pdf-engine=xelatex \
+  --include-in-header=preamble.tex \
   --include-in-header=render/_version.tex \
   -o render/BmE-teacher-materials.pdf
 echo "--- HTML (single self-contained file) ---"
