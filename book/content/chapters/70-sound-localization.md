@@ -36,9 +36,7 @@ Students must be familiar with Microsoft Excel or Google Sheets, be able to ente
 
 ## Educational Standards
 
-Please follow the link below to see the educational standards pertaining to this lesson plan:
-
-[Educational Standards](#educational-standards)
+The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
 
 ## Learning objectives
 
@@ -177,7 +175,7 @@ Before the development of radar, approaching airplanes were often detected and l
 
 ![](images/testing-artificial-pinnae-f4295f63.png)
 
-All these devices attempted to increase the cues available for sound localization. In the current activity, students are asked to build their own devices to enhance sound localization. The activity is described on the following page.
+All these devices attempted to increase the cues available for sound localization. In the current activity, students are asked to build their own devices to enhance sound localization. The activity is described below.
 
 ### Activity
 

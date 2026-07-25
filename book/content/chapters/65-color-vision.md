@@ -29,9 +29,7 @@ Basic biology course, some understanding of algorithmic thinking.
 
 ## Educational Standards
 
-The national and state educational standards applicable to this lesson plan are listed on the following page:
-
-[Educational Standards](#educational-standards)
+The national and state educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
 
 ## Learning Objectives
 
@@ -190,7 +188,7 @@ To solve this issue, we will proceed in three steps. First, students will run a 
     
     Make sure you select the mBot under the Devices tab to see the code for the robot.
     
-3. Connect to the robot using the USB cable. [Instructions on connecting to the robot using the USB cable are available on this page](#getting-started-with-the-robot).
+3. Connect to the robot using the USB cable. see [Getting started with the robot](#getting-started-with-the-robot) for instructions on connecting over the USB cable.
 4. Upload the code to the robot by selecting the `Upload` mode and clicking `Upload code`.
 
 ![](images/color-vision-lesson-plan-4d4b0a0b.png)

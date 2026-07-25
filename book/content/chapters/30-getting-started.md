@@ -1,10 +1,6 @@
 # Getting started with the robot
 
 
-> **Important**
->
-> March 7, 2025 5:13 PM **Work in progress.** This page is being prepared as the single canonical guide to getting started with the robot, replacing the older platform-specific quick-start guides.
-
 ## Accessing mBlock
 
 This guide assumes you already have access to **mBlock**, the software used to program the robot — either running in your browser or installed on your computer. If you do not, work through Installing mBlock first, then come back here.

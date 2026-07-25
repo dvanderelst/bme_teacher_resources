@@ -3,7 +3,7 @@
 
 In our lesson plans, we use the mBot, an educational robot made by [Makeblock](https://www.makeblock.com). We selected this robot because it easily connects different sensors and can be programmed using a Scratch-like programming language, mBlock.
 
-If your robots still need to be assembled, follow Makeblock's own instructions: [Assemble mBot](https://support.makeblock.com/hc/en-us/articles/12822859943959-A-Beginner-s-Guide-to-mBot#Assemble%20mBot). The rest of this page covers the parts and connections you will need to know about when running the lessons.
+If your robots still need to be assembled, follow Makeblock's own instructions: [Assemble mBot](https://support.makeblock.com/hc/en-us/articles/12822859943959-A-Beginner-s-Guide-to-mBot#Assemble%20mBot). The rest of this chapter covers the parts and connections you will need to know about when running the lessons.
 
 ![The robot is equipped with a sonar sensor on the front and a line follower sensor on the bottom, which is its default configuration.](images/introduction-to-the-robot-15c3c66e.jpg)
 

@@ -1,8 +1,6 @@
 # Installing mBlock
 
 
-**Work in progress.** This page is being prepared to replace the six platform-specific pages currently under this heading.
-
 mBlock is the software used to write and run programs for the mBot. It is a block-based (Scratch-like) environment, so programs are built by dragging blocks rather than typing code.
 
 There are two ways to use it, and either works for all our lesson plans:

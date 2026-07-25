@@ -36,9 +36,7 @@ Algebra I
 
 ## Educational Standards
 
-The educational standards applicable to this lesson plan are listed on the following page.
-
-[Educational Standards](#educational-standards)
+The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
 
 ## Learning objectives
 

@@ -33,9 +33,7 @@ echolocating animals?
 
 ## Educational Standards
 
-Follow this link to see the educational standards applicable to this lesson plan:
-
-[Educational Standards](#educational-standards)
+The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
 
 ## Learning Objectives
 
