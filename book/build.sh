@@ -10,6 +10,12 @@ set -euo pipefail
 cd "$(dirname "$0")"
 mkdir -p render
 
+# Handouts, media and mBlock programs travel with the repository, and are linked
+# from the source relatively. tools/abs-links.lua rewrites those to full URLs, so
+# they still resolve from a downloaded PDF or a saved HTML file. Note this is
+# dead until the first push -- see TODO 6.6.
+export BME_FILE_BASE="https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/"
+
 if git rev-parse --git-dir >/dev/null 2>&1; then
   FINGERPRINT=$(git describe --tags --always --dirty 2>/dev/null || echo uncommitted)
   ISO=$(git log -1 --format=%cs 2>/dev/null || date +%F)
@@ -38,6 +44,7 @@ ARGS=(
   --toc --toc-depth=2 --number-sections
   --resource-path=content:content/images
   --lua-filter=tools/strip-notes.lua
+  --lua-filter=tools/abs-links.lua
   --lua-filter=tools/xref.lua
   --metadata "subtitle=Teacher materials"
   --metadata "date=Edition of $EDITION · $FINGERPRINT"
@@ -63,5 +70,6 @@ fi
 if grep -q -- '<!--' render/BmE-teacher-materials.html; then
   echo "  !! a revision note leaked into the HTML source"
 fi
+python3 tools/check-links.py --quiet || true
 N=$(python3 tools/notes.py --count)
 [ "$N" != "0" ] && echo "  $N outstanding revision note(s) -- python3 tools/notes.py"

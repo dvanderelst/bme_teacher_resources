@@ -260,7 +260,7 @@ Next, turn the robot to align it with the next direction and click the green but
 >
 > [Adding the sound sensor extension](#adding-the-sound-sensor-extension)
 
-[sound_localization_directionality](https://planet.mblock.cc/project/3941521) — or [download `sound_localization_directionality.mblock` directly](https://drive.google.com/file/d/1hKiYFX9wSxCGxuLkfC3UYyaonUeW_tbo/view?usp=sharing) if your school blocks the Makeblock site.
+[sound_localization_directionality](https://planet.mblock.cc/project/3941521) — or [download `sound_localization_directionality.mblock` directly](files/programs/sound_localization_directionality.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >
@@ -318,7 +318,7 @@ Now, the left and right ear values are approximately equal at angle zero. Moreov
 
 We will now have the robot follow a sound source. Students can run the example program. The robot should approach the sound source. They can try moving the sound source while the program is running to see whether the robot notices the change.
 
-[sound_localization_approach](https://planet.mblock.cc/project/3941523) — or [download `sound_localization_approach.mblock` directly](https://drive.google.com/file/d/1-cUC4kOW5Fy2Qy7libpa73puB28lPIS_/view?usp=sharing) if your school blocks the Makeblock site.
+[sound_localization_approach](https://planet.mblock.cc/project/3941523) — or [download `sound_localization_approach.mblock` directly](files/programs/sound_localization_approach.mblock) if your school blocks the Makeblock site.
 
 When running this program, be sure to fill out the previously determined correction factor in the `left_scale` block:
 

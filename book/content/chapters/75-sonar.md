@@ -238,7 +238,7 @@ In this activity, students will create a graph (on the floor) to understand what
 
 Open the Sonar Directionality Program in mBlock 5 from the link below and connect to your robot using the dongle connection. [See here for instructions](#getting-started-with-the-robot) on how to connect to the robot.
 
-[sonar_directionality](https://planet.mblock.cc/project/3916152) — or [download `sonar_directionality.mblock` directly](https://drive.google.com/file/d/1ycsKwRZEAqmBKjQ5AxTq4WWw4T5JBfVx/view?usp=sharing) if your school blocks the Makeblock site.
+[sonar_directionality](https://planet.mblock.cc/project/3916152) — or [download `sonar_directionality.mblock` directly](files/programs/sonar_directionality.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >
@@ -269,7 +269,7 @@ The previous activity revealed that the sonar sensor's range is limited. To use 
 
 This effect can be observed by pointing the robot to a smooth surface (like a wall) while the program used in [Activity 1](#activity-1-measuring-the-sonars-directivity) is running:
 
-[sonar_directionality](https://planet.mblock.cc/project/3916152) — or [download `sonar_directionality.mblock` directly](https://drive.google.com/file/d/1ycsKwRZEAqmBKjQ5AxTq4WWw4T5JBfVx/view?usp=sharing) if your school blocks the Makeblock site.
+[sonar_directionality](https://planet.mblock.cc/project/3916152) — or [download `sonar_directionality.mblock` directly](files/programs/sonar_directionality.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >
@@ -311,7 +311,7 @@ The red brackets were 3D printed. The STL files accompanying these lesson plans 
 
 Students could be asked to design a program for the robot that allows it to avoid obstacles using the sonar sensors. Below, we discuss the linked example program. This program assumes that the left sonar sensor is connected to port 1 and the right sensor to port 2. A screenshot of the program is provided below.
 
-[sonar_obstacle_avoidance](https://planet.mblock.cc/project/3916162) — or [download `sonar_obstacle_avoidance.mblock` directly](https://drive.google.com/file/d/1-NNPwR_EeliOnSDDOA87IJ-XHtJDunZ1/view?usp=sharing) if your school blocks the Makeblock site.
+[sonar_obstacle_avoidance](https://planet.mblock.cc/project/3916162) — or [download `sonar_obstacle_avoidance.mblock` directly](files/programs/sonar_obstacle_avoidance.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >
@@ -414,7 +414,7 @@ We provide an example program. The program is linked and displayed below.
 >
 > The example program below assumes one sonar sensor is being used. However, students can use more than one sensor.
 
-[sonar_cane](https://planet.mblock.cc/project/3916250) — or [download `sonar_cane.mblock` directly](https://drive.google.com/file/d/1nENLgknP-9-Gud3_HAl-3C0QFPo1bq6T/view?usp=sharing) if your school blocks the Makeblock site.
+[sonar_cane](https://planet.mblock.cc/project/3916250) — or [download `sonar_cane.mblock` directly](files/programs/sonar_cane.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >

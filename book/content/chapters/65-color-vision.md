@@ -169,7 +169,7 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 
 1. Open the program in mBlock on your computer or online.
 
-    [Open the mBlock project](https://planet.mblock.cc/project/3954097) — or [download `color_vision_communication.mblock` directly](https://drive.google.com/file/d/1HsO5T4I7fSO7VC-iYbI_eH1SbMnlvQkI/view?usp=sharing) if your school blocks the Makeblock site.
+    [Open the mBlock project](https://planet.mblock.cc/project/3954097) — or [download `color_vision_communication.mblock` directly](files/programs/color_vision_communication.mblock) if your school blocks the Makeblock site.
 
 > **Tip**
 >
@@ -259,7 +259,7 @@ If students start writing their program from scratch instead of starting from th
 
 ![Adding a new category of blocks.](images/color-vision-lesson-plan-c06b5690.png)
 
-[Open the mBlock project](https://planet.mblock.cc/project/3954308) — or [download `color_vision_motion.mblock` directly](https://drive.google.com/file/d/1kIi6T0hHREPmvZpEvC-I0OGfBcrrUTfW/view?usp=sharing) if your school blocks the Makeblock site.
+[Open the mBlock project](https://planet.mblock.cc/project/3954308) — or [download `color_vision_motion.mblock` directly](files/programs/color_vision_motion.mblock) if your school blocks the Makeblock site.
 
 The program is shown below. The first blocks read the red, green, and blue values detected by the color sensor. The purple block sets the onboard lights to a color that mimics the color seen by the color sensor, which should help debug the program. Next, the robot is set to move forward at a slow speed. Immediately after this, we check the value of red-green. Depending on this result, the robot is turned left or right. See below for a video demonstrating the behavior of the robot.
 

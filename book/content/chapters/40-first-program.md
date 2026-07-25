@@ -10,9 +10,9 @@ Once mBlock is working and you can connect to the robot, it is worth running a s
 
 Our lesson plans come with several example programs for the robot. We will run one of them here, so that the pattern is familiar when a lesson asks you to open another.
 
-We publish every program in two places: on the mBlock website, and as a file you can download from Google Drive. They are the same program — the download is there for schools whose network blocks the Makeblock site. Each lesson gives you both links, in the form you see just below.
+We publish every program in two places: on the mBlock website, and as a file in our own repository. They are the same program — the second copy is there for schools whose network blocks the Makeblock site. Each lesson gives you both links, in the form you see just below.
 
-[MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](https://drive.google.com/file/d/1XCEIlMv4KOro7h_ZQQajJ_j_5QhLtC34/view?usp=sharing) if your school blocks the Makeblock site.
+[MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](files/programs/MyFirstProgram.mblock) if your school blocks the Makeblock site.
 
 The two routes differ from here on.
 
