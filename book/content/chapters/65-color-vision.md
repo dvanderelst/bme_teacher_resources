@@ -14,7 +14,7 @@
 | Extra cables (short) | Extra cables for connecting sensors. This allows students to add sensors without removing cables and covers for losing cables.  The cables come in a pack of 4. I suggest supplying 1 extra cable per robot.  This cable is 20 cm long and has the same length as the 2 cables that come with the robot. |
 | Lego compatible blocks | These blocks are compatible with the screws and the hole spacing used by the robot. Therefore these blocks allow students freedom in mounting sensors (as an alternative to the brackets we provide) |
 | Colored paper | This paper can be used to build the tracks for the color vision robot activity. |
-| Gaffers tape | It’s tape. What else can I say. I comes in handy everywhere. |
+| Gaffers tape | It’s tape. What else can I say. It comes in handy everywhere. |
 | Batteries | The robot takes 4 AA batteries. These should last a while. This is a 100 pack of AA batteries Providing more than 8 batteries per robot should allow swapping out the batteries and getting new stock without interruption to the curriculum. |
 
 ## Prerequisites

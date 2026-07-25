@@ -22,7 +22,7 @@ Below, we list the materials required for each lesson plan and the quantity requ
 | Materials to make robot ears | Students can make ears out of magic clay or craft paper. |
 | Printed programming blocks | These are the paper stubs used during the Cheese Sandwich Factory game. |
 | Colored paper | This paper can be used to build the tracks for the color vision robot activity. |
-| Gaffers tape | It’s tape. What else can I say. I comes in handy everywhere. |
+| Gaffers tape | It’s tape. What else can I say. It comes in handy everywhere. |
 | Batteries | The robot takes 4 AA batteries. These should last a while. This is a 100 pack of AA batteries Providing more than 8 batteries per robot should allow swapping out the batteries and getting new stock without interruption to the curriculum. |
 | Spinners | Used to generate random directions for the taxis/kinesis lesson plan. They come in a pack of 12. |
 | Blindfolds | We need 1 per student. These are used during the sonar cane activity. |
