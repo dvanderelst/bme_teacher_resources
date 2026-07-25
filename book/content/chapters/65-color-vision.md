@@ -81,49 +81,65 @@ By wearing goggles with a particular filter, a student acts as a proxy for one t
 
 The goggles prevent a single student from discriminating various colors. Again, this is analogous to the cones in the retina: a single cone cell can not discriminate colors. It can only tell how much light in a specific wavelength band reaches it. As mentioned, the retina compares the activity across differently tuned cone cells to discriminate colors. Students can do something similar: by comparing how much light they see (how bright a color looks), they can collectively work out which color they are looking at.
 
+### The app
+
+Both halves of this activity live in one app: [colorvisionapp.up.railway.app](https://colorvisionapp.up.railway.app/). It needs nothing installed — any browser will do — and it opens on the screen below.
+
+![The app's opening screen. `TRAIN` opens the trainer, `START` begins the competitive game, and the difficulty setting fixes how long each round allows.](images/color-vision-app-start.png)
+
+`TRAIN` opens the trainer described next. `START` begins the competitive game described after it. Set the difficulty before starting: it decides how many seconds each round allows, and it multiplies the final score.
+
 ### Training game
 
-Students can use the color vision training app to familiarize themselves with how to identify colors collectively. Open the app at the link below; its **TRAIN** button leads to the trainer described here, and its **START** button launches the competitive game described further down.
+Students use the trainer to get used to identifying colors together before they are timed on it.
 
-[NiceGUI](https://colorvisionapp.up.railway.app/)
+![The trainer. The dropdown chooses the color of the large rectangle; beneath each pair of goggles is a box showing how that color looks through them. With RED selected, only the red goggles see anything.](images/color-vision-trainer.png)
 
-The trainer shows a large colored rectangle at the top and, below it, three boxes — one beneath an image of each pair of goggles (red, green, and blue) (see screenshot below). Each lower box shows how the top color appears through that pair of goggles. The students can select a different color for the large rectangle using a dropdown box.
+The trainer shows a large colored rectangle, and below it three boxes, one under an image of each pair of goggles. Each box shows how the top color appears through those goggles. Students choose the color of the large rectangle from the dropdown.
 
-![](images/color-vision-lesson-plan-6d594ed2.png)
+Those three boxes show how much red, green and blue light the top color contains, which is the same thing as how strongly it would stimulate the red, green and blue cones in a retina. Select red, and the box under the red goggles is bright while the other two are black, because red light contains no green or blue. Select yellow, and the red and green boxes are bright while the blue one is dark — which is exactly why we see yellow when light stimulates the red and green cones but not the blue.
 
-The bottom rectangle displays the amounts of red, green, and blue light in the top rectangle's current color (as seen through the red, green, and blue goggles). For example, if the students select red for the rectangle color, the left square would be bright red. The two other rectangles would be black. This is because the red color shown does not contain green and blue light. If they choose yellow for the rectangle, the rightmost square would be dark. The left and middle rectangles would be bright red and green, respectively. Another way of thinking about the function of the rectangle at the bottom is to consider it as showing the level of stimulation provided by the top color to the red, green, and blue color cones in the retina. We perceive a yellow color when light stimulates the red and green cones but not the blue cones. Therefore, when selecting yellow, the rightmost (blue) rectangle is darkened.
+There are two ways to use this. With goggles off, students can see how a color looks to each of the others in the group. With goggles on, they can watch how the brightness of their own box changes as the color changes.
 
-Students can familiarize themselves with how various colors (in the top rectangle) appear through their colored goggles using this training program. The rectangles at the bottom can be used in two ways. First, with their goggles removed momentarily, the rectangles show how the top color appears through other students’ goggles. For example, yellow (at the top) would look bright red and green to students wearing red and green goggles, respectively, but to a student wearing blue goggles, it would look black (or very dark blue). Therefore, students can use the rectangles at the bottom to explore how the color at the top can be encoded by perceived brightness across three different cone cells (i.e., colored goggles). A second way to use the rectangles is to have students keep their goggles on and explore how the brightness of the three squares varies with color.
+They should notice that one channel alone is not enough. The box under the red goggles looks equally bright for yellow and for red, so a student wearing red goggles — like a single cone cell — cannot tell those two apart. Distinguishing them takes more than one channel, and that is most obvious for the secondary colors: cyan, yellow and magenta.
 
-They should notice that a single color “channel” is not sufficient to distinguish colors. For example, the leftmost rectangle appears equally bright to a student wearing red goggles, whether it is yellow or red. This means that this student (or an analogous cone) cannot distinguish between these colors on its own. They need multiple color channels for this, especially for secondary colors (cyan, yellow, and magenta).
+Once students have explored, ask them to identify the color of the large rectangle without reading the label. The dropdown, or the up and down arrow keys, changes it. Start with the primaries — red, green, blue — and move on to the secondaries, each of which is a mixture of two primaries and so looks bright to two students and dark to the third.
 
-After students have been allowed to explore how different colors look through their goggles, they can be asked to identify the color in the large rectangle without looking at the label shown. The pull-down menu at the top of the screen (or the up/down arrows on the keyboard) changes the rectangle's color. After the students are proficient at identifying primary colors (red, green, blue), they examine secondary colors (cyan, yellow, and magenta). These are created simply by mixing two of the primary colors. Therefore, they will be seen by two out of the three students as bright, and by the third as dark.
+The table below relates what the three students see, bright (+) or dark (-), to the actual color on screen.
 
-The table below is a key that relates the pattern of what the three students see – bright (+) or dark (-) – to the actual color of the rectangle on the screen.
+![The key relating what each pair of goggles sees to the color on screen.](images/color-vision-lesson-plan-f1a76c67.png)
 
-![](images/color-vision-lesson-plan-f1a76c67.png)
+It helps to give students a blank copy to fill in as they work through the trainer:
 
-It may be helpful for students to have a blank copy to fill in as they work through this training program. A blank copy is provided below:
-
-https://docs.google.com/document/d/13XWyNWr7AakKWV4G2NTxmmAAdFU6aDXkLBcIz2Qe-0c/edit?usp=drive_web
+[Color discrimination chart (.docx)](files/Color_Discrimination_Chart.docx)
 
 ### Competitive Game
 
-After student groups practice identifying colors in the training program, they are asked to run a competitive version of the color discrimination game to reinforce the concepts learned and foster collaborative interaction. While wearing their goggles, groups open the software. They then see nine boxes of different primary or secondary colors. Above those boxes is a word indicating the color of the corresponding box. All boxes of that color must be selected, and the group’s score is determined by the time needed to identify all appropriately colored boxes.
+After practising in the trainer, groups play the timed version to reinforce what they have learnt and to give them a reason to work quickly together. Wearing their goggles, they press `START`. Each round shows nine boxes of primary and secondary colors with a color named above them, and the group must select every box of that color.
 
-The game offers three difficulty levels: Easy, Medium, and Hard. Each level determines the time limit for correctly identifying colors on each screen. As the difficulty increases, the time allowed decreases, challenging players to make faster decisions. Players earn points based on their speed and accuracy.
+![A round in progress. The named color is at the top, the ring above it shows the time left, and the group selects every box of that color.](images/color-vision-game.png)
 
-The game has ten rounds. Each round starts at 100 points, and the points tick down as an audible clock counts off — so the faster the group selects all the correct boxes, the more of the 100 points it keeps for that round. Selecting an incorrectly colored box costs 10 points and speeds up the clock, so mistakes are penalized twice over. The total across the ten rounds is then multiplied by a difficulty factor (Easy ×1.0, Medium ×1.5, Hard ×2.0) to give the final score.
+The game runs ten rounds. Each round starts at 100 points and ticks down as an audible clock counts off, so the faster a group finds all the right boxes, the more of the 100 it keeps. Selecting a wrongly colored box costs 10 points and speeds the clock up, so a mistake is penalised twice. The ten rounds therefore total at most 1000, and that total is multiplied by the difficulty — Easy x1.0, Medium x1.5, Hard x2.0 — for a maximum of 2000 on Hard.
 
-The link to the game is provided below:
+At the end, groups enter a team name and submit their score. Encourage them to play more than once and try to beat it.
 
-[NiceGUI](https://colorvisionapp.up.railway.app/)
+![The final screen. The score is shown out of 1000 before the difficulty multiplier is applied.](images/color-vision-lesson-plan-67265ec6.png)
 
-Have student groups share their score after finishing the game. At the end of the game, they enter a team name and submit their score. You can encourage students to play the game a few times and try to improve their scores. Submitted scores are collected on a leaderboard that the teacher can view on a password-protected instructor dashboard, reached from the link at the bottom of the app's start page; the dashboard lists each team's score for a chosen date. If you would like to use the dashboard in your classroom, email [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu) for access.
+### Watching the scores come in
 
-The image below shows the game's final screen, where students enter a team name and submit their score.
+Submitted scores go to an instructor dashboard, reached from the `Instructor Dashboard` link at the foot of the app's opening screen.
 
-![](images/color-vision-lesson-plan-67265ec6.png)
+![The `Instructor Dashboard` link sits at the bottom of the opening screen.](images/color-vision-dashboard-link.png)
+
+![The dashboard asks for a password.](images/color-vision-dashboard-login.png)
+
+The password is **bme26**. Pick the date or dates your class is playing, and the dashboard lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard, which is worth doing: groups play again to climb it.
+
+![The dashboard, with team names blurred here. Choose one or more dates on the left, and the scores appear on the right, highest first.](images/color-vision-dashboard-scores.png)
+
+> **Note**
+>
+> The dashboard is protected only by that password, and the password is printed here, so treat anything submitted as public. Ask groups to invent a team name rather than use their own names — it makes for better team names anyway.
 
 ## Activity: robot color discrimination
 
@@ -133,7 +149,7 @@ Explain to students that their task is to program a robot to follow a bicolored 
 
 Students will create a path of two different colors of paper (red and green in the example below). Next, they will program the robot to stay in the middle of the path. This can be done by programming the robot to turn left or right, depending on which color the color sensor detects. In the example below, the robot should turn right if the sensor detects green and left if the sensor detects the red paper.
 
-![](images/color-vision-lesson-plan-998025db.png)
+![The task. The color sensor points down at the boundary between the two colors, and the robot steers to keep it there.](images/color-vision-lesson-plan-998025db.png)
 
 ### Operation of the color sensor
 
@@ -141,9 +157,9 @@ Students can find detailed [information on the operation of the color sensor](ht
 
 Give students time to install the color sensor instead of the Line follower sensor depicted in the generic instructions. Students should not over-tighten the screws when installing the color sensor because the caster wheel rests on some of the electronic components on the sensor board. This may cause the wheel not to move or the electronic component to get damaged. See below for images of the color sensor installed on the robot.
 
-![](images/color-vision-lesson-plan-a15b7f94.jpg)
+![The color sensor mounted at the front of the robot, facing down.](images/color-vision-lesson-plan-a15b7f94.jpg)
 
-![](images/color-vision-lesson-plan-bf6d4571.jpg)
+![The same sensor seen from underneath, between the two motors. Its two white LEDs light the paper so the reading does not depend on the room.](images/color-vision-lesson-plan-bf6d4571.jpg)
 
 Students also construct a bicolored path using colored paper and tape so that each side of the path is a different color. This is illustrated in the drawing above. [An example is also shown in the video at the end of this guide](#color-vision).
 
@@ -167,17 +183,9 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 >
 > Ensure the color sensor is connected to port 2 on the robot.
 
-1. Open the program in mBlock on your computer or online.
+1. Open the program in mBlock, in the browser or installed. Either link works, and [Step 1: Open the example program](#step-1-open-the-example-program) explains what to do with each.
 
     [Open the mBlock project](https://planet.mblock.cc/project/3954097) — or [download `color_vision_communication.mblock` directly](files/programs/color_vision_communication.mblock) if your school blocks the Makeblock site.
-
-> **Tip**
->
-> Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
->
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
->
-> See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This will show the robot's code. Do not unplug the cable during this part of the activity.
 
@@ -188,27 +196,27 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 3. Connect to the robot using the USB cable. see [Getting started with the robot](#getting-started-with-the-robot) for instructions on connecting over the USB cable.
 4. Upload the code to the robot by selecting the `Upload` mode and clicking `Upload code`.
 
-![](images/color-vision-lesson-plan-4d4b0a0b.png)
+![Select the mBot in `Devices`, switch to `Upload`, then click `Upload Code`.](images/color-vision-lesson-plan-4d4b0a0b.png)
 
-![](images/color-vision-lesson-plan-41a422cc.png)
+![The upload in progress. It takes a few moments, and the robot cannot be used until it finishes.](images/color-vision-lesson-plan-41a422cc.png)
 
-Once the code has been uploaded to the robot, you should see the robot’s white light coming on every second. This indicates that the robot is collecting data using the color sensor. Keep the USB cable plugged in. Also, mBlock should show a graph view that visualizes the amount of red, green, and blue light the color sensor picks up. The values are also shown in the panda window. Below, we show an image of the bar graph and the values as shown in the panda window.
+Once the code has been uploaded to the robot, you should see the robot’s white light coming on every second. This indicates that the robot is collecting data using the color sensor. Keep the USB cable plugged in. Also, mBlock should show a graph view that visualizes the amount of red, green, and blue light the color sensor picks up. The same values also appear on the stage, at the top left of the mBlock window. Both are shown below.
 
-![](images/color-vision-lesson-plan-8d5aeda8.png)
+![mBlock's chart view, showing how much red, green and blue light the sensor is picking up.](images/color-vision-lesson-plan-8d5aeda8.png)
 
-![](images/color-vision-lesson-plan-d29948b8.png)
+![The same three readings on the stage. They are labelled `Panda:` because the variables belong to the panda sprite.](images/color-vision-lesson-plan-d29948b8.png)
 
 With the robot connected to the computer through the USB cable, we can now collect data to check how the color sensor sees the two different colors of paper. Ask students to draw a few lines spanning the border between the two colors of paper spaced by about 1 cm. For example, in the figure below, we have drawn 7 marks spaced by 1 cm.
 
-![](images/color-vision-lesson-plan-9e9eb54f.png)
+![Marks drawn across the boundary about 1 cm apart. Here there are seven, from 3 cm into the green to 3 cm into the red.](images/color-vision-lesson-plan-9e9eb54f.png)
 
 Students can now observe how the values for the red, green, and blue light change as the robot is placed and aligned with each mark. For example, in the image below, the robot is aligned with the left most marker.
 
-![](images/color-vision-lesson-plan-c1d3a88e.jpg)
+![The robot lined up with one of the marks. The sensor's own lights show which patch of paper it is reading.](images/color-vision-lesson-plan-c1d3a88e.jpg)
 
 The aim is to observe how the sensor readings change as the robot moves from one color of paper to the other color (here, green to red). Below, we include some measurements collected using the setup depicted in the images above. We have also included a column that shows the difference between the red and green values.
 
-Here is a link to a [Google Sheets document](https://docs.google.com/spreadsheets/d/1frBjPa5mE7UsAW0t1LLKr9oEFSrDW9Je9eHolUvAf_I/edit?usp=sharing) to simplify recording and graphing the data.
+Students can record this on paper or in whatever spreadsheet software the school already uses — the table is six columns and a handful of rows, and a spreadsheet has the advantage of plotting the last column for them, which is what the next step needs.
 
 | Marker | Position | Red | Green | Blue | Red – Green |
 | --- | --- | --- | --- | --- | --- |
@@ -222,7 +230,7 @@ Here is a link to a [Google Sheets document](https://docs.google.com/spreadsheet
 
 There are a few things to observe. The students’ values might differ depending on the paper's color. Notice that for each paper, all channels have a value larger than 0, indicating that each paper also reflects some amount of other wavelengths of light.
 
-![](images/color-vision-lesson-plan-44ef58b4.png)
+![The three channels as the sensor crosses the boundary. Red rises and green falls, while blue changes comparatively little.](images/color-vision-lesson-plan-44ef58b4.png)
 
 Now that students have some baseline data, they must develop their algorithm and program the robot to follow the midline. Give students time to write a rule that would direct the robot when to turn right or left based on their data. Check student work before moving on. Students should have something similar to the example explanation below.
 
@@ -236,11 +244,11 @@ In the above example, the set-up consisted of green paper on the left and red on
 
 Below, we have plotted the difference between Red and Green as a function of the robot's position. From this graph, we can derive a rule to keep the robot on the center line.
 
-![](images/color-vision-lesson-plan-2a426533.png)
+![The difference between red and green across the same positions. This is the curve the steering rule is read off: strongly negative on the green, strongly positive on the red, crossing zero near the middle.](images/color-vision-lesson-plan-2a426533.png)
 
 This is a potential rule:
 
-```jsx
+```text
 If Red - Green < -10: turn right
 If Red - Green > 40: turn left
 ```
@@ -251,13 +259,7 @@ This rule turns the robot right if it detects more green light than red and vice
 
 Below, we link a program that implements the rule we have derived above. Students’ programs could look similar but should be changed to reflect the rules they derived.
 
-If students start writing their program from scratch instead of starting from the example program. They should load the extension that loads the blocks that allow reading the color sensor.
-
-![Click this button to open the extension menu.](images/color-vision-lesson-plan-721cd583.png)
-
-![Add the color sensor extension to enable the blocks required to read the color sensor.](images/color-vision-lesson-plan-d48c279e.png)
-
-![Adding a new category of blocks.](images/color-vision-lesson-plan-c06b5690.png)
+Students starting from scratch rather than from the example program will need to add the color sensor extension first, which is described in [Adding color sensor extension](#adding-color-sensor-extension) at the end of this chapter.
 
 [Open the mBlock project](https://planet.mblock.cc/project/3954308) — or [download `color_vision_motion.mblock` directly](files/programs/color_vision_motion.mblock) if your school blocks the Makeblock site.
 
@@ -269,11 +271,13 @@ The program is shown below. The first blocks read the red, green, and blue value
 
 To run the example program (or the students’ program), upload the program to the robot. Once the program is uploaded, the USB cable can be disconnected. To change the program, connect the USB cable to the robot and upload the new program.
 
-![](images/color-vision-lesson-plan-8649dc81.png)
+![One solution. The three channels are read into variables, the LEDs are set to the color the sensor reports, and the robot turns right or left when the red-minus-green difference passes the thresholds taken from the graph.](images/color-vision-lesson-plan-8649dc81.png)
 
-[output.mp4](files/output.mp4)
+![The robot following the boundary between the two colors. The onboard LEDs are set to the color the sensor is reporting, which makes it possible to see what the robot thinks it is looking at.](images/color-vision-path-following.png)
 
-### Extensions
+[Video: the robot following the path (.mp4)](files/color_vision_path_following.mp4)
+
+### Taking it further
 
 Several extensions to the lesson plan can be made:
 
@@ -286,35 +290,18 @@ Several extensions to the lesson plan can be made:
 
 ## Adding color sensor extension
 
-### Step 1: Add the mBot to mBlock
+The blocks that read the color sensor are not in mBlock to begin with; they arrive as an extension. Opening one of our programs loads it for you, so this is only needed when starting a program from scratch.
 
-- Check whether the mBot is showing in the `Devices` window in mBlock. If the mBot is not listed, follow the instructions below to add the mBot.
-- Click the `Add` (circular) button at the left side of the window. The button's image is shown below.
+First make sure the mBot has been added to mBlock — see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock) — and that it is the device selected in the `Devices` panel, because extensions are added to a particular device.
 
-![](images/chrome-os-a1ae66d1.png)
+Then click the `+` button at the bottom of the block palette, find `color sensor` in the list that appears, and click `Add`.
 
-- From the window that pops up, select the mBot (**not the mBot2**).
+![The `+` button at the foot of the block palette opens the extension list.](images/adding-color-sensor-extension-4c6bddee.png)
 
-![](images/chrome-os-d52dfcc3.png)
+![Find the color sensor extension and click `Add`.](images/adding-color-sensor-extension-2578cd3c.png)
 
-![The mBot is selected in the `Devices` window.](images/chrome-os-86445f6e.png)
-
-- The mBot will be added to the `Devices` section of the mBlock.
-
-### Step 2: Add the color sensor extension
-
-- Make sure the mBot is selected in the `Devices` window in mBlock.
-- Click the `+` button in the blocks menu (see image below)
-- This will bring up a screen with extensions for the robot.
-- Select and `Add` the  `color sensor` extension.
-- This extension will give you access to new blocks for using the color sensor.
+![A new category appears in the palette, holding the blocks that read the color sensor.](images/adding-color-sensor-extension-7d2f1d27.png)
 
 > **Tip**
 >
-> Note that the color sensor can only be used in the `Upload` mode. Not in `Live mode`. Follow this link for more information about these modes: [Getting started with the robot](#getting-started-with-the-robot).
-
-![](images/adding-color-sensor-extension-4c6bddee.png)
-
-![](images/adding-color-sensor-extension-2578cd3c.png)
-
-![](images/adding-color-sensor-extension-7d2f1d27.png)
+> The color sensor works only in `Upload` mode, not in `Live` mode. See [Live versus Upload mode](#live-versus-upload-mode).
