@@ -55,3 +55,10 @@
     \endgroup
   \fi}
 \makeatother
+
+% --- document properties ----------------------------------------------------
+% The website is listed in the author block so it appears on the title page;
+% keep it out of the PDF's Author field, which should name the institution.
+% Deferred to \AtBeginDocument because pandoc's template loads hyperref *after*
+% include-in-header content, so \hypersetup is not yet defined at this point.
+\AtBeginDocument{\hypersetup{pdfauthor={University of Cincinnati}}}

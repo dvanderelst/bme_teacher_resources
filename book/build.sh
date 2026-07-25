@@ -25,7 +25,7 @@ cat > render/_version.tex <<TEX
 \\pagestyle{fancy}
 \\fancyhf{}
 \\renewcommand{\\headrulewidth}{0pt}
-\\newcommand{\\bmefoot}{\\footnotesize\\textcolor{gray}{BmE teacher materials \\textperiodcentered\\ $EDITION \\textperiodcentered\\ $FINGERPRINT}}
+\\newcommand{\\bmefoot}{\\footnotesize\\textcolor{gray}{biologymeetsengineering.org \\textperiodcentered\\ $EDITION \\textperiodcentered\\ $FINGERPRINT}}
 \\fancyfoot[L]{\\bmefoot}
 \\fancyfoot[R]{\\footnotesize\\thepage}
 \\fancypagestyle{plain}{\\fancyhf{}\\fancyfoot[L]{\\bmefoot}\\fancyfoot[R]{\\footnotesize\\thepage}}
