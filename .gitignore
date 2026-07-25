@@ -1,0 +1,32 @@
+# Whitelist pattern: ignore everything at the top level, then re-admit only what
+# belongs in a PUBLIC repo. Safer than blacklisting, because anything new that
+# lands in this folder is excluded until someone deliberately adds it.
+/*
+
+!/.gitignore
+!/README.md
+!/LICENSE
+!/book/
+
+# --- inside book/ -----------------------------------------------------------
+# Rendered output is a build artifact, not source. Committing 14 MB binaries on
+# every rebuild would bloat history; publish via CI or Releases instead.
+/book/render/
+
+# --- deliberately excluded and why ------------------------------------------
+# bme-notion-export/    103 MB frozen Notion archive. Superseded by book/content
+#                       and kept locally only. It is also a whole-workspace
+#                       export, so it contains unrelated personal material.
+# *.pdf (top level)     "A Beginner's Guide to mBot" is Makeblock's copyrighted
+#                       documentation. Link to it, do not redistribute it.
+# mbot_board.jpg        Makeblock product photograph, same reasoning.
+# review-basics.md      Internal review notes and working files. See README.
+# check-on-robot.md
+# manual-edits-in-notion.md
+# notion-comments-archive.md
+# notion-todo-backlog.md
+# info.md
+
+.DS_Store
+__pycache__/
+*.pyc

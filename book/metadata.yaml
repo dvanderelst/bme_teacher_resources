@@ -1,0 +1,34 @@
+---
+title: "Biology Meets Engineering"
+subtitle: "Teacher materials"
+author: "University of Cincinnati — Colleges of Arts and Sciences, Engineering, and the School of Education"
+date: "Draft — proof of concept"
+lang: en-GB
+
+# --- print ---
+documentclass: report
+papersize: a4
+geometry:
+  - margin=2.5cm
+fontsize: 11pt
+mainfont: "DejaVu Serif"
+sansfont: "DejaVu Sans"
+monofont: "DejaVu Sans Mono"
+linestretch: 1.15
+colorlinks: true
+linkcolor: RoyalBlue
+urlcolor: RoyalBlue
+toccolor: black
+figPrefix: "Figure"
+secnumdepth: 2
+
+header-includes: |
+  \usepackage{graphicx}
+  \setkeys{Gin}{width=0.85\linewidth,keepaspectratio}
+  \usepackage{framed}
+  \usepackage{xcolor}
+  \definecolor{shadecolor}{RGB}{242,244,247}
+  \let\oldquote\quote
+  \let\endoldquote\endquote
+  \renewenvironment{quote}{\begin{snugshade}\begin{oldquote}}{\end{oldquote}\end{snugshade}}
+---

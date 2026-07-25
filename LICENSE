@@ -1,0 +1,83 @@
+BmE Teacher Resources — licensing
+=================================
+
+Biology Meets Engineering, University of Cincinnati.
+Supported by NSF ITEST grants DRL 1759150 and DRL 2342578.
+
+
+1. The teaching materials
+-------------------------
+
+The lesson plans, prose, tables, diagrams and photographs authored by the
+project are licensed under
+
+    Creative Commons Attribution-NonCommercial 4.0 International
+    (CC BY-NC 4.0)
+
+Summary:      https://creativecommons.org/licenses/by-nc/4.0/
+Full terms:   https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+You are free to share and adapt this material for non-commercial purposes,
+provided you give appropriate credit, link to the licence, and indicate if
+changes were made.
+
+Suggested attribution:
+
+    "Biology Meets Engineering teacher materials, University of Cincinnati.
+    Supported by NSF ITEST DRL 1759150 and DRL 2342578. Used under CC BY-NC 4.0."
+
+If you are unsure whether your intended use counts as non-commercial — a paid
+teacher-training workshop, a fee-charging summer programme, a private school —
+please just ask. The intent of this licence is to keep the materials free for
+teachers, not to obstruct education. Contact details are in the document.
+
+
+2. The build scripts
+--------------------
+
+The tooling in `book/` (`convert.py`, `build.sh`, `tools/`) is licensed under the
+MIT Licence:
+
+Copyright (c) 2026 Dieter Vanderelst
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+3. Third-party material — NOT covered by the above
+--------------------------------------------------
+
+Some material in this repository is not ours to license, and the CC BY-NC grant
+above does not extend to it:
+
+  * Screenshots of the mBlock software. mBlock, mBot and Makeblock are products
+    and trademarks of Makeblock Co., Ltd. Screenshots are reproduced to document
+    how to operate the software.
+
+  * Photographs of Makeblock hardware not taken by the project.
+
+  * "A Primer on fundamental types of animal spatial orientation and stimulus
+    localization" and "Echolocation in Insectivores and Rodents" in
+    `book/content/files/`, and any other third-party document reproduced there;
+    rights remain with their respective authors and publishers.
+
+  * Linked external material — YouTube videos, journal articles, manufacturer
+    documentation — remains with its owners. Links are provided for reference
+    only.
+
+If you believe any material here infringes your rights, please get in touch and
+we will remove or replace it.
