@@ -6,50 +6,68 @@ If your robots still need to be assembled, follow Makeblock's own instructions: 
 
 ![The robot is equipped with a sonar sensor on the front and a line follower sensor on the bottom, which is its default configuration.](images/introduction-to-the-robot-15c3c66e.jpg)
 
-![Screenshot of a program for the robot. The software used to program the robot is called mBlock](images/introduction-to-the-robot-1979a40e.png)
+![A program for the robot. The software we use to write these programs is called mBlock.](images/introduction-to-the-robot-1979a40e.png)
 
-The robot has four ports (Makeblock calls them RJ25 ports), as indicated in the top view of the robot shown below. Each of these ports has several color labels. For example, port 1 is labeled yellow, blue, and white. The color labels are important. They indicate which type of sensor can be connected to which port. For example, the right image shows sound and sonar sensors. The sound sensor is labeled with a black sticker. Therefore, this sensor can only be connected to ports 3 and 4. The sonar sensor is labeled with a yellow sticker. Therefore, sonar sensors can be attached to ports 1, 2, 3, and 4. The type of cable used to connect sensors to the robot is also depicted below.
+## Ports and sensor labels
 
-![Image pointing out the four ports on the robot to which sensors can be attached.](images/introduction-to-the-robot-0c87735b.jpg)
+The robot has four ports, which Makeblock calls RJ25 ports. The top view below shows where they are. Each port carries several color labels — port 1, for example, is labeled yellow, blue, and white — and those labels are the thing to pay attention to, because they tell you which kind of sensor a port can accept. The sound sensor carries a black label, and only ports 3 and 4 have black among their colors, so a sound sensor has to go in one of those two. They are the only ports wired to the board's analog inputs, which is what a sound sensor needs. The sonar sensor carries a yellow label, and all four ports have yellow, so a sonar will work in any of them.
+
+The point to take away is that the ports are not interchangeable, so it is worth checking which one you are plugging into. When a lesson plan asks for a particular port, use that port: the programs we supply read the port the lesson names. mBlock knows about the restrictions too — add a sound sensor block to a program and its port dropdown will offer you only 3 and 4 — so the software will stop you making the worst of these mistakes even if you forget.
+
+![The four RJ25 ports on top of the robot, where sensors plug in.](images/introduction-to-the-robot-0c87735b.jpg)
 
 ![Left: a sound sensor (notice the black sticker). Right: a sonar sensor (notice the yellow sticker).](images/introduction-to-the-robot-c0775633.jpg)
 
-![This image shows the cable used to connect sensors to the robot.](images/introduction-to-the-robot-676c1e4d.png)
+![The cable used to connect a sensor to one of the robot's ports.](images/introduction-to-the-robot-676c1e4d.png)
 
-## Which port for which lesson
+Two of the sensors we use, the sound sensor and the color sensor, need an mBlock *extension* installed before their blocks appear in the palette. Opening one of our example programs loads the right extension for you, but starting a program from scratch does not, so in that case you have to add it yourself. See [Adding the sound sensor extension](#adding-the-sound-sensor-extension) and [Adding the color sensor extension](#adding-color-sensor-extension).
 
-The lesson plans assume particular ports, and the supplied programs read those ports. This table collects them in one place:
+## Switches and onboard sensors
 
-| Lesson or activity | Sensor | Port |
-| --- | --- | --- |
-| Color Vision | Me Color Sensor | 2 |
-| Sonar — Activity 1: measuring directivity | Sonar | 1 |
-| Sonar — Activity 2: acoustic mirrors | Sonar | 1 |
-| Sonar — Robot obstacle avoidance | Left sonar / right sonar | 1 / 2 |
-| Sound Localization — Robot phonotaxis | Left microphone / right microphone | 3 / 4 |
+The robot runs on four AA batteries. If you would rather not keep replacing them, a rechargeable battery pack is available as well; see [Optional: the rechargeable battery pack](#optional-the-rechargeable-battery-pack) below.
 
-A few things worth knowing alongside that table.
+The on/off switch is indicated in the image below. The robot also has a USB port. As we will explain in upcoming guides, a USB cable is one way to program the robot. However, the preferred way to connect to the robot is wirelessly ([see one of the next guides](#getting-started-with-the-robot)).
 
-- **Sonar sensors work in any of the four ports.** The table only records what the supplied programs expect, so if you write your own program, you are free to use a different port.
-- **The sound sensors have to go in ports 3 or 4.** Those are the only two ports wired to the board's analog inputs,
-- **The sound sensor and the color sensor each need an mBlock extension** before their blocks appear in the palette. If you open one of our example programs, the extension loads automatically, but if you start a program from scratch, you have to add it yourself — see [Adding the sound sensor extension](#adding-the-sound-sensor-extension) and [Adding the color sensor extension](#adding-color-sensor-extension).
-
-## Switches, sensors, and ports
-
-The robot takes 4 AA batteries. The on/off switch is indicated in the image below. The robot also has a USB port. As we will explain in upcoming guides, a USB cable is one way the robot can be programmed. However, the preferred way to connect to the robot is wirelessly ([see one of the next guides](#getting-started-with-the-robot)).
-
-![Image pointing out the location of the on/off switch and the USB port.](images/introduction-to-the-robot-b3cee238.jpg)
+![The location of the on/off switch and the USB port.](images/introduction-to-the-robot-b3cee238.jpg)
 
 Even without attaching external sensors to the robot with a cable, the robot has several inputs and outputs.
 
-1. An onboard light sensor that can measure the amount of ambient light.
-2. A tiny speaker that can play tones
-3. Two LED lights. We can set their brightness and color.
-4. The robot has a button that can be used in programs.
+1. A light sensor that measures the amount of ambient light.
+2. A small speaker that can play tones.
+3. Two RGB LEDs, whose brightness and color you can set.
+4. A button that your programs can read.
 
-If you are curious, the image below shows the location of these devices on the robot’s main board.
+If you are curious, the image below shows where these sit on the robot's main board. The board also carries an infrared receiver and transmitter, which our lessons do not use.
 
-![](images/introduction-to-the-robot-51abd850.png)
+![The mBot's main board, the mCore, with its connectors and onboard devices labeled. Diagram by Makeblock.](images/introduction-to-the-robot-51abd850.png)
+
+## Optional: the rechargeable battery pack
+
+By default the robot runs on four AA batteries, but it can also be powered by a rechargeable battery pack that charges over USB. If you would rather not keep buying AA batteries, this is worth doing. Installing it takes a few minutes per robot.
+
+![The battery pack.](images/optional-using-the-battery-pack-b3a67c4f.jpg)
+
+Start by unplugging the AA battery holder from the robot. You will need to unscrew the robot's top board as well, so it is easiest to do that now rather than partway through.
+
+![The top board unscrewed and lifted clear, with the AA battery holder unplugged.](images/optional-using-the-battery-pack-4f020b9a.jpg)
+
+The battery pack attaches to the underside of the top board, clipping into the slots there. Once it is clipped in, plug it into the board using the red and black cables. The plug is shaped so that it only fits one way round.
+
+![The pack clipped into the underside of the top board, with the red and black cables ready to plug in.](images/optional-using-the-battery-pack-db21ceea.jpg)
+
+Screw the board back onto the robot. The AA battery holder is no longer needed.
+
+![The top board screwed back on, with the AA battery holder set aside.](images/optional-using-the-battery-pack-b8f42f1d.jpg)
+
+You can now charge the pack by connecting the robot to a charger or a USB port with the USB cable. While it charges, the robot shows a red light; when charging is complete, the light turns green.
+
+> **Tip**
+>
+> Please do not attempt to charge the robot while it is running on the 4 x AA batteries.
+
+![Charging. Notice the red LED.](images/optional-using-the-battery-pack-9d9b2d0d.jpg)
+
+![Charging complete. Note the green LED.](images/optional-using-the-battery-pack-b758c100.jpg)
 
 ## Robot moving in the wrong direction?
 

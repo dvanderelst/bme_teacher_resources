@@ -50,7 +50,7 @@ Students should be able to…
 
 In this lesson, students will explore how humans localize sound and how robots can be made to localize sound through phonotaxis.  Sound localization has various applications. For example, in engineering, localizing the noise source in a machine can enhance its design. Engineers typically use arrays of many microphones to pinpoint sound more precisely than when using two microphones or ears. Other applications of sound localization include localizing a speaker. For example, some conference cameras will focus on the person speaking. This not only provides visual information about who is speaking but also improves the quality of the recorded sound. Sound localization is also increasingly used in robots to approach sound sources. Robots that interact with people are often able to localize sound, in particular, speech. As for the conference cameras, this ability allows the robot to fixate on (and identify) the speaker. It also points the microphones in the optimal direction to improve sound quality.
 
-This lesson is divided into two sections. In the first section, students will learn about humans' ability to localize sound, design and test pinnae for human ears, and investigate how a microphone differs from a human ear. Then, in section two, students will use what they have learned to design and test pinnae (ears) for their robots so that the robot can move towards a sound.
+This lesson is divided into two sections. In the first section, students will learn about humans' ability to localize sound, design and test pinnae for human ears, and investigate how a microphone differs from a human ear. Then, in section two, students will use what they have learned to design and test pinnae (ears) for their robots so that the robot can move toward a sound.
 
 This unit was created collaboratively with faculty from the University of Cincinnati College of Arts and Sciences, College of Engineering, and School of Education. Combining biology with engineering activities gives students a unique opportunity to understand the parallels between animal and robot behavior and sensory/sensor function. It addresses the Next Generation Science Standards (NGSS Lead States, 2013) and the International Society for Technology in Education Standards (International Society for Technology in Education, 2022).
 
@@ -108,7 +108,7 @@ The microphone is almost omnidirectional, meaning it is nearly equally sensitive
 
 ![](images/sound-localization-lesson-plan-d5560ae5.png)
 
-This figure shows the sensitivity of the left ear (for a given frequency) as a function of direction. The sphere is cut in half so that you can see inside. Red colors mean the ear is more sensitive to those directions. From this image, students can see that the ear is less sensitive to sound coming from behind. It is also less sensitive to sounds coming from straight ahead. The left ear is most sensitive to sound coming from the left. This is why humans turn one ear towards a sound source when trying to hear very faint sounds. Human ears are less sensitive to sounds coming from straight ahead. Luckily, that is where our eyes are focusing.
+This figure shows the sensitivity of the left ear (for a given frequency) as a function of direction. The sphere is cut in half so that you can see inside. Red colors mean the ear is more sensitive to those directions. From this image, students can see that the ear is less sensitive to sound coming from behind. It is also less sensitive to sounds coming from straight ahead. The left ear is most sensitive to sound coming from the left. This is why humans turn one ear toward a sound source when trying to hear very faint sounds. Human ears are less sensitive to sounds coming from straight ahead. Luckily, that is where our eyes are focusing.
 
 ### Temporal response of the Makeblock sound sensor
 
@@ -202,7 +202,7 @@ For this activity, students should download a sound snippet. The link is provide
 
 ## Robot phonotaxis
 
-This activity aims to create a robot that follows a sound source. Use the sound file provided on a phone or portable speaker. When the sound source is held close (~50 cm) to the robot, the robot should turn towards the sound and approach it. The robot will do this by comparing the sound intensity between the left and right microphones. If the sound strength at the left receiver is greater than at the right, we will turn left, and vice versa. This is a form of phonotaxis.
+This activity aims to create a robot that follows a sound source. Use the sound file provided on a phone or portable speaker. When the sound source is held close (~50 cm) to the robot, the robot should turn toward the sound and approach it. The robot will do this by comparing the sound intensity between the left and right microphones. If the sound strength at the left receiver is greater than at the right, we will turn left, and vice versa. This is a form of phonotaxis.
 
 In principle, the robot should be able to approach a sound source placed somewhere in the environment. However, as discussed earlier, the microphones are not very sensitive, so the robot might not be able to approach distant sound sources.
 
@@ -236,7 +236,7 @@ In the first step of this activity, students will measure the microphones' direc
 
 ![](images/robot-phonotaxis-9b19fbad.jpg)
 
-![The sound sensor](images/robot-phonotaxis-e133beed.jpg)
+![The sound sensor.](images/robot-phonotaxis-e133beed.jpg)
 
 Next, have students build a setup like the one shown below. You can have students put a large sheet of paper or a whiteboard on the floor (as in the example below) and draw several compass directions. Below, angles from -40 to 40 degrees have been drawn in 20-degree steps. Place the sound source at an angle of 0 ° and about 50 cm from the robot. The sound source can be a phone or a speaker. The speaker is not shown in the image below.
 

@@ -182,7 +182,7 @@ Here, we relate the above concepts to animal sonar, enabling students to see par
 
 Echolocating whales and dolphins' calls typically contain an even broader range of frequencies than bats' calls. Below, we show the spectrogram of dolphin sonar sounds. The sounds contain frequencies from 0 to 150 kHz (the highest frequency measured).
 
-![From https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html](images/sonar-lesson-plan-342a9881.jpg)
+![A modern acoustic mirror. Source: [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html).](images/sonar-lesson-plan-342a9881.jpg)
 
 From [https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html)
 
@@ -234,7 +234,7 @@ In this activity, students will create a graph (on the floor) to understand what
 >
 > For this activity, plug in the sonar sensor to port 1. The robot should be equipped with only one sonar sensor for this activity (see image below).
 
-![For this activity, the robot should be equipped with a single sonar sensor (this is the default configuration of the robot). **In this stock image, the sonar is plugged in to port 2 but we will use port 1 for this activity.**](images/activity-1-measuring-the-sonars-directivity-60d0fadf.jpg)
+![For this activity, the robot should be equipped with a single sonar sensor (this is the default configuration of the robot). **In this stock image, the sonar is plugged in to port 2 but we will use port 1 for this activity.**.](images/activity-1-measuring-the-sonars-directivity-60d0fadf.jpg)
 
 Open the Sonar Directionality Program in mBlock 5 from the link below and connect to your robot using the dongle connection. [See here for instructions](#getting-started-with-the-robot) on how to connect to the robot.
 
@@ -265,7 +265,7 @@ You could repeat the measurements with different objects and compare the resulti
 
 ## Activity 2 Acoustic mirrors
 
-The previous activity revealed that the sonar sensor's range is limited. To use the sonar effectively, especially indoors, we must understand a second limitation. In contrast to natural environments, indoor environments contain many smooth surfaces, which can be a problem for sonar. If the sonar pulse strikes a smooth surface at an angle, much of the sound will be reflected away from the receiver instead of towards it. This might result in the sonar sensor not detecting large smooth surfaces. This is called the acoustic mirror effect.
+The previous activity revealed that the sonar sensor's range is limited. To use the sonar effectively, especially indoors, we must understand a second limitation. In contrast to natural environments, indoor environments contain many smooth surfaces, which can be a problem for sonar. If the sonar pulse strikes a smooth surface at an angle, much of the sound will be reflected away from the receiver instead of toward it. This might result in the sonar sensor not detecting large smooth surfaces. This is called the acoustic mirror effect.
 
 This effect can be observed by pointing the robot to a smooth surface (like a wall) while the program used in [Activity 1](#activity-1-measuring-the-sonars-directivity) is running:
 
@@ -342,7 +342,7 @@ Here's how these elements work together:
 
 The red blocks in the program above are defined in the image below.
 
-![Screenshot from 2024-10-28 16-11-25.png](images/robot-obstacle-avoidance-57525850.png)
+![](images/robot-obstacle-avoidance-57525850.png)
 
 ### Running the program
 

@@ -101,7 +101,7 @@ The technical definition of a variable is a named container that stores a value.
 
 Before using a variable, you must define (or “make”) it. In mBlock, you can create variables by clicking the `variables` menu and then clicking `Make a Variable`. See the images below for an illustration. This will bring up a window where you can enter the name of your new variable. The name of the variable is arbitrary. However, it’s usually a good idea to give the variable a name you can remember and has some connection to what you wish to use the variable for. In this introduction to variables, we will create a simple program that counts to 10. Therefore, we will name our variable `count`. Once you have created a variable, a block with that name will be created under the `variables` menu.
 
-![Step 1: select the category `variables`](images/programming-the-robot-496da0e0.png)
+![Step 1: select the category `variables`.](images/programming-the-robot-496da0e0.png)
 
 ![Step 2: Click `make a variable`.](images/programming-the-robot-4703540e.png)
 

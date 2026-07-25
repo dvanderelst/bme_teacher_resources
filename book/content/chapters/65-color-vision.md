@@ -257,7 +257,7 @@ If students start writing their program from scratch instead of starting from th
 
 ![Add the color sensor extension to enable the blocks required to read the color sensor.](images/color-vision-lesson-plan-d48c279e.png)
 
-![A new category of](images/color-vision-lesson-plan-c06b5690.png)
+![Adding a new category of blocks.](images/color-vision-lesson-plan-c06b5690.png)
 
 [Open the mBlock project](https://planet.mblock.cc/project/3954308) — or [download `color_vision_motion.mblock` directly](https://drive.google.com/file/d/1kIi6T0hHREPmvZpEvC-I0OGfBcrrUTfW/view?usp=sharing) if your school blocks the Makeblock site.
 

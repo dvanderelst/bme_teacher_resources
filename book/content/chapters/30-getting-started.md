@@ -65,7 +65,7 @@ When you start creating programs from scratch, you must add the robot to mBlock 
 
 Look at the `Devices` area in mBlock. If the mBot is not listed in this area (like in the left image below), you must first add it. To do so, click the `Add (+)` button in the window's device area (left bottom corner. See also image below). This will allow you to select multiple devices (See image below). In the window listing the devices, select mBot (**not mBot2**) and click `OK`. The mBot has now been added (see the right image below).
 
-![Click this button to add the robot to mBlock](images/getting-started-draft-c19638ac.png)
+![Click this button to add the robot to mBlock.](images/getting-started-draft-c19638ac.png)
 
 ![The devices area before adding the mBot.](images/getting-started-draft-bcbd96a0.png)
 
@@ -161,7 +161,7 @@ Below is a screenshot of mBlock running locally on Windows. Note that the mBot h
 
 ## Uploading a program to the robot
 
-Most of our programs run in Live mode, so you will not normally need this. The exception is the Color Vision lesson, whose programs have to be uploaded because the colour sensor does not work in Live mode.
+Most of our programs run in Live mode, so you will not normally need this. The exception is the Color Vision lesson, whose programs have to be uploaded because the color sensor does not work in Live mode.
 
 1. Make sure the program starts with the `when mBot (mcore) starts up` block rather than `when flag clicked`. An uploaded program runs when the robot is switched on, so it needs that starting block.
 2. Use the toggle to switch mBlock to `Upload` mode.
