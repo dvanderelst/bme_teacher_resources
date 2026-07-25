@@ -1,6 +1,5 @@
 # Sound Localization
 
-
 ## Required materials
 
 | Item | Description |
@@ -69,7 +68,7 @@ Engage students by asking for a volunteer to sit blindfolded in the middle of th
 
 ## Activity: pinnae design
 
-In this activity, students will create and test their own artificial pinnae (ears) to see whether these can increase the cues available for sound localization. 
+In this activity, students will create and test their own artificial pinnae (ears) to see whether these can increase the cues available for sound localization.
 
 [Testing artificial pinnae](#testing-artificial-pinnae)
 
@@ -117,7 +116,7 @@ This figure shows the sensitivity of the left ear (for a given frequency) as a f
 >
 > The take-home message of this section is that the robot does not detect sounds that are longer than about 1 second. The robot detects only the onset (and offset) of sound. This explains why a pulsed sound is provided below for robotic activities. If you were to use a constant sound, the robot would be functionally insensitive to it.
 
-For the technically inclined, there is a fourth way our ears differ from the microphones used by the robot. The electronic components processing the microphone input make the robot sensitive to short bursts of sound. In contrast, the robot cannot detect long sounds, no matter how loud they are. 
+For the technically inclined, there is a fourth way our ears differ from the microphones used by the robot. The electronic components processing the microphone input make the robot sensitive to short bursts of sound. In contrast, the robot cannot detect long sounds, no matter how loud they are.
 
 When observing the Makeblock sound sensor, it should be evident that the microphone is the round black disk on the sensor board. However, you will notice that the board contains many other (tiny) electronic components. These primarily increase (amplify) the microphone's signal before sending it to the robot. However, these electronic components also do something else: they filter the signal from the microphone so it is high for short, loud bursts of sound. Almost no signal is transmitted to the robot during long bursts of sound.
 
@@ -148,18 +147,16 @@ In this robotic activity, students will create a robot that performs phonotaxis.
 Below, we list two questions you can use to assess students’ comprehension.
 
 > Question 1: How does creating ‘ears’ on the robot increase the robot’s ability to respond to sound?  Support your reasoning using data from the graph.
-> 
+>
 
 Answer: The variability of each ear has increased. For example, for the right ear, the measurements vary from about 400 to 150, a range of 250. In the previous graph, the right ear data range was less than 50. This increased variability is good: it means the microphone's output varies more with the angle to the sound source. This increased directionality should make sound localization easier (or more reliable).
 
 > Question 2: Does angle placement of the ears on the robot increase or decrease the ability to locate sound?  Support your reasoning using data from the graph.
-> 
+>
 
 Answer: At angle zero, we would expect the left and right ears to return about the same value. However, this is not the case. The left ear returns a larger value than the right one. This is due to the microphone sensitivity difference we observed earlier – a technical difference between the microphones at the time of manufacture. We will correct this difference.
 
-
 ## Testing artificial pinnae
-
 
 ### Introduction
 
@@ -203,13 +200,11 @@ For this activity, students should download a sound snippet. The link is provide
 
 [https://docs.google.com/document/d/1V8dXweQiOUJKbkWrg74FiriQjNVoPsODYCXSUl_M6s8/edit?usp=drive_web](https://docs.google.com/document/d/1V8dXweQiOUJKbkWrg74FiriQjNVoPsODYCXSUl_M6s8/edit?usp=drive_web)
 
-
 ## Robot phonotaxis
-
 
 This activity aims to create a robot that follows a sound source. Use the sound file provided on a phone or portable speaker. When the sound source is held close (~50 cm) to the robot, the robot should turn towards the sound and approach it. The robot will do this by comparing the sound intensity between the left and right microphones. If the sound strength at the left receiver is greater than at the right, we will turn left, and vice versa. This is a form of phonotaxis.
 
-In principle, the robot should be able to approach a sound source placed somewhere in the environment. However, as discussed earlier, the microphones are not very sensitive, so the robot might not be able to approach distant sound sources. 
+In principle, the robot should be able to approach a sound source placed somewhere in the environment. However, as discussed earlier, the microphones are not very sensitive, so the robot might not be able to approach distant sound sources.
 
 > **Note**
 >
@@ -231,7 +226,7 @@ In principle, the robot should be able to approach a sound source placed somewhe
 
 If we wish to find the sound by comparing the intensities at both receivers, the left microphone must be more sensitive than the right one for sound coming from the left. However, this is not necessarily so. Remember, we discussed the properties of the microphones and compared them with our ears? We said the microphones are almost omnidirectional (but not entirely). Therefore, they pick up sound almost equally well from all directions. In fact, they might be so omnidirectional that a sound at the left of the robot stimulates the left and the right microphones equally. In this case, the robot could not tell whether to turn left or right.
 
-In the first step of this activity, students will measure the microphones' directionality. For this activity, we will provide the robot with two microphone sensors. Sensors can be mounted, as seen in the images below. 
+In the first step of this activity, students will measure the microphones' directionality. For this activity, we will provide the robot with two microphone sensors. Sensors can be mounted, as seen in the images below.
 
 > **Note**
 >
@@ -337,9 +332,7 @@ The example program does the following:
 
 This approach to sound localization results in a jittery path: the robot stops, measures, rotates, and moves. However, this approach gives the robot enough time to collect data (sound). Moreover, many animals adopt the same stopping-moving strategy when approaching sound sources. Even humans "stop to listen" when looking for their ringing phone. Biology and engineering use similar strategies!
 
-
 ## Adding the sound sensor extension
-
 
 ### Step 1: Add the mBot to mBlock
 

@@ -1,6 +1,5 @@
 # Color Vision
 
-
 ## Materials
 
 | Item | Description |
@@ -43,7 +42,7 @@ The national and state educational standards applicable to this lesson are liste
 
 Sensory biology as a field of study is concerned with how organisms obtain information about their environment. Specifically, how sense organs transduce energy from external stimuli to neural electrical signals. This unit examines the sense of color vision. Many animals have evolved color vision, which is the ability to discriminate between things based solely on the wavelengths of light they either emit or reflect. The mechanisms underlying color vision are well understood. Studies across organisms have led to a rich understanding of how animals vary in color perception ability and its importance in their daily behavior (Cronin et al., 2014). There are many examples of color used to evoke desired behaviors, such as human-made media advertisements that use color to get consumer attention and the development of artificial lures colored to attract different species of fish. The biological principles behind the detection of color have also been applied to engineering problems. For example, color sensors are used to check the colors of products in factories, allowing products to be automatically sorted and assessed for their type or quality.
 
-This challenge-based unit aims to introduce students to the biological principles underlying color vision in animals and use engineering design to reinforce the principles learned. The unit also demonstrates to students how the working principles of color vision can be applied to autonomous robots. Groups of students participate in two activities that build foundational knowledge of how humans perceive color and how robots discriminate color to meet their engineering challenges. 
+This challenge-based unit aims to introduce students to the biological principles underlying color vision in animals and use engineering design to reinforce the principles learned. The unit also demonstrates to students how the working principles of color vision can be applied to autonomous robots. Groups of students participate in two activities that build foundational knowledge of how humans perceive color and how robots discriminate color to meet their engineering challenges.
 
 - Part 1: Color discrimination game. In this activity, student groups participate in a computer game where each member wears goggles transmitting distinct wavelengths of light (red, blue, or green). This setup mimics the functioning of human cone cells. By wearing these goggles, students act as proxies for the cone cells of the human eye, each perceiving a different color range. Together, they collaborate to discern the color of objects in the game, simulating how the human eye perceives color through combined signals from different cone cells. The goal is for the students to collectively determine and agree upon the color of the objects they see based on their filtered perspectives.
 - Part 2: Robot color discrimination. In this activity, student groups learn to program a robot that navigates a colored path using light sensors. The light sensor operates similarly to the human eye, with different detectors registering varying amounts of light wavelengths to determine color. The task involves programming the robot to follow a bicolored paper path using a color sensor. **This sensor, resembling the human eye, includes three light detectors for red, green, and blue light**, enabling the robot to stay centered on the path based on the color readings it receives.
@@ -64,13 +63,13 @@ However, for an organism to have color vision, it is not sufficient to be sensit
 
 > **Note**
 >
-> Here is another easily accessible intro to color vision: 
+> Here is another easily accessible intro to color vision:
 >
 > [How color vision happens in the eye (Medium)](https://medium.com/age-of-awareness/red-light-green-light-yellow-light-heres-how-it-happens-in-the-eye-and-how-to-teach-it-4e0c4bb96b8)
 
 ## Activity: color discrimination game
 
-For this game, students work in groups of at least three. At least one person in a group should wear goggles with red filters, another with blue filters, and another with green filters. It is okay for more than one person to wear filters of a particular color. The filters in the goggles are important to the success of this activity. At the time of writing, the following three filters are used to create the goggles: 
+For this game, students work in groups of at least three. At least one person in a group should wear goggles with red filters, another with blue filters, and another with green filters. It is okay for more than one person to wear filters of a particular color. The filters in the goggles are important to the success of this activity. At the time of writing, the following three filters are used to create the goggles:
 
 - Rosco E-Colour+ #736 Twickenham Green
 - Rosco E-Colour+ #106 Primary Red
@@ -100,7 +99,7 @@ They should notice that a single color “channel” is not sufficient to distin
 
 After students have been allowed to explore how different colors look through their goggles, they can be asked to identify the color in the large rectangle without looking at the label shown. The pull-down menu at the top of the screen (or the up/down arrows on the keyboard) changes the rectangle's color. After the students are proficient at identifying primary colors (red, green, blue), they examine secondary colors (cyan, yellow, and magenta). These are created simply by mixing two of the primary colors. Therefore, they will be seen by two out of the three students as bright, and by the third as dark.
 
-The table below is a key that relates the pattern of what the three students see – bright (+) or dark (-) – to the actual color of the rectangle on the screen. 
+The table below is a key that relates the pattern of what the three students see – bright (+) or dark (-) – to the actual color of the rectangle on the screen.
 
 ![](images/color-vision-lesson-plan-f1a76c67.png)
 
@@ -110,9 +109,9 @@ https://docs.google.com/document/d/13XWyNWr7AakKWV4G2NTxmmAAdFU6aDXkLBcIz2Qe-0c/
 
 ### Competitive Game
 
-After student groups practice identifying colors in the training program, they are asked to run a competitive version of the color discrimination game to reinforce the concepts learned and foster collaborative interaction. While wearing their goggles, groups open the software. They then see nine boxes of different primary or secondary colors. Above those boxes is a word indicating the color of the corresponding box. All boxes of that color must be selected, and the group’s score is determined by the time needed to identify all appropriately colored boxes. 
+After student groups practice identifying colors in the training program, they are asked to run a competitive version of the color discrimination game to reinforce the concepts learned and foster collaborative interaction. While wearing their goggles, groups open the software. They then see nine boxes of different primary or secondary colors. Above those boxes is a word indicating the color of the corresponding box. All boxes of that color must be selected, and the group’s score is determined by the time needed to identify all appropriately colored boxes.
 
-The game offers three difficulty levels: Easy, Medium, and Hard. Each level determines the time limit for correctly identifying colors on each screen. As the difficulty increases, the time allowed decreases, challenging players to make faster decisions. Players earn points based on their speed and accuracy. 
+The game offers three difficulty levels: Easy, Medium, and Hard. Each level determines the time limit for correctly identifying colors on each screen. As the difficulty increases, the time allowed decreases, challenging players to make faster decisions. Players earn points based on their speed and accuracy.
 
 The game has ten rounds. Each round starts at 100 points, and the points tick down as an audible clock counts off — so the faster the group selects all the correct boxes, the more of the 100 points it keeps for that round. Selecting an incorrectly colored box costs 10 points and speeds up the clock, so mistakes are penalized twice over. The total across the ten rounds is then multiplied by a difficulty factor (Easy ×1.0, Medium ×1.5, Hard ×2.0) to give the final score.
 
@@ -130,7 +129,7 @@ The image below shows the game's final screen, where students enter a team name 
 
 ### Introduction
 
-Explain to students that their task is to program a robot to follow a bicolored path constructed of paper, using a color sensor to keep the robot in the middle of the path. The task is illustrated in the figure below. 
+Explain to students that their task is to program a robot to follow a bicolored path constructed of paper, using a color sensor to keep the robot in the middle of the path. The task is illustrated in the figure below.
 
 Students will create a path of two different colors of paper (red and green in the example below). Next, they will program the robot to stay in the middle of the path. This can be done by programming the robot to turn left or right, depending on which color the color sensor detects. In the example below, the robot should turn right if the sensor detects green and left if the sensor detects the red paper.
 
@@ -140,7 +139,7 @@ Students will create a path of two different colors of paper (red and green in t
 
 Students can find detailed [information on the operation of the color sensor](https://www.mouser.co.uk/datasheet/2/348/bh1745nuc-e-519994.pdf) online. However, in brief, the Me color sensor consists of three different light detectors registering the amount of red, green, and blue light. As we know, this information can be used to discriminate colors and recognize which color the paper under the robot is.
 
-Give students time to install the color sensor instead of the Line follower sensor depicted in the generic instructions. Students should not over-tighten the screws when installing the color sensor because the caster wheel rests on some of the electronic components on the sensor board. This may cause the wheel not to move or the electronic component to get damaged. See below for images of the color sensor installed on the robot. 
+Give students time to install the color sensor instead of the Line follower sensor depicted in the generic instructions. Students should not over-tighten the screws when installing the color sensor because the caster wheel rests on some of the electronic components on the sensor board. This may cause the wheel not to move or the electronic component to get damaged. See below for images of the color sensor installed on the robot.
 
 ![](images/color-vision-lesson-plan-a15b7f94.jpg)
 
@@ -150,7 +149,7 @@ Students also construct a bicolored path using colored paper and tape so that ea
 
 ### Procedure
 
-The color sensor can only be used in the so-called `Upload` mode. This means programs must be uploaded to the robot using a USB cable. We can then disconnect the cable, and the robot is entirely autonomous. From then on, every time we switch on the robot, it will run the uploaded program without communication with your computer. More information about the different modes the robot can operate in is [available here](#getting-started-with-the-robot). 
+The color sensor can only be used in the so-called `Upload` mode. This means programs must be uploaded to the robot using a USB cable. We can then disconnect the cable, and the robot is entirely autonomous. From then on, every time we switch on the robot, it will run the uploaded program without communication with your computer. More information about the different modes the robot can operate in is [available here](#getting-started-with-the-robot).
 
 The fact that the sensor can only be used in `Upload` mode makes programming the robot harder. The main issue is that one cannot observe sensor values while our program runs and the robot is not connected using a USB cable. This makes it challenging to pick the correct sensor values to respond to.
 
@@ -169,10 +168,9 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 > Ensure the color sensor is connected to port 2 on the robot.
 
 1. Open the program in mBlock on your computer or online.
-    
+
     [Open the mBlock project](https://planet.mblock.cc/project/3954097) — or [download `color_vision_communication.mblock` directly](https://drive.google.com/file/d/1HsO5T4I7fSO7VC-iYbI_eH1SbMnlvQkI/view?usp=sharing) if your school blocks the Makeblock site.
-    
-    
+
 > **Tip**
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
@@ -181,13 +179,12 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 >
 >     See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
 
-    
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This will show the robot's code. Do not unplug the cable during this part of the activity.
-    
+
     ![Make sure you select the mBot under the Devices tab to see the code for the robot.](images/color-vision-lesson-plan-a5e7ceb3.png)
-    
+
     Make sure you select the mBot under the Devices tab to see the code for the robot.
-    
+
 3. Connect to the robot using the USB cable. see [Getting started with the robot](#getting-started-with-the-robot) for instructions on connecting over the USB cable.
 4. Upload the code to the robot by selecting the `Upload` mode and clicking `Upload code`.
 
@@ -211,7 +208,7 @@ Students can now observe how the values for the red, green, and blue light chang
 
 The aim is to observe how the sensor readings change as the robot moves from one color of paper to the other color (here, green to red). Below, we include some measurements collected using the setup depicted in the images above. We have also included a column that shows the difference between the red and green values.
 
-Here is a link to a [Google Sheets document](https://docs.google.com/spreadsheets/d/1frBjPa5mE7UsAW0t1LLKr9oEFSrDW9Je9eHolUvAf_I/edit?usp=sharing) to simplify recording and graphing the data. 
+Here is a link to a [Google Sheets document](https://docs.google.com/spreadsheets/d/1frBjPa5mE7UsAW0t1LLKr9oEFSrDW9Je9eHolUvAf_I/edit?usp=sharing) to simplify recording and graphing the data.
 
 | Marker | Position | Red | Green | Blue | Red – Green |
 | --- | --- | --- | --- | --- | --- |
@@ -282,14 +279,12 @@ Several extensions to the lesson plan can be made:
 
 1. The track's end and start can be constructed of a third color. When the robot detects this color, it can be programmed to turn 180 degrees to return to the other end of the path.
 2. The white LEDs on the me color sensor can be switched off. Remember, the LEDs deliver a uniform fixed and broad-spectrum light onto the floor, making the sensor’s ability to color discriminate easier. But, consider a real-life scenario where a robot tries to detect whether the floor underneath it is red or yellow, but the light in the environment is variable or suboptimal. If the lighting is poor, the overhead lamps might not emit sufficient yellow light, so the light reflecting from the floor will contain little yellow light. The sensor will have difficulty discriminating yellow from red. The following block can be used to switch off the white LEDs.
-    
+
     ![](images/color-vision-lesson-plan-5972c66e.png)
-    
+
 3. Altering the colors in the path to include secondary colors such as cyan, yellow, and/or magenta.
 
-
 ## Adding color sensor extension
-
 
 ### Step 1: Add the mBot to mBlock
 

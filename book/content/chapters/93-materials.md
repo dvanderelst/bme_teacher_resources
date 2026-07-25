@@ -1,7 +1,6 @@
 # Required materials
 
-
-Below, we list the materials required for each lesson plan and the quantity required per student (or group of students). Numbers smaller than one mean that groups can share the materials. 
+Below, we list the materials required for each lesson plan and the quantity required per student (or group of students). Numbers smaller than one mean that groups can share the materials.
 
 | Item | Description |
 | :--- | :--- |

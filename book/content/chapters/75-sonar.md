@@ -1,6 +1,5 @@
 # Sonar
 
-
 ## Materials
 
 | Item | Description |
@@ -28,8 +27,7 @@ Student knowledge: High school Biology and Algebra 2 or equivalent.
 
 ## Investigating / Essential Questions
 
-What limitations do human-made sensors have compared to the ability of
-echolocating animals?
+What limitations do human-made sensors have compared to the ability of echolocating animals?
 
 ## Educational Standards
 
@@ -96,8 +94,7 @@ Most bats belonging to the suborder Microchiroptera are capable of echolocation.
 
 Megabats, which include fruit bats and flying foxes, generally do not use echolocation to navigate or hunt for food. Instead, they rely primarily on their excellent eyesight and sense of smell.
 
-Megabats have large eyes and well-developed visual centers in their brains, which help them find food (fruits, nectar, or pollen) and navigate through forests or open spaces during nighttime.
-Megabats include the Fruit Bat (Family Pteropodidae) and Flying Foxes (Genus Pteropus), predominantly found in tropical and subtropical regions of Africa, Asia, Australia, and the Pacific Islands.
+Megabats have large eyes and well-developed visual centers in their brains, which help them find food (fruits, nectar, or pollen) and navigate through forests or open spaces during nighttime. Megabats include the Fruit Bat (Family Pteropodidae) and Flying Foxes (Genus Pteropus), predominantly found in tropical and subtropical regions of Africa, Asia, Australia, and the Pacific Islands.
 
 ![](images/sonar-lesson-plan-c31a35a4.jpg)
 
@@ -229,9 +226,7 @@ Click the link below to access the sonar cane building instructions.
 
 [Sonar cane](#sonar-cane)
 
-
 ## Activity 1 Measuring the sonar’s directivity
-
 
 In this activity, students will create a graph (on the floor) to understand what a single sonar sensor can be expected to detect.
 
@@ -253,8 +248,7 @@ Open the Sonar Directionality Program in mBlock 5 from the link below and connec
 >
 > See [Step 1: Open the example program](#running-your-first-program) for an example and more instructions.
 
-The program is straightforward: It continuously measures the distance from the sonar and checks whether the returned value is smaller than 400 cm. If nothing is detected, the sensor returns a value of 400 cm. If the sensor detects something, the green LEDs on the robot are switched on.
-If nothing is detected, the red LEDs are switched on. Therefore, the robot’s color should indicate whether the sonar picks up an echo.
+The program is straightforward: It continuously measures the distance from the sonar and checks whether the returned value is smaller than 400 cm. If nothing is detected, the sensor returns a value of 400 cm. If the sensor detects something, the green LEDs on the robot are switched on. If nothing is detected, the red LEDs are switched on. Therefore, the robot’s color should indicate whether the sonar picks up an echo.
 
 To measure the region in which the robot can detect an obstacle, place the robot in a large open space (see image below). Next, move an obstacle in front of the robot (in this case, a black pole) to find the largest distance at which the object is detected (the robot turns green) for several directions. While doing this, ensure that the robot is not picking up echoes from your body. In all likelihood, your body will be a larger object than the one you use to assess the sonar’s reach.
 
@@ -269,12 +263,9 @@ You could repeat the measurements with different objects and compare the resulti
 - What is your robot's maximum detection distance?
 - Is the sensor’s directionality symmetric?
 
-
 ## Activity 2 Acoustic mirrors
 
-
-The previous activity revealed that the sonar sensor's range is limited. To use the sonar effectively, especially indoors, we must understand a second limitation.
-In contrast to natural environments, indoor environments contain many smooth surfaces, which can be a problem for sonar. If the sonar pulse strikes a smooth surface at an angle, much of the sound will be reflected away from the receiver instead of towards it. This might result in the sonar sensor not detecting large smooth surfaces. This is called the acoustic mirror effect.
+The previous activity revealed that the sonar sensor's range is limited. To use the sonar effectively, especially indoors, we must understand a second limitation. In contrast to natural environments, indoor environments contain many smooth surfaces, which can be a problem for sonar. If the sonar pulse strikes a smooth surface at an angle, much of the sound will be reflected away from the receiver instead of towards it. This might result in the sonar sensor not detecting large smooth surfaces. This is called the acoustic mirror effect.
 
 This effect can be observed by pointing the robot to a smooth surface (like a wall) while the program used in [Activity 1](#activity-1-measuring-the-sonars-directivity) is running:
 
@@ -294,9 +285,7 @@ This effect can be observed by pointing the robot to a smooth surface (like a wa
 
 ![Left: the robot is pointed straight at a smooth, flat wall. The sonar sensor has no problem detecting the wall and turns green. Right: The robot is pointed at the wall from an angle. Due to the acoustic mirror effect, the robot does not detect the wall.](images/activity-2-acoustic-mirrors-3936ab65.png)
 
-
 ## Robot obstacle avoidance
-
 
 ### Preparing the robot
 
@@ -357,8 +346,7 @@ The red blocks in the program above are defined in the image below.
 
 ### Running the program
 
-When students run the program, the robot should move forward as long as it is far away from obstacles. It should turn on the spot when close to them. Depending on where the robot is tested, students might notice that the robot seems blind to some obstacles. This happens when the obstacles have a small surface area. These return weak echoes and might go undetected. They might also see the mirror effect coming into play. When approaching a smooth wall or other surfaces under an oblique angle, the robot happily drives into the obstacle as no strong echoes return.
-Therefore, it might be worthwhile to construct an arena for the robot populated with obstacles the sensors should be able to detect. A circular arena of children’s toys has been built in the example below. These objects consist of multiple surfaces oriented in many different directions. This makes them very likely to return echoes the robot can pick up.
+When students run the program, the robot should move forward as long as it is far away from obstacles. It should turn on the spot when close to them. Depending on where the robot is tested, students might notice that the robot seems blind to some obstacles. This happens when the obstacles have a small surface area. These return weak echoes and might go undetected. They might also see the mirror effect coming into play. When approaching a smooth wall or other surfaces under an oblique angle, the robot happily drives into the obstacle as no strong echoes return. Therefore, it might be worthwhile to construct an arena for the robot populated with obstacles the sensors should be able to detect. A circular arena of children’s toys has been built in the example below. These objects consist of multiple surfaces oriented in many different directions. This makes them very likely to return echoes the robot can pick up.
 
 Plastic drinking cups could also be used to build an arena. If drinking cups are used, make sure they are tall enough to reach the level of the robot's sensors. If not, the sonar sensor might literally overlook the cups.
 
@@ -368,9 +356,7 @@ The acoustic complexity of the toy arena can be appreciated by looking at a reco
 
 ![One recorded echo as perceived by the robot. The marked part is the robot’s emission. The remainder of the signal consists of echoes returned from the many surfaces in the arena depicted on the left.](images/robot-obstacle-avoidance-6a79cb0c.png)
 
-
 ## Sonar cane
-
 
 Several inventors and companies have designed sonar-enabled canes for visually impaired people. The general idea of these devices is to use a sonar sensor (or multiple sensors) to detect obstacles in the user's path. The distance picked up by the sensors is then conveyed to the user by employing non-visual cues.
 
@@ -442,7 +428,7 @@ The program continuously measures the distance recorded by a sonar sensor, [appl
 
 ![](images/sonar-cane-894677a6.png)
 
-The distance (variable `distance`) is then used to set the duration of a beep. Smaller distances result in longer beeps, while higher distances result in shorter beeps. In equation form, the value `b` (in seconds) is determined as follows: 
+The distance (variable `distance`) is then used to set the duration of a beep. Smaller distances result in longer beeps, while higher distances result in shorter beeps. In equation form, the value `b` (in seconds) is determined as follows:
 
 $$
 \begin{aligned}

@@ -1,6 +1,5 @@
 # Kinesis and Taxis
 
-
 ## Materials
 
 | Item | Description |
@@ -47,8 +46,7 @@ For more information, consult the following primer for teachers:
 
 > **Note**
 >
-> **Definitions**
-> Kinesis: un-directed movement consisting of rotational ‘tumbles’ and linear ‘runs,’ in which the frequency of tumbles, or the speed (or distance) of runs, depending on the intensity of the stimulus. It is simpler/basic than Taxis but requires fewer sensory and brain resources. Examples include pill bugs (a.k.a. woodlouse, roly-poly), which alter speed at different temperatures, and flatworms (like planarians), which alter turn frequency in response to light levels.
+> **Definitions** Kinesis: un-directed movement consisting of rotational ‘tumbles’ and linear ‘runs,’ in which the frequency of tumbles, or the speed (or distance) of runs, depending on the intensity of the stimulus. It is simpler/basic than Taxis but requires fewer sensory and brain resources. Examples include pill bugs (a.k.a. woodlouse, roly-poly), which alter speed at different temperatures, and flatworms (like planarians), which alter turn frequency in response to light levels.
 >
 > Taxis: directed movement either toward or away from the source of stimulation. Examples include virtually all guided behavior by animals.
 
@@ -83,7 +81,7 @@ The first set of three exercises demonstrates the nature of motion by **Kinesis*
 Students will determine whether their data supports the following hypothesis:
 
 > *Hypothesis:* Adding intensity-dependent behavior (i.e, varying **Run** distance with stimulus intensity a.k.a. orthokinesis), decreases the number of **Runs** required to reach the goal, i.e. goal will be reached more quickly under Condition 2 than under Condition 1.
-> 
+>
 
 Before students collect data, you can take a poll to determine whether they think condition 2 or 3 will be more effective. Next, they can use the following linked document with instructions and the grids file to run through the three conditions (Kinesis without sensors, Orthokinesis, and Orthokinesis in reverse).
 
@@ -100,9 +98,8 @@ The second set of three exercises demonstrates the nature of motion by **Taxis**
 Students will determine whether their data supports these hypotheses:
 
 > Hypothesis A: The presence of a single sensor that measures successive stimulus intensities will lead to source localization.
-Hypothesis B: The presence of two sensors that measures simultaneous, bilateral stimulus intensities will lead to faster source localization than a single sensor with memory.
-Hypothesis C: Widely spaced sensors will lead to faster source localization than narrowly spaced sensors.
-> 
+Hypothesis B: The presence of two sensors that measures simultaneous, bilateral stimulus intensities will lead to faster source localization than a single sensor with memory. Hypothesis C: Widely spaced sensors will lead to faster source localization than narrowly spaced sensors.
+>
 
 Students use the grids file linked above in combination with the following instructions.
 

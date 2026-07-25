@@ -1,6 +1,5 @@
 # Running your first program
 
-
 ## Introduction
 
 Once you have installed the mBlock software (or have learned how to run mBlock in a browser), you can try running a simple example program on the robot. This program can be used to check whether the connection between the computer and the robot is successful. If you can run this test program. you are ready to start exploring our tutorial on programming the robot or dive into the lesson plans.
@@ -17,7 +16,7 @@ Start by navigating to the test program on the mBlock website:
 
 [MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](https://drive.google.com/file/d/1XCEIlMv4KOro7h_ZQQajJ_j_5QhLtC34/view?usp=sharing) if your school blocks the Makeblock site.
 
-This should bring up the webpage shown in the screenshot below. 
+This should bring up the webpage shown in the screenshot below.
 
 ![](images/getting-started-draft-0e4e97c5.png)
 
@@ -25,7 +24,7 @@ Next, click on `Source Code`. This will show the program in the online version o
 
 ![](images/getting-started-draft-390bb096.png)
 
-You can run the program using this online version or download it to your computer. To download the program, use the file menu: `File > Save to your computer`. 
+You can run the program using this online version or download it to your computer. To download the program, use the file menu: `File > Save to your computer`.
 
 > **Tip**
 >
@@ -33,7 +32,7 @@ You can run the program using this online version or download it to your compute
 
 ## Step 2: Connect to the robot in Live mode
 
-Please see [here for instructions](#getting-started-with-the-robot) on connecting to the robot using the USB cable or wirelessly. If you have previously used `Upload` mode, you should reset the robot to `Live` mode by following [these instructions](#getting-started-with-the-robot). 
+Please see [here for instructions](#getting-started-with-the-robot) on connecting to the robot using the USB cable or wirelessly. If you have previously used `Upload` mode, you should reset the robot to `Live` mode by following [these instructions](#getting-started-with-the-robot).
 
 Once you have connected the robot, you can click the green flag on the left side of the screen to run the program. You can also stop the program by clicking the stop button next to the green flag.
 

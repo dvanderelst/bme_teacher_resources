@@ -1,6 +1,5 @@
 # Programming the robot
 
-
 > **Tip**
 >
 > This brief introduction to mBlock assumes you (and the students) have installed mBlock on the computer or have access to mBlock online. Please see [our guide on this topic here](#installing-mblock). We also assume you (and the students) understand how to connect to the robot. Our [guide on connecting to the robot can be found here](#getting-started-with-the-robot). We also assume that you (and the students) have successfully run a first test program to ensure the robot is connected to the computer. If not, [the guide can be found here](#running-your-first-program).
@@ -74,8 +73,7 @@ blocks to make the robot play tones.
 motor speeds. Blocks for reading additional sensors can be installed as extensions.
 5. Events: From this category, you will most likely only use the `when flag is clicked` block. This block indicates the start of a program.
 6. Control: This category consists of blocks that allow you to repeat parts of a program, execute
-part of the program depending on a condition (if ... then ...), or pause the program for a small
-amount of time.
+part of the program depending on a condition (if ... then ...), or pause the program for a small amount of time.
 7. Operators: This category contains some blocks allowing you to perform simple math and
 comparisons.
 8. Variables: This category contains the blocks keeping track of variables. For example, if you assign a sensor's output to a variable, you would find a block representing that variable here.
@@ -111,7 +109,7 @@ Before using a variable, you must define (or “make”) it. In mBlock, you can 
 
 ![Step 4: use the new blocks.](images/programming-the-robot-f6a631e9.png)
 
-Now, we can use our newly created variable in a simple program (that does not involve the robot but demonstrates the use of a variable). Even though the program does not use the robot’s sensors or motors, you will need to connect to the robot to run it (otherwise, the program will not run). 
+Now, we can use our newly created variable in a simple program (that does not involve the robot but demonstrates the use of a variable). Even though the program does not use the robot’s sensors or motors, you will need to connect to the robot to run it (otherwise, the program will not run).
 
 The program starts by setting the variable `count` to zero. Then, it increases the value of `count` by 1 before waiting a second and repeating this. Once the value of `count` is larger than 10, `count` is reset to zero.
 
@@ -134,7 +132,7 @@ The topics covered above should prepare the students to address the following ch
 ### Challenge 1: Blinking the LEDs
 
 > Challenge: Construct a program that switches on the onboard LEDs for a second and turns them off for a second.
-> 
+>
 
 In this challenge, students will construct a program to make the onboard LEDs of the robot blink. Blinking LEDs is a prevalent first example in tutorials about programming hardware. Here, we adhere to this tradition.  An example program is below.
 
@@ -145,7 +143,7 @@ The program below repeatedly sets the value of the onboard LEDs to red. Then, it
 ### Challenge: Reading a sensor
 
 > Challenge: Construct a program that briefly blinks the onboard LEDs when the onboard light sensor registers a value smaller than 500.
-> 
+>
 
 The robot has an onboard light intensity sensor. The sensor gives a value from 0 to 1000, depending on the light's intensity falling on the sensor. In this example, we will use this sensor to program the robot to do the following:
 
@@ -159,7 +157,7 @@ The program below is one solution to this challenge. The program starts by switc
 ### Challenge: Sound Detection
 
 > Challenge:  Construct a program that blinks the LEDs if the sound is louder than a set value. The duration of the LEDs' blink should depend on the loudness of the sound.
-> 
+>
 
 For this activity, we will connect a single sound sensor to the robot using a cable. An example of a robot equipped with a sound sensor is shown below.
 
@@ -200,7 +198,7 @@ With `min` set to 200. This program should respond to noise: louder noises resul
 The following programming challenge will use the motors. Using the sonar sensor, we will program the robot to maintain a fixed distance from an object. When starting the program, the robot will read the distance to the nearest object (detected by the sonar). Next, the robot will move forward if the distance increases and backward if the distance decreases.
 
 > Challenge: Program the robot to keep a fixed distance from an object in front of the sonar.
-> 
+>
 
 Below is an example of this challenge in action. The robot tries to maintain a fixed distance from the box. Moving the box back and forth causes the robot to move back and forth. We will use the blocks from the `action` category for this exercise. These blocks allow you to have the robot move forward or backward and turn. These blocks assume you have connected the motors to the correct motor ports (Left motor to M1 and Right motor to M2). If you notice the robot moving in the opposite direction you ask it to move, you have probably swapped the motor connectors. As always, there are different solutions. The program below is one possible solution.
 

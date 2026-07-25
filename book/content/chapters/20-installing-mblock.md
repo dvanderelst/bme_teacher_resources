@@ -1,6 +1,5 @@
 # Installing mBlock
 
-
 mBlock is the software used to write and run programs for the mBot. It is a block-based (Scratch-like) environment, so programs are built by dragging blocks rather than typing code.
 
 There are two ways to use it, and either works for all our lesson plans:
@@ -22,7 +21,7 @@ All downloads come from the same place: [mblock.cc/pages/downloads](https://mblo
 If you are running a class on mixed hardware, the browser route keeps everyone on the same screens.
 
 > Some school computers are locked down and will not allow either the mBlock installer or mLink to be installed. If that happens, you will need your school's IT staff to install it for you. It is worth checking this well before the first lesson.
-> 
+>
 
 ## Option A: Install mBlock on the computer
 
@@ -42,9 +41,9 @@ If you are running a class on mixed hardware, the browser route keeps everyone o
 2. Find the **mBlock PC version** section. There are **two** Mac downloads, and picking the wrong one is the most common problem on Mac:
     - **For Apple M1/M2 chips** — use this on any Mac with Apple Silicon, which means essentially every Mac sold since late 2020.
     - The standard Mac download — for older Intel Macs.
-    
+
     If you are unsure which you have, open the Apple menu and choose `About This Mac`. A chip named "Apple M1", "M2", "M3" or similar means Apple Silicon.
-    
+
 3. Run the downloaded installer and follow the prompts.
 
 **Mac requirement:** macOS 10.12 or later.
@@ -61,7 +60,7 @@ macOS may refuse to open the installer or the installed app because it was not d
 The browser version of mBlock cannot reach the robot on its own. A small program called **mLink** runs on the computer and bridges between the two. So this route is two steps: install mLink, then open the editor.
 
 > Use **Chrome**. The online editor is most reliable there, and on Linux mLink only works with Chrome and Chromium — not with other Chrome-based browsers.
-> 
+>
 
 ### Step 1: Install mLink
 

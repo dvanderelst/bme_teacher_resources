@@ -1,6 +1,5 @@
 # Educational standards
 
-
 [Educational standards: Color Vision](#educational-standards-color-vision)
 
 [Educational standards: Sonar](#educational-standards-sonar)
@@ -9,9 +8,7 @@
 
 [Educational standards: Sound Localization](#educational-standards-sound-localization)
 
-
 ## Educational standards Kinesis Taxis
-
 
 ### Next Generation Science Standards
 
@@ -58,8 +55,7 @@ Science and Engineering Practices:
 #### Ohio Science Standards
 
 - AP.LO.3 Homeostasis
-B.E.1 Mechanisms
-B.E.2: Speciation
+B.E.1 Mechanisms B.E.2: Speciation
 
 **Cognitive Demands for Science**
 
@@ -77,9 +73,7 @@ Requires students to provide accurate statements about scientifically valid fact
 
 #### Indiana Science Standards
 
-AP.1.3 Homeostasis
-B.5.3 Apply concepts of statistics and probability to support a claim that organisms with an advantageous heritable trait tend to increase in proportion to organisms lacking this trait.
-B.5.4 Evaluate evidence to explain the role of natural selection as an evolutionary mechanism that leads to the adaptation of species, and to support claims that changes in environmental conditions may result in: (1) increases in the number of individuals of some species, (2) the emergence of new species over time, and/or (3) the extinction of other species.
+AP.1.3 Homeostasis B.5.3 Apply concepts of statistics and probability to support a claim that organisms with an advantageous heritable trait tend to increase in proportion to organisms lacking this trait. B.5.4 Evaluate evidence to explain the role of natural selection as an evolutionary mechanism that leads to the adaptation of species, and to support claims that changes in environmental conditions may result in: (1) increases in the number of individuals of some species, (2) the emergence of new species over time, and/or (3) the extinction of other species.
 
 #### Science and Engineering Process Standards (SEPS)
 
@@ -98,9 +92,7 @@ B.5.4 Evaluate evidence to explain the role of natural selection as an evolution
 - S.10.LS.22 Apply concepts of statistics and probability to support explanations that organisms with an advantageous heritable trait tend to increase in proportion to organisms lacking in this trait.
 - S.10.LS.24 Evaluate the evidence supporting claims that changes in environmental conditions may result in: (1) increase in the number of individuals of some species, (2) the emergence of new species over time, and (3) the extinction of other species.
 
-
 ## Educational standards Color Vision
-
 
 ### Next Generation Science Standards
 
@@ -174,8 +166,7 @@ Requires students to provide accurate statements about scientifically valid fact
 
 #### Indiana Science Standards
 
-AP.1.3 Homeostasis (of the robot)
-AP.7.2 Function of the eye
+AP.1.3 Homeostasis (of the robot) AP.7.2 Function of the eye
 
 #### Science and Engineering Process Standards
 
@@ -194,9 +185,7 @@ AP.7.2 Function of the eye
 - S.HS.HAP.13 Apply the structure of the ear and eye to their function/dysfunction in relation to environmental perception.
 - S.HS.ETS.2 Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.
 
-
 ## Educational standards Sound Localization
-
 
 ### Next Generation Science Standards
 
@@ -301,9 +290,7 @@ AP.7.3 Special Senses
 - S.HS.HAP.13 Apply the structure of the ear and eye to their function/dysfunction in relation to environmental perception.
 - S.HS.ETS.2 Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.
 
-
 ## Educational standards Sonar
-
 
 ### Next Generation Science Standards
 

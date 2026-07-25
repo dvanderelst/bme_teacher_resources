@@ -1,6 +1,5 @@
 # Getting started with the robot
 
-
 ## Accessing mBlock
 
 This guide assumes you already have access to **mBlock**, the software used to program the robot — either running in your browser or installed on your computer. If you do not, work through Installing mBlock first, then come back here.
@@ -94,7 +93,7 @@ In Upload Mode, the program is stored directly on the mBot. The robot can run th
 
 **Switching from Upload to Live mode**
 
-Once you have used the Upload mode, reset the robot's firmware to use the Live mode again. Instructions on how to do this are given below: [Resetting the firmware](#getting-started-with-the-robot) 
+Once you have used the Upload mode, reset the robot's firmware to use the Live mode again. Instructions on how to do this are given below: [Resetting the firmware](#getting-started-with-the-robot)
 
 > **Why?**
 >
@@ -198,7 +197,7 @@ Start by navigating to the test program on the mBlock website:
 
 [MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](https://drive.google.com/file/d/1XCEIlMv4KOro7h_ZQQajJ_j_5QhLtC34/view?usp=sharing) if your school blocks the Makeblock site.
 
-This should bring up the webpage shown in the screenshot below. 
+This should bring up the webpage shown in the screenshot below.
 
 ![](images/getting-started-draft-0e4e97c5.png)
 
@@ -206,7 +205,7 @@ Next, click on `Source Code`. This will show the program in the online version o
 
 ![](images/getting-started-draft-390bb096.png)
 
-You can run the program using this online version or download it to your computer. To download the program, use the file menu: `File > Save to your computer`. 
+You can run the program using this online version or download it to your computer. To download the program, use the file menu: `File > Save to your computer`.
 
 > **Tip**
 >

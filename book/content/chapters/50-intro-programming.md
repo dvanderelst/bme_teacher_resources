@@ -1,6 +1,5 @@
 # Introduction to Programming
 
-
 ## Materials
 
 | Item | Description |
@@ -16,7 +15,7 @@ Programming is writing step-by-step instructions for a machine, such as a comput
 Before delving into programming the robot, explore the challenges programmers face through the following simple (made-up) example. Engage students with the scenario pictured below.
 
 > You are an engineer hired to program a mobile robot to reach the house's front door (indicated with an arrow) when the bell rings. The robot should be able to get to the front door from any location in the house.
-> 
+>
 
 ![This image depicts the layout of an imaginary building. The building is serviced by a robot, and we want to program it to answer the door when the doorbell rings.](images/introduction-to-programming-b71247e9.png)
 
@@ -53,7 +52,7 @@ This instruction tells the robot to jump to a different numbered instruction in 
 
 ![](images/introduction-to-programming-331392b1.jpg)
 
-This instruction tells the robot to pick up or drop the object (bread or cheese) at its current location. Students can tell the robot to drop or pick up by ticking the appropriate box. 
+This instruction tells the robot to pick up or drop the object (bread or cheese) at its current location. Students can tell the robot to drop or pick up by ticking the appropriate box.
 
 ![](images/introduction-to-programming-8dc64988.png)
 
@@ -94,7 +93,7 @@ Below, we have linked two files that allow printing instructions on slips, parti
 
 [Avery16154cheese_sandwich_back_windows.doc](files/Avery16154cheese_sandwich_back_windows.doc)
 
-Providing the students with printed strips allows them to “write” a program by placing and moving the slips around on their desks. Each student (group) should receive one set of printed instructions (i.e., a front and a back version of the strips). This should be sufficient to construct a program for making the robot build cheese sandwiches. Make it clear to students they are not expected to use all the slips. Only as many as they think they need. Give students sufficient time to try to construct a program that solves the problem. Encourage them to check each other's work. 
+Providing the students with printed strips allows them to “write” a program by placing and moving the slips around on their desks. Each student (group) should receive one set of printed instructions (i.e., a front and a back version of the strips). This should be sufficient to construct a program for making the robot build cheese sandwiches. Make it clear to students they are not expected to use all the slips. Only as many as they think they need. Give students sufficient time to try to construct a program that solves the problem. Encourage them to check each other's work.
 
 ### Possible Solution
 
