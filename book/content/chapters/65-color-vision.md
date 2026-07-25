@@ -175,7 +175,7 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
->     You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 

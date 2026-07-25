@@ -8,7 +8,9 @@ Once mBlock is working and you can connect to the robot, it is worth running a s
 
 ## Step 1: Open the example program
 
-Our lesson plans come with several example programs for the robot. We will run one of them here, so that the pattern is familiar when a lesson asks you to open another. All of them are published on the mBlock website, and all of them can be opened in the same two ways.
+Our lesson plans come with several example programs for the robot. We will run one of them here, so that the pattern is familiar when a lesson asks you to open another.
+
+We publish every program in two places: on the mBlock website, and as a file you can download from Google Drive. They are the same program — the download is there for schools whose network blocks the Makeblock site. Each lesson gives you both links, in the form you see just below.
 
 [MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](https://drive.google.com/file/d/1XCEIlMv4KOro7h_ZQQajJ_j_5QhLtC34/view?usp=sharing) if your school blocks the Makeblock site.
 
@@ -22,7 +24,7 @@ The two routes differ from here on.
 
 **From the downloaded file.** There is no project page on this route. Open mBlock, choose `File > Open from my computer`, and select the `.mblock` file you downloaded. The program opens straight away.
 
-Either way, you can keep your own copy with `File > Save to my computer`. That lets you open and edit it in a locally installed mBlock — Windows and Mac only, as Chromebooks have to use the online version.
+Either way, you can keep your own copy of the program. `File > Save to my computer` writes it out as an `.mblock` file, and `File > Open from my computer` opens it again later. Both work the same way in the browser and in the installed version, so a copy you save on one will open on the other.
 
 ## Step 2: Connect to the robot in Live mode
 

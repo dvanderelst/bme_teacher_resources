@@ -244,7 +244,7 @@ Open the Sonar Directionality Program in mBlock 5 from the link below and connec
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -275,7 +275,7 @@ This effect can be observed by pointing the robot to a smooth surface (like a wa
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -317,7 +317,7 @@ Students could be asked to design a program for the robot that allows it to avoi
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -420,7 +420,7 @@ We provide an example program. The program is linked and displayed below.
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
