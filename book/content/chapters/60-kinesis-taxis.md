@@ -36,13 +36,13 @@ On the other hand, taxis involve a directed movement toward (positive taxis) or 
 
 For more information, consult the following primer for teachers:
 
-[A Primer on fundamental types of animal spatial orientation and stimulus localization.docx](files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
+[Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
 
-[https://www.youtube.com/watch?v=jSKkecFzD50](https://www.youtube.com/watch?v=jSKkecFzD50)
+[AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
 
-[https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
+[Kinesis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
 
-[https://www.youtube.com/watch?v=n02SW9fs_VU](https://www.youtube.com/watch?v=n02SW9fs_VU)
+[Taxis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=n02SW9fs_VU)
 
 > **Note**
 >
@@ -52,7 +52,7 @@ For more information, consult the following primer for teachers:
 
 Show the video clip of a pill bug experiment below. Have students make observations and then write down what the students noticed and wondered. Ask students to identify the questions that are testable.  Highlight them as they are discussed. Also, highlight the words that students use to describe the movement of the pill bugs (random, faster, slower, etc.) to introduce some new vocabulary.  Tell students that they will be exploring an organism’s movement toward an attractive source through something like a game.  They will need to determine if the data produced defends the given hypothesis.
 
-[https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
+[Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
 
 ## Testing hypotheses about kinesis and taxis
 
@@ -60,7 +60,7 @@ In this lesson, students will test three different hypotheses using simulated da
 
 Students will use the following file, which provides the grids required for the activities.
 
-[Kinesis-Taxis grids.pptx](files/Kinesis-Taxis_grids.pptx)
+[Grids for the activities (.pptx)](files/Kinesis-Taxis_grids.pptx)
 
 IMPORTANT: The grid is NOT for discrete Blue Arrow placement; the Blue Arrow moves in arrow lengths and lies across the grid in whichever place and orientation it wants! The grid only indicates the location of the arrow’s tip.
 
@@ -68,7 +68,7 @@ IMPORTANT: The grid is NOT for discrete Blue Arrow placement; the Blue Arrow mov
 
 We also link an Excel file below that should make it easier for students to record their data.
 
-[Kinesis-Taxis data sheets.xlsx](files/Kinesis-Taxis_data_sheets.xlsx)
+[Data sheets for recording coordinates (.xlsx)](files/Kinesis-Taxis_data_sheets.xlsx)
 
 ### Activity 1:  Kinesis Under 3 Different Conditions
 
@@ -85,7 +85,7 @@ Students will determine whether their data supports the following hypothesis:
 
 Before students collect data, you can take a poll to determine whether they think condition 2 or 3 will be more effective. Next, they can use the following linked document with instructions and the grids file to run through the three conditions (Kinesis without sensors, Orthokinesis, and Orthokinesis in reverse).
 
-[Rules for Kinesis.docx](files/Rules_for_Kinesis.docx)
+[Rules for Kinesis, all three conditions (.docx)](files/Rules_for_Kinesis.docx)
 
 ### Activity 2: Taxis Under 3 Different Conditions
 
@@ -103,7 +103,7 @@ Hypothesis B: The presence of two sensors that measures simultaneous, bilateral 
 
 Students use the grids file linked above in combination with the following instructions.
 
-[Rules for Taxis.docx](files/Rules_for_Taxis.docx)
+[Rules for Taxis, all three conditions (.docx)](files/Rules_for_Taxis.docx)
 
 ## Student Assessment
 
@@ -116,16 +116,13 @@ You can use the following questions to assess students’ understanding:
 
 ## Example student data
 
-[Kinesis-Taxis all paths 2024.pptx](files/Kinesis-Taxis_all_paths_2024.pptx)
+[All student paths, 2024 (.pptx)](files/Kinesis-Taxis_all_paths_2024.pptx)
 
-[https://youtube.com/shorts/4uvJpsjLObI?feature=share](https://youtube.com/shorts/4uvJpsjLObI?feature=share)
+Six short clips of students working through the conditions, in the order the activities are presented above — the three kinesis conditions first, then the three taxis conditions.
 
-[https://youtube.com/shorts/_mVhKfe_RGE?feature=share](https://youtube.com/shorts/_mVhKfe_RGE?feature=share)
-
-[https://youtube.com/shorts/MlRwHJofd_g?feature=share](https://youtube.com/shorts/MlRwHJofd_g?feature=share)
-
-[https://youtu.be/BGXWkXicTWg](https://youtu.be/BGXWkXicTWg)
-
-[https://youtube.com/shorts/lPVNrK8Hsgw?feature=share](https://youtube.com/shorts/lPVNrK8Hsgw?feature=share)
-
-[https://youtube.com/shorts/m6It0r6OQFA?feature=share](https://youtube.com/shorts/m6It0r6OQFA?feature=share)
+- [Video: kinesis 1](https://youtu.be/BGXWkXicTWg)
+- [Video: kinesis 2](https://youtube.com/shorts/lPVNrK8Hsgw?feature=share)
+- [Video: kinesis 3](https://youtube.com/shorts/m6It0r6OQFA?feature=share)
+- [Video: taxis 1](https://youtube.com/shorts/4uvJpsjLObI?feature=share)
+- [Video: taxis 2](https://youtube.com/shorts/_mVhKfe_RGE?feature=share)
+- [Video: taxis 3](https://youtube.com/shorts/MlRwHJofd_g?feature=share)

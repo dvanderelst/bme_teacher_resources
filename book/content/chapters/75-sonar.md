@@ -58,13 +58,13 @@ During part two of the lesson, students will build a robot that uses two sensors
 
 ## Introduction to Sonar
 
-This part of the lesson plan introduces sonar in technology and animals. You can begin the lesson by showing the four short video clips below. The videos of sperm whales and bats below will introduce students to echolocation. We also include a video of a sonar-based parking sensor.
+This part of the lesson plan introduces sonar in technology and animals. You can begin the lesson by showing the three short video clips below. The videos of sperm whales and bats below will introduce students to echolocation. We also include a video of a sonar-based parking sensor.
 
-[https://www.youtube.com/watch?v=tw7E7owEBm8](https://www.youtube.com/watch?v=tw7E7owEBm8)
+[Feeling the Force of Sperm Whales Ultrasound — BBC Earth](https://www.youtube.com/watch?v=tw7E7owEBm8)
 
-[https://www.youtube.com/watch?v=MgRh_Q_xwys](https://www.youtube.com/watch?v=MgRh_Q_xwys)
+[Bat echolocating and capturing moths](https://www.youtube.com/watch?v=MgRh_Q_xwys)
 
-[https://www.youtube.com/watch?v=BGd38676nF0](https://www.youtube.com/watch?v=BGd38676nF0)
+[A sonar parking sensor: Toyota's enhanced parking support](https://www.youtube.com/watch?v=BGd38676nF0)
 
 ### The principle of sonar
 
@@ -118,7 +118,7 @@ Below, we provide two links providing information on echolocating birds and rode
 
 [Functional Convergence in Bat and Toothed Whale Biosonars | Physiology](https://doi.org/10.1152/physiol.00008.2013)
 
-[Echolocation_in_Insectivores_and_Rodents.pdf](files/Echolocation_in_Insectivores_and_Rodents.pdf)
+[Echolocation in insectivores and rodents (.pdf)](files/Echolocation_in_Insectivores_and_Rodents.pdf)
 
 ## Part 1: Understanding sonar
 

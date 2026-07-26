@@ -59,7 +59,7 @@ However, for an organism to have color vision, it is not sufficient to be sensit
 
 > **Note**
 >
-> There is a PhET simulation by the University of Colorado, Boulder that could be used to further student understanding. It can be found at this link: [https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html](https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html)
+> There is a PhET simulation by the University of Colorado, Boulder that could be used to further student understanding. It can be found here: [PhET Color Vision simulation](https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html)
 
 > **Note**
 >
