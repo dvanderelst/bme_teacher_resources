@@ -185,7 +185,7 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 
 1. Open the program in mBlock, in the browser or installed. Either link works, and [Step 1: Open the example program](#step-1-open-the-example-program) explains what to do with each.
 
-    [Open the mBlock project](https://planet.mblock.cc/project/3954097) — or [download `color_vision_communication.mblock` directly](files/programs/color_vision_communication.mblock) if your school blocks the Makeblock site.
+    [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](files/programs/color_vision_communication.mblock) instead.
 
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This will show the robot's code. Do not unplug the cable during this part of the activity.
 
@@ -261,7 +261,7 @@ Below, we link a program that implements the rule we have derived above. Student
 
 Students starting from scratch rather than from the example program will need to add the color sensor extension first, which is described in [Adding color sensor extension](#adding-color-sensor-extension) at the end of this chapter.
 
-[Open the mBlock project](https://planet.mblock.cc/project/3954308) — or [download `color_vision_motion.mblock` directly](files/programs/color_vision_motion.mblock) if your school blocks the Makeblock site.
+[Open the mBlock project](https://planet.mblock.cc/project/3954308). If your school blocks the Makeblock site, [download `color_vision_motion.mblock`](files/programs/color_vision_motion.mblock) instead.
 
 The program is shown below. The first blocks read the red, green, and blue values detected by the color sensor. The purple block sets the onboard lights to a color that mimics the color seen by the color sensor, which should help debug the program. Next, the robot is set to move forward at a slow speed. Immediately after this, we check the value of red-green. Depending on this result, the robot is turned left or right. See below for a video demonstrating the behavior of the robot.
 

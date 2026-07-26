@@ -6,7 +6,8 @@ title: "Biology Meets Engineering"
 # author on its own line in HTML.
 author:
   - "University of Cincinnati"
-  - "Colleges of Arts and Sciences and of Engineering, and the School of Education"
+  - "Colleges of Arts and Sciences and of Engineering,"
+  - "and the School of Education"
   - "[biologymeetsengineering.org](https://www.biologymeetsengineering.org)"
 # date/subtitle are injected by build.sh from git — do not set here
 lang: en-US

@@ -57,6 +57,15 @@
 % Allow breaks anywhere in a URL rather than letting it run into the margin.
 \usepackage{xurl}
 
+% --- lines that will not fit --------------------------------------------------
+% This document is full of things TeX cannot break: file names, block names such
+% as when_mBot_starts_up, standards codes, words like function/dysfunction. When
+% one lands near the end of a line, TeX would rather run into the margin than
+% loosen the spacing. \emergencystretch lets it make one further pass with more
+% give, which absorbs the small cases; the large ones have to be fixed in the
+% text. tools/check-overfull.sh reports whatever is left.
+\emergencystretch=4em
+
 % --- table of contents ------------------------------------------------------
 % report.cls sizes the number and page-number boxes for single digits. With ten
 % or more chapters this collides: "10Sonar", "8.10Adding color sensor

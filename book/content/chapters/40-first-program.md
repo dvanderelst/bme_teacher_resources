@@ -12,7 +12,7 @@ Our lesson plans come with several example programs for the robot. We will run o
 
 We publish every program in two places: on the mBlock website, and as a file in our own repository. They are the same program — the second copy is there for schools whose network blocks the Makeblock site. Each lesson gives you both links, in the form you see just below.
 
-[MyFirstProgram](https://planet.mblock.cc/project/3934903) — or [download `MyFirstProgram.mblock` directly](files/programs/MyFirstProgram.mblock) if your school blocks the Makeblock site.
+[Open the mBlock project](https://planet.mblock.cc/project/3934903). If your school blocks the Makeblock site, [download `MyFirstProgram.mblock`](files/programs/MyFirstProgram.mblock) instead.
 
 The two routes differ from here on.
 
