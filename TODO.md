@@ -14,6 +14,12 @@ Sources folded in: the materials review, the recovered Notion comment threads, t
 
 *Last updated: 2026-07-25*
 
+Section 4 was audited against the source on 25 July 2026 rather than trusted. Five entries in it had
+already been closed by earlier commits and were still listed as open; those now say so. Everything in
+section 4 that could be settled without hardware or a judgement call has been fixed, and each entry
+records what was done. What remains in section 4 is 4.1, 4.2's Q2, 4.3's "section B", 4.6, and the
+backlog items in 4.8.
+
 ---
 
 ## 1. Needs a robot
@@ -104,7 +110,9 @@ While measuring, note the ratio at 50 cm particularly. The programs turn at 30 c
 never been checked over the range where it is actually used.
 
 ### 1.8 Smaller confirmations
-- [ ] Colour sensor genuinely requires **port 2** (or is that just convention?)
+- [ ] Colour sensor genuinely requires **port 2** (or is that just convention?) — note that the
+      `set fill light LED to off` screenshot in *Color Vision* §Taking it further shows the block set
+      to **`port1`**, which is at least suggestive. See 4.7.
 - [ ] Onboard light sensor really returns **0–1000** (the challenge threshold of 500 depends on it)
 - [ ] Sound-sensor sensitivity dial: is "both to the same halfway position" still right, and does it
       interact with the `left_scale` calibration students derive later?
@@ -197,28 +205,58 @@ Chapter ordering is **my guess, not your judgement**. In particular: I put *Intr
 Programming* and *Programming the robot* before the three sensor lessons, and *Educational
 standards* as a reference chapter at the back rather than distributed per lesson.
 
-### 4.2 Sound Localization — the assessment answers don't match the questions
+### 4.2 Sound Localization — the assessment answer to Q2 doesn't match the question
 Question 2 asks whether ear *placement angle* affects localisation. The answer supplied instead
 discusses **left/right microphone sensitivity mismatch** — a different question, already covered in
-the phonotaxis section. And Q1's answer cites "the graph" and "the previous graph", which are not in
-that part of the chapter.
+the phonotaxis section. Writing the right answer needs your data on what ear angle actually does, so
+it is left for you.
 
-### 4.3 Kinesis and Taxis — a cluster of problems
-Your own backlog already says *"Revise Kinesis/Taxis lesson plan"*. Specifically:
+Q1 is dealt with: it cited "the graph" with no graph nearby, and now points at the two directionality
+measurements by figure number (the without-ears and with-ears plots, which gained ids for the
+purpose). Both resolve in the PDF.
 
-- Assessment Q2 refers to *"the protocol in section B"* — there is no section B
-- Q1 asks about *"these four mechanisms"*, never enumerated as four
-- The introduction promises **three** activities; the chapter delivers **two**
-- The definitions callout defines kinesis by *tumble frequency* — that's klinokinesis — and then the
-  activity correctly introduces orthokinesis. The two are conflated.
+While in there: the **assessment sits before the activities that generate its data** — Assessment
+Questions is §Assessment Questions, and the graphs it now cites are ~150 lines later under *Robot
+phonotaxis*. The cross-references carry page numbers so it works on paper, but you may prefer to move
+the assessment after the activities. That is an ordering call, so it belongs with 4.1.
 
-### 4.4 Color Vision — "three steps" that are two
-*"we will proceed in three steps"* — steps 2 and 3 restate the same thing, and the actual Step 2
-heading is "Interpreting the data".
+### 4.3 Kinesis and Taxis — one problem left of the four
+Your own backlog already says *"Revise Kinesis/Taxis lesson plan"*. Three of the four are fixed;
+the remaining one is genuinely yours.
 
-### 4.5 Sound Localization — "Sound localization cues" is still just a link
-A 2024 comment said *"Expand this with theory"* and was marked resolved, but the section is a bare
-bookmark with no prose. The assessment questions depend on this theory.
+**Still open:**
+
+- [ ] Assessment Q2 refers to *"the protocol in section B"* — **there is no section B, and never
+      was.** I extracted both handouts: `Rules for Kinesis.docx` and `Rules for Taxis.docx` are
+      organised as "Condition 1 / 2 / 3", with no lettered sections anywhere. Q2 asks whether the
+      protocol describes klinokinesis or klinotaxis, and the only protocol where that is a real
+      question is Taxis Condition 1 — but that handout is *titled* "Condition 1. Klinotaxis", so
+      simply repointing the question hands students the answer. That makes it a pedagogical choice,
+      not a reference repair: either rename the handout condition, or reword the question to describe
+      the protocol rather than cite it.
+
+**Fixed:**
+
+- Q1's *"these four mechanisms"* — the four are unambiguous once you read the handouts (kinesis
+  without sensors, orthokinesis, klinotaxis, tropotaxis: six conditions, four mechanisms). Both the
+  chapter introduction and Q1 itself now name them.
+- The introduction promised **three** activities and **three** hypotheses; the chapter delivers **two
+  activities of three conditions each**, and four hypotheses (one, plus A/B/C). The introduction now
+  describes what is actually there, and names the mechanism each condition demonstrates.
+- The definitions callout conflated klinokinesis and orthokinesis. It now gives both halves of the
+  definition their names and says which one the activities use. (It also had a grammar slip —
+  "depending on" for "depends on" — and an inverted "but" where "and" was meant.)
+
+### 4.4 Color Vision — "three steps" — fixed
+There really are three steps; the paragraph introducing them described the second and third as the
+same thing. It now matches the three headings that follow it (Inspecting the sensor values,
+Interpreting the data, Programming the robot).
+
+### 4.5 Sound Localization — "Sound localization cues" — already done
+This entry was stale. The section now names all three cues (interaural time difference, interaural
+level difference, and the outer ear's spectral colouring) before linking the *Physics Today* survey,
+and the Motivation exercise below it turns the horizontal/vertical distinction into a demonstration.
+Nothing to do.
 
 ### 4.6 The materials database is unmaintained for two lessons
 | Lesson | Items |
@@ -235,45 +273,75 @@ material list to make external pinnae"*. The Kinesis chapter's table currently l
 (Spinners) though the lesson also needs printed grids, the rules handouts and paper. Fixing the
 source CSV or the chapter directly both work — the chapter is now the source of truth.
 
-### 4.7 61 images still have no caption
-Your note asked whether the empty `![]()` was a markdown fault. It isn't — those images simply never
-had a caption in Notion, or had junk like `Screenshot 2024-10-28.png` that I stripped during the
-migration. You spotted the visible symptom yourself: an uncaptioned image is not a figure, so it gets
-neither centring nor a number, and nothing in the text can refer to it.
+### 4.7 Image captions — done
+Started at 111, and this entry still said 61. The real figure is now **zero**: every image in every
+chapter carries a caption. Sonar and Sound Localization did come out in the wash of their reviews, as
+predicted.
 
-Started at 111. Done: *Introduction to the robot*, *Getting started*, *Programming the robot* and
-*Color Vision*. Remaining, worst first:
+The last one was the `set fill light LED to off` block in *Color Vision* §Taking it further. Writing
+its caption turned up something worth keeping: **the block in that screenshot reads `port1`**, while
+the chapter tells teachers throughout to use **port 2**. The caption now says so explicitly and tells
+the reader to set the dropdown to whichever port the sensor is on, so nobody copies the screenshot
+blindly — but it is also a data point for **1.8**, where "does the colour sensor genuinely require
+port 2, or is that just convention?" is still open. If port 1 works, that screenshot is evidence, and
+the answer changes several sentences in the chapter.
 
-| Chapter | Uncaptioned |
-|---|---|
-| Sound Localization | 30 |
-| Sonar | 26 |
-| Kinesis and Taxis | 5 |
+### 4.9 Link text — done, and it was bigger than three
+Every link in the book now has descriptive text. The house convention is `Description (.ext)`, set by
+"Video: the robot following the path (.mp4)".
 
-Sonar and Sound Localization are the two chapters still to review, so they will come out in the wash.
-Kinesis and Taxis you are overhauling anyway.
+`pip_exported.mp3` was already fixed. `Echolocation_in_Insectivores_and_Rodents.pdf` is now
+"Echolocation in insectivores and rodents (.pdf)". Checking properly turned up **six more of the same
+defect** in Kinesis and Taxis, which the original count missed because those filenames contain spaces
+— `Rules for Kinesis.docx`, `Kinesis-Taxis grids.pptx` and the rest. All seven now follow the
+convention.
 
-### 4.9 Three handouts are linked by raw filename
-Now that handout links actually work, the link text matters. `output.mp4` is dealt with — it now
-reads "Video: the robot following the path (.mp4)", and the file is renamed to match. Three left, all
-in chapters still to review:
+Separately, **14 links had a bare URL as their link text** — unreadable in print, where the reader
+cannot click. Those are now titled, using the actual titles fetched from each target rather than
+invented ones: three sonar clips (BBC Earth sperm whales, a bat taking moths, a Toyota parking
+sensor), four kinesis/taxis teaching videos, the PhET colour-vision simulation, and the six
+student-data clips.
 
-| Link text | Chapter |
-|---|---|
-| `pip_exported.mp3` | Sound Localization |
-| `burst_short.wav` | Sound Localization |
-| `Echolocation_in_Insectivores_and_Rodents.pdf` | Sonar |
+Two things fell out of that:
+
+- The six student-data clips are named `kinesis1-3` and `taxis1-3` at the source but were **listed
+  taxis-first**, the reverse of the activity order in the chapter. They are now a labelled list in
+  kinesis-then-taxis order. If those six do correspond to the three *conditions* of each activity,
+  the labels could say so — I did not assume it.
+- Sonar's introduction promised **four** short video clips and listed **three**; the sentence then
+  goes on to describe exactly three (whales, bats, parking sensor). Corrected to three.
+
+- [ ] `files/burst_short.wav` is **tracked but linked from nowhere** — a 0.5 second mono 44.1 kHz
+      burst, presumably meant as a stimulus alongside `pip_exported.mp3`. Either it lost its
+      reference somewhere in the migration, or it was superseded by the .mp3. Your call: link it
+      where it belongs, or delete it. I left it alone rather than guess.
 
 ### 4.8 Loose ends in the prose
-- [ ] *Sonar cane*: "The student guide for this part can be found **here**" — "here" is not a link
-- [ ] *Programming the robot*: only the first of four challenges is numbered, though the intro
-      promises "four challenges"
-- [ ] *Programming the robot*: escaped-backtick leak — `` \`difference is\> 0\` `` renders broken
-- [ ] *Sound Localization*: literal tab characters in the essential questions, rendering as odd gaps
+
+**Still open — these need you, not a desk:**
+
 - [ ] *Programming the robot*: your backlog says *"Create programs under 'Programming the robot'"* —
       it is the only lesson with no `.mblock` programs
 - [ ] Backlog: *"Create Master slide deck"*, *"Use the slides below to illustrate the working
       principle of sonar"*, *"Update robot color vision activity?"*
+- [ ] Minor, and only if it bothers you: *Introduction to Programming* uses "Challenge 1" and
+      "Challenge 2" for the two conceptual halves of programming (working out the algorithm, then
+      expressing it), while *Programming the robot* now uses "Challenge 1–4" for the four exercises.
+      Self-consistent within each chapter, but the same word carries two meanings across a page turn.
+
+**Fixed:**
+
+- *Programming the robot*: challenges 2, 3 and 4 were unnumbered headings while the intro promised
+  four. All four now numbered, and their headings brought to consistent sentence case. Nothing linked
+  to the old anchors, so no cross-references broke.
+- *Sound Localization*: four literal tab characters — three in the essential questions, one in
+  learning objective 4 — replaced with spaces. No chapter contains a tab any more.
+- *Color Vision*: a caption was repeated verbatim as body text directly beneath its own image, so the
+  same sentence appeared twice in a row. The duplicate is gone.
+
+Two entries here were already stale and are struck: the *Sonar cane* "here is not a link" sentence no
+longer exists in the chapter, and the escaped-backtick leak is gone — that passage now reads
+`abs(difference) > 2` cleanly.
 
 ---
 
@@ -347,6 +415,13 @@ and 1.3 are settled. One line of markdown now, rather than a Notion UI job.
 
 ## Done
 
+- **Section 4 swept for everything a desk can settle.** Nine defect classes fixed across five
+  chapters: literal tabs, unnumbered challenges, seven file links off the naming convention, 14 bare
+  URLs as link text, the Color Vision "three steps" paragraph, a caption duplicated as body text, the
+  last uncaptioned image, the Kinesis activity and hypothesis counts, and the klinokinesis /
+  orthokinesis conflation. Q1 of the Sound Localization assessment now cites its graphs by figure
+  number instead of saying "the graph". Verified by rebuilding: no broken links, no unresolved
+  references, zero overfull boxes, and no revision notes leaked.
 - **The open-items list is in the repository.** It was excluded at first on the grounds that it held
   frank criticism and private notes. Re-reading it before publishing, it holds neither — it is a
   project to-do list, which is a normal and useful thing for a public repository to carry, and it is
