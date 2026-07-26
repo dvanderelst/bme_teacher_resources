@@ -27,7 +27,8 @@ The license above covers our own writing, diagrams and photographs. It does **no
 - The Biology Meets Engineering logo and the University of Cincinnati name and marks. These identify the programme rather than teaching anything, so the licence does not cover them. Please adapt the materials as much as you like, but remove the logo from your version, so that it is clear the result is yours rather than ours.
 - Screenshots of the mBlock software. mBlock, mBot and Makeblock are products and trademarks of
   Makeblock Co., Ltd.; screenshots appear here to document how to operate the software.
-- Photographs of Makeblock hardware not taken by the project.
+- Photographs and diagrams of Makeblock hardware not made by the project. The labelled drawing of the
+  mCore main board is Makeblock's, and is credited as such in its caption.
 - The reproduced primers on animal orientation and on echolocation in insectivores and rodents,
   whose rights remain with their authors and publishers.
 - Anything reached by an external link — videos, journal articles, manufacturer documentation.
