@@ -46,7 +46,7 @@ For more information, consult the following primer for teachers:
 
 > **Note**
 >
-> **Definitions** Kinesis: un-directed movement consisting of rotational ‘tumbles’ and linear ‘runs,’ in which the frequency of tumbles, or the speed (or distance) of runs, depending on the intensity of the stimulus. It is simpler/basic than Taxis but requires fewer sensory and brain resources. Examples include pill bugs (a.k.a. woodlouse, roly-poly), which alter speed at different temperatures, and flatworms (like planarians), which alter turn frequency in response to light levels.
+> **Definitions** Kinesis: un-directed movement consisting of rotational ‘tumbles’ and linear ‘runs,’ in which either the frequency of tumbles or the speed (or distance) of runs depends on the intensity of the stimulus. The first of those is klinokinesis, the second orthokinesis; the activities in this chapter use orthokinesis. Kinesis is simpler than Taxis and requires fewer sensory and brain resources. Examples include pill bugs (a.k.a. woodlouse, roly-poly), which alter speed at different temperatures, and flatworms (like planarians), which alter turn frequency in response to light levels.
 >
 > Taxis: directed movement either toward or away from the source of stimulation. Examples include virtually all guided behavior by animals.
 
@@ -56,7 +56,7 @@ Show the video clip of a pill bug experiment below. Have students make observati
 
 ## Testing hypotheses about kinesis and taxis
 
-In this lesson, students will test three different hypotheses using simulated data. In the first activity, they will explore kinesis under three different experimental conditions. In the second, they will explore kinesis/taxis with a single sensor. Finally, in the third activity, they will examine kinesis/taxis with two sensors. Based on their findings in each activity, students will be asked to support or reject a hypothesis.
+In this lesson, students test hypotheses using simulated data, in two activities of three conditions each. The first activity covers kinesis: movement with no sensor at all, and then two forms of orthokinesis, in which run length varies with stimulus intensity. The second activity covers taxis: klinotaxis, where a single sensor is compared against a remembered earlier reading, and then tropotaxis with two sensors, once widely spaced and once narrowly spaced. Between them the two activities put four orientation mechanisms in front of students — kinesis, orthokinesis, klinotaxis and tropotaxis. Based on their findings in each activity, students will be asked to support or reject a hypothesis.
 
 Students will use the following file, which provides the grids required for the activities.
 
@@ -109,7 +109,7 @@ Students use the grids file linked above in combination with the following instr
 
 You can use the following questions to assess students’ understanding:
 
-1. Are these four mechanisms effective for reaching the stimulus source? Do they differ in their effectiveness? Explain.
+1. Are the four mechanisms tested in these activities — kinesis, orthokinesis, klinotaxis and tropotaxis — effective for reaching the stimulus source? Do they differ in their effectiveness? Explain.
 2. Does the protocol in section B describe a form KLINOKINESIS or KLINOTAXIS? Explain.
 3. Does the spatial segregation of the sensors impact stimulus localization? Explain.
 4. What factors can be applied to robotic design?
