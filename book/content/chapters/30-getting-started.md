@@ -21,15 +21,18 @@ Older mBots could also be connected using a 2.4 GHz module and dongle, or over d
 >
 > With more than one robot in the room, pair each dongle with a particular robot. The computer holding that dongle will then reach that robot and no other, which is what makes it possible to tell a set of identical mBots apart. You only have to do this once per robot.
 
-1. Switch off every robot except the one you are pairing. Its blue LED will start blinking.
-2. Plug the dongle into a computer and press the Bluetooth symbol on it. The symbol flashes rapidly, and the dongle and the one unpaired robot find each other.
-3. When they have paired, the robot's LED and the dongle's symbol both stop blinking and stay lit.
-4. Label the robot and the dongle as a set. The dongle will now only connect to this robot, and the labels are what let you match them up later.
-5. Repeat for each remaining robot.
+The order matters: every robot goes off first, then the dongle goes in, and only then does the robot you are pairing come on.
+
+1. Switch **every** robot off, including the one you are about to pair. Do this even when there is only one robot in the room.
+2. Plug the dongle into a computer. Its Bluetooth symbol starts flashing.
+3. Switch on the robot you are pairing. Its blue LED starts flashing as well.
+4. After a few seconds both stop flashing and stay lit. They are paired.
+5. Label the robot and the dongle as a set. The dongle will now only connect to this robot, and the labels are what let you match them up later.
+6. Repeat for each remaining robot, switching that robot off again before starting the next one.
 
 > **Note**
 >
-> Pressing the button on the dongle puts it back into pairing mode, which undoes the work above. Tell students to leave it alone, and consider putting a piece of tape over it.
+> Pressing the button on the dongle puts it back into pairing mode, which undoes the work above. Tell students to leave it alone, and consider putting a piece of tape over it. It is also how you deliberately re-pair a dongle that is already committed to another robot: press it to release the old pairing, then run the sequence above.
 
 ![Blue LED blinking on the robot's Bluetooth module.](images/getting-started-draft-1f093a0d.jpg)
 

@@ -9,8 +9,8 @@ camera, and decisions that are the project's to make rather than a reviewer's. I
 up cold, read this file and then `git log`; between them they carry the reasoning that the finished
 text deliberately leaves out.
 
-Closed items are deleted rather than struck through, so gaps in the numbering (4.4, 4.5, 4.7, 4.9,
-5.2, 6.2) are items that are done. `git log` says what happened to each.
+Closed items are deleted rather than struck through, so gaps in the numbering (1.5, 1.10, 4.4, 4.5,
+4.7, 4.9, 5.2, 6.2) are items that are done. `git log` says what happened to each.
 
 *Last updated: 2026-07-26*
 
@@ -57,11 +57,6 @@ The screenshots settle most of this, and the chapter now matches them:
 | Installed mBlock | `Connect` | a dialog with `USB` / `Bluetooth` / `2.4G` tabs; choose `USB` |
 
 - [ ] Confirm this is still what v5.6.0 shows — the screenshots are from v5.4.3.
-
-### 1.5 Which dongle-pairing sequence is right?
-- [ ] **A** — switch off other robots → insert dongle → press its Bluetooth symbol
-- [ ] **B** — robot **off** → insert dongle → press and *hold* until rapid flash → robot on
-- [ ] Both work
 
 ### 1.6 Does the mBot need re-adding to mBlock for every new program?
 Open one of the supplied `.mblock` files in a fresh session — is the mBot already under Devices?
@@ -148,14 +143,6 @@ Two gaps left, both needing a robot:
       Ties in with 3.1.
 
 If the direct connection covers everything, the mLink material can shrink to a footnote.
-
-### 1.10 Confirm the pairing test
-I wrote up the test you described — break the pair from either end and see whether the other partner
-starts blinking — as *Checking whether a dongle and a robot are paired*. Worth running once as
-written to confirm the timings, particularly the "five to ten seconds" before the dongle reacts.
-
-- [ ] Robot blinks a few seconds after the dongle is unplugged
-- [ ] Dongle blinks five to ten seconds after the robot is switched off
 
 ---
 
