@@ -169,7 +169,7 @@ The color sensor can only be used in the so-called `Upload` mode. This means pro
 
 The fact that the sensor can only be used in `Upload` mode makes programming the robot harder. The main issue is that one cannot observe sensor values while our program runs and the robot is not connected using a USB cable. This makes it challenging to pick the correct sensor values to respond to.
 
-To solve this issue, we will proceed in three steps. First, students will run a program that displays the sensor's current values while the robot is connected to the computer via a USB cable. This allows them to pick values for the program. Second, they can use these values to construct a program that follows the track. Next, they can program the robot using the derived rule. At this point, the robot is no longer connected to the computer using a USB cable.
+To solve this issue, we will proceed in three steps, which are the three sections that follow. First, students run a program that displays the sensor's current values while the robot is connected to the computer via a USB cable. Second, they interpret those readings to work out a rule that tells the two colors apart. Third, they program the robot using that rule and disconnect the cable, so that from then on the robot follows the track on its own.
 
 > **Tip**
 >
@@ -190,8 +190,6 @@ To solve this issue, we will proceed in three steps. First, students will run a 
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This will show the robot's code. Do not unplug the cable during this part of the activity.
 
     ![Make sure you select the mBot under the Devices tab to see the code for the robot.](images/color-vision-lesson-plan-a5e7ceb3.png)
-
-    Make sure you select the mBot under the Devices tab to see the code for the robot.
 
 3. Connect to the robot using the USB cable. see [Getting started with the robot](#getting-started-with-the-robot) for instructions on connecting over the USB cable.
 4. Upload the code to the robot by selecting the `Upload` mode and clicking `Upload code`.
@@ -284,7 +282,7 @@ Several extensions to the lesson plan can be made:
 1. The track's end and start can be constructed of a third color. When the robot detects this color, it can be programmed to turn 180 degrees to return to the other end of the path.
 2. The white LEDs on the me color sensor can be switched off. Remember, the LEDs deliver a uniform fixed and broad-spectrum light onto the floor, making the sensor’s ability to color discriminate easier. But, consider a real-life scenario where a robot tries to detect whether the floor underneath it is red or yellow, but the light in the environment is variable or suboptimal. If the lighting is poor, the overhead lamps might not emit sufficient yellow light, so the light reflecting from the floor will contain little yellow light. The sensor will have difficulty discriminating yellow from red. The following block can be used to switch off the white LEDs.
 
-    ![](images/color-vision-lesson-plan-5972c66e.png)
+    ![The block that switches the sensor's white fill LEDs off. Note that the port dropdown reads `port1` in this screenshot; set it to the port the color sensor is actually plugged into, which is port 2 everywhere else in this chapter.](images/color-vision-lesson-plan-5972c66e.png)
 
 3. Altering the colors in the path to include secondary colors such as cyan, yellow, and/or magenta.
 
