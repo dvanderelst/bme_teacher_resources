@@ -150,7 +150,7 @@ The value of 34.3 cm/millisecond for the speed of sound only holds for temperatu
 
 #### The sensor under-reports distance
 
-The distance the sensor reports is not the distance we just calculated from the echo. It is consistently too small. In the measurement above, with the wall about 184 cm away, the sensor reported **142 cm**. A search suggests this is a known quirk of these sensors rather than a fault in one unit.
+The distance the sensor reports is not the distance we just calculated from the echo. It is consistently too small. In the measurement above, with the wall about 184 cm away, the sensor reported **142 cm**. This appears to be a quirk of the sensor rather than a fault in one unit, and checks at several distances found the error to be proportional — the reading is always short by roughly the same fraction, not by a fixed number of centimetres. That is what makes a single multiplier the right way to correct it.
 
 The programs in this lesson multiply the reported distance by **1.25** to compensate, and that is worth understanding rather than taking on trust, because it does not quite reconcile:
 
@@ -165,11 +165,13 @@ So x 1.25 brings the sensor into line with the time-of-flight calculation almost
 
 > **Note**
 >
-> Since the error may differ from sensor to sensor, it is worth measuring your own rather than trusting ours. Put the robot a known distance from a large flat wall, read what the sensor reports, and divide:
+> Sensors differ, and mBlock is updated from time to time, so it is worth checking your own rather than trusting ours. Put the robot a measured distance from a large flat wall, read what the sensor reports, and divide:
 >
 > **correction factor = true distance / reported distance**
 >
-> If your answer is a long way from 1.25, change the multiplier in the programs to match. It appears in the `do_sensing` block.
+> Do this at two or three distances, say half a metre, one metre and two metres. You should get roughly the same answer each time.
+>
+> If that answer is close to **1**, the under-reporting has been fixed in your version of mBlock and the correction is no longer needed — remove the multiplier, or the robot will think obstacles are further away than they are and leave everything too late. If it is close to **1.25**, our programs will work as they are. If it is something else, put your own number in place of 1.25, which appears in the `do_sensing` block of the obstacle avoidance program and near the top of the sonar cane program.
 
 #### Directionality and Range
 
