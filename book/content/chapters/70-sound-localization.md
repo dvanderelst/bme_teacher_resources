@@ -112,7 +112,11 @@ The microphone is almost omnidirectional, meaning it is nearly equally sensitive
 
 ![How sensitivity varies with the direction a sound comes from, for one ear and one frequency. The sphere is cut away so the inside is visible, and warmer colors mark the directions the ear picks up best. Figure from [LmK Music Production, *What is HRTF?*](https://lmkprod.com/what-is-hrtf-brief-explanation/).](images/sound-localization-lesson-plan-d5560ae5.png){#fig:hrtf}
 
-It shows the sensitivity of the left ear, at one frequency, as a function of the direction a sound arrives from. The sphere is cut in half so that you can see inside. Red colors mean the ear is more sensitive to those directions. From this image, students can see that the ear is less sensitive to sound coming from behind. It is also less sensitive to sounds coming from straight ahead. The left ear is most sensitive to sound coming from the left. This is why humans turn one ear toward a sound source when trying to hear very faint sounds. Human ears are less sensitive to sounds coming from straight ahead. Luckily, that is where our eyes are focusing.
+It shows the sensitivity of the left ear, at one frequency, as a function of the direction a sound arrives from. The sphere is cut in half so that you can see inside, and warmer colors mark the directions the ear picks up best.
+
+Each ear is most sensitive to sounds arriving from its own side — for the left ear, from roughly 90 degrees to the left. Sensitivity falls away from there in both directions: towards the back, where the head and the pinna shadow the ear, and towards the front, so that a sound directly ahead reaches the ear less efficiently than the same sound off to one side. This is why we turn one ear towards a sound we are straining to hear, and it is no great loss that straight ahead is a weak direction for the ears, because that is the direction the eyes already cover.
+
+The pattern is easier to state than to read off this particular figure, so use it as an illustration of the idea rather than something to measure.
 
 ### Temporal response of the Makeblock sound sensor
 
