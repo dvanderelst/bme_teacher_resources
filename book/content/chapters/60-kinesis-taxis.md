@@ -5,6 +5,10 @@
 | Item | Description |
 | :--- | :--- |
 | Spinners | Used to generate random directions for the taxis/kinesis lesson plan. They come in a pack of 12. |
+| Printed grids | Grids 1, 2 and 3 for the three kinesis conditions, and Grid 4 for all three taxis conditions. All four are in the grids file linked below; Grid 4 carries the narrow and wide markings the two tropotaxis conditions need. One set per group, printed as large as your printer allows — the organism is moved across the grid by hand. |
+| The two rules handouts | *Rules for Kinesis* and *Rules for Taxis*, both linked below. One copy per group, since each group works through the conditions from them directly. |
+| Arrow cut-outs | One **large** and one **wide** per group. The large one is used for the three kinesis conditions and for klinotaxis; the wide one is for the two tropotaxis conditions, where the distance between its two "sensors" is the whole point of the comparison. Note that the rules handouts call these the large and wide **Blue Bug**, and measure movement in *bug-lengths*. |
+| Data sheets | Students record coordinates after every cycle, for up to 40 cycles per condition, so give each group something to write on. The spreadsheet linked below is set up for it and can be printed or filled in on a laptop. |
 
 ## Prerequisites
 
