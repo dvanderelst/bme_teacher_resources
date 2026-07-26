@@ -46,6 +46,12 @@
 % which would land inside the parenthesis and give "( on page 21)".
 \usepackage{varioref}
 \newcommand{\pageofref}[1]{\unskip\ (\vpageref*{#1})}
+% A reference to a figure carries its number too, so that prose which says "the
+% graph below" can name the figure instead. LaTeX supplies the number, so it
+% stays right when figures are added or moved.
+% No space before \vpageref here: the unstarred form supplies its own, and adding
+% one as well loses it -- the comma ends up jammed against "on page".
+\newcommand{\figref}[1]{\unskip\ (Figure~\ref{#1},\vpageref{#1})}
 
 % --- long URLs --------------------------------------------------------------
 % Allow breaks anywhere in a URL rather than letting it run into the margin.

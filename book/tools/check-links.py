@@ -44,6 +44,8 @@ def main():
     for t in texts.values():
         for m in HEADING.finditer(t):
             anchors.add(slug(m.group(2)))
+        # figures carry explicit ids, e.g. ![caption](x.png){#fig:audiogram}
+        anchors.update(re.findall(r"\{#([\w:-]+)\}", t))
 
     broken, missing, mismatched = [], [], []
     planet_links, mirrors = 0, 0

@@ -20,9 +20,12 @@ return {
     Link = function (el)
       local anchor = el.target:match '^#(.+)$'
       if not anchor then return nil end
+      -- A link to a figure gets its number as well as its page. LaTeX counts the
+      -- figures itself, so the number cannot drift as the book is edited.
+      local macro = anchor:match '^fig:' and '\\figref{' or '\\pageofref{'
       return {
         el,
-        pandoc.RawInline('latex', '\\pageofref{' .. anchor .. '}'),
+        pandoc.RawInline('latex', macro .. anchor .. '}'),
       }
     end,
   },

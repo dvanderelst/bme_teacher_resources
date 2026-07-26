@@ -78,37 +78,41 @@ Before moving on to the robotics section of this lesson, students need to unders
 
 ### Sensitivity
 
-The lines in the graph below represent the hearing threshold of humans and animals at different sound frequencies. These kinds of graphs are called audiograms. The graph shows the hearing threshold for different animals as a function of frequency. The curve indicates the faintest sound an animal can detect at that frequency. The lower the line, the fainter the sound that can be detected at a given frequency.
+The graph below is an **audiogram**. It is worth spending a moment on how to read one, because the shape is the opposite way up from what people expect.
 
-![](images/sound-localization-lesson-plan-fd572681.png)
+Every point on a curve is a **threshold**: the faintest sound the animal can just detect at that frequency. So a curve that dips low means *good* hearing, not a quiet sound — it means the animal can hear sounds as faint as that. A curve that rises means hearing is *worse* there, because a sound has to be louder before it registers at all. The lowest point on a curve is the frequency the animal hears best. Nothing on this graph says anything about how loud a sound is; it is entirely about how quiet a sound can get before it becomes inaudible.
 
-These are average curves. The hearing threshold for individuals (and animals) can vary quite a bit. This graph shows that humans tend to be most sensitive (at the lowest point on the curve) around 3 kHz. Like a mouse, a small animal typically has a higher best frequency. If you want to find similar curves for other animals, Google 'audiogram x,' with x the animal you are interested in. Researchers have measured the audiograms of many different species.
+![Audiograms for four species, with the sound sensor's threshold in red. Each curve gives the faintest sound that animal can detect at each frequency, so **lower on the graph means more sensitive**. Humans hear best at around 3 kHz, where the threshold dips below 0 dB SPL. The red line is flat because the sensor is about equally sensitive at every frequency, and it lies above all four curves because it is far less sensitive than any of these ears.](images/sound-localization-lesson-plan-fd572681.png){#fig:audiogram}
 
-The red line represents the approximate hearing threshold for the microphone, estimated from manufacturer-provided numbers. Two conclusions can be drawn about the differences between our ears and the microphone. First, the microphone's "hearing threshold" is much higher than our ears. This is not surprising. Animal ears are unbelievably sensitive. This implies that many sounds we can detect the microphone cannot. The microphone's hearing threshold is about 36 dB SPL. Students can use the table below to determine which sound intensities correspond with this intensity.  It is estimated that the microphone cannot detect sounds below 36 dB.
+These are average curves. The hearing threshold for individuals (and animals) can vary quite a bit. The graph shows that humans tend to be most sensitive around 3 kHz. Like a mouse, a small animal typically has a higher best frequency. If you want to find similar curves for other animals, search for 'audiogram x', with x the animal you are interested in. Researchers have measured the audiograms of many different species.
 
-![](images/sound-localization-lesson-plan-58c2fb72.png)
+The red line is the approximate threshold of the robot's sound sensor, estimated from manufacturer-provided numbers, and it gives the first of our differences. It sits at about 36 dB SPL — above every animal curve on the graph. The sensor is much less sensitive than any of these ears, which is not surprising, because animal ears are extraordinarily sensitive. A great many sounds that we can hear easily are simply not there as far as the robot is concerned. The [table of everyday sound levels](#fig:levels) gives a feel for what 36 dB SPL means.
+
+![Everyday sounds and their approximate levels. The sensor's threshold of about 36 dB SPL falls between a quiet whisper and a quiet auditorium, so anything fainter than a quiet room will not register at all.](images/sound-localization-lesson-plan-58c2fb72.png){#fig:levels}
 
 ### Frequency response
 
-The audiograms and the microphone's sensitivity shown above reveal a second difference between our ears and the microphone: the microphone is almost equally sensitive to frequencies from 20 Hz to 20,000 Hz (and probably even higher frequencies, hence the trailing dots on the right side of the red line). To humans, sounds with the same physical amplitude at 2000 Hz and 10,000 Hz have very different loudness levels.  The 2000 Hz (i.e, 2 kHz) tone will sound louder than the 10,000 Hz (i.e., 10 kHz) tone. Introduce this idea to students using the online tone generator.
+The [audiogram](#fig:audiogram) reveals a second difference. The sensor is almost equally sensitive from 20 Hz to 20,000 Hz and probably beyond, which is why its line is flat and why it trails off in dots at the right-hand edge. Our ears are not like that at all. Two sounds with the same physical amplitude, one at 2 kHz and one at 10 kHz, do not sound equally loud to us: the 2 kHz tone sounds louder.
 
-The curve that shows a microphone’s sensitivity to different frequencies is called its “frequency response”. Because the red line in the graph above is flat, engineers would say that the microphone has a “flat frequency response.” The drawing in the graph above is not a real frequency response. Below, we have included an actual frequency response of a simple microphone.
+The curve describing how sensitive a microphone is at each frequency is called its **frequency response**, and because the red line is flat, an engineer would say this microphone has a *flat frequency response*. That red line is a schematic rather than a measurement. A [real one, measured from a simple microphone](#fig:freqresp), is flat within a decibel or two across most of the range, with small ripples at the top end.
 
-![](images/sound-localization-lesson-plan-abed05bc.png)
+![A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike.](images/sound-localization-lesson-plan-abed05bc.png){#fig:freqresp}
 
-To demonstrate that our ears are differently sensitive to sounds with different frequencies, you can play tones with different frequencies at the same physical volume.  You can use an online tone generator like the one linked below.
+You can demonstrate the contrast with your own ears using an online tone generator, playing tones of different frequencies without touching the volume control.
 
 [Online Tone Generator - generate pure tones of any frequency](https://www.szynalski.com/tone-generator/)
 
-Even if you do not change the volume at which the sound is played, people will perceive sounds around 3000 Hz louder than lower- and higher-frequency sounds. For example, start by playing a 2000 Hz sound. Next, stop the sound and move the slider to 10,000 Hz before playing the new tone. Students will notice the difference in frequency, of course. However, they should also note that the 10,000 Hz tone sounds less loud.
+Even with the volume fixed, sounds around 3000 Hz are perceived as louder than lower- and higher-frequency ones. Play a 2000 Hz tone, then stop it, move the slider to 10,000 Hz, and play again. Students will hear the change in pitch, of course, but they should also notice the 10,000 Hz tone sounds quieter, even though nothing about the volume has changed.
+
+This has a practical consequence that is easy to miss, and it matters for the robot activities later in this chapter. Because our sensitivity falls away at both ends of the range and the sensor's does not, **your own ears are a poor guide to what the robot can hear.** A 10 kHz tone that sounds faint to you is no harder for the sensor than a 2 kHz tone that sounds loud, and a low rumble you can barely hear may be perfectly detectable to it. So when you are setting up a sound for the robot, judge it by what the robot reports rather than by how loud it seems in the room — and resist turning the volume up because a tone sounds quiet to you, since the sensor may be well above its threshold already.
 
 ### Directionality
 
-The microphone is almost omnidirectional, meaning it is nearly equally sensitive to sounds coming from different directions. Our ears are not equally sensitive to all directions. Our heads and external ears block sound from specific directions and (somewhat) increase (amplify) sounds from other directions. Seeing this is a bit tricky, as the effect depends on the sound's frequency. Use the figure below to convey this idea.
+The microphone is almost omnidirectional, meaning it is nearly equally sensitive to sounds coming from different directions. Our ears are not equally sensitive to all directions. Our heads and external ears block sound from specific directions and (somewhat) increase (amplify) sounds from other directions. Seeing this is a bit tricky, as the effect depends on the sound's frequency. Use the [directivity figure](#fig:hrtf) to convey this idea.
 
-![](images/sound-localization-lesson-plan-d5560ae5.png)
+![How sensitivity varies with the direction a sound comes from, for one ear and one frequency. The sphere is cut away so the inside is visible, and warmer colors mark the directions the ear picks up best. Figure from [LmK Music Production, *What is HRTF?*](https://lmkprod.com/what-is-hrtf-brief-explanation/).](images/sound-localization-lesson-plan-d5560ae5.png){#fig:hrtf}
 
-This figure shows the sensitivity of the left ear (for a given frequency) as a function of direction. The sphere is cut in half so that you can see inside. Red colors mean the ear is more sensitive to those directions. From this image, students can see that the ear is less sensitive to sound coming from behind. It is also less sensitive to sounds coming from straight ahead. The left ear is most sensitive to sound coming from the left. This is why humans turn one ear toward a sound source when trying to hear very faint sounds. Human ears are less sensitive to sounds coming from straight ahead. Luckily, that is where our eyes are focusing.
+It shows the sensitivity of the left ear, at one frequency, as a function of the direction a sound arrives from. The sphere is cut in half so that you can see inside. Red colors mean the ear is more sensitive to those directions. From this image, students can see that the ear is less sensitive to sound coming from behind. It is also less sensitive to sounds coming from straight ahead. The left ear is most sensitive to sound coming from the left. This is why humans turn one ear toward a sound source when trying to hear very faint sounds. Human ears are less sensitive to sounds coming from straight ahead. Luckily, that is where our eyes are focusing.
 
 ### Temporal response of the Makeblock sound sensor
 
@@ -116,13 +120,17 @@ This figure shows the sensitivity of the left ear (for a given frequency) as a f
 >
 > The take-home message of this section is that the robot does not detect sounds that are longer than about 1 second. The robot detects only the onset (and offset) of sound. This explains why a pulsed sound is provided below for robotic activities. If you were to use a constant sound, the robot would be functionally insensitive to it.
 
-For the technically inclined, there is a fourth way our ears differ from the microphones used by the robot. The electronic components processing the microphone input make the robot sensitive to short bursts of sound. In contrast, the robot cannot detect long sounds, no matter how loud they are.
+For the technically inclined, there is a fourth way our ears differ from the sound sensor the robot uses. The electronics on the sensor board make it responsive to short bursts of sound, while a long sound goes undetected no matter how loud it is.
+
+> **Important**
+>
+> This is a quirk of the Makeblock sound sensor, not something microphones do in general. The microphone itself follows a continuous sound perfectly well. It is the amplifier circuit on the sensor board that removes the steady part of the signal and passes on only the changes. A different sound sensor would behave differently, and the microphone in a phone or a laptop certainly does. It is worth being explicit about this with students, because "microphones cannot hear continuous sounds" is both memorable and wrong.
 
 When observing the Makeblock sound sensor, it should be evident that the microphone is the round black disk on the sensor board. However, you will notice that the board contains many other (tiny) electronic components. These primarily increase (amplify) the microphone's signal before sending it to the robot. However, these electronic components also do something else: they filter the signal from the microphone so it is high for short, loud bursts of sound. Almost no signal is transmitted to the robot during long bursts of sound.
 
-The image below plots the signal sent to the robot over about 10 seconds. At the position of the first red arrow, a sound started playing.  Notice that, in response, the signal jumps up. This tells the robot the microphone is picking up sound. However, the signal decreases over time. After about a second, the signal returns to baseline, even though the sound is still playing. At the instance of the second arrow, the sound was switched off. The signal responds by becoming negative for a second or so.
+The [oscilloscope trace](#fig:temporal) plots the signal reaching the robot over about ten seconds. At the first red arrow a sound starts playing, and the signal jumps up: the sensor has noticed. But it then falls away, and after about a second it is back at baseline even though the sound is still playing. At the second arrow the sound stops, and the signal dips below baseline for a second or so before recovering. What the sensor reports is not the sound but the *changes* in it.
 
-![](images/sound-localization-lesson-plan-d9268e13.png)
+![The sensor's output on an oscilloscope, over about ten seconds. The sound starts at the first arrow and stops at the second. Both edges produce a response that decays back to baseline within about a second; the steady sound in between produces nothing at all.](images/sound-localization-lesson-plan-d9268e13.png){#fig:temporal}
 
 ### Conclusions
 
@@ -135,6 +143,8 @@ Our ears are very sensitive! Let's express the sensitivity of our ears in some n
 We can calculate the force a 20 micropascal change in air pressure exerts on the eardrum. Using an online converter to avoid errors, we find that 40 micropascal equals 4.07 × 10⁻⁷ grams per square cm. The surface area of the eardrum is about 0.5 cm2. Therefore, we have to divide this number by 2.
 
 This result shows that our ears can detect (the equivalent of) 0.0000002 grams applied to (and removed from) the eardrum at a frequency of 2000 Hz. These are tiny forces, indeed! Imagine a kitchen scale that could detect something much smaller than a grain of salt!
+
+<!-- Can you check my math? -->
 
 ## Activity: robot phonotaxis
 
@@ -185,6 +195,10 @@ Tell students they will pair up for their sound localization test.  They will al
 ![](images/testing-artificial-pinnae-f88f6efd.jpg)
 
 ![Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity.](images/testing-artificial-pinnae-e2beccd3.jpg)
+
+<!-- The activity has been overhauled: we now have an app at soundlocalizationapp-production.up.railway.app that takes the students through the steps of the activity. The experiment is an adaptive one (correct answer -> more difficult). The app keeps track of the trial, it tells students where to place the sound source and it allows playing the sound. And at the end it give a score and table. I have added some screenshots. Since the app is designed to be pulled up on students phones, we provide a qr code (see image in root) that can be shown to students to pull up the app on their phones. But the app also runs on laptops. Also important: the app provides instructions, including on how to build the setup: students can click the fold out arrow on the start page.-->
+
+<!-- Given the overhaul of the app most or all of the stuff below can be removed? -->
 
 The Google Doc embedded below can be printed and handed out to students as a handout describing how to conduct the experiment and record the data.
 
@@ -333,6 +347,8 @@ The example program does the following:
 This approach to sound localization results in a jittery path: the robot stops, measures, rotates, and moves. However, this approach gives the robot enough time to collect data (sound). Moreover, many animals adopt the same stopping-moving strategy when approaching sound sources. Even humans "stop to listen" when looking for their ringing phone. Biology and engineering use similar strategies!
 
 ## Adding the sound sensor extension
+
+<!-- This is double: I think we covered this above? -->
 
 ### Step 1: Add the mBot to mBlock
 
