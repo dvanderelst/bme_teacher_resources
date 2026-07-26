@@ -150,7 +150,7 @@ The program below needs only two blocks inside the loop. `LED all shows color re
 
 ![One solution to the blinking challenge. Each `shows color ... for 1 secs` block holds the program for its second, so the two together give one second on and one second off.](images/programming-the-robot-blink-solution.png)
 
-### Challenge: Reading a sensor
+### Challenge 2: Reading a sensor
 
 > Challenge: Construct a program that briefly blinks the onboard LEDs when the onboard light sensor registers a value smaller than 500.
 >
@@ -164,7 +164,7 @@ The program below is one solution to this challenge. The program starts by switc
 
 ![One solution to the light sensor challenge. The reading is stored in the variable `light` on every pass, and the LEDs blink only while that value is below 500.](images/programming-the-robot-efc4bf9d.png)
 
-### Challenge: Sound Detection
+### Challenge 3: Sound detection
 
 > Challenge:  Construct a program that blinks the LEDs if the sound is louder than a set value. The duration of the LEDs' blink should depend on the loudness of the sound.
 >
@@ -203,7 +203,7 @@ With `min` set to 200. This program should respond to noise: louder noises resul
 
 ![One solution to the sound challenge. The sound sensor is read on port 3; `min` holds the threshold, and the LEDs stay lit for a time that grows with how far the reading exceeds it.](images/programming-the-robot-d2e74147.png)
 
-### Challenge: Keeping your Distance
+### Challenge 4: Keeping your distance
 
 The following programming challenge will use the motors. Using the sonar sensor, we will program the robot to maintain a fixed distance from an object. When starting the program, the robot will read the distance to the nearest object (detected by the sonar). Next, the robot will move forward if the distance increases and backward if the distance decreases.
 
