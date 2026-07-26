@@ -32,6 +32,13 @@ You do not need any of the rest of this if you just want to teach from it.
 
 Plus an unnumbered colophon carrying the licence, the version, and who to write to.
 
+## State of the work
+
+**Every chapter has been reviewed.** What is still open is listed in [TODO.md](TODO.md), grouped by
+what you need in hand to settle it — the robot, a Mac, a Chromebook, a camera, or a decision that is
+the project's to make. That file and `git log` between them carry the reasoning behind the current
+state; the finished text deliberately does not.
+
 ## Layout
 
 ```
@@ -102,7 +109,29 @@ link's text names a different section than the one it points at — a defect tha
 and sends a printed reader to the wrong page. `build.sh` runs it.
 
 `tools/xref.lua` appends a page reference to every internal link in the PDF, so cross-references
-work on paper. It is not applied to the HTML, where the link is live.
+work on paper. It is not applied to the HTML, where the link is live. Give a figure an id —
+`![caption](x.png){#fig:audiogram}` — and a link to it also picks up the figure number, which LaTeX
+counts, so numbering cannot drift as the book is edited.
+
+`./tools/check-overfull.sh` reports text that runs into the margin. LaTeX knows when a line does not
+fit but pandoc discards the log, so this rebuilds through a kept log and lists what is left. It
+should report zero; anything it does report is usually something TeX cannot break, such as a file
+name or a standards code.
+
+Two smaller pieces: `tools/strip-notes.lua` keeps revision notes out of the HTML, since pandoc only
+drops them from LaTeX, and `tools/read-comments.py` pulls annotations out of a marked-up PDF and
+reports which chapter and line each one lands on, which is how the review was run.
+
+## Branding
+
+`book/content/branding/` holds the programme logo, which goes above the title in both outputs, and
+the robot bug, which sits in the running footer of the PDF. Both are the RGB versions, following the
+2021 brand guidelines: RGB for screen, CMYK for print at 300 dpi or better. At the sizes used the RGB
+files still resolve well past 300 dpi, and the document is read on screen far more than it is
+printed.
+
+The logo is a trademark and is **not** covered by the licence below. If you adapt these materials,
+remove it.
 
 ## Licence
 
