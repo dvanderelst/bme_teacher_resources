@@ -173,7 +173,7 @@ For this activity, we will connect a single sound sensor to the robot using a ca
 
 ![A single sound sensor is attached to the robot and taped to the top of the robot.](images/programming-the-robot-1dea6db5.jpg)
 
-#### Adding the sound sensor to mBlock
+#### Adding the sound sensor extension
 
 ![The sound sensor.](images/programming-the-robot-8b214556.jpg)
 

@@ -17,9 +17,12 @@ import os, re, sys, glob
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAPTERS = os.path.join(HERE, "content", "chapters")
 
-# <!-- D: ... -->  or  <!-- TODO: ... -->  (case-insensitive, may span lines)
-NOTE = re.compile(r"<!--\s*(D|TODO|NOTE|FIXME|Q)\s*:\s*(.*?)-->",
-                  re.S | re.I)
+# Every HTML comment counts as a note. An earlier version required a D: or TODO:
+# prefix, which quietly hid four notes written without one -- including a whole
+# activity that had been rebuilt. A comment in the source is a note by definition;
+# there is nothing else it could be.
+NOTE = re.compile(r"<!--(.*?)-->", re.S)
+KIND = re.compile(r"^\s*(D|TODO|NOTE|FIXME|Q)\s*:\s*", re.I)
 
 
 def collect():
@@ -28,12 +31,15 @@ def collect():
         text = open(path, encoding="utf-8").read()
         for m in NOTE.finditer(text):
             line = text.count("\n", 0, m.start()) + 1
-            body = " ".join(m.group(2).split())
+            raw = m.group(1)
+            k = KIND.match(raw)
+            kind = k.group(1).upper() if k else "-"
+            body = " ".join(KIND.sub("", raw).split())
             # the nearest heading above, so the note has context
             heads = re.findall(r"^(#{1,6})\s+(.*)$",
                                text[:m.start()], re.M)
             where = heads[-1][1].strip() if heads else ""
-            found.append((os.path.basename(path), line, m.group(1).upper(),
+            found.append((os.path.basename(path), line, kind,
                           body, where))
     return found
 

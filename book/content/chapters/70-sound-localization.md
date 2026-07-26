@@ -60,7 +60,9 @@ Humans (and many other animals) use several cues to localize sound.  These metho
 
 ### Sound localization cues
 
-[](https://pubs.aip.org/physicstoday/article/52/11/24/410870/How-We-Localize-SoundRelying-on-a-variety-of-cues)
+Humans locate sound using several cues at once: the difference in arrival time between the two ears, the difference in level, and the way the outer ear colours sounds arriving from different directions. The article below is a readable survey.
+
+[How We Localize Sound — *Physics Today*](https://pubs.aip.org/physicstoday/article/52/11/24/410870/How-We-Localize-SoundRelying-on-a-variety-of-cues)
 
 ### Motivation
 
@@ -144,11 +146,9 @@ Now ask students to list the three (or four) main differences between microphone
 
 Our ears are very sensitive! Let's express the sensitivity of our ears in some numbers. This will give us intuition about how sensitive we are to sound. The faintest sounds humans can detect (around 2 kHz) have an amplitude of about 20 micropascal. This means the air pressure at the eardrum fluctuates by 20 micropascals around the average pressure. Therefore, the total pressure difference at this sound intensity is 40 micropascal (2 x 20 micropascal). This change in air pressure pushes and pulls the eardrum back and forth. The movement of the eardrum will eventually be perceived as sound.
 
-We can calculate the force a 20 micropascal change in air pressure exerts on the eardrum. Using an online converter to avoid errors, we find that 40 micropascal equals 4.07 × 10⁻⁷ grams per square cm. The surface area of the eardrum is about 0.5 cm2. Therefore, we have to divide this number by 2.
+We can work out the force that pressure exerts on the eardrum. A pressure of 40 micropascal is the same as 4.07 × 10⁻⁷ grams per square centimetre — that is, the weight of about four ten-millionths of a gram resting on every square centimetre. Force is pressure times area, and the eardrum is about 0.5 cm², so the force on it is half that figure.
 
 This result shows that our ears can detect (the equivalent of) 0.0000002 grams applied to (and removed from) the eardrum at a frequency of 2000 Hz. These are tiny forces, indeed! Imagine a kitchen scale that could detect something much smaller than a grain of salt!
-
-<!-- Can you check my math? -->
 
 ## Activity: robot phonotaxis
 
@@ -163,7 +163,7 @@ Below, we list two questions you can use to assess students’ comprehension.
 > Question 1: How does creating ‘ears’ on the robot increase the robot’s ability to respond to sound?  Support your reasoning using data from the graph.
 >
 
-Answer: The variability of each ear has increased. For example, for the right ear, the measurements vary from about 400 to 150, a range of 250. In the previous graph, the right ear data range was less than 50. This increased variability is good: it means the microphone's output varies more with the angle to the sound source. This increased directionality should make sound localization easier (or more reliable).
+Answer: The variability of each ear has increased. With ears fitted, the right ear ranges from about 380 at -40 degrees down to about 170 at +40, a spread of roughly 210. Without ears it stayed between about 310 and 380, a spread of roughly 70. This increased variability is good: it means the microphone's output varies more with the angle to the sound source. This increased directionality should make sound localization easier (or more reliable).
 
 > Question 2: Does angle placement of the ears on the robot increase or decrease the ability to locate sound?  Support your reasoning using data from the graph.
 >
@@ -178,13 +178,13 @@ Before the development of radar, approaching airplanes were often detected and l
 
 [How warplanes were spotted before radar | CNN](https://www.cnn.com/style/article/war-sound-locators-before-radar/index.html)
 
-![](images/testing-artificial-pinnae-affed672.png)
+![Two Dutch personal sound locators. Each funnels sound from a wide area into the operator's ears, and each turns on its base so the operator can sweep for the direction the sound is loudest.](images/testing-artificial-pinnae-affed672.png)
 
-![](images/testing-artificial-pinnae-06410d6c.png)
+![Four more locators. Note how many use pairs or quads of horns rather than one: separating the collectors widens the difference between what each ear receives, which is exactly what students are trying to achieve with their own pinnae.](images/testing-artificial-pinnae-06410d6c.png)
 
-![](images/testing-artificial-pinnae-6587bd75.jpg)
+![Left, a locator using honeycomb collectors rather than horns. Right, a row of them on wheeled carriages, ready to be moved into position.](images/testing-artificial-pinnae-6587bd75.jpg)
 
-![](images/testing-artificial-pinnae-f4295f63.png)
+![Left, a head-mounted locator, which is the closest of these to the pinnae students will build. Right, a large locator worked by three operators at once.](images/testing-artificial-pinnae-f4295f63.png)
 
 All these devices attempted to increase the cues available for sound localization. In the current activity, students are asked to build their own devices to enhance sound localization. The activity is described below.
 
@@ -192,31 +192,33 @@ All these devices attempted to increase the cues available for sound localizatio
 
 Tell students they will pair up for their sound localization test.  They will also be tasked with building pinnae to enhance their ability to locate sound, and then testing the effectiveness of their design.  For inspiration, show students some pictures of acoustic locators built in the early 20th century. You can also show them pictures of various animal ears. We previously provided students with cardboard paper, pipe cleaners, tape, etc., to build artificial pinnae. Example of some ears built by our students can be seen in the images below.
 
-![](images/testing-artificial-pinnae-fe673636.jpg)
+![Pinnae made from card cones on a headband. The shape gathers sound from in front of the ear and shields it from behind.](images/testing-artificial-pinnae-fe673636.jpg)
 
-![](images/testing-artificial-pinnae-540a5939.jpg)
+![A flatter design, taped to the side of the head. Reflecting surfaces need not be cone-shaped to change what reaches the ear.](images/testing-artificial-pinnae-540a5939.jpg)
 
-![](images/testing-artificial-pinnae-f88f6efd.jpg)
+![Large cones covering both ears. Designs this size change the loudness reaching each ear substantially, but they also make it hard to tell front from back.](images/testing-artificial-pinnae-f88f6efd.jpg)
 
 ![Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity.](images/testing-artificial-pinnae-e2beccd3.jpg)
 
-<!-- The activity has been overhauled: we now have an app at soundlocalizationapp-production.up.railway.app that takes the students through the steps of the activity. The experiment is an adaptive one (correct answer -> more difficult). The app keeps track of the trial, it tells students where to place the sound source and it allows playing the sound. And at the end it give a score and table. I have added some screenshots. Since the app is designed to be pulled up on students phones, we provide a qr code (see image in root) that can be shown to students to pull up the app on their phones. But the app also runs on laptops. Also important: the app provides instructions, including on how to build the setup: students can click the fold out arrow on the start page.-->
+The procedure is run by an app, which walks a pair through the trials, tells them where to put the speaker, plays the sound, and scores the result at the end.
 
-<!-- Given the overhaul of the app most or all of the stuff below can be removed? -->
+[soundlocalizationapp-production.up.railway.app](https://soundlocalizationapp-production.up.railway.app)
 
-The Google Doc embedded below can be printed and handed out to students as a handout describing how to conduct the experiment and record the data.
+It is designed for a phone, so the quickest way to start a class is to put this code on the board. It runs just as well on a laptop.
+
+![The code students can scan to open the sound localization app on their phones.](images/sound-localization-app-qr.png){#fig:sl-qr}
+
+On the opening screen, a pair enters a name, chooses whether this run is with **Real ears** or **Artificial ears**, and sets how many trials to do — fewer if time is short. The `Instructions` bar folds out into a full description of the activity, including how to lay the setup out, so students can work from the app rather than from a handout.
+
+![The opening screen. The `Instructions` bar at the top folds out into the full procedure, including how to arrange the room.](images/sound-localization-app-start.png){#fig:sl-start}
+
+Each trial then tells the pair where to place the speaker, waits while they play the sound, and records what the listener answers.
+
+![A trial in progress. The app names the speaker position, plays the sound on request, and moves on when the listener has answered.](images/sound-localization-app-trial.png){#fig:sl-trial}
+
+The test is adaptive: a correct answer makes the next trial harder by moving the speaker nearer the midline, where the difference between the two ears is smallest. A pair whose pinnae work will keep succeeding at angles that defeat a pair without them, which is the comparison the activity is built on. At the end the app reports a score and a table of trials — run it once with real ears and once with the artificial ones, and compare.
 
 After all groups have finished, discuss the pinnae's performance. In their designs, students could have affected the timing (through distance), the loudness (through shape), or both. Ask the class questions to gather information about which were most effective and what they might change with more time.
-
-For this activity, students should download a sound snippet. The link is provided in the linked Google Doc below. However, they can also download it directly here (click the file, then click the 3 dots to download).
-
-[burst_short.wav](files/burst_short.wav)
-
-> **Tip**
->
-> You can decrease the number of trials if time is short.
-
-[https://docs.google.com/document/d/1V8dXweQiOUJKbkWrg74FiriQjNVoPsODYCXSUl_M6s8/edit?usp=drive_web](https://docs.google.com/document/d/1V8dXweQiOUJKbkWrg74FiriQjNVoPsODYCXSUl_M6s8/edit?usp=drive_web)
 
 ## Robot phonotaxis
 
@@ -250,23 +252,23 @@ In the first step of this activity, students will measure the microphones' direc
 >
 > If you mount the sound sensors, as shown below, do not tighten the screws too much. This might damage the sensors.
 
-![](images/robot-phonotaxis-5f001102.jpg)
+![The two sound sensors mounted on the front of the robot, angled outwards so that each faces a different side.](images/robot-phonotaxis-5f001102.jpg)
 
-![](images/robot-phonotaxis-9b19fbad.jpg)
+![One of the sensors close up. The microphone is the small black disc; the rest of the board amplifies and filters its signal.](images/robot-phonotaxis-9b19fbad.jpg)
 
 ![The sound sensor.](images/robot-phonotaxis-e133beed.jpg)
 
 Next, have students build a setup like the one shown below. You can have students put a large sheet of paper or a whiteboard on the floor (as in the example below) and draw several compass directions. Below, angles from -40 to 40 degrees have been drawn in 20-degree steps. Place the sound source at an angle of 0 ° and about 50 cm from the robot. The sound source can be a phone or a speaker. The speaker is not shown in the image below.
 
-![](images/robot-phonotaxis-748fdb0b.jpg)
+![Measuring directionality. The robot sits at the centre of a protractor scale so it can be rotated to a known angle between readings.](images/robot-phonotaxis-748fdb0b.jpg)
 
-Have the sound source play the following sound on repeat. The sound consists of bursts of white noise. [The reason why this sound is pulsed is explained here](#sound-localization).  Click the link below, then click the 3 dots in the sound player to download the file.
+Have the sound source play the following sound on repeat. The sound consists of bursts of white noise. [Temporal response of the Makeblock sound sensor](#temporal-response-of-the-makeblock-sound-sensor) explains why this sound is pulsed.  Click the link below, then click the 3 dots in the sound player to download the file.
 
-[pip_exported.mp3](files/pip_exported.mp3)
+[Pulsed tone for the robot (.mp3)](files/pip_exported.mp3)
 
 Students should align the robot with each marked direction. Run the program below. In the program, ensure the block "set left_scale" contains the value 1. You can change this number by clicking on the small oval with the number.
 
-![](images/robot-phonotaxis-35eb8c6f.png)
+![The `left_scale` block, which holds the correction factor. It starts at 1, meaning no correction.](images/robot-phonotaxis-35eb8c6f.png)
 
 When they click the green flag, the robot will take 20 measurements of sound intensity from the left and right microphones. Finally, it will calculate the average of the 20 measurements. The robot will beep when it is done. Once the robot beeps, they should write down the number for `left_sound` and `right_sound`.
 
@@ -290,7 +292,7 @@ Next, turn the robot to align it with the next direction and click the green but
 
 After collecting all measurements, students can create a graph of their data. Below, we have included a typical plot resulting from the measurements.
 
-![](images/robot-phonotaxis-d4731c59.png)
+![Loudness at each ear as the robot is rotated, with no ears fitted. Both lines are nearly flat: the bare microphones barely distinguish direction at all.](images/robot-phonotaxis-d4731c59.png)
 
 From the graph, we can derive two conclusions. First, the intensity of the picked-up sound varies little with the angle. This means that the microphones register about the same sound intensity regardless of the angle relative to the sound source. This is due to the microphones' omnidirectionality. Stated differently, from the sound intensity picked up by the left and right microphones, you cannot tell whether the sound is coming from the left or the right. That is not a good basis for sound localization. Secondly, across (most) directions, the left microphone (in the provided example) registered larger values than the right one. This suggests that the microphones are not equally sensitive. The two microphones on the robot feature the same electronic components. Therefore, one would expect them to be similarly sensitive to sound. However, for various reasons, one is often more sensitive than the other. This makes localizing sound by comparing the intensity at both microphones harder.
 
@@ -300,19 +302,19 @@ In summary, based on the measurements, we conclude that the microphones are not 
 
 Students can make the ears (microphones) directional by constructing artificial pinnae around the microphones. Students can use paper, modeling clay, or other materials. In the example below, we made external ears for the robot by rolling sheets of paper into cones. Notice that the ears are quite large with respect to the robot. Larger ears typically result in higher directionality. We also show images of a student’s robot, which is provided with external ears made out of model magic clay.
 
-![](images/robot-phonotaxis-3b931d59.jpg)
+![Paper cone ears, taped to the sensors and angled outwards.](images/robot-phonotaxis-3b931d59.jpg)
 
-![](images/robot-phonotaxis-3c135ee9.jpg)
+![A moulded pair, shaped to gather sound from one side and shield the other.](images/robot-phonotaxis-3c135ee9.jpg)
 
-![](images/robot-phonotaxis-5b1579be.jpg)
+![Another design. What matters is not realism but that the two ears face away from each other.](images/robot-phonotaxis-5b1579be.jpg)
 
-![](images/robot-phonotaxis-caff0520.jpg)
+![Students take the brief further than strictly necessary, which is no bad thing.](images/robot-phonotaxis-caff0520.jpg)
 
 Once students have created ‘ears’ for their robots, have them repeat the measurements above. The graph should now show a clear directionality. If not, they should keep working on the ears until they obtain directional ears. If the ears are not directional, they can not be used to localize sound.
 
 Below, we show an example of data collected with directional ears. These data show that the right ear picks up more sound when the sound source is to the right of the robot (negative x-axis angles), and vice versa.
 
-![](images/robot-phonotaxis-f4124490.png)
+![The same measurement with ears fitted. The lines now separate and cross: each ear hears its own side more loudly, which is the difference the robot steers on.](images/robot-phonotaxis-f4124490.png)
 
 One problem with the graph above, which often occurs with students’ external ears, is that the amount of sound picked up by the left and right ears is not the same at zero degrees. Indeed, in the data shown, when the sound source is directly in front of the robot, the left ear picks up more sound than the right. The amount of sound picked up by the left ear seems higher overall. This indicates that the left ear is more sensitive than the right. At angle zero, the right value is about 70% of the value for the left ear:
 
@@ -324,11 +326,11 @@ Students’ values will differ. Perhaps their right ear is more sensitive than t
 
 We can correct for the differences in microphone sensitivity. The example program provides for this through the `left_scale` block. You can enter the result of the equation into that block to correct for differences in microphone sensitivity. For the example above, we would enter 0.7
 
-![](images/robot-phonotaxis-3f2fd20b.png)
+![Setting the correction factor. Here the left microphone reads high, so `left_scale` is set below 1 to bring the two into agreement.](images/robot-phonotaxis-3f2fd20b.png){#fig:leftscale}
 
 Students could rerun the measurements to check whether this correction results in the left and right ears picking up about the same amount of sound at zero degrees. Below, we have included an example graph.
 
-![](images/robot-phonotaxis-6f33c641.png)
+![After scaling. The two curves now cross close to zero degrees, so equal loudness means the sound really is straight ahead.](images/robot-phonotaxis-6f33c641.png)
 
 Now, the left and right ear values are approximately equal at angle zero. Moreover, the left ear returns a higher value if the sound source is on the robot's left side (angle > 0). The right ear has a larger response when the sound source is on the robot's right side (angle < 0). These response curves allow us to perform phonotaxis now.
 
@@ -338,9 +340,7 @@ We will now have the robot follow a sound source. Students can run the example p
 
 [sound_localization_approach](https://planet.mblock.cc/project/3941523) — or [download `sound_localization_approach.mblock` directly](files/programs/sound_localization_approach.mblock) if your school blocks the Makeblock site.
 
-When running this program, be sure to fill out the previously determined correction factor in the `left_scale` block:
-
-![](images/robot-phonotaxis-f22ed6ba.png)
+When running this program, be sure to fill in the correction factor you determined earlier, in the same [`left_scale` block](#fig:leftscale) as before.
 
 The example program does the following:
 
@@ -349,36 +349,3 @@ The example program does the following:
 3. Next, the robot drives a few cm forward. And the cycle repeats.
 
 This approach to sound localization results in a jittery path: the robot stops, measures, rotates, and moves. However, this approach gives the robot enough time to collect data (sound). Moreover, many animals adopt the same stopping-moving strategy when approaching sound sources. Even humans "stop to listen" when looking for their ringing phone. Biology and engineering use similar strategies!
-
-## Adding the sound sensor extension
-
-<!-- This is double: I think we covered this above? -->
-
-### Step 1: Add the mBot to mBlock
-
-- Check whether the mBot is showing in the `Devices` window in mBlock. If the mBot is not listed, follow the instructions below to add the mBot.
-- Click the `Add` (circular) button at the left side of the window. The button's image is shown below.
-
-![](images/chrome-os-a1ae66d1.png)
-
-- From the window that pops up, select the mBot (**not the mBot2**).
-
-![](images/chrome-os-d52dfcc3.png)
-
-![The mBot is selected in the `Devices` window.](images/chrome-os-86445f6e.png)
-
-- The mBot will be added to the `Devices` section of the mBlock.
-
-### Step 2: Add the sound sensor extension
-
-- Make sure the mBot is selected in the `Devices` window in mBlock.
-- Click the `+` button in the blocks menu (see image below)
-- This will bring up a screen with extensions for the robot.
-- Select and `Add` the `Light Sound` extension.
-- This extension will give you access to new blocks for using the sound sensors.
-
-![](images/adding-color-sensor-extension-4c6bddee.png)
-
-![](images/adding-the-sound-sensor-extension-12902c49.png)
-
-![](images/adding-the-sound-sensor-extension-3972f84e.png)
