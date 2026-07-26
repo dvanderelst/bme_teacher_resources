@@ -144,11 +144,13 @@ Now ask students to list the three (or four) main differences between microphone
 
 ### Background: hearing sensitivity
 
-Our ears are very sensitive! Let's express the sensitivity of our ears in some numbers. This will give us intuition about how sensitive we are to sound. The faintest sounds humans can detect (around 2 kHz) have an amplitude of about 20 micropascal. This means the air pressure at the eardrum fluctuates by 20 micropascals around the average pressure. Therefore, the total pressure difference at this sound intensity is 40 micropascal (2 x 20 micropascal). This change in air pressure pushes and pulls the eardrum back and forth. The movement of the eardrum will eventually be perceived as sound.
+Our ears are very sensitive, and it is worth putting a number on it. The faintest sound a person can hear at around 2 kHz corresponds to a sound pressure of about **20 micropascal** — the figure that defines 0 dB SPL, and the bottom row of the table of sound levels earlier in this chapter.
 
-We can work out the force that pressure exerts on the eardrum. A pressure of 40 micropascal is the same as 4.07 × 10⁻⁷ grams per square centimetre — that is, the weight of about four ten-millionths of a gram resting on every square centimetre. Force is pressure times area, and the eardrum is about 0.5 cm², so the force on it is half that figure.
+That 20 micropascal is an RMS value: a kind of average taken over the cycle, not the largest pressure reached. For a pure tone the peak is √2 times the RMS value, so at the eardrum the pressure rises about 28 micropascal above the surrounding air pressure and falls about 28 micropascal below it. The full swing, from the top of the cycle to the bottom, is about **57 micropascal**. It is this rising and falling pressure that pushes and pulls the eardrum, and that movement is eventually perceived as sound.
 
-This result shows that our ears can detect (the equivalent of) 0.0000002 grams applied to (and removed from) the eardrum at a frequency of 2000 Hz. These are tiny forces, indeed! Imagine a kitchen scale that could detect something much smaller than a grain of salt!
+We can turn that pressure into a force. A pressure of 57 micropascal is 5.8 × 10⁻⁷ grams-force per square centimetre — the weight of just under six ten-millionths of a gram resting on each square centimetre. Force is pressure times area, and the eardrum is about 0.5 cm², so the force on it is about **2.9 × 10⁻⁷ grams-force**, or 0.0000003 grams.
+
+So our ears detect the equivalent of three ten-millionths of a gram being laid on the eardrum and lifted off again, two thousand times a second. A grain of salt weighs something like 0.00006 grams — two hundred times more. Imagine a kitchen scale that could weigh a two-hundredth of a grain of salt, and read it two thousand times a second.
 
 ## Activity: robot phonotaxis
 
