@@ -11,6 +11,20 @@
 % side by side and the attribution runs off the page.
 \renewcommand{\and}{\\}
 
+% Put the programme logo above the title. titling gives us a hook into
+% \maketitle without having to carry a modified copy of pandoc's template.
+%
+% The RGB file, per the 2021 brand guidelines: RGB for screen, CMYK for print at
+% 300 dpi or better. This document is read on screen far more often than it is
+% printed, and at the width set below the RGB file still resolves to about
+% 590 dpi, so it clears the print threshold anyway.
+\usepackage{titling}
+\pretitle{%
+  \begin{center}
+  \includegraphics[width=0.55\linewidth]{content/branding/bme-logo.png}\\[2.2em]
+  \LARGE}
+\posttitle{\end{center}\vskip 0.5em}
+
 % --- figures ----------------------------------------------------------------
 \usepackage{graphicx}
 \setkeys{Gin}{width=0.85\linewidth,keepaspectratio}

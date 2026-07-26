@@ -24,6 +24,7 @@ If you are unsure whether your use counts as non-commercial — a paid teacher-t
 
 The license above covers our own writing, diagrams and photographs. It does **not** cover:
 
+- The Biology Meets Engineering logo and the University of Cincinnati name and marks. These identify the programme rather than teaching anything, so the licence does not cover them. Please adapt the materials as much as you like, but remove the logo from your version, so that it is clear the result is yours rather than ours.
 - Screenshots of the mBlock software. mBlock, mBot and Makeblock are products and trademarks of
   Makeblock Co., Ltd.; screenshots appear here to document how to operate the software.
 - Photographs of Makeblock hardware not taken by the project.

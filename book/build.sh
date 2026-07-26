@@ -42,7 +42,7 @@ ARGS=(
   metadata.yaml "${CH[@]}"
   --from=markdown+pipe_tables+tex_math_dollars+implicit_figures
   --toc --toc-depth=2 --number-sections
-  --resource-path=content:content/images
+  --resource-path=content:content/images:content/branding
   --lua-filter=tools/strip-notes.lua
   --lua-filter=tools/abs-links.lua
   --lua-filter=tools/xref.lua
@@ -59,6 +59,7 @@ pandoc "${ARGS[@]}" --pdf-engine=xelatex \
   -o render/BmE-teacher-materials.pdf
 echo "--- HTML (single self-contained file) ---"
 pandoc "${ARGS[@]}" --standalone --embed-resources --mathml \
+  --include-before-body=content/branding/logo.html \
   -o render/BmE-teacher-materials.html
 rm -f render/_version.tex
 ls -lh render/ | awk 'NR>1{print "  "$9"  "$5}'
