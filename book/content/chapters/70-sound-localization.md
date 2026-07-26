@@ -28,9 +28,9 @@ Students must be familiar with Microsoft Excel or Google Sheets, be able to ente
 
 ## Investigating/Essential Questions
 
-- How	do humans localize sound?
-- How	does a microphone differ from a human ear?
-- How	can we use information from living animals to improve human technology (biomimicry)?
+- How do humans localize sound?
+- How does a microphone differ from a human ear?
+- How can we use information from living animals to improve human technology (biomimicry)?
 - What is phonotaxis?
 
 ## Educational Standards
@@ -44,7 +44,7 @@ Students should be able to…
 1. Identify three ways that a microphone is different from a human ear.
 2. Measure and display the directivity of the microphones on a robot.
 3. Design pinnae for a human and a robot.
-4. Explore the design and placement of the robot's ears to increase	sensitivity to sound.
+4. Explore the design and placement of the robot's ears to increase sensitivity to sound.
 
 ## Introduction
 
