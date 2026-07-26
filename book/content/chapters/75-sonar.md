@@ -82,7 +82,7 @@ The sonar sensor used by the mBot is a typical example of sonar as a distance se
 
 The sensor reports distance: It uses the time delay between the emitted sound and the returning echo to estimate the distance to the object from which the sound is reflected. This is illustrated below. In this image, the same device is used as an emitter and receiver. Some sonar sensors can also use the emitter as a microphone. As said, the emitter and receiver are separated in our sensor.
 
-![](images/sonar-lesson-plan-19f7e7c8.png)
+![The principle. The sensor emits a pulse, the pulse reflects off an object, and the time until the reflection returns gives the distance.](images/sonar-lesson-plan-19f7e7c8.png)
 
 ### Animals that use sonar
 
@@ -96,7 +96,7 @@ Megabats, which include fruit bats and flying foxes, generally do not use echolo
 
 Megabats have large eyes and well-developed visual centers in their brains, which help them find food (fruits, nectar, or pollen) and navigate through forests or open spaces during nighttime. Megabats include the Fruit Bat (Family Pteropodidae) and Flying Foxes (Genus Pteropus), predominantly found in tropical and subtropical regions of Africa, Asia, Australia, and the Pacific Islands.
 
-![](images/sonar-lesson-plan-c31a35a4.jpg)
+![Microbats and megabats. Broadly, it is the microbats that echolocate; the fruit-eating megabats mostly navigate by sight and smell.](images/sonar-lesson-plan-c31a35a4.jpg)
 
 #### Whales
 
@@ -132,25 +132,44 @@ Even though we can’t hear the emission of the sonar sensor without help, we ca
 
 Below, the sound (waveform) has been plotted as recorded by an ultrasonic microphone. This snippet is about 0.03 seconds (or 30 milliseconds) long. The sound burst at the left side of the graph is the emission of the ultrasonic pulse. The sound bursts at the right of this are returning echoes. It should be noted that the sensor uses very short sound bursts. The emitted sound is about 1 ms (millisecond) long.
 
-![](images/sonar-lesson-plan-e223f011.png)
+![About 30 milliseconds of sound recorded next to the sensor. The tall burst at the left is the emitted pulse, and the bursts to the right are returning echoes. The shaded region is the interval the sensor times: emission to first detected echo. The faint echoes inside it are too weak for the sensor to register.](images/sonar-lesson-plan-e223f011.png)
 
 The mBot sensor, like many other sonar-based distance sensors, ignores all but the first echo. The interval shaded in pink is the time between the emission of the pulse and the reception of the first echo. Looking closely, you will see that some very weak echoes return before the indicated echo. But these are too weak for the sensor to detect. The sensor uses the time interval to the first detected echo to determine the distance to an object. In this case, the interval is about 0.0104 seconds (or 10.4 ms).
 
 Assuming that sound travels about 34 cm per millisecond, we can work out the distance (d) from which the echo returned using the following formula:
 
 $$
-d = \frac{34.3 \frac{cm}{ms} \times delay}{2} = \frac{34.3 \frac{cm}{ms} \times 10.4\ ms}{2} = 178.36\ cm
+d = \frac{34.3 \frac{cm}{ms} \times \text{delay}}{2} = \frac{34.3 \frac{cm}{ms} \times 10.4\ ms}{2} = 178.36\ cm
 $$
 
-Using a laser distance meter, the object returning the echo (in this case, a wall) was found to be about 185 cm away from the sonar sensor. Therefore, the calculation is close but not entirely exact. One reason for this is that the speed of sound (sound travel) depends on temperature and humidity. The applet linked below lets you calculate a more precise speed of sound for different environmental conditions:
+Using a laser distance meter, the object returning the echo (in this case, a wall) was found to be about 184 cm away from the sonar sensor. Therefore, the calculation is close but not entirely exact. One reason for this is that the speed of sound (sound travel) depends on temperature and humidity. The applet linked below lets you calculate a more precise speed of sound for different environmental conditions:
 
 [Calculation speed of sound in humid air and the air pressure humidity moist air water vapor density of water atmospheric pressure - sengpielaudio Sengpiel Berlin](https://sengpielaudio.com/calculator-airpressure.htm)
 
 The value of 34.3 cm/millisecond for the speed of sound only holds for temperatures around 20 degrees Celsius and 50% humidity. The speed of sound increases with temperature and humidity. Taking temperature and humidity measurements would have allowed a correction to the equation above and a more accurate result.
 
-> **Tip**
+#### The sensor under-reports distance
+
+The distance the sensor reports is not the distance we just calculated from the echo. It is consistently too small. In the measurement above, with the wall about 184 cm away, the sensor reported **142 cm**. A search suggests this is a known quirk of these sensors rather than a fault in one unit.
+
+The programs in this lesson multiply the reported distance by **1.25** to compensate, and that is worth understanding rather than taking on trust, because it does not quite reconcile:
+
+| | Distance |
+|---|---|
+| Reported by the sensor | 142 cm |
+| Sensor reading x 1.25 | 177.5 cm |
+| Calculated from the echo delay | 178.4 cm |
+| Measured with a laser distance meter | about 184 cm |
+
+So x 1.25 brings the sensor into line with the time-of-flight calculation almost exactly, and still leaves it about 6 cm short of the laser measurement. Correcting the whole way to 184 cm would take a factor of about 1.30. That remaining gap is small enough to come from the assumed speed of sound, or from the two instruments not measuring from quite the same point on the robot.
+
+> **Note**
 >
-> **Cautionary Note:** In the previous section, it was shown how the sensor derives a distance measure from the delay of the echo. However, it turns out that the distance returned by the robot is biased: it consistently underestimates the distance. For the example given in the previous section, using a real distance of 184 cm, the robot reported a distance of 142 cm. An internet search indicated this might be a problem with the sensor's hardware. This can be corrected by multiplying the distances reported by the sensor by 1.25. The programs in this lesson include this correction factor. However, it might be worthwhile to check the distances reported by the sensors used by the students to see whether such a correction factor is needed (and, if so, what factor).
+> Since the error may differ from sensor to sensor, it is worth measuring your own rather than trusting ours. Put the robot a known distance from a large flat wall, read what the sensor reports, and divide:
+>
+> **correction factor = true distance / reported distance**
+>
+> If your answer is a long way from 1.25, change the multiplier in the programs to match. It appears in the `do_sensing` block.
 
 #### Directionality and Range
 
@@ -162,7 +181,7 @@ The conclusion of this discussion is that for a given target object, the sensor 
 
 To make this a bit more tangible, consider the following graph. This graph is provided by a manufacturer of a specific sonar sensor (Maxbotix, a well-known manufacturer of a wide range of sonar sensors). This is not the sensor used in this lesson, but the example is illustrative.
 
-![](images/sonar-lesson-plan-3ea35653.jpg)
+![The region in which a Maxbotix sensor can detect a 10 cm wooden pole, each grid square being 30 cm. The sensor sits at the bottom, pointing up. Straight ahead it reaches about 240 cm; along the blue arrow, only about 20 degrees off axis, about 190 cm. The red dots are a different sensor setting and can be ignored.](images/sonar-lesson-plan-3ea35653.jpg)
 
 Each square of the grid measures 30 x 30 cm. The sensor is assumed to be placed at the bottom of the graph, pointing upwards. The black line shows the area where the sensor can detect a target object. The red dots show the same for another setting of the sonar sensor. For our purpose, these can be ignored. In this case, a 10 cm diameter wooden pole was used. This graph shows that the pole can be detected at a maximum range of 240 cm (8 squares x 30 cm) straight ahead.
 
@@ -176,15 +195,13 @@ Students will explore the directionality and the problem with sound mirrors in t
 
 Here, we relate the above concepts to animal sonar, enabling students to see parallels and differences between artificial sonar systems and biological echolocators. Above, we learned that the mBot sonar sensor emits sound pulses of about 40 kHz. Many echolocating bats use calls with a broad frequency range. For example, below, we show a recording of the big brown bat, copied from the U.S. National Park Service website. This plot is a spectrogram. It shows the frequencies in the bat's calls as a function of time. This spectrogram shows that this bat's call contains frequencies between about 60 and 25 kHz. You can play a slowed-down version of the sound recording on the U.S. National Park Service website. By slowing down the recording, the sound becomes audible to humans. When you listen to the recording, you will notice that this bat’s calls sound like ‘chirps’; indeed, bat calls are often called chirps, as this is what they sound like on slowed-down recordings.
 
-![](images/sonar-lesson-plan-bcb99b25.png)
+![A big brown bat's calls, recorded by the U.S. National Park Service. Each stroke is one call, sweeping downwards from about 60 kHz to about 25 kHz. The calls come closer together towards the right as the bat closes on a target.](images/sonar-lesson-plan-bcb99b25.png)
 
 [Echolocation - Bats (U.S. National Park Service)](https://www.nps.gov/subjects/bats/echolocation.htm)
 
 Echolocating whales and dolphins' calls typically contain an even broader range of frequencies than bats' calls. Below, we show the spectrogram of dolphin sonar sounds. The sounds contain frequencies from 0 to 150 kHz (the highest frequency measured).
 
-![A modern acoustic mirror. Source: [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html).](images/sonar-lesson-plan-342a9881.jpg)
-
-From [https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html)
+![A spectrogram of eight echolocation clicks from a dolphin, about 40 milliseconds apart. Each click is the narrow vertical stripe, and it spans the whole height of the plot: a single click contains everything from the lowest frequencies shown up to about 150 kHz. Compare this with the bat call above, and with the sensor's single frequency of 40 kHz. Source: [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html).](images/sonar-lesson-plan-342a9881.jpg)
 
 > **Tip**
 >
@@ -192,41 +209,15 @@ From [https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html](https:/
 
 Above, we discussed that artificial sonar sensors are directional: they are more sensitive in some directions than others. Likewise, animal sonar systems are also directional. Below, we show an image showing a top view of the emission directionality of a bat and a dolphin. These images show the “loudness” of their calls in each direction. Straight in front of the animal, the calls are the loudest. Left and right, the call is quieter. On top of this, the animals’ hearing is also directional. They are more sensitive to echoes coming from straight ahead and less to peripheral echoes.
 
-![](images/sonar-lesson-plan-c01f834f.png)
+![Emission directionality of a bat and a dolphin, seen from above. The calls are loudest straight ahead and fall away to the sides, just as the mBot's sensor does. From Madsen, P. T. & Surlykke, A. (2013), *Functional Convergence in Bat and Toothed Whale Biosonars*, Physiology 28, 276-283.](images/sonar-lesson-plan-c01f834f.png)
 
 > **Tip**
 >
 > In summary, just like the mBot sonar, animal sonar is directional. Animals can detect small objects more readily straight ahead than from the side.
 
-### Activities
+The next two activities let students find these limits for themselves. Both are optional and can be skipped if time is short.
 
-Below, we introduce two activities that familiarize the students with the operation of the robot’s sonar sensor.
-
-> **Note**
->
-> These two activities are optional and can be skipped if time is limited.
-
-[Activity 1: Measuring the sonar’s directivity](#activity-1-measuring-the-sonars-directivity)
-
-[Activity 2: Acoustic mirrors](#activity-2-acoustic-mirrors)
-
-## Part 2: Programming and Building
-
-Below, we provide two activities that can be used to challenge the students. The first activity asks the students to program a robot equipped with two sonar sensors to avoid obstacles. The second activity asks students to design, program, and test a sonar-based cane to support visually impaired people.
-
-### Activity: Robot obstacle avoidance
-
-Click the link below to access the robot obstacle avoidance activity instructions.
-
-[Robot obstacle avoidance](#robot-obstacle-avoidance)
-
-### Activity: Building a sonar cane
-
-Click the link below to access the sonar cane building instructions.
-
-[Sonar cane](#sonar-cane)
-
-## Activity 1 Measuring the sonar’s directivity
+## Activity 1: Measuring the sonar's directivity
 
 In this activity, students will create a graph (on the floor) to understand what a single sonar sensor can be expected to detect.
 
@@ -234,7 +225,7 @@ In this activity, students will create a graph (on the floor) to understand what
 >
 > For this activity, plug in the sonar sensor to port 1. The robot should be equipped with only one sonar sensor for this activity (see image below).
 
-![For this activity, the robot should be equipped with a single sonar sensor (this is the default configuration of the robot). **In this stock image, the sonar is plugged in to port 2 but we will use port 1 for this activity.**.](images/activity-1-measuring-the-sonars-directivity-60d0fadf.jpg)
+![For this activity, the robot should be equipped with a single sonar sensor (this is the default configuration of the robot). **In this stock image, the sonar is plugged in to port 2 but we will use port 1 for this activity.**](images/activity-1-measuring-the-sonars-directivity-60d0fadf.jpg)
 
 Open the Sonar Directionality Program in mBlock 5 from the link below and connect to your robot using the dongle connection. [See here for instructions](#getting-started-with-the-robot) on how to connect to the robot.
 
@@ -252,7 +243,7 @@ The program is straightforward: It continuously measures the distance from the s
 
 To measure the region in which the robot can detect an obstacle, place the robot in a large open space (see image below). Next, move an obstacle in front of the robot (in this case, a black pole) to find the largest distance at which the object is detected (the robot turns green) for several directions. While doing this, ensure that the robot is not picking up echoes from your body. In all likelihood, your body will be a larger object than the one you use to assess the sonar’s reach.
 
-![](images/activity-1-measuring-the-sonars-directivity-d833df5e.jpg)
+![The setup. The robot is at the bottom, the black pole is the target, and the white straws mark the positions where the robot could just detect it.](images/activity-1-measuring-the-sonars-directivity-d833df5e.jpg)
 
 In trials for this lesson, a black plastic tube pole was used as the obstacle, and straws (or tape) were placed on the floor, connecting the positions at which the robot could detect it. For every position in the area delineated by the straws, the robot could detect the tube pole (the robot turned green). Moving the tube pole outside this area turned the robot red.
 
@@ -263,7 +254,7 @@ You could repeat the measurements with different objects and compare the resulti
 - What is your robot's maximum detection distance?
 - Is the sensor’s directionality symmetric?
 
-## Activity 2 Acoustic mirrors
+## Activity 2: Acoustic mirrors
 
 The previous activity revealed that the sonar sensor's range is limited. To use the sonar effectively, especially indoors, we must understand a second limitation. In contrast to natural environments, indoor environments contain many smooth surfaces, which can be a problem for sonar. If the sonar pulse strikes a smooth surface at an angle, much of the sound will be reflected away from the receiver instead of toward it. This might result in the sonar sensor not detecting large smooth surfaces. This is called the acoustic mirror effect.
 
@@ -285,7 +276,11 @@ This effect can be observed by pointing the robot to a smooth surface (like a wa
 
 ![Left: the robot is pointed straight at a smooth, flat wall. The sonar sensor has no problem detecting the wall and turns green. Right: The robot is pointed at the wall from an angle. Due to the acoustic mirror effect, the robot does not detect the wall.](images/activity-2-acoustic-mirrors-3936ab65.png)
 
-## Robot obstacle avoidance
+## Part 2: Programming and building
+
+The two activities that follow are the challenges of this lesson. In the first, students program a robot with two sonar sensors to avoid obstacles. In the second, they design, program and test a sonar cane to support a visually impaired user.
+
+## Activity 3: Robot obstacle avoidance
 
 ### Preparing the robot
 
@@ -303,9 +298,9 @@ The [Thingiverse](https://www.thingiverse.com/dvanderelst/designs) page provides
 
 The red brackets were 3D printed. The STL files accompanying these lesson plans are available on the [Thingiverse](https://www.thingiverse.com/dvanderelst/designs) page.
 
-![](images/robot-obstacle-avoidance-519ceb09.jpg)
+![Two sonar sensors on 3D-printed brackets, angled apart so each covers its own side.](images/robot-obstacle-avoidance-519ceb09.jpg)
 
-![](images/robot-obstacle-avoidance-72615833.jpg)
+![A second arrangement of the same idea. The angle between the sensors is a design choice worth letting students experiment with.](images/robot-obstacle-avoidance-72615833.jpg)
 
 ### Programming the robot
 
@@ -321,15 +316,15 @@ Students could be asked to design a program for the robot that allows it to avoi
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
-The main program loop is shown first. This loop continuously goes through the same steps. It queries the sensors. If the left sonar sensor detects the smallest distance (`min_side = left`), the robot turns left as long as the left sonar returns a distance smaller than the safe distance. If the right sonar detects the shortest distance, the robot turns right as long as the right sonar returns a distance smaller than the safe distance.
+The main program loop is shown first. It goes round the same steps continuously. It queries the sensors; if the left sonar reports the smaller distance (`min_side = left`) the robot turns **right**, away from the obstacle, and keeps turning until the left sonar reports a distance greater than the safe distance. If the right sonar reports the smaller distance it turns left in the same way. Between turns it drives forward — at half power when the nearest obstacle is more than 100 cm away, and at quarter power when it is closer, so that it has more time to sense as it comes up on something.
 
-![](images/robot-obstacle-avoidance-18f6461b.png)
+![The main loop. `do_sensing` reads both sensors; if the nearer obstacle is on the left the robot turns right, and the other way round; otherwise it drives on, more slowly when something is within a metre.](images/robot-obstacle-avoidance-18f6461b.png)
 
 The safe distance is defined at the start of the program. Here, it is set to 30 cm. The result is that the robot turns left or right (on the spot) if one of the sensors returns a distance smaller than the safe distance.  And the robot keeps turning until that sensor returns a large enough value.
 
 Let's break down the program into simpler terms:
 
-1. `do_sensing`: This block collects data from both sonar sensors. It measures the distances to obstacles on the left and right sides of the robot. It also multiplies the values by 1.25. See [here](#sonar) for an explanation of why this multiplication is performed.
+1. `do_sensing`: This block collects data from both sonar sensors. It measures the distances to obstacles on the left and right sides of the robot. It also multiplies both values by 1.25, for the reason given in [The sensor under-reports distance](#the-sensor-under-reports-distance).
 2. `min_distance`: This variable stores the smaller of the two distances measured. It tells us how close the nearest obstacle is, regardless of which side it's on.
 3. `min_side`: This variable tracks which sensor (left or right) detected the closest obstacle. It's crucial to decide which way the robot should turn to avoid the obstacle.
 
@@ -342,7 +337,7 @@ Here's how these elements work together:
 
 The red blocks in the program above are defined in the image below.
 
-![](images/robot-obstacle-avoidance-57525850.png)
+![The blocks the main loop calls. `do_sensing` reads both sensors and applies the correction factor; `get_min_distance` and `get_min_side` work out how near the closest obstacle is and which side it is on; `turn_left` and `turn_right` turn in short bursts, re-sensing between each, until that side is clear.](images/robot-obstacle-avoidance-57525850.png)
 
 ### Running the program
 
@@ -356,19 +351,19 @@ The acoustic complexity of the toy arena can be appreciated by looking at a reco
 
 ![One recorded echo as perceived by the robot. The marked part is the robot’s emission. The remainder of the signal consists of echoes returned from the many surfaces in the arena depicted on the left.](images/robot-obstacle-avoidance-6a79cb0c.png)
 
-## Sonar cane
+## Activity 4: Building a sonar cane
 
 Several inventors and companies have designed sonar-enabled canes for visually impaired people. The general idea of these devices is to use a sonar sensor (or multiple sensors) to detect obstacles in the user's path. The distance picked up by the sensors is then conveyed to the user by employing non-visual cues.
 
 > **Tip**
 >
-> Show students the YouTube video below describing such a device. Using the robot, students will build a device that does something similar: use one or two sensors to detect obstacles and the robot's speaker to convey this information to a (blindfolded) user. The student guide for this part can be found here.
+> Show students the YouTube video below describing such a device. Using the robot, students will build a device that does something similar: one or two sensors to detect obstacles, and the robot's speaker to convey what they find to a blindfolded user.
 
-[https://www.youtube.com/watch?v=cnW1_XMUIzM](https://www.youtube.com/watch?v=cnW1_XMUIzM)
+[Video: a sonar cane for visually impaired users](https://www.youtube.com/watch?v=cnW1_XMUIzM)
 
 In this activity, the student builds a device that does something similar: use one or two sonar sensors to detect obstacles and use the speaker on the robot to convey this information to a (blindfolded) user. The sonar device should detect obstacles missed by the cane (the user employs their cane to probe for obstacles on the floor while the sonar device looks horizontally for overhanging obstacles).
 
-![](images/sonar-cane-6beb49f4.png)
+![The idea. The cane sweeps the floor while the sonar, mounted higher up, looks ahead for obstacles at head and chest height that the cane would miss.](images/sonar-cane-6beb49f4.png)
 
 ### Mounting the robot on the PVC pipe
 
@@ -378,33 +373,33 @@ Students will mount the robot on a 1/2-inch PVC pipe for this activity. They can
 
 Remove the caster wheel from the front of the robot.
 
-![](images/step-1-b0e9918f.jpg)
+![The caster wheel removed from the front of the robot, with the two screws that held it.](images/step-1-b0e9918f.jpg)
 
 #### Step 2
 
 Mount the platform on the PVC pipe using two screws and a 1/2 inch pipe bracket. It is important to mount the platform with the broad side to the side of the pipe that will be used as the top of the sonar cane.
 
-![](images/step-2-f2db380c.jpg)
+![The mounting plate fixed to the pipe. The broad end must point towards the top of the cane, as marked.](images/step-2-f2db380c.jpg)
 
 #### Step 3
 
 Use at least two screws to fix the robot to the platform. You can use the screws from the caster or any M4 machine screw.
 
-![](images/step-3-a36ea32a.jpg)
+![The robot screwed onto the platform.](images/step-3-a36ea32a.jpg)
 
-![](images/step-3-dffc78d1.jpg)
+![The same join seen from the other side.](images/step-3-dffc78d1.jpg)
 
 #### Step 4
 
 Add more screws using the holes pointed out in the image below.
 
-![](images/step-4-2686475f.jpg)
+![The additional holes used to add further screws.](images/step-4-2686475f.jpg)
 
 #### End result
 
 This image shows the end result: the robot is mounted on the cane. Now students can add one or more sonar sensors to the cane.
 
-![](images/end-result-ccd5463c.jpg)
+![The finished mount. Sonar sensors can now be added anywhere along the pipe.](images/end-result-ccd5463c.jpg)
 
 ### Example Program
 
@@ -424,9 +419,9 @@ We provide an example program. The program is linked and displayed below.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
-The program continuously measures the distance recorded by a sonar sensor, [applies the correction](#sonar), and converts the measurement in cm to meters.
+The program continuously measures the distance recorded by a sonar sensor, [applies the correction factor](#the-sensor-under-reports-distance), and converts the measurement in cm to meters.
 
-![](images/sonar-cane-894677a6.png)
+![The cane program. The distance is read, corrected, and converted to metres; the `beep` block turns it into a beep whose length grows as the obstacle gets closer, and runs the motors briefly at close range so the user feels it as well as hears it.](images/sonar-cane-894677a6.png)
 
 The distance (variable `distance`) is then used to set the duration of a beep. Smaller distances result in longer beeps, while higher distances result in shorter beeps. In equation form, the value `b` (in seconds) is determined as follows:
 
@@ -444,7 +439,7 @@ $$
 
 The relationship between the distance `d` and the duration of the beep `b` is visualized in the following plot. The values `0.49` and `0.4` determine the slope of the line for intermediate distances. When the distance is over about 1.2 meters, the duration of the beep is zero, and the robot will not beep at all. For distances below 0.6 meters, the duration of the beep is maximal (0.25 seconds). At these short distances, the motors are also turned on for 0.25 seconds to give the user some vibrational feedback.
 
-![](images/sonar-cane-b9caef3a.png)
+![Beep length against distance. Beyond about 1.2 m there is no beep at all; below 0.6 m the beep is at its longest, a quarter of a second.](images/sonar-cane-b9caef3a.png)
 
 ### Testing the program
 
@@ -454,14 +449,14 @@ It is worthwhile for students to take time to practice using the sonar cane. Aft
 
 The images below show students using a sonar cane to avoid obstacles. Note that these students use a different robot and have mounted the robot in a different way than explained above.
 
-![](images/sonar-cane-630a642a.jpg)
+![A blindfolded student navigating a corridor with the cane, with an obstacle placed in the path.](images/sonar-cane-630a642a.jpg)
 
-![](images/sonar-cane-ff190d27.jpg)
+![The sonar is mounted low on this cane. Where it points decides which obstacles it finds.](images/sonar-cane-ff190d27.jpg)
 
-![](images/sonar-cane-7bef03ce.jpg)
+![Testing against a bench, the kind of overhanging obstacle a cane sweeping the floor would miss.](images/sonar-cane-7bef03ce.jpg)
 
-![](images/sonar-cane-314965f7.jpg)
+![Obstacles marked out with tape. The rest of the group watches and records what happens.](images/sonar-cane-314965f7.jpg)
 
-![](images/sonar-cane-935870be.jpg)
+![Several canes in use at once. These students mounted the robot differently from the method described above.](images/sonar-cane-935870be.jpg)
 
-![](images/sonar-cane-b5d37240.jpg)
+![Another group's design, tested along the same corridor.](images/sonar-cane-b5d37240.jpg)
