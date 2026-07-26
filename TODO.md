@@ -14,11 +14,29 @@ Sources folded in: the materials review, the recovered Notion comment threads, t
 
 *Last updated: 2026-07-25*
 
-Section 4 was audited against the source on 25 July 2026 rather than trusted. Five entries in it had
-already been closed by earlier commits and were still listed as open; those now say so. Everything in
-section 4 that could be settled without hardware or a judgement call has been fixed, and each entry
-records what was done. What remains in section 4 is 4.1, 4.2's Q2, 4.3's "section B", 4.6, and the
-backlog items in 4.8.
+Audited against the source on 25–26 July 2026 rather than trusted, first section 4 and then every
+other section for work that only looked like it needed hardware. Five entries in section 4 had already
+been closed by earlier commits and were still listed as open; those now say so.
+
+Everything that could be settled at a desk has been, and each entry records what was done and what it
+turned up. Closed this way: all of section 4 except the items below, plus **5.2** (it was a badge, now
+blurred), **5.3**'s licence gap, **6.2** (eight installer screenshots), and the Kinesis half of
+**4.6**. One entry in 1.8 was retired as already dealt with — no Google Drive mirrors remain in the
+book, the programs are mirrored locally.
+
+**What is genuinely left, and why:**
+
+| | Needs |
+|---|---|
+| 1.1–1.7, most of 1.8, 1.9, 1.10 | the robot |
+| 2.1 | a Mac |
+| 3.1 | a Chromebook |
+| 5.1 | a camera |
+| 4.1, 4.2's Q2, 4.3's "section B", the rest of 4.6, 4.8's backlog, 5.3's redraw choice, 6.1, 6.3 | a decision that is yours |
+
+Two 1.8 items were attempted and could not be settled from the material at hand — the port 1/2 pin
+labels and which motor connector is backmost. What was ruled out is written into those entries so the
+next person does not repeat the attempt.
 
 ---
 
@@ -117,13 +135,15 @@ never been checked over the range where it is actually used.
 - [ ] Sound-sensor sensitivity dial: is "both to the same halfway position" still right, and does it
       interact with the `left_scale` calibration students derive later?
 - [ ] Pin labels beside **ports 1 and 2** — one appears to include `A5`. If so, "sound sensors must
-      go in ports 3 or 4" is slightly too strict. (Ports 3 and 4 carry `A0`–`A3`; that much is
-      confirmed from your board photo.)
-- [ ] Which motor connector is physically **backmost** — M1 or M2? Your board photo shows M2 left of
-      M1, but "backmost" depends on chassis orientation. Would make the wrong-direction
-      troubleshooting much faster to follow.
-- [ ] Do the 2024 Google Drive program mirrors still match the current `planet.mblock.cc` versions?
-      The mirrors date from Sept–Dec 2024.
+      go in ports 3 or 4" is slightly too strict. **Tried and failed to settle this at a desk:** the
+      only board photograph available is an 855 px Makeblock product shot, and while ports 3 and 4
+      legibly read `SCL SDA GND 5V A0 A1` and `SCL SDA GND 5V A2 A3` — confirming that half — the
+      port 1 and 2 strips are printed at half the size and upside down, and `A5` cannot be told from
+      `L1` at that resolution. Makeblock's *Beginner's Guide* has no pinout table either. Needs the
+      board in your hand and good light.
+- [ ] Which motor connector is physically **backmost** — M1 or M2? The product shot confirms M2 sits
+      left of M1 with the power switch above them, but no photograph in the repository shows the
+      board mounted in the chassis, so "backmost" still cannot be resolved from what we have.
 - [ ] **Screenshot drift.** Every mBlock screenshot in the document dates from 2024; the current PC
       release is v5.6.0 (April 2025). Spot-check the Devices panel, the `+` extension button and the
       Connect dialog. This matters more in a PDF than it did on a website — a teacher who printed it
@@ -132,7 +152,11 @@ never been checked over the range where it is actually used.
       "Save to **my** computer". I standardised on "my computer", matching "Open from my computer",
       but one of the two spellings was wrong and it is worth reading the menu once.
 - [ ] Screenshot versions: the installed-mBlock screenshot shows **v5.4.3** in its title bar, and the
-      current release is v5.6.0. Part of the screenshot drift already noted below.
+      current release is v5.6.0. Part of the screenshot drift already noted below. The eight installer
+      screenshots added for 6.2 are the same vintage — two of them print a version in the window
+      chrome, **mBlock 5.4.3** and **mLink2 2.1.1**. Installer dialogs change far less often than the
+      editor, so these should age better than the IDE screenshots, but they are on the drift list now
+      rather than discovered later.
 - [ ] **"Panda window."** Several chapters call the variable-values panel the "panda window". Confirm
       that is still what it looks like and a name teachers recognise, or replace it with a neutral
       description.
@@ -258,20 +282,40 @@ level difference, and the outer ear's spectral colouring) before linking the *Ph
 and the Motivation exercise below it turns the horizontal/vertical distinction into a demonstration.
 Nothing to do.
 
-### 4.6 The materials database is unmaintained for two lessons
+### 4.6 The materials database — Kinesis done, two items left
 | Lesson | Items |
 |---|---|
 | Sonar | 16 |
 | Color Vision | 12 |
 | Sound Localization | 11 |
 | Programming the robot | 7 |
+| **Taxis/Kinesis** | **5** (was 1) |
 | **Intro Programming** | **1** |
-| **Taxis/Kinesis** | **1** |
 
-Your backlog has *"Add Taxis/Kinesis Materials"*, *"Add model magic to materials"* and *"Create
-material list to make external pinnae"*. The Kinesis chapter's table currently lists one item
-(Spinners) though the lesson also needs printed grids, the rules handouts and paper. Fixing the
-source CSV or the chapter directly both work — the chapter is now the source of truth.
+*"Add Taxis/Kinesis Materials"* is done, in the chapter rather than the CSV, since the chapter is the
+source of truth now. The table was derivable without asking you: I extracted both rules handouts and
+the grids file, so the list is what the activities actually consume rather than a guess — spinners,
+the four printed grids (Grid 4 carries the narrow and wide markings the tropotaxis conditions need),
+the two rules handouts, a large and a wide arrow cut-out, and the data sheets.
+
+**Still open, because these need you:**
+
+- [ ] *"Add model magic to materials"* — which lesson, and how much per group?
+- [ ] *"Create material list to make external pinnae"* — Sound Localization says "cardboard paper,
+      pipe cleaners, tape, etc." in prose. Turning "etc." into a table is a purchasing decision.
+- [ ] **Intro Programming still lists one item.** The cheese-sandwich game needs the two Avery label
+      sheets that are already linked from the chapter, and presumably actual materials to build a
+      sandwich from. Not obvious from the source what you hand out.
+
+**One naming conflict found while doing this, which is a decision rather than a defect:**
+
+- [ ] The chapter calls the manipulative the **Blue Arrow** and measures in *arrow lengths*; both
+      rules handouts call the same object the **Blue Bug** and measure in *bug-lengths*. The figure
+      shows an arrow, so neither name is wrong about the artwork, but a group holding the handout and
+      a teacher reading the chapter are using two words for one thing. The materials table now
+      mentions both so nobody is stuck, which is a bridge rather than a fix. Standardising means
+      either editing the chapter or regenerating the two `.docx` handouts, and only you know whether
+      those handouts are already printed and in a cupboard.
 
 ### 4.7 Image captions — done
 Started at 111, and this entry still said 61. The real figure is now **zero**: every image in every
@@ -367,18 +411,29 @@ On git history: these were already served publicly from the Notion site, so push
 them for the first time — it makes them permanent. While you are the only person with a clone,
 rewriting history to drop them is easy. It stops being easy once anyone else clones the repo.
 
-### 5.2 One image to glance at
-In the pinnae photo (`testing-artificial-pinnae-e2beccd3.jpg`) the seated student has a small
-light-coloured rectangle at their hip. Could be a phone, a sheet of paper, or a name badge. If it's
-a badge, spot-blur it. Faces are already masked throughout — that part is done.
+### 5.2 The rectangle at the student's hip — it was a badge, and it is blurred
+Enlarged ten times, it is unmistakably an **ID badge in a plastic holder on a lanyard clip**: white
+card, a pink header band, three lines of printed text, clipped to the waistband. Not a phone and not a
+sheet of paper.
 
-### 5.3 The mCore board diagram is Makeblock's, not ours
+Blurred as you instructed, by pixelating a 24 × 48 px region past any possibility of recovery rather
+than softening it, so nothing can be reconstructed from the file. At page scale it reads as a small
+soft patch, consistent with the black face masks already used throughout. The original is one
+`git revert` away if you dislike it.
+
+### 5.3 The mCore board diagram is Makeblock's — carve-out widened
 `introduction-to-the-robot-51abd850.png` — the labelled main-board diagram — is a Makeblock
 illustration, so it belongs with the web-sourced images above rather than with your own photographs.
-It now carries "Diagram by Makeblock." in its caption, which is the honest minimum. Reshooting is not
-really an option here (it's a line drawing, not a photo), so the choices are to keep it with the
-credit, or redraw it. The licence carve-out in *About these materials* covers "photographs of
-Makeblock hardware" — if this diagram stays, widen that wording to cover diagrams too.
+It carries "Diagram by Makeblock." in its caption, which is the honest minimum.
+
+The licence carve-out said "Photographs of Makeblock hardware not taken by the project", which as
+written did not reach a line drawing at all — a diagram is not a photograph, so the one item most
+needing the carve-out fell outside it. It now reads "Photographs **and diagrams** of Makeblock
+hardware not **made** by the project" and names the board drawing explicitly.
+
+- [ ] That closes the licensing gap but not the underlying choice: keep the diagram with its credit,
+      or redraw it so the book owns the artwork outright. Reshooting is not an option, it being a line
+      drawing rather than a photo.
 
 ---
 
@@ -403,10 +458,25 @@ cd book && ./build.sh          # render/BmE-teacher-materials.pdf + .html
 The last one is worth the ten seconds. When someone reports a problem, the first question is which
 version they have, and it is printed at the foot of every page.
 
-### 6.2 Screenshots for *Installing mBlock*
-The new chapter is text-and-links only. Worth bringing across the installer screenshots from the
-retired platform pages (they're still in `bme-notion-export/`): the mBlock installer, `Finish`,
-"installed", the mLink installer, the `Driver Install Failure` dialog, the firewall prompt.
+### 6.2 Screenshots for *Installing mBlock* — done, eight of them
+The chapter was text-and-links only; it now illustrates every step that has a dialog. All eight came
+from `bme-notion-export/` and every one was opened and checked before it was captioned, which turned
+up four things worth recording:
+
+- **Two of them existed in both exports at different versions.** The retired `Admin` page had mBlock
+  **5.4.0**; the newer `Quick Start Guide` page had **5.4.3**, which matches the rest of the book.
+  Used the 5.4.3 pair.
+- **There is no `Driver Install Failure` screenshot**, contrary to what this entry used to claim. That
+  failure appears in the same `DriverSetup` window as the success case, and that window does carry the
+  `UNINSTALL` button the step-4 advice tells teachers to press, so the caption points at it there.
+- **The driver confirmation really does say "The drive is successfully Pre-installed in advance!"** —
+  Makeblock's own wording, "drive" and all. Captioned verbatim, and flagged as the message you want,
+  because it reads like an error when it is not.
+- **The mLink window is a launcher, not a status box.** It has cards and a `Create now` button that
+  opens the same editor as Step 3. The chapter described it as "a small window confirming it is
+  running"; that is now corrected, and the caption notes the shortcut.
+
+Their vintage is on the drift list in 1.8 rather than left to be discovered later.
 
 ### 6.3 A Live/Upload screenshot to delete — gated on 1.1
 *Getting started* line 189 still carries an image captioned *"Use the slider to switch the software
@@ -415,6 +485,12 @@ and 1.3 are settled. One line of markdown now, rather than a Notion UI job.
 
 ## Done
 
+- **Sections 5 and 6 swept too, and one 1.8 entry retired.** *Installing mBlock* gained the eight
+  installer screenshots it was missing (6.2), the badge on the student's hip turned out to be a badge
+  and is blurred (5.2), the licence carve-out was widened to cover diagrams and not just photographs,
+  which is what the mCore drawing needed (5.3), and the Kinesis materials table went from one item to
+  five, derived from the rules handouts and the grids file rather than guessed (4.6). The Google Drive
+  mirror check in 1.8 was retired: no Google Drive links remain anywhere in the book.
 - **Section 4 swept for everything a desk can settle.** Nine defect classes fixed across five
   chapters: literal tabs, unnumbered challenges, seven file links off the naming convention, 14 bare
   URLs as link text, the Color Vision "three steps" paragraph, a caption duplicated as body text, the
