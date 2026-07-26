@@ -31,8 +31,18 @@ Some school computers are locked down and will not allow either the mBlock insta
 1. Go to [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads).
 2. Find the **mBlock PC version** section and download the Windows version. An `.exe` installer and an `.msi` package are both offered; the `.exe` is the normal choice, and the `.msi` is there for IT departments that deploy software centrally.
 3. Run the downloaded installer and follow the prompts.
+
+    ![The mBlock installer running. There is nothing to decide here; it takes a minute or two.](images/installing-mblock-installer.png)
+
 4. Near the end, the installer offers to install a **device driver**. This is what lets the computer talk to the robot, so click `Install`. If you see `Driver Install Failure`, the driver is most likely already present from an earlier installation — click `Uninstall`, then `Install` again.
+
+    ![The driver window, which appears on its own and does not look like the rest of the installer. `CH341SER.INF` is the right thing to see in the box; click `INSTALL`. This is also the window where you would click `UNINSTALL` first if the install fails.](images/installing-mblock-driver-setup.png)
+
+    ![Confirmation that the driver went in. The wording is Makeblock's, and it does say "drive" rather than "driver" — this is the message you want. Click `OK`, then close the driver window behind it.](images/installing-mblock-driver-installed.png)
+
 5. Click `Finish`.
+
+    ![The end of the installation. `Run mBlock` is ticked by default, so mBlock opens as soon as you click `Finish`.](images/installing-mblock-finish.png)
 
 **Windows requirement:** mBlock needs **64-bit** Windows 7 or Windows 10. It will not install on a 32-bit machine. Older school laptops are worth checking before the lesson.
 
@@ -70,6 +80,10 @@ Go to [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads) and scroll 
 
 **Windows** — download and run the installer. As with mBlock itself, it will offer to install a device driver at the end: click `Install`, and if you get `Driver Install Failure`, choose `Uninstall` then `Install` again. Windows 7 or 10, 64-bit.
 
+![The mLink installer. Note that the program calls itself mLink2; that is the same thing the download page lists as mLink.](images/installing-mblock-mlink-installer.png)
+
+![The end of the mLink installation. As with mBlock, `Run mLink2` is ticked, so it starts straight away.](images/installing-mblock-mlink-finish.png)
+
 **Mac** — download and run the installer. macOS 10.12 or later. If macOS blocks it, use the same two fixes as above.
 
 **Linux** — two packages are offered: `.deb` for Debian and Ubuntu-based systems, `.rpm` for Fedora and Red Hat-based ones. Install whichever matches your distribution.
@@ -80,10 +94,14 @@ Go to [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads) and scroll 
 
 mLink has to be running before the browser can find the robot.
 
-- **Windows** — start mLink from the Start menu. It opens a small window confirming it is running. **Leave that window open.** The first time, Windows may ask about the firewall: click `Allow Access`, or the browser will not be able to reach mLink.
-- **Mac** — start mLink from Applications. It opens a small window confirming it is running. Leave it open.
+- **Windows** — start mLink from the Start menu. It opens a window confirming it is running. **Leave that window open.** The first time, Windows may ask about the firewall: click `Allow Access`, or the browser will not be able to reach mLink.
+- **Mac** — start mLink from Applications. It opens a window confirming it is running. Leave it open.
 - **Linux** — start it from a terminal with `mblock-mlink start`.
 - **Chromebook** — nothing to start; Chrome handles it once mLink is added.
+
+![The Windows firewall prompt, which appears the first time mLink runs. `Private networks` is the one that matters, since mLink and the browser are on the same machine. Click `Allow access`.](images/installing-mblock-firewall.png)
+
+![mLink running. This window is what has to stay open — closing it stops the browser finding the robot. It is a launcher rather than a status box, so `Create now` under **mBlock block-based editor** is a shortcut to the same editor as the next step.](images/installing-mblock-mlink-running.png)
 
 ### Step 3: Open the editor
 
