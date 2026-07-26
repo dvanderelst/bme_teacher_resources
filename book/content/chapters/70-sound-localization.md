@@ -162,7 +162,7 @@ In this robotic activity, students will create a robot that performs phonotaxis.
 
 Below, we list two questions you can use to assess students’ comprehension.
 
-> Question 1: How does creating ‘ears’ on the robot increase the robot’s ability to respond to sound?  Support your reasoning using data from the graph.
+> Question 1: How does creating ‘ears’ on the robot increase the robot’s ability to respond to sound?  Support your reasoning by comparing the measurement made [without ears](#fig:noears) against the one made [with ears fitted](#fig:withears).
 >
 
 Answer: The variability of each ear has increased. With ears fitted, the right ear ranges from about 380 at -40 degrees down to about 170 at +40, a spread of roughly 210. Without ears it stayed between about 310 and 380, a spread of roughly 70. This increased variability is good: it means the microphone's output varies more with the angle to the sound source. This increased directionality should make sound localization easier (or more reliable).
@@ -294,7 +294,7 @@ Next, turn the robot to align it with the next direction and click the green but
 
 After collecting all measurements, students can create a graph of their data. Below, we have included a typical plot resulting from the measurements.
 
-![Loudness at each ear as the robot is rotated, with no ears fitted. Both lines are nearly flat: the bare microphones barely distinguish direction at all.](images/robot-phonotaxis-d4731c59.png)
+![Loudness at each ear as the robot is rotated, with no ears fitted. Both lines are nearly flat: the bare microphones barely distinguish direction at all.](images/robot-phonotaxis-d4731c59.png){#fig:noears}
 
 From the graph, we can derive two conclusions. First, the intensity of the picked-up sound varies little with the angle. This means that the microphones register about the same sound intensity regardless of the angle relative to the sound source. This is due to the microphones' omnidirectionality. Stated differently, from the sound intensity picked up by the left and right microphones, you cannot tell whether the sound is coming from the left or the right. That is not a good basis for sound localization. Secondly, across (most) directions, the left microphone (in the provided example) registered larger values than the right one. This suggests that the microphones are not equally sensitive. The two microphones on the robot feature the same electronic components. Therefore, one would expect them to be similarly sensitive to sound. However, for various reasons, one is often more sensitive than the other. This makes localizing sound by comparing the intensity at both microphones harder.
 
@@ -316,7 +316,7 @@ Once students have created ‘ears’ for their robots, have them repeat the mea
 
 Below, we show an example of data collected with directional ears. These data show that the right ear picks up more sound when the sound source is to the right of the robot (negative x-axis angles), and vice versa.
 
-![The same measurement with ears fitted. The lines now separate and cross: each ear hears its own side more loudly, which is the difference the robot steers on.](images/robot-phonotaxis-f4124490.png)
+![The same measurement with ears fitted. The lines now separate and cross: each ear hears its own side more loudly, which is the difference the robot steers on.](images/robot-phonotaxis-f4124490.png){#fig:withears}
 
 One problem with the graph above, which often occurs with students’ external ears, is that the amount of sound picked up by the left and right ears is not the same at zero degrees. Indeed, in the data shown, when the sound source is directly in front of the robot, the left ear picks up more sound than the right. The amount of sound picked up by the left ear seems higher overall. This indicates that the left ear is more sensitive than the right. At angle zero, the right value is about 70% of the value for the left ear:
 
