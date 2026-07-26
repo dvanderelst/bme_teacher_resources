@@ -25,6 +25,14 @@
   \LARGE}
 \posttitle{\end{center}\vskip 0.5em}
 
+% The robot bug, which the brand guidelines describe as an extractable element
+% usable as a design device. It sits in the running footer, set at cap height so
+% it reads as part of the line rather than as a picture dropped into it. Defined
+% here because render/_version.tex, which builds the footer, is included after
+% this file.
+\newcommand{\bmebug}{%
+  \raisebox{-0.35ex}{\includegraphics[height=1.9ex]{content/branding/bme-bug.png}}}
+
 % --- figures ----------------------------------------------------------------
 \usepackage{graphicx}
 \setkeys{Gin}{width=0.85\linewidth,keepaspectratio}
