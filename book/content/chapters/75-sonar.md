@@ -1,9 +1,6 @@
 # Sonar
 
 ## Materials
-# Sonar
-
-## Materials
 
 | Item | Description |
 | :--- | :--- |

@@ -93,6 +93,13 @@ rm -f render/_version.tex
 rm -f render/_stale_warning.tex 2>/dev/null || true
 ls -lh render/ | awk 'NR>1{print "  "$9"  "$5}'
 
+# --- knowledge set for the teacher-support bot -------------------------------
+# Regenerated here rather than on demand, because a bot that answers from the
+# working tree contradicts the PDF a teacher is holding. Same source, same
+# BME_FILE_BASE, same fingerprint as the two documents above.
+echo "--- knowledge (bot) ---"
+BME_FINGERPRINT="$FINGERPRINT" BME_EDITION="$EDITION" python3 tools/knowledge.py
+
 # safety net: a revision note must never reach a reader
 if pdftotext render/BmE-teacher-materials.pdf - 2>/dev/null | grep -q -- '<!--'; then
   echo "  !! a revision note leaked into the PDF -- check the chapters"

@@ -1,9 +1,6 @@
 # Sound Localization
 
 ## Required materials
-# Sound Localization
-
-## Required materials
 
 | Item | Description |
 | :--- | :--- |
