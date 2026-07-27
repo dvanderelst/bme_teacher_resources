@@ -2,7 +2,10 @@
 """
 Make the accounts in the database match bot/users.txt, exactly.
 
-    python bot/scripts/set_users.py [path/to/users.txt]
+    python bot/scripts/set_users.py
+
+The file is always bot/users.txt, and there is no way to point this at
+another one. One file, in one place, with no argument to get wrong.
 
 Every account is deleted and rewritten from the file, so the file is the whole
 account list rather than a log of commands that were run against it. That is
@@ -10,8 +13,13 @@ the point: with a handful of teachers, "who has access?" should be answerable
 by reading one file, not by querying a database that remembers every add and
 disable anyone ever typed.
 
+One account per line, columns separated by spaces:
+
+    username    password    full name (optional, may contain spaces)
+
 Passwords are hashed on the way in; the database never holds the plaintext.
-The file does, which is why it is gitignored -- see bot/users.txt.example.
+The file does, which is why it is gitignored and why there is no template
+version of it in the repository.
 """
 import sys
 from pathlib import Path
@@ -21,8 +29,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # bot/
 from lib import auth
 from lib.db import Database
 from lib.settings import BOT_DIR
-
-MIN_PASSWORD_LENGTH = 12
 
 
 def parse(path):
@@ -44,9 +50,6 @@ def parse(path):
             continue
         username, password = fields[0], fields[1]
         full_name = fields[2].strip() if len(fields) > 2 else None
-        if len(password) < MIN_PASSWORD_LENGTH:
-            errors.append(f"line {number}: {username}'s password is under "
-                          f"{MIN_PASSWORD_LENGTH} characters")
         if username in seen:
             errors.append(f"line {number}: {username} appears twice")
         seen.add(username)
@@ -57,10 +60,16 @@ def parse(path):
 
 
 def main():
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else BOT_DIR / "users.txt"
+    path = BOT_DIR / "users.txt"
     if not path.exists():
         print(f"error: {path} does not exist")
-        print("copy bot/users.txt.example to bot/users.txt and edit it")
+        # There is no template in the repository -- the file holds plaintext
+        # passwords, so it is gitignored and a fresh clone has nothing to copy.
+        # That makes this message the only place the format is written down for
+        # someone starting from scratch, so it states the format rather than
+        # pointing at a file.
+        print("one account per line, separated by spaces:\n")
+        print("    username    password    full name (optional)")
         return 1
 
     users, errors = parse(path)

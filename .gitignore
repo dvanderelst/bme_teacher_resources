@@ -18,8 +18,9 @@
 # Belt and braces. The whitelist above re-admits everything under /bot/, so a
 # secret dropped into a subdirectory that does not exist yet would be tracked
 # by default. These match at any depth, so a new app/ or lib/ cannot leak one.
-# ".env.example" and "users.txt.example" are deliberately still committable as
-# templates.
+# ".env.example" is deliberately still committable as a template. "users.txt"
+# has no template: it holds plaintext passwords, and bot/scripts/set_users.py
+# prints the format when the file is missing.
 **/.env
 **/secrets.toml
 **/users.txt
