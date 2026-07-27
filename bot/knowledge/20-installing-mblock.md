@@ -2,7 +2,7 @@
 chapter: "Installing mBlock"
 source: 20-installing-mblock.md
 edition: "27 July 2026"
-fingerprint: "6a5b178-stale"
+fingerprint: "677bb65-stale"
 ---
 
 # Installing mBlock

@@ -2,7 +2,7 @@
 chapter: "Introduction to the robot"
 source: 10-robot.md
 edition: "27 July 2026"
-fingerprint: "6a5b178-stale"
+fingerprint: "677bb65-stale"
 ---
 
 # Introduction to the robot

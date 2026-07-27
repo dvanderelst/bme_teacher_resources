@@ -2,7 +2,7 @@
 chapter: "Sound Localization"
 source: 70-sound-localization.md
 edition: "27 July 2026"
-fingerprint: "6a5b178-stale"
+fingerprint: "677bb65-stale"
 ---
 
 # Sound Localization

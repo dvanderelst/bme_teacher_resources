@@ -4,26 +4,22 @@ Turn the chapter source into the knowledge set the teacher-support bot reads.
 
 The bot must answer from the edition that was *published*, not from whatever is
 in the working tree, so this runs from build.sh alongside the PDF and the HTML
-and stamps its output with the same git fingerprint. Four artifacts, one version
-number: that is the whole point of generating rather than hand-writing.
+and stamps its output with the same git fingerprint. Three artifacts, one
+version number: that is the whole point of generating rather than hand-writing.
 
-    content/chapters/*.md  ->  knowledge/markdown/*.md  ->  knowledge/chunks.jsonl
+    content/chapters/*.md  ->  bot/knowledge/*.md
 
-The markdown is written to disk and the chunks are parsed back out of it, rather
-than both being emitted from one in-memory model. Two reasons. The chunks then
-cannot describe text the markdown does not contain, so the two outputs cannot
-drift. And it forces the markdown to be *self-sufficient* -- everything the
-chunks need has to be expressible in the prose -- which is exactly the property
-required if the markdown is ever handed to a hosted retrieval service that
-parses and chunks documents itself and keeps none of our structure.
+One document per chapter, and no chunking. Retrieval is somebody else's job: a
+hosted library parses and chunks what it is given, and passing it pre-cut pieces
+would only have it cut them again on boundaries of its own. The same documents
+serve a full-context bot, which is a live option here -- the whole book is about
+60,000 tokens.
 
-Which of the two you use depends on where retrieval lives:
-
-  * hosted library (upload documents, it chunks them) -> knowledge/markdown/
-  * retrieval we build ourselves                      -> knowledge/chunks.jsonl
-
-Chapters are written for print and carry constructs that are meaningless or
-harmful in a chat window, so the conversion is not a copy:
+What cannot be delegated is the conversion, because none of it is inferable from
+the files. Nothing tells an ingestion pipeline that image captions are
+load-bearing instruction rather than decoration, or that a relative files/ path
+resolves against a raw GitHub URL. Chapters are written for print and carry
+constructs that are meaningless or harmful in a chat window:
 
   * Image captions survive as prose, labelled "Figure:", with the resolved URL
     beside them. Captions are 11% of the book and, since the captioning work
@@ -40,6 +36,10 @@ harmful in a chat window, so the conversion is not a copy:
     weight rather than left as anonymous blockquotes.
   * Tables stay verbatim. The port table and the materials lists are lookup
     data and prose-flattening destroys them.
+  * Headings are left exactly where they are. They are the breadcrumb -- the
+    prose says "the robot", "the sensor", "the dial" constantly with the
+    referent sitting in the heading -- and a chunker we do not control can only
+    see them if they are in the text.
   * Revision notes, pandoc attributes and LaTeX machinery are dropped.
 
 Chapter *numbers* are deliberately absent. Pandoc computes them from
@@ -56,11 +56,6 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAPTERS = os.path.join(HERE, "content", "chapters")
 DEFAULT_OUT = os.path.join(os.path.dirname(HERE), "bot", "knowledge")
 
-# A section this short cannot stand on its own once retrieved -- 64 of them are
-# under 40 words and one is nothing but an image -- so it folds into its parent
-# rather than becoming a fragment that matches a query and then says nothing.
-MIN_WORDS = 40
-
 COMMENT = re.compile(r"<!--.*?-->", re.S)
 HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 ATTR = re.compile(r"\s*\{[^}]*\}\s*$")
@@ -69,21 +64,12 @@ IMAGE = re.compile(r"!\[((?:[^\[\]]|\[[^\]]*\])*)\]\(([^)]*)\)(?:\{[^}]*\})?")
 LINK = re.compile(r"(?<!!)\[((?:[^\[\]]|\[[^\]]*\])*)\]\(([^)]*)\)")
 CALLOUT_KIND = re.compile(r"^\*\*(Note|Tip|Warning|Caution)\*\*\s*$", re.I)
 
-# How a figure is written into the markdown, and how it is read back out. The
-# two must stay in step, so they are defined together.
+# How a figure is written, and how it is read back for the integrity check
+# below. The two must stay in step, so they are defined together. Leading
+# whitespace is allowed on the way back in: six figures sit inside numbered-list
+# items and are indented to match.
 FIGURE_OUT = "Figure: {caption} ([image]({url}))"
-# Leading whitespace allowed: six figures sit inside numbered-list items and
-# are indented to match, which an unanchored-to-margin pattern would miss.
 FIGURE_IN = re.compile(r"^[ \t]*Figure: (.*?) \(\[image\]\((\S+)\)\)\s*$", re.M)
-
-
-def slug(text):
-    """Anchor a book link would use. Same rule as tools/check-links.py, so the
-    overlay can point at a section by the anchor the chapters already use."""
-    t = ATTR.sub("", text).strip().lower()
-    t = re.sub(r"[*`_]", "", t)
-    t = re.sub(r"[^\w\s-]", "", t)
-    return re.sub(r"\s+", "-", t).strip("-")
 
 
 def resolve(target, base):
@@ -152,9 +138,6 @@ def convert(path, base, edition, fingerprint):
 
     text = LINK.sub(swap_link, text)
 
-    # Strip pandoc attributes from headings, keep the headings themselves: they
-    # are the breadcrumb, and in the markdown they are already in the right
-    # place, so nothing has to be added for a foreign chunker to see them.
     lines, chapter = [], None
     for line in text.split("\n"):
         m = HEADING.match(line)
@@ -174,143 +157,11 @@ def convert(path, base, edition, fingerprint):
     return chapter, front + body + "\n"
 
 
-def read_front(text):
-    """Split YAML front matter from the body. Only the four keys we write."""
-    m = re.match(r"^---\n(.*?)\n---\n+", text, re.S)
-    if not m:
-        return {}, text
-    meta = {}
-    for line in m.group(1).split("\n"):
-        if ":" in line:
-            k, v = line.split(":", 1)
-            v = v.strip()
-            try:
-                v = json.loads(v)
-            except json.JSONDecodeError:
-                pass
-            meta[k.strip()] = v
-    return meta, text[m.end():]
-
-
-def words(text):
-    """Prose length. Table rows are lookup data, not prose, and counting them
-    would keep a two-line section alive purely because it holds a wide table."""
-    prose = [l for l in text.split("\n") if not l.strip().startswith("|")]
-    return len(" ".join(prose).split())
-
-
-def chunk(md_text, md_name):
-    """One generated markdown document -> retrieval chunks.
-
-    Read back out of the file rather than carried over from convert(), so a
-    chunk can never claim text the uploaded markdown does not contain.
-
-    Breadcrumbs are not optional. The prose says "the robot", "the sensor",
-    "the dial" constantly with the referent sitting in the heading, so a chunk
-    retrieved without its heading path is often ambiguous about which sensor it
-    is even discussing.
-    """
-    meta, body = read_front(md_text)
-    chapter = meta.get("chapter") or md_name
-    source = meta.get("source", md_name)
-
-    secs, cur = [], None
-    for line in body.split("\n"):
-        m = HEADING.match(line)
-        if m:
-            level, title = len(m.group(1)), m.group(2).strip()
-            if level == 1:
-                cur = {"level": 1, "title": None, "body": []}
-                secs.append(cur)
-                continue
-            cur = {"level": level, "title": title, "body": []}
-            secs.append(cur)
-            continue
-        if cur is not None:
-            cur["body"].append(line)
-
-    def finish(s):
-        t = re.sub(r"\n{3,}", "\n\n", "\n".join(s["body"])).strip()
-        imgs = [{"caption": c, "url": u} for c, u in FIGURE_IN.findall(t)]
-        # Every figure carries an [image](...) link of its own; those are
-        # already accounted for above and would otherwise be counted twice.
-        links = [{"text": a, "url": b} for a, b in LINK.findall(t)
-                 if a != "image" and b.startswith("http")]
-        return t, imgs, links
-
-    chunks, stack, pending = [], [], None
-    for s in secs:
-        title, level = s["title"], s["level"]
-        if title is None:
-            trail = []
-        else:
-            stack = stack[: max(0, level - 2)]
-            stack.append(title)
-            trail = list(stack)
-
-        text, imgs, links = finish(s)
-        short = words(text) < MIN_WORDS
-
-        # Fold upward: a heading with almost nothing under it is a signpost for
-        # the section that follows, and belongs with it rather than alone.
-        if short and chunks:
-            prev = chunks[-1]
-            head = f"### {title}\n\n" if title else ""
-            prev["text"] = (prev["text"] + "\n\n" + head + text).strip()
-            prev["images"] += imgs
-            prev["links"] += links
-            prev["folded"].append(title or "(chapter opening)")
-            continue
-
-        # A chapter opening has nothing above it to fold into, so it waits and
-        # goes on the front of the first real section instead.
-        if short and not chunks:
-            pending = (text, imgs, links)
-            continue
-
-        chunks.append({
-            "id": f"{slug(chapter)}/{slug(title)}" if title else slug(chapter),
-            "chapter": chapter,
-            "section": title,
-            "breadcrumb": " > ".join([chapter] + trail),
-            "anchor": slug(title) if title else slug(chapter),
-            "source": source,
-            "document": md_name,
-            "text": text,
-            "images": imgs,
-            "links": links,
-            "folded": [],
-        })
-
-        if pending is not None:
-            c, (ptext, pimgs, plinks) = chunks[-1], pending
-            c["text"] = (ptext + "\n\n" + c["text"]).strip()
-            c["images"] = pimgs + c["images"]
-            c["links"] = plinks + c["links"]
-            c["folded"].append("(chapter opening)")
-            pending = None
-
-    # A chapter that is nothing but a short opening still has to survive.
-    if pending is not None and not chunks:
-        text, imgs, links = pending
-        chunks.append({
-            "id": slug(chapter), "chapter": chapter, "section": None,
-            "breadcrumb": chapter, "anchor": slug(chapter), "source": source,
-            "document": md_name, "text": text, "images": imgs, "links": links,
-            "folded": [],
-        })
-
-    for c in chunks:
-        c["words"] = words(c["text"])
-    return [c for c in chunks if c["text"]]
-
-
 def main():
     quiet = "--quiet" in sys.argv
     out_dir = DEFAULT_OUT
     if "--out" in sys.argv:
         out_dir = sys.argv[sys.argv.index("--out") + 1]
-    md_dir = os.path.join(out_dir, "markdown")
 
     base = os.getenv("BME_FILE_BASE", "")
     fingerprint = os.getenv("BME_FINGERPRINT", "unknown")
@@ -318,60 +169,52 @@ def main():
     if not base and not quiet:
         print("  knowledge: BME_FILE_BASE unset -- image and file links stay relative")
 
-    os.makedirs(md_dir, exist_ok=True)
-    for stale in glob.glob(os.path.join(md_dir, "*.md")):
+    os.makedirs(out_dir, exist_ok=True)
+    for stale in glob.glob(os.path.join(out_dir, "*.md")):
         os.remove(stale)  # a renamed chapter must not leave its old copy behind
 
-    # Pass one: source -> markdown on disk.
-    written = []
+    written, words, figures, links, expected = [], 0, 0, 0, 0
     for path in sorted(glob.glob(os.path.join(CHAPTERS, "*.md"))):
         chapter, md = convert(path, base, edition, fingerprint)
         if chapter is None:
             print(f"  !! {os.path.basename(path)} has no chapter title -- skipped")
             continue
         name = os.path.basename(path)
-        with open(os.path.join(md_dir, name), "w", encoding="utf-8") as fh:
+        with open(os.path.join(out_dir, name), "w", encoding="utf-8") as fh:
             fh.write(md)
         written.append(name)
 
-    # Pass two: markdown on disk -> chunks.
-    chunks = []
-    for name in written:
-        text = open(os.path.join(md_dir, name), encoding="utf-8").read()
-        chunks += chunk(text, name)
-
-    with open(os.path.join(out_dir, "chunks.jsonl"), "w", encoding="utf-8") as fh:
-        for c in chunks:
-            fh.write(json.dumps(c, ensure_ascii=False) + "\n")
+        # Integrity check. Every image in the source must come back out as a
+        # figure line the agreed shape can read; a caption that quietly fails to
+        # round-trip is invisible otherwise, and has happened.
+        src_images = len(IMAGE.findall(open(path, encoding="utf-8").read()))
+        out_figures = len(FIGURE_IN.findall(md))
+        if src_images != out_figures:
+            print(f"  !! {name}: {src_images} images in, {out_figures} figures out")
+        expected += src_images
+        figures += out_figures
+        links += sum(1 for a, _ in LINK.findall(md) if a != "image")
+        words += len(" ".join(l for l in md.split("\n")
+                              if not l.strip().startswith("|")).split())
 
     manifest = {
         "edition": edition,
         "fingerprint": fingerprint,
         "file_base": base,
         "documents": len(written),
-        "chunks": len(chunks),
-        "images": sum(len(c["images"]) for c in chunks),
-        "links": sum(len(c["links"]) for c in chunks),
-        "words": sum(c["words"] for c in chunks),
-        "min_words": MIN_WORDS,
+        "words": words,
+        "figures": figures,
+        "links": links,
         "generated_by": "book/tools/knowledge.py",
+        "note": "One document per chapter. Chunking is left to whatever ingests these.",
     }
     with open(os.path.join(out_dir, "manifest.json"), "w", encoding="utf-8") as fh:
         json.dump(manifest, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
 
     if not quiet:
-        longest = max(chunks, key=lambda c: c["words"])
-        print(f"  {len(written)} documents -> {len(chunks)} chunks, "
-              f"{manifest['words']} words")
-        print(f"  {manifest['images']} images, {manifest['links']} links")
-        print(f"  longest chunk {longest['words']} words: {longest['breadcrumb']}")
-        # A chunk carrying a table or a screenshot is not a fragment even when
-        # its prose is short -- the table *is* the content.
-        thin = [c for c in chunks if c["words"] < MIN_WORDS and not c["images"]
-                and not any(l.startswith("|") for l in c["text"].split("\n"))]
-        for c in thin[:5]:
-            print(f"  thin: {c['words']:3d} words  {c['breadcrumb']}")
+        print(f"  {len(written)} documents, {words} words, "
+              f"{figures}/{expected} figures, {links} links")
 
 
 if __name__ == "__main__":

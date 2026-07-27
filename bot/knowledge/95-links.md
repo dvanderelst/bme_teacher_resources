@@ -2,7 +2,7 @@
 chapter: "All links used in these materials"
 source: 95-links.md
 edition: "27 July 2026"
-fingerprint: "6a5b178-stale"
+fingerprint: "677bb65-stale"
 ---
 
 # All links used in these materials

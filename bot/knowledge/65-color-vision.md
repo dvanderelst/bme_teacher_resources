@@ -2,7 +2,7 @@
 chapter: "Color Vision"
 source: 65-color-vision.md
 edition: "27 July 2026"
-fingerprint: "6a5b178-stale"
+fingerprint: "677bb65-stale"
 ---
 
 # Color Vision

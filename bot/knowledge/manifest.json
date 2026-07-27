@@ -1,12 +1,11 @@
 {
   "edition": "27 July 2026",
-  "fingerprint": "6a5b178-stale",
+  "fingerprint": "677bb65-stale",
   "file_base": "https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/",
   "documents": 15,
-  "chunks": 162,
-  "images": 160,
-  "links": 136,
-  "words": 31701,
-  "min_words": 40,
-  "generated_by": "book/tools/knowledge.py"
+  "words": 32925,
+  "figures": 160,
+  "links": 139,
+  "generated_by": "book/tools/knowledge.py",
+  "note": "One document per chapter. Chunking is left to whatever ingests these."
 }
