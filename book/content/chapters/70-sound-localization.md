@@ -191,7 +191,7 @@ Students pair up for their sound localization test. They build pinnae to enhance
 
 ![Large cones covering both ears. Designs this size change the loudness reaching each ear substantially, but they also make it hard to tell front from back.](images/testing-artificial-pinnae-f88f6efd.jpg)
 
-![Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity.](images/testing-artificial-pinnae-e2beccd3.png)
+![Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity.](images/testing-artificial-pinnae-e2beccd3.jpg)
 
 The procedure runs via an app, which walks a pair through the trials, tells them where to place the speaker, plays the sound, and scores the result.
 
