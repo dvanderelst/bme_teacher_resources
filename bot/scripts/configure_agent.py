@@ -76,6 +76,44 @@ def local_documents():
     return sorted(KNOWLEDGE_DIR.glob("*.md"))
 
 
+def explain_stale(fingerprint):
+    """Say what a "-stale" fingerprint means and whether this one matters.
+
+    It fires on most runs, for a reason that is structural rather than a
+    mistake, so a bare warning gets tuned out. The distinction worth drawing is
+    whether the *inputs* to the knowledge set are uncommitted -- in which case
+    the agent is about to be stamped with an edition nobody can check out -- or
+    whether the tree is only dirty because the generated set is itself
+    committed, which is unavoidable and harmless.
+    """
+    import subprocess
+    print(f"note: the knowledge set is stamped {fingerprint}")
+    print("  '-stale' means it was generated from a working tree with uncommitted")
+    print("  changes, so the commit it names does not contain what is being deployed.")
+    try:
+        out = subprocess.run(["git", "status", "--porcelain"], cwd=BOT_DIR.parent,
+                             capture_output=True, text=True, timeout=10).stdout
+    except Exception:
+        print("  (could not read git status)")
+        return
+    changed = [l[3:] for l in out.splitlines() if l[3:].strip()]
+    inputs = [f for f in changed
+              if f.startswith("book/content/") or f.startswith("book/tools/")]
+    if inputs:
+        print("  these inputs to the knowledge set are uncommitted:")
+        for f in inputs[:10]:
+            print(f"    {f}")
+        if len(inputs) > 10:
+            print(f"    ... and {len(inputs) - 10} more")
+        print("  commit them, re-run book/build.sh, then deploy -- otherwise the")
+        print("  agent's stamp points at an edition that never existed.")
+    else:
+        print("  nothing under book/content or book/tools is uncommitted, so the")
+        print("  knowledge set matches the last commit. The stamp lags by one commit")
+        print("  because the generated set is committed too, and cannot name the")
+        print("  commit that contains it. Expected -- deploy anyway.")
+
+
 def remote_documents(client, library_id):
     """Every document in the library, following pagination."""
     out, page = [], 0
@@ -145,6 +183,34 @@ def sync_documents(client, library_id, dry_run):
         except Exception as e:
             failures.append(f"upload {path.name}: {e}")
     return failures
+
+
+def check_model(client, model, reasoning_effort):
+    """Preflight the agent settings, before anything is uploaded.
+
+    reasoning_effort is rejected outright by a model without the "reasoning"
+    capability -- 400 "reasoning_effort is not enabled for this model", not
+    silently ignored -- and mistral-large is one of those. Checking last, at the
+    agent step, would mean a pointless delete-and-re-upload of the whole library
+    first. The API error also does not say which models would work; this does.
+    """
+    if not client or not reasoning_effort:
+        return []
+    try:
+        models = {m.id: m for m in (getattr(client.models.list(), "data", None) or [])}
+    except Exception as e:
+        print(f"note: could not check model capabilities ({e})")
+        return []
+    if model not in models:
+        return [f"{model} is not available to this account"]
+    if not getattr(models[model].capabilities, "reasoning", False):
+        ok = sorted(i for i, m in models.items()
+                    if getattr(m.capabilities, "reasoning", False)
+                    and getattr(m.capabilities, "completion_chat", False)
+                    and i.endswith("-latest"))
+        return [f"{model} does not support reasoning_effort",
+                f"models that do: {', '.join(ok)}"]
+    return []
 
 
 def configure_library(client, library_id, manifest, dry_run):
@@ -232,8 +298,7 @@ def main():
         print(f"warning: no manifest in {KNOWLEDGE_DIR} -- "
               f"the agent will be stamped 'unknown'")
     if "-stale" in str(manifest.get("fingerprint", "")):
-        print(f"warning: fingerprint {manifest['fingerprint']} was built from a "
-              f"working tree with uncommitted changes; commit before deploying")
+        explain_stale(manifest["fingerprint"])
 
     client = None
     if not missing:
@@ -245,6 +310,13 @@ def main():
     print(f"\n=== BmE teacher bot {'(dry run)' if args.dry_run else ''} ===")
     print(f"edition {manifest.get('edition', 'unknown')}  "
           f"fingerprint {manifest.get('fingerprint', 'unknown')}\n")
+
+    # Preflight: nothing is uploaded until the agent settings are known good,
+    # so a rejected flag cannot cost a full re-upload of the library.
+    bad = check_model(client, args.model, args.reasoning_effort)
+    if bad:
+        print("\n".join(f"error: {b}" for b in bad))
+        return 1
 
     failures = []
     print("documents:")
