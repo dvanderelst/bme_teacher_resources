@@ -1,0 +1,9 @@
+# Runtime for the teacher-support app. The scripts under bot/scripts/ need only
+# mistralai; the rest is the Streamlit front end and its storage.
+streamlit>=1.43
+mistralai>=2.7
+bcrypt
+# Postgres in production. The app falls back to SQLite locally so it can be run
+# without provisioning a database first -- see lib/db.py for why that fallback
+# must not be used in production.
+psycopg2-binary
