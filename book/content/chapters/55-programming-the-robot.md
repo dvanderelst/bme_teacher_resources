@@ -58,7 +58,7 @@ Below is the mBlock interface, which appears nearly identical in both installed 
 
 ### Useful blocks
 
-The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons.
+The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons. Every block, with what it does and what its dropdowns offer, is listed in the [Block reference](#block-reference).
 
 1. **Looks:** Only relevant if the robot has an LCD (sold separately). For our purposes, this category is not needed.
 2. **Show:** Controls the onboard LEDs and buzzer. Blocks come in two forms: `LED all shows color red` sets the LEDs and continues, while `LED all shows color red for 1 secs` holds for that second then turns them off.

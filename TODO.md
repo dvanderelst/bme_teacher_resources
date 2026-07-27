@@ -99,9 +99,10 @@ While measuring, note the ratio at 50 cm particularly. The programs turn at 30 c
 never been checked over the range where it is actually used.
 
 ### 1.8 Smaller confirmations
-- [ ] Colour sensor genuinely requires **port 2** (or is that just convention?) The `set fill light
-      LED to off` screenshot in *Color Vision* §Taking it further shows the block set to **`port1`**,
-      which is at least suggestive. If port 1 works, several sentences in that chapter change.
+- [x] Colour sensor genuinely requires **port 2** (or is that just convention?) — **answered: it is
+      convention.** The colour sensor and the line follower both work in any of the four ports, so the
+      `port1` in the *Color Vision* §Taking it further screenshot is harmless. Port 2 remains the
+      lesson convention and the chapters need no change; the *Block reference* records the rule.
 - [ ] Onboard light sensor really returns **0–1000** (the challenge threshold of 500 depends on it)
 - [ ] Sound-sensor sensitivity dial: is "both to the same halfway position" still right, and does it
       interact with the `left_scale` calibration students derive later?
@@ -126,6 +127,14 @@ never been checked over the range where it is actually used.
 - [ ] **"Panda window."** Several chapters call the variable-values panel the "panda window". Confirm
       that is still what it looks like and a name teachers recognise, or replace it with a neutral
       description.
+- [ ] **Three dropdowns the *Block reference* describes but does not enumerate.** Everything else in
+      that chapter was confirmed against mBlock or Makeblock's documentation; these three were not, so
+      the chapter says "the chosen side" and "the dropdown selects which" rather than listing options.
+      Open each one and the chapter can be made complete:
+      `stop [all ▾]` (Control) · `line follower sensor ... detects [leftside ▾] being [black ▾]`
+      (Sensing) · `IR remote [A ▾] pressed?` (Sensing). Also worth a glance: whether the palette
+      offers any onboard gyro/accelerometer block at all — none appears in the screenshots the
+      chapter was built from, and no lesson uses one.
 
 ### 1.9 Is mLink needed at all in the browser? — mostly answered
 Your note asked what the minimum software is for the browser route. The screenshots answer most of

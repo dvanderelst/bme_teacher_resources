@@ -14,7 +14,7 @@ The robot has four RJ25 ports (Makeblock's name for these connectors).
 
 Each port has several color labels. Port 1, for example, is labeled yellow, blue, and white. Pay attention to these labels, as they indicate which sensors each port accepts. The sound sensor has a black label; only ports 3 and 4 include black, so it must be plugged into one of those. These are the only ports with analog inputs, which sound sensors require. The sonar sensor has a yellow label, and all four ports have yellow, so a sonar will work in any of them.
 
-Importantly, the ports are not interchangeable, so check which one you are using. When a lesson specifies a port, use that port; our programs expect sensors on the specified ports. mBlock also enforces these restrictions. If you add a sound sensor block, its port dropdown only offers ports 3 and 4, preventing serious errors even if you forget.
+Importantly, the ports are not interchangeable, so check which one you are using. When a lesson specifies a port, use that port; our programs expect sensors on the specified ports. mBlock also enforces these restrictions. If you add a sound sensor block, its port dropdown only offers ports 3 and 4, preventing serious errors even if you forget. The [Block reference](#block-reference) notes, for each block, which ports its dropdown offers.
 
 ![The four RJ25 ports on top of the robot, where sensors plug in.](images/introduction-to-the-robot-0c87735b.jpg)
 
