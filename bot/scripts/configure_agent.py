@@ -50,8 +50,20 @@ DEFAULT_TEMPERATURE = 0.2
 
 
 def load_env(required):
-    """Read bot/.env. Returns {} rather than exiting when the file is absent, so
-    --dry-run still works on a machine that has never been given a key."""
+    """Configuration, from the real environment first and bot/.env second.
+
+    That order is the whole point. A hosting platform supplies secrets as
+    environment variables and there is no .env file on the box, so a loader that
+    reads only the file works locally and fails everywhere else. Reading the
+    environment first also means a one-off override --
+
+        MISTRAL_LIBRARY_ID=... python bot/scripts/configure_agent.py
+
+    -- does what it looks like it does, rather than being silently ignored.
+
+    Returns ({}, missing) rather than exiting when nothing is set, so --dry-run
+    still works on a machine that has never been given a key.
+    """
     config = {}
     if ENV_PATH.exists():
         for line in ENV_PATH.read_text(encoding="utf-8").splitlines():
@@ -60,6 +72,9 @@ def load_env(required):
                 continue
             key, value = line.split("=", 1)
             config[key.strip()] = value.strip().strip('"').strip("'")
+    for key in set(required) | set(config):
+        if os.environ.get(key):
+            config[key] = os.environ[key]
     missing = [k for k in required if not config.get(k)]
     return config, missing
 
