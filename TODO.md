@@ -129,6 +129,12 @@ never been checked over the range where it is actually used.
 - [ ] The mBlock `File` menu wording. The chapter had it both ways — "Save to **your** computer" and
       "Save to **my** computer". I standardised on "my computer", matching "Open from my computer",
       but one of the two spellings was wrong and it is worth reading the menu once.
+- [ ] **Where is the dongle's button?** The pairing sequence now says "press the button on the
+      dongle" as step 3, but never says which part to press. The product photograph
+      (`getting-started-draft-6fb3632a.png`) shows a raised oval bearing the Bluetooth symbol on
+      the top face, which is presumably both the button and the indicator light — but that is a
+      guess from a stock photo and should not go in the book unchecked. Confirm with a dongle in
+      hand, then name it in step 3; a photo with the button marked would be better still.
 - [ ] **"Panda window."** Several chapters call the variable-values panel the "panda window". Confirm
       that is still what it looks like and a name teachers recognise, or replace it with a neutral
       description.

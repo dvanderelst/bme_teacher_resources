@@ -19,16 +19,19 @@ Figure: The USB cable that can be used to connect to the robot. ([image](https:/
 
 **Note:** With multiple robots in the room, pair each dongle to a specific robot. This ensures the computer using that dongle connects only to its paired robot, allowing you to distinguish identical mBots. Pairing is only needed once per robot.
 
-Follow this sequence precisely: turn all robots off first, then insert the dongle, then power on only the robot you are pairing.
+Follow this sequence precisely: turn all robots off first, then put the dongle into pairing mode, then power on only the robot you are pairing.
 
 1. Switch **all** robots off, including the one you are pairing. Do this even if only one robot is present.
-2. Plug the dongle into a computer. Its Bluetooth symbol begins flashing.
-3. Switch on the robot you are pairing. Its blue LED starts flashing as well.
-4. After a few seconds, both lights stop flashing and remain lit. They are now paired.
-5. Label the robot and dongle as a set. The dongle will only connect to this robot; use the labels to match them later.
-6. Repeat for each remaining robot, turning it off before pairing the next one.
+2. Plug the dongle into a computer.
+3. Press the button on the dongle. It begins flashing **quickly**, which means it is in pairing mode and has released whatever robot it was paired with before. Press it every time you pair, including on a dongle straight out of its packaging: you cannot tell by looking whether a dongle has been paired before, and pressing one that is already in pairing mode does no harm.
+4. Switch on the robot you are pairing. Its blue LED starts flashing as well.
+5. After a few seconds, both lights stop flashing and remain lit. They are now paired.
+6. Label the robot and dongle as a set. The dongle will only connect to this robot; use the labels to match them later.
+7. Repeat for each remaining robot, turning it off before pairing the next one.
 
-**Note:** Pressing the button on the dongle returns it to pairing mode, undoing the pairing. Instruct students not to press it, and consider covering it with tape. To re-pair a dongle already assigned to another robot: press the button to clear the old pairing, then repeat the sequence above.
+**Note:** The dongle flashes at two speeds, and they mean opposite things. **Fast** means it is in pairing mode and will bond with the next robot switched on nearby. **Slow** means it is already paired and cannot find its robot — usually because that robot is switched off, out of range, or is not the one this dongle belongs to. A slowly flashing dongle looks like a dongle waiting to pair, and this is the single most likely reason for a pairing that appears to work and then does not connect. It is why step 3 presses the button rather than checking the light first.
+
+**Note:** The button is also how a pairing gets broken: pressing it releases the robot, and that dongle will no longer connect to it until they are paired again. Once a set is paired and labelled, instruct students not to press it, and consider covering it with tape for the rest of the lesson. Remove the tape when you next need to pair that dongle to a different robot.
 
 Figure: Blue LED blinking on the robot's Bluetooth module. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-1f093a0d.jpg))
 
@@ -38,10 +41,10 @@ Figure: When the dongle and the robot are paired, the blue LEDs on both will sto
 
 Labels can fall off, and after extended use existing labels may no longer be reliable. You can verify a pair without opening mBlock by observing that paired devices blink when separated from their partner.
 
-1. Switch the robot on and plug in the dongle. Both should display a **steady** blue light. If either continues blinking, they are not paired.
+1. Switch the robot on and plug in the dongle. Both should display a **steady** blue light. If either keeps blinking, they are not paired to each other — a slow blink on the dongle means it is paired to some other robot.
 2. Unplug the dongle. After a few seconds, the robot's blue light starts **blinking** — it has lost its partner.
 3. Plug the dongle back in. Both should return to steady lights.
-4. Switch the robot off. After five to ten seconds, the dongle's light starts **blinking**.
+4. Switch the robot off. After five to ten seconds, the dongle's light starts blinking **slowly**, for the same reason.
 
 If separating the pair from either end causes the other to blink, they are correctly paired and you can relabel them confidently. If a light never becomes steady initially, or remains steady after its partner is removed, re-pair them as described above.
 
