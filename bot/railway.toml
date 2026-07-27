@@ -1,0 +1,25 @@
+# Railway service configuration for the teacher-support app.
+#
+# The service's Root Directory must be set to `bot` in the Railway UI. Railpack
+# looks for requirements.txt in the service root, and this repository's root
+# holds a book, not a Python application -- so without that setting the build
+# finds nothing to install.
+#
+# There is no secrets file to generate at boot. Configuration comes from real
+# environment variables, which lib/settings.py reads in preference to bot/.env.
+
+[build]
+builder = "railpack"
+
+[deploy]
+# $PORT is assigned by Railway; 0.0.0.0 because the container is behind its
+# proxy and binding to localhost would be unreachable.
+startCommand = "streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+
+# Streamlit's own endpoint. Other paths return the app's HTML with a 200, so a
+# healthcheck pointed at "/" would pass even when the app is broken.
+healthcheckPath = "/_stcore/health"
+healthcheckTimeout = 100
+
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
