@@ -10,6 +10,9 @@
 !/BOT-PLAN.md
 !/book/
 !/bot/
+!/bot/scripts/
+/bot/.env
+/bot/config.json
 
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on
