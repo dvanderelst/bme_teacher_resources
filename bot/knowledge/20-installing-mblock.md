@@ -1,10 +1,3 @@
----
-chapter: "Installing mBlock"
-source: 20-installing-mblock.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Installing mBlock
 
 mBlock is the block-based software used to program the mBot. Programs are built by dragging blocks rather than typing code.

@@ -1,10 +1,3 @@
----
-chapter: "Kinesis and Taxis"
-source: 60-kinesis-taxis.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Kinesis and Taxis
 
 ## Materials

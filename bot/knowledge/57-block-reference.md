@@ -1,10 +1,3 @@
----
-chapter: "Block reference"
-source: 57-block-reference.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Block reference
 
 This chapter lists the programming blocks available for the mBot (mCore) board in mBlock, with what each one does. It is a lookup chapter rather than one to read through; Programming the robot introduces the categories and shows how the blocks fit together.

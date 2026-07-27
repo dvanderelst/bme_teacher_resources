@@ -1,10 +1,3 @@
----
-chapter: "About these materials"
-source: 00-about.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # About these materials
 
 These are the teacher-facing materials for **Biology Meets Engineering**, a transdisciplinary STEM program developed collaboratively by faculty from the University of Cincinnati's College of Arts and Sciences, College of Engineering, and the School of Education.

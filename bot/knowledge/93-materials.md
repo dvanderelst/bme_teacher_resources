@@ -1,10 +1,3 @@
----
-chapter: "Required materials"
-source: 93-materials.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Required materials
 
 Below, we list the materials required for each lesson plan and the quantity required per student (or group of students). Numbers smaller than one mean that groups can share the materials.

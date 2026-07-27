@@ -1,10 +1,3 @@
----
-chapter: "Running your first program"
-source: 40-first-program.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Running your first program
 
 Once mBlock is working and you can connect to the robot, run a small example program first. It verifies the entire setup — software, connection, and robot — in a couple of minutes, and introduces the pattern used throughout the lessons for opening programs.

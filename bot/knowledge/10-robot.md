@@ -1,10 +1,3 @@
----
-chapter: "Introduction to the robot"
-source: 10-robot.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Introduction to the robot
 
 Our lesson plans use the mBot, an educational robot made by [Makeblock](https://www.makeblock.com). We selected this robot because it easily connects various sensors and is programmed using mBlock, a Scratch-like language.

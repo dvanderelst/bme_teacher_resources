@@ -1,10 +1,3 @@
----
-chapter: "Educational standards"
-source: 90-standards.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Educational standards
 
 Educational standards: Color Vision

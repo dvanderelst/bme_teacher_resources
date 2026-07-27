@@ -1,10 +1,3 @@
----
-chapter: "Introduction to Programming"
-source: 50-intro-programming.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Introduction to Programming
 
 ## Materials

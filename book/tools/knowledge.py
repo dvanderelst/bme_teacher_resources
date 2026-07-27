@@ -46,7 +46,7 @@ Chapter *numbers* are deliberately absent. Pandoc computes them from
 --number-sections, so they shift whenever a chapter is reordered; the titles are
 stable and are what a teacher would say out loud.
 
-    python3 tools/knowledge.py            # write ../bot/knowledge
+    python3 tools/knowledge.py            # write ../bot/knowledge (no frontmatter)
     python3 tools/knowledge.py --quiet    # for use in build.sh
     python3 tools/knowledge.py --out DIR
 """
@@ -150,11 +150,7 @@ def convert(path, base, edition, fingerprint):
             lines.append(line)
 
     body = re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
-    front = (f"---\nchapter: {json.dumps(chapter, ensure_ascii=False)}\n"
-             f"source: {os.path.basename(path)}\n"
-             f"edition: {json.dumps(edition)}\n"
-             f"fingerprint: {json.dumps(fingerprint)}\n---\n\n")
-    return chapter, front + body + "\n"
+    return chapter, body + "\n"
 
 
 def main():

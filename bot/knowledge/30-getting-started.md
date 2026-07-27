@@ -1,10 +1,3 @@
----
-chapter: "Getting started with the robot"
-source: 30-getting-started.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Getting started with the robot
 
 This chapter assumes you already have **mBlock** installed or running in your browser. If not, complete Installing mBlock first, then return here.

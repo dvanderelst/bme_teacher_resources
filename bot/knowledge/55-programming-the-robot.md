@@ -1,10 +1,3 @@
----
-chapter: "Programming the robot"
-source: 55-programming-the-robot.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # Programming the robot
 
 **Tip:** This introduction assumes you and your students have mBlock installed or accessible online (Installing mBlock), can connect to the robot (Getting started with the robot), and have successfully run a test program (Running your first program).

@@ -1,10 +1,3 @@
----
-chapter: "All links used in these materials"
-source: 95-links.md
-edition: "27 July 2026"
-fingerprint: "677bb65-stale"
----
-
 # All links used in these materials
 
 This chapter lists every link that appears in these materials, grouped by chapter.
