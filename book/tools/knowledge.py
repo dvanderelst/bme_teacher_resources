@@ -4,17 +4,32 @@ Turn the chapter source into the knowledge set the teacher-support bot reads.
 
 The bot must answer from the edition that was *published*, not from whatever is
 in the working tree, so this runs from build.sh alongside the PDF and the HTML
-and stamps its output with the same git fingerprint. Three artifacts, one
-version number: that is the whole point of generating rather than hand-writing.
+and stamps its output with the same git fingerprint. Four artifacts, one version
+number: that is the whole point of generating rather than hand-writing.
+
+    content/chapters/*.md  ->  knowledge/markdown/*.md  ->  knowledge/chunks.jsonl
+
+The markdown is written to disk and the chunks are parsed back out of it, rather
+than both being emitted from one in-memory model. Two reasons. The chunks then
+cannot describe text the markdown does not contain, so the two outputs cannot
+drift. And it forces the markdown to be *self-sufficient* -- everything the
+chunks need has to be expressible in the prose -- which is exactly the property
+required if the markdown is ever handed to a hosted retrieval service that
+parses and chunks documents itself and keeps none of our structure.
+
+Which of the two you use depends on where retrieval lives:
+
+  * hosted library (upload documents, it chunks them) -> knowledge/markdown/
+  * retrieval we build ourselves                      -> knowledge/chunks.jsonl
 
 Chapters are written for print and carry constructs that are meaningless or
 harmful in a chat window, so the conversion is not a copy:
 
-  * Image captions survive as prose. They are 11% of the book and, since the
-    captioning work finished, they are instruction rather than decoration --
-    "note that the port dropdown reads port1" is the answer to a real question.
-    The resolved image URL rides along, because the bot shows images and for
-    "which button do I click?" the screenshot is most of the answer.
+  * Image captions survive as prose, labelled "Figure:", with the resolved URL
+    beside them. Captions are 11% of the book and, since the captioning work
+    finished, they are instruction rather than decoration -- "note that the port
+    dropdown reads port1" is the answer to a real question. The URL is inline
+    rather than held as metadata so that it survives someone else's chunker.
   * files/ links become absolute URLs, by the same rule as tools/abs-links.lua,
     so the bot can hand over the handout instead of mentioning that one exists.
   * Internal cross-references flatten to their link text. In print xref.lua
@@ -54,6 +69,13 @@ IMAGE = re.compile(r"!\[((?:[^\[\]]|\[[^\]]*\])*)\]\(([^)]*)\)(?:\{[^}]*\})?")
 LINK = re.compile(r"(?<!!)\[((?:[^\[\]]|\[[^\]]*\])*)\]\(([^)]*)\)")
 CALLOUT_KIND = re.compile(r"^\*\*(Note|Tip|Warning|Caution)\*\*\s*$", re.I)
 
+# How a figure is written into the markdown, and how it is read back out. The
+# two must stay in step, so they are defined together.
+FIGURE_OUT = "Figure: {caption} ([image]({url}))"
+# Leading whitespace allowed: six figures sit inside numbered-list items and
+# are indented to match, which an unanchored-to-margin pattern would miss.
+FIGURE_IN = re.compile(r"^[ \t]*Figure: (.*?) \(\[image\]\((\S+)\)\)\s*$", re.M)
+
 
 def slug(text):
     """Anchor a book link would use. Same rule as tools/check-links.py, so the
@@ -74,46 +96,14 @@ def resolve(target, base):
     return target
 
 
-def take_images(text, base):
-    """Replace image markup with its caption and collect the resolved URLs.
-
-    The caption becomes a sentence of its own rather than being dropped or left
-    as markup, because it frequently carries the instruction the surrounding
-    prose only gestures at.
-    """
-    found = []
-
-    def swap(m):
-        caption, target = m.group(1).strip(), m.group(2).strip()
-        found.append({"url": resolve(target, base), "caption": caption})
-        return caption
-
-    return IMAGE.sub(swap, text), found
-
-
-def take_links(text, base):
-    """Flatten internal references, absolutise bundled files, keep the rest."""
-    found = []
-
-    def swap(m):
-        label, target = m.group(1), m.group(2).strip()
-        if not target or target.startswith("#"):
-            return label  # a cross-reference; the phrase is the useful part
-        url = resolve(target, base)
-        found.append({"text": label, "url": url})
-        return f"{label} ({url})" if url.startswith("http") else label
-
-    return LINK.sub(swap, text), found
-
-
-def take_callouts(lines):
+def label_callouts(lines):
     """Label `> **Note**` blockquotes and unwrap them.
 
     A blockquote in a chat window reads as a quotation from somewhere else,
     which is exactly wrong: these are the book speaking in its own voice about
     something that will bite you.
     """
-    out, kinds, i = [], [], 0
+    out, i = [], 0
     while i < len(lines):
         if not lines[i].startswith(">"):
             out.append(lines[i])
@@ -125,18 +115,81 @@ def take_callouts(lines):
             i += 1
         while block and not block[0].strip():
             block.pop(0)
-        kind = None
+        kind = "Aside"
         if block and CALLOUT_KIND.match(block[0].strip()):
             kind = CALLOUT_KIND.match(block[0].strip()).group(1).capitalize()
             block.pop(0)
             while block and not block[0].strip():
                 block.pop(0)
         body = "\n".join(block).strip()
-        if not body:
-            continue
-        kinds.append(kind or "Aside")
-        out.append(f"**{kind or 'Aside'}:** {body}" if kind else f"**Aside:** {body}")
-    return out, kinds
+        if body:
+            out.append(f"**{kind}:** {body}")
+    return out
+
+
+def convert(path, base, edition, fingerprint):
+    """One chapter of source -> one self-contained markdown document."""
+    raw = COMMENT.sub("", open(path, encoding="utf-8").read())
+
+    text = "\n".join(label_callouts(raw.split("\n")))
+
+    # Images before links: the image markup contains a link-shaped tail.
+    def swap_image(m):
+        caption, target = m.group(1).strip(), m.group(2).strip()
+        return FIGURE_OUT.format(caption=caption, url=resolve(target, base))
+
+    text = IMAGE.sub(swap_image, text)
+
+    # Link syntax is kept rather than flattened to "label (url)", so the
+    # markdown still renders as markdown and so the figure markup this pass
+    # walks over -- [image](url), written just above -- survives unchanged.
+    def swap_link(m):
+        label, target = m.group(1), m.group(2).strip()
+        if not target or target.startswith("#"):
+            return label  # a cross-reference; the phrase is the useful part
+        url = resolve(target, base)
+        return f"[{label}]({url})" if url.startswith("http") else label
+
+    text = LINK.sub(swap_link, text)
+
+    # Strip pandoc attributes from headings, keep the headings themselves: they
+    # are the breadcrumb, and in the markdown they are already in the right
+    # place, so nothing has to be added for a foreign chunker to see them.
+    lines, chapter = [], None
+    for line in text.split("\n"):
+        m = HEADING.match(line)
+        if m:
+            title = ATTR.sub("", m.group(2)).strip()
+            if len(m.group(1)) == 1 and chapter is None:
+                chapter = title
+            lines.append("#" * len(m.group(1)) + " " + title)
+        else:
+            lines.append(line)
+
+    body = re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
+    front = (f"---\nchapter: {json.dumps(chapter, ensure_ascii=False)}\n"
+             f"source: {os.path.basename(path)}\n"
+             f"edition: {json.dumps(edition)}\n"
+             f"fingerprint: {json.dumps(fingerprint)}\n---\n\n")
+    return chapter, front + body + "\n"
+
+
+def read_front(text):
+    """Split YAML front matter from the body. Only the four keys we write."""
+    m = re.match(r"^---\n(.*?)\n---\n+", text, re.S)
+    if not m:
+        return {}, text
+    meta = {}
+    for line in m.group(1).split("\n"):
+        if ":" in line:
+            k, v = line.split(":", 1)
+            v = v.strip()
+            try:
+                v = json.loads(v)
+            except json.JSONDecodeError:
+                pass
+            meta[k.strip()] = v
+    return meta, text[m.end():]
 
 
 def words(text):
@@ -146,45 +199,45 @@ def words(text):
     return len(" ".join(prose).split())
 
 
-def sections(path, base):
-    """Split one chapter into (level, title, body, images, links, callouts)."""
-    raw = COMMENT.sub("", open(path, encoding="utf-8").read())
-    lines = raw.split("\n")
+def chunk(md_text, md_name):
+    """One generated markdown document -> retrieval chunks.
 
-    chapter, out, cur = None, [], None
-    for line in lines:
-        m = HEADING.match(line)
-        if m:
-            level, title = len(m.group(1)), ATTR.sub("", m.group(2)).strip()
-            if level == 1 and chapter is None:
-                chapter = title
-                cur = {"level": 1, "title": None, "body": []}
-                out.append(cur)
-                continue
-            cur = {"level": level, "title": title, "body": []}
-            out.append(cur)
-            continue
-        if cur is not None:
-            cur["body"].append(line)
-
-    for s in out:
-        body, kinds = take_callouts(s["body"])
-        text = "\n".join(body)
-        text, imgs = take_images(text, base)
-        text, links = take_links(text, base)
-        s["text"] = re.sub(r"\n{3,}", "\n\n", text).strip()
-        s["images"], s["links"], s["callouts"] = imgs, links, kinds
-    return chapter, out
-
-
-def fold(chapter, secs, source):
-    """Emit chunks, folding anything too short into its parent.
+    Read back out of the file rather than carried over from convert(), so a
+    chunk can never claim text the uploaded markdown does not contain.
 
     Breadcrumbs are not optional. The prose says "the robot", "the sensor",
     "the dial" constantly with the referent sitting in the heading, so a chunk
     retrieved without its heading path is often ambiguous about which sensor it
     is even discussing.
     """
+    meta, body = read_front(md_text)
+    chapter = meta.get("chapter") or md_name
+    source = meta.get("source", md_name)
+
+    secs, cur = [], None
+    for line in body.split("\n"):
+        m = HEADING.match(line)
+        if m:
+            level, title = len(m.group(1)), m.group(2).strip()
+            if level == 1:
+                cur = {"level": 1, "title": None, "body": []}
+                secs.append(cur)
+                continue
+            cur = {"level": level, "title": title, "body": []}
+            secs.append(cur)
+            continue
+        if cur is not None:
+            cur["body"].append(line)
+
+    def finish(s):
+        t = re.sub(r"\n{3,}", "\n\n", "\n".join(s["body"])).strip()
+        imgs = [{"caption": c, "url": u} for c, u in FIGURE_IN.findall(t)]
+        # Every figure carries an [image](...) link of its own; those are
+        # already accounted for above and would otherwise be counted twice.
+        links = [{"text": a, "url": b} for a, b in LINK.findall(t)
+                 if a != "image" and b.startswith("http")]
+        return t, imgs, links
+
     chunks, stack, pending = [], [], None
     for s in secs:
         title, level = s["title"], s["level"]
@@ -195,25 +248,24 @@ def fold(chapter, secs, source):
             stack.append(title)
             trail = list(stack)
 
-        body = s["text"]
-        short = words(body) < MIN_WORDS
+        text, imgs, links = finish(s)
+        short = words(text) < MIN_WORDS
 
         # Fold upward: a heading with almost nothing under it is a signpost for
         # the section that follows, and belongs with it rather than alone.
         if short and chunks:
             prev = chunks[-1]
             head = f"### {title}\n\n" if title else ""
-            prev["text"] = (prev["text"] + "\n\n" + head + body).strip()
-            prev["images"] += s["images"]
-            prev["links"] += s["links"]
-            prev["callouts"] += s["callouts"]
+            prev["text"] = (prev["text"] + "\n\n" + head + text).strip()
+            prev["images"] += imgs
+            prev["links"] += links
             prev["folded"].append(title or "(chapter opening)")
             continue
 
         # A chapter opening has nothing above it to fold into, so it waits and
         # goes on the front of the first real section instead.
         if short and not chunks:
-            pending = s
+            pending = (text, imgs, links)
             continue
 
         chunks.append({
@@ -223,35 +275,34 @@ def fold(chapter, secs, source):
             "breadcrumb": " > ".join([chapter] + trail),
             "anchor": slug(title) if title else slug(chapter),
             "source": source,
-            "text": body,
-            "images": list(s["images"]),
-            "links": list(s["links"]),
-            "callouts": list(s["callouts"]),
+            "document": md_name,
+            "text": text,
+            "images": imgs,
+            "links": links,
             "folded": [],
         })
 
         if pending is not None:
-            c = chunks[-1]
-            c["text"] = (pending["text"] + "\n\n" + c["text"]).strip()
-            c["images"] = pending["images"] + c["images"]
-            c["links"] = pending["links"] + c["links"]
-            c["callouts"] = pending["callouts"] + c["callouts"]
+            c, (ptext, pimgs, plinks) = chunks[-1], pending
+            c["text"] = (ptext + "\n\n" + c["text"]).strip()
+            c["images"] = pimgs + c["images"]
+            c["links"] = plinks + c["links"]
             c["folded"].append("(chapter opening)")
             pending = None
 
     # A chapter that is nothing but a short opening still has to survive.
     if pending is not None and not chunks:
+        text, imgs, links = pending
         chunks.append({
             "id": slug(chapter), "chapter": chapter, "section": None,
             "breadcrumb": chapter, "anchor": slug(chapter), "source": source,
-            "text": pending["text"], "images": pending["images"],
-            "links": pending["links"], "callouts": pending["callouts"],
+            "document": md_name, "text": text, "images": imgs, "links": links,
             "folded": [],
         })
 
     for c in chunks:
         c["words"] = words(c["text"])
-    return [c for c in chunks if c["text"] or c["images"]]
+    return [c for c in chunks if c["text"]]
 
 
 def main():
@@ -259,6 +310,7 @@ def main():
     out_dir = DEFAULT_OUT
     if "--out" in sys.argv:
         out_dir = sys.argv[sys.argv.index("--out") + 1]
+    md_dir = os.path.join(out_dir, "markdown")
 
     base = os.getenv("BME_FILE_BASE", "")
     fingerprint = os.getenv("BME_FINGERPRINT", "unknown")
@@ -266,16 +318,28 @@ def main():
     if not base and not quiet:
         print("  knowledge: BME_FILE_BASE unset -- image and file links stay relative")
 
-    chunks = []
-    files = sorted(glob.glob(os.path.join(CHAPTERS, "*.md")))
-    for path in files:
-        chapter, secs = sections(path, base)
+    os.makedirs(md_dir, exist_ok=True)
+    for stale in glob.glob(os.path.join(md_dir, "*.md")):
+        os.remove(stale)  # a renamed chapter must not leave its old copy behind
+
+    # Pass one: source -> markdown on disk.
+    written = []
+    for path in sorted(glob.glob(os.path.join(CHAPTERS, "*.md"))):
+        chapter, md = convert(path, base, edition, fingerprint)
         if chapter is None:
             print(f"  !! {os.path.basename(path)} has no chapter title -- skipped")
             continue
-        chunks += fold(chapter, secs, os.path.basename(path))
+        name = os.path.basename(path)
+        with open(os.path.join(md_dir, name), "w", encoding="utf-8") as fh:
+            fh.write(md)
+        written.append(name)
 
-    os.makedirs(out_dir, exist_ok=True)
+    # Pass two: markdown on disk -> chunks.
+    chunks = []
+    for name in written:
+        text = open(os.path.join(md_dir, name), encoding="utf-8").read()
+        chunks += chunk(text, name)
+
     with open(os.path.join(out_dir, "chunks.jsonl"), "w", encoding="utf-8") as fh:
         for c in chunks:
             fh.write(json.dumps(c, ensure_ascii=False) + "\n")
@@ -284,11 +348,10 @@ def main():
         "edition": edition,
         "fingerprint": fingerprint,
         "file_base": base,
-        "chapters": len(files),
+        "documents": len(written),
         "chunks": len(chunks),
         "images": sum(len(c["images"]) for c in chunks),
         "links": sum(len(c["links"]) for c in chunks),
-        "callouts": sum(len(c["callouts"]) for c in chunks),
         "words": sum(c["words"] for c in chunks),
         "min_words": MIN_WORDS,
         "generated_by": "book/tools/knowledge.py",
@@ -299,19 +362,16 @@ def main():
 
     if not quiet:
         longest = max(chunks, key=lambda c: c["words"])
-        print(f"  {len(chunks)} chunks from {len(files)} chapters, "
+        print(f"  {len(written)} documents -> {len(chunks)} chunks, "
               f"{manifest['words']} words")
-        print(f"  {manifest['images']} images, {manifest['links']} links, "
-              f"{manifest['callouts']} callouts")
+        print(f"  {manifest['images']} images, {manifest['links']} links")
         print(f"  longest chunk {longest['words']} words: {longest['breadcrumb']}")
         # A chunk carrying a table or a screenshot is not a fragment even when
         # its prose is short -- the table *is* the content.
         thin = [c for c in chunks if c["words"] < MIN_WORDS and not c["images"]
                 and not any(l.startswith("|") for l in c["text"].split("\n"))]
-        if thin:
-            print(f"  {len(thin)} chunk(s) still under {MIN_WORDS} words:")
-            for c in thin[:5]:
-                print(f"     {c['words']:3d}  {c['breadcrumb']}")
+        for c in thin[:5]:
+            print(f"  thin: {c['words']:3d} words  {c['breadcrumb']}")
 
 
 if __name__ == "__main__":
