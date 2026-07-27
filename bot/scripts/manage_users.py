@@ -26,13 +26,54 @@ from lib import auth
 from lib.db import Database
 
 
-def ask_password():
-    first = getpass.getpass("Password: ")
-    if len(first) < 12:
-        print("error: use at least 12 characters")
+def ask(prompt):
+    """Prompt, or give up quietly on Ctrl-C / Ctrl-D rather than tracebacking."""
+    try:
+        return input(prompt).strip()
+    except (EOFError, KeyboardInterrupt):
+        print()
+        return ""
+
+
+def resolve_username(db, given, must_exist):
+    """Take the username from the command line or ask for it, then check it.
+
+    The check runs whichever way the name arrived. Doing it only on the
+    prompted path left `disable someone-who-does-not-exist` updating no rows
+    and reporting success, which is worse than an error: it tells you an
+    account is disabled when nothing of the sort happened.
+
+    Checking here rather than letting the database raise also turns "duplicate
+    key value violates unique constraint" into a sentence.
+    """
+    name = given if given is not None else ask("Username: ")
+    if not name:
+        print("error: no username given")
         return None
-    if first != getpass.getpass("Again: "):
-        print("error: they do not match")
+    if " " in name:
+        print("error: usernames cannot contain spaces")
+        return None
+    known = {row[0] for row in auth.list_users(db)}
+    if must_exist and name not in known:
+        print(f"error: there is no account called {name}")
+        return None
+    if not must_exist and name in known:
+        print(f"error: {name} already exists — use `password {name}` to change it")
+        return None
+    return name
+
+
+def ask_password():
+    try:
+        first = getpass.getpass("Password: ")
+        if len(first) < 12:
+            print("error: use at least 12 characters")
+            return None
+        if first != getpass.getpass("Again: "):
+            print("error: they do not match")
+            return None
+    except (EOFError, KeyboardInterrupt):
+        print()
         return None
     return first
 
@@ -45,12 +86,15 @@ def main():
     # rather than one line naming the argument they omitted.
     sub = ap.add_subparsers(dest="command")
     sub.add_parser("list")
+    # username is optional throughout: given, it is used; omitted, it is asked
+    # for. The argument form is what makes the commands scriptable, the prompt
+    # is what makes them usable once, by hand, six months from now.
     add = sub.add_parser("add")
-    add.add_argument("username")
-    add.add_argument("--name", default=None)
+    add.add_argument("username", nargs="?", default=None)
+    add.add_argument("--name", default=None, help="full name, for display")
     for name in ("password", "disable", "enable"):
         p = sub.add_parser(name)
-        p.add_argument("username")
+        p.add_argument("username", nargs="?", default=None)
     args = ap.parse_args()
     if not args.command:
         ap.print_help()
@@ -75,27 +119,35 @@ def main():
         return 0
 
     if args.command == "add":
+        username = resolve_username(db, args.username, must_exist=False)
+        if not username:
+            return 1
+        full_name = args.name if args.name is not None else ask("Full name (optional): ")
         password = ask_password()
         if not password:
             return 1
         try:
-            auth.create_user(db, args.username, password, args.name)
+            auth.create_user(db, username, password, full_name or None)
         except Exception as e:
-            print(f"error: could not add {args.username}: {e}")
+            print(f"error: could not add {username}: {e}")
             return 1
-        print(f"added {args.username}")
+        print(f"added {username}")
         return 0
+
+    username = resolve_username(db, args.username, must_exist=True)
+    if not username:
+        return 1
 
     if args.command == "password":
         password = ask_password()
         if not password:
             return 1
-        auth.set_password(db, args.username, password)
-        print(f"password changed for {args.username}")
+        auth.set_password(db, username, password)
+        print(f"password changed for {username}")
         return 0
 
-    auth.set_enabled(db, args.username, args.command == "enable")
-    print(f"{args.username} {args.command}d")
+    auth.set_enabled(db, username, args.command == "enable")
+    print(f"{username} {args.command}d")
     return 0
 
 
