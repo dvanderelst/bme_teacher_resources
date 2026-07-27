@@ -9,6 +9,7 @@
 !/TODO.md
 !/BOT-PLAN.md
 !/book/
+!/bot/
 
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on

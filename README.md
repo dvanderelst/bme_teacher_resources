@@ -9,7 +9,8 @@ and localize stimuli, then build and program mBot robots that do something compa
 
 ## Looking for the materials themselves?
 
-This repository holds the **source**. The finished document — a PDF to download and print, and a
+This repository holds the **source** of the teaching materials and the **teacher-support bot** 
+that answers questions about them. The finished document — a PDF to download and print, and a
 single-file web version — is published at
 [**biologymeetsengineering.org**](https://www.biologymeetsengineering.org).
 
@@ -56,6 +57,11 @@ book/
 ├── build.sh          renders content/ -> render/
 ├── convert.py        one-time Notion migration. Already run. Do not re-run.
 └── tools/            filters and checks used by the build
+
+bot/
+├── app/              the teacher-support chatbot
+├── overlay/          hand-written pedagogy notes and misconceptions
+└── knowledge/        generated knowledge base (do not hand-edit)
 ```
 
 `book/render/` is deliberately not committed. It is a build artifact, and a 14 MB PDF that changes

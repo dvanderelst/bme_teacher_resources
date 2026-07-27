@@ -32,11 +32,11 @@ please just ask. The intent of this licence is to keep the materials free for
 teachers, not to obstruct education. Contact details are in the document.
 
 
-2. The build scripts
---------------------
+2. The code
+------------
 
-The tooling in `book/` (`convert.py`, `build.sh`, `tools/`) is licensed under the
-MIT Licence:
+The code in `book/` (`convert.py`, `build.sh`, `tools/`) and the bot in `bot/` 
+(`app/`, `knowledge.py`) is licensed under the MIT Licence:
 
 Copyright (c) 2026 Dieter Vanderelst
 
