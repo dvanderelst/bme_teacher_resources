@@ -11,7 +11,7 @@ To program and control your mBot, connect it to your computer using one of these
 
 Older mBots could connect via a 2.4 GHz module or direct Bluetooth. We do not support these. Makeblock has discontinued the 2.4 GHz hardware, and with direct Bluetooth all robots in a classroom share the same address, preventing students from identifying which robot they are connecting to.
 
-Figure: The Bluetooth dongle that can be used to connect to the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6fb3632a.png))
+Figure: The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6fb3632a.png))
 
 Figure: The USB cable that can be used to connect to the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-dd60485a.png))
 
@@ -23,7 +23,7 @@ Follow this sequence precisely: turn all robots off first, then put the dongle i
 
 1. Switch **all** robots off, including the one you are pairing. Do this even if only one robot is present.
 2. Plug the dongle into a computer.
-3. Press the button on the dongle. It begins flashing **quickly**, which means it is in pairing mode and has released whatever robot it was paired with before. Press it every time you pair, including on a dongle straight out of its packaging: you cannot tell by looking whether a dongle has been paired before, and pressing one that is already in pairing mode does no harm.
+3. Press the Bluetooth symbol on the top of the dongle — the symbol is the button, and it is also the light. It begins flashing **quickly**, which means the dongle is in pairing mode and has released whatever robot it was paired with before. Press it every time you pair, including on a dongle straight out of its packaging: you cannot tell by looking whether a dongle has been paired before, and pressing one that is already in pairing mode does no harm.
 4. Switch on the robot you are pairing. Its blue LED starts flashing as well.
 5. After a few seconds, both lights stop flashing and remain lit. They are now paired.
 6. Label the robot and dongle as a set. The dongle will only connect to this robot; use the labels to match them later.
