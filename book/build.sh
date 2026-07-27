@@ -39,7 +39,7 @@ cat > render/_version.tex <<TEX
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\newcommand{\bmefoot}{\bmebug\hspace{0.45em}\footnotesize\textcolor{gray}{biologymeetsengineering.org \textperiodcentered\ $EDITION \textperiodcentered\ $FINGERPRINT}}
+\newcommand{\bmefoot}{\bmebug\hspace{0.45em}\footnotesize\textcolor{gray}{biologymeetsengineering.org · $EDITION · $FINGERPRINT}}
 \fancyfoot[L]{\bmefoot}
 \fancyfoot[R]{\footnotesize\thepage}
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[L]{\bmefoot}\fancyfoot[R]{\footnotesize\thepage}}
@@ -55,7 +55,7 @@ ARGS=(
   --lua-filter=tools/abs-links.lua
   --lua-filter=tools/xref.lua
   --metadata "subtitle=Teacher materials"
-  --metadata "date=Edition of $EDITION \textperiodcentered\ $FINGERPRINT"
+  --metadata "date=Edition of $EDITION · $FINGERPRINT"
   --metadata "subject=BmE teacher materials, edition of $EDITION ($FINGERPRINT)"
   --metadata "keywords=Biology Meets Engineering; mBot; mBlock; NGSS; ISTE; $FINGERPRINT"
 )
