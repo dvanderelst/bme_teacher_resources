@@ -38,8 +38,12 @@ def ask_password():
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.strip().split("\n")[0])
-    sub = ap.add_subparsers(dest="command", required=True)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    # Not required=True: a bare run should show the usage examples in the module
+    # docstring above, which is what someone reaching for this actually needs,
+    # rather than one line naming the argument they omitted.
+    sub = ap.add_subparsers(dest="command")
     sub.add_parser("list")
     add = sub.add_parser("add")
     add.add_argument("username")
@@ -48,9 +52,16 @@ def main():
         p = sub.add_parser(name)
         p.add_argument("username")
     args = ap.parse_args()
+    if not args.command:
+        ap.print_help()
+        return 1
 
     db = Database()
     db.create_schema()
+    # Printed before anything else on purpose. Pointing the script at the wrong
+    # database is the mistake that costs time here -- an account created in a
+    # local file while the app reads Postgres looks exactly like a wrong
+    # password at the login screen.
     print(f"using {db.label}\n")
 
     if args.command == "list":
