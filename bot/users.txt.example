@@ -1,0 +1,21 @@
+# Teacher accounts. Copy to bot/users.txt, edit, then:
+#
+#     python bot/scripts/set_users.py
+#
+# This file IS the account list. The script makes the database match it
+# exactly: names removed here are deleted there, and every password is set
+# from what is written here. There is no signup, no reset email and no
+# password anyone but you chooses -- the cohort is small enough that a text
+# file is the whole system.
+#
+# One account per line, columns separated by spaces:
+#
+#     username    password    full name (optional, may contain spaces)
+#
+# Usernames and passwords cannot contain spaces. Passwords need at least 12
+# characters. Blank lines and lines starting with # are ignored.
+#
+# bot/users.txt holds plaintext passwords and is gitignored. Keep it where you
+# keep the rest of your secrets, not in this repository's history.
+
+dieter      choose-a-real-one      Dieter Vanderelst

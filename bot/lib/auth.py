@@ -32,22 +32,14 @@ def hash_password(password):
     return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
 
 
-def create_user(db, username, password, full_name=None):
+def insert_user(db, username, password_hash, full_name=None):
+    """Takes a hash rather than a password, so the caller can hash the whole
+    account list before deleting anything. See bot/scripts/set_users.py."""
     db.run(
         "INSERT INTO users (username, password_hash, full_name, enabled, created_at) "
         "VALUES (?, ?, ?, 1, ?)",
-        (username, hash_password(password), full_name, now()),
+        (username, password_hash, full_name, now()),
     )
-
-
-def set_password(db, username, password):
-    db.run("UPDATE users SET password_hash = ? WHERE username = ?",
-           (hash_password(password), username))
-
-
-def set_enabled(db, username, enabled):
-    db.run("UPDATE users SET enabled = ? WHERE username = ?",
-           (1 if enabled else 0, username))
 
 
 def list_users(db):

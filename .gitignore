@@ -13,13 +13,16 @@
 !/bot/scripts/
 /bot/.env
 /bot/config.json
+/bot/users.txt
 
 # Belt and braces. The whitelist above re-admits everything under /bot/, so a
 # secret dropped into a subdirectory that does not exist yet would be tracked
 # by default. These match at any depth, so a new app/ or lib/ cannot leak one.
-# ".env.example" is deliberately still committable as a template.
+# ".env.example" and "users.txt.example" are deliberately still committable as
+# templates.
 **/.env
 **/secrets.toml
+**/users.txt
 
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on
