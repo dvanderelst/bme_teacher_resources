@@ -4,20 +4,19 @@
 
 | Item | Description |
 | :--- | :--- |
-| Spinners | Used to generate random directions for the taxis/kinesis lesson plan. They come in a pack of 12. |
-| Printed grids | Grids 1, 2 and 3 for the three kinesis conditions, and Grid 4 for all three taxis conditions. All four are in the grids file linked below; Grid 4 carries the narrow and wide markings the two tropotaxis conditions need. One set per group, printed as large as your printer allows — the organism is moved across the grid by hand. |
-| The two rules handouts | *Rules for Kinesis* and *Rules for Taxis*, both linked below. One copy per group, since each group works through the conditions from them directly. |
-| Arrow cut-outs | One **large** and one **wide** per group. The large one is used for the three kinesis conditions and for klinotaxis; the wide one is for the two tropotaxis conditions, where the distance between its two "sensors" is the whole point of the comparison. Note that the rules handouts call these the large and wide **Blue Bug**, and measure movement in *bug-lengths*. |
-| Data sheets | Students record coordinates after every cycle, for up to 40 cycles per condition, so give each group something to write on. The spreadsheet linked below is set up for it and can be printed or filled in on a laptop. |
+| Spinners | Generate random directions for the activities. Pack of 12. |
+| Printed grids | Grids 1-3 for the kinesis conditions, and Grid 4 for all three taxis conditions. All four grids are in the file below; Grid 4 includes markings for the tropotaxis conditions. One set per group, printed as large as possible — organisms move across the grid manually. |
+| Rules handouts | *Rules for Kinesis* and *Rules for Taxis* (linked below). One copy per group; students work through the conditions directly from these. |
+| Arrow cut-outs | One **large** and one **wide** arrow per group. The large arrow is used for kinesis and klinotaxis; the wide arrow is for tropotaxis, where the distance between its two "sensors" is critical. The handouts refer to these as the large and wide **Blue Bug**, measuring movement in *bug-lengths*. |
+| Data sheets | Students record coordinates after each cycle (up to 40 per condition). Provide each group with recording materials. The linked spreadsheet is pre-formatted and can be printed or used digitally. |
 
 ## Prerequisites
 
-Students should be comfortable tracking and organizing data, testing and reasoning about hypotheses, and understanding the terms “stimulus” and “response.”   
+Students should be comfortable tracking and organizing data, testing and reasoning about hypotheses, and understanding the terms **stimulus** and **response**.
 
 ## Investigating/Essential Questions
-
-- How can I use simulated biological data to test hypotheses?
-- What sensory stimuli may be used to identify and guide animal movement to/from its source?
+- How can simulated biological data be used to test hypotheses?
+- What sensory stimuli may identify and guide animal movement to or from its source?
 
 ## Educational Standards
 
@@ -34,11 +33,13 @@ The educational standards applicable to this lesson are listed in the [Education
 
 ## Introduction and Motivation
 
-Kinesis and taxis are two types of behavioral responses exhibited by organisms in reaction to external stimuli, each with distinct characteristics. Kinesis refers to a non-directional, random movement or activity in response to the intensity of a stimulus. This means that the speed or rate of movement changes based on the stimulus level without any specific directionality. For example, woodlice (also known as pill bugs) demonstrate kinesis by exhibiting more rapid and erratic movements in dry environments. In this scenario, the woodlice are responding to the dryness of their surroundings by increasing their movement speed, but the movement itself is not targeted toward or away from a specific point.
+Kinesis and taxis are two types of behavioral responses to external stimuli, with distinct characteristics.
 
-On the other hand, taxis involve a directed movement toward (positive taxis) or away from (negative taxis) a stimulus. Unlike kinesis, taxis are purposeful and goal-oriented, leading the organism toward a favorable condition or away from a harmful one. A classic example of positive phototaxis (movement toward light) can be observed in moths and other insects. These insects are naturally drawn toward sources of light, a behavior that serves various purposes such as navigation or finding mates. In contrast, negative geotaxis is another form of taxis where certain organisms, like earthworms, exhibit a downward movement in response to the Earth's gravitational pull, which helps them burrow into soil.
+**Kinesis** is non-directional, random movement in response to stimulus intensity. The speed or rate of movement changes with stimulus level, but without specific directionality. For example, woodlice (pill bugs) exhibit more rapid and erratic movements in dry environments, responding to dryness by increasing movement speed without targeting any specific location.
 
-For more information, consult the following primer for teachers:
+**Taxis**, by contrast, involves directed movement toward (positive taxis) or away from (negative taxis) a stimulus. Taxis is purposeful and goal-oriented, guiding the organism toward favorable conditions or away from harmful ones. Moths demonstrate positive phototaxis by moving toward light for navigation or mate-finding, while earthworms exhibit negative geotaxis by burrowing downward in response to gravity.
+
+For more information, consult these resources:
 
 [Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
 
@@ -50,79 +51,77 @@ For more information, consult the following primer for teachers:
 
 > **Note**
 >
-> **Definitions** Kinesis: un-directed movement consisting of rotational ‘tumbles’ and linear ‘runs,’ in which either the frequency of tumbles or the speed (or distance) of runs depends on the intensity of the stimulus. The first of those is klinokinesis, the second orthokinesis; the activities in this chapter use orthokinesis. Kinesis is simpler than Taxis and requires fewer sensory and brain resources. Examples include pill bugs (a.k.a. woodlouse, roly-poly), which alter speed at different temperatures, and flatworms (like planarians), which alter turn frequency in response to light levels.
+> **Definitions**
+> **Kinesis:** Undirected movement with rotational tumbles and linear runs, where either tumble frequency or run speed/distance depends on stimulus intensity. The first is klinokinesis, the second orthokinesis; these activities use orthokinesis. Kinesis is simpler than taxis and requires fewer sensory and neural resources. Examples: pill bugs (woodlice, roly-polies) alter speed at different temperatures; flatworms (like planarians) alter turn frequency in response to light.
 >
-> Taxis: directed movement either toward or away from the source of stimulation. Examples include virtually all guided behavior by animals.
+> **Taxis:** Directed movement toward or away from a stimulus source. Examples include virtually all guided animal behavior.
 
-Show the video clip of a pill bug experiment below. Have students make observations and then write down what the students noticed and wondered. Ask students to identify the questions that are testable.  Highlight them as they are discussed. Also, highlight the words that students use to describe the movement of the pill bugs (random, faster, slower, etc.) to introduce some new vocabulary.  Tell students that they will be exploring an organism’s movement toward an attractive source through something like a game.  They will need to determine if the data produced defends the given hypothesis.
+Show the pill bug experiment video below. Have students make observations and record what they notice and wonder. Ask them to identify testable questions, highlighting these as they are discussed. Also highlight vocabulary words students use to describe pill bug movement (random, faster, slower, etc.). Tell students they will explore an organism's movement toward an attractive source through a game-like activity, determining whether the data supports the given hypothesis.
 
 [Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
 
 ## Testing hypotheses about kinesis and taxis
 
-In this lesson, students test hypotheses using simulated data, in two activities of three conditions each. The first activity covers kinesis: movement with no sensor at all, and then two forms of orthokinesis, in which run length varies with stimulus intensity. The second activity covers taxis: klinotaxis, where a single sensor is compared against a remembered earlier reading, and then tropotaxis with two sensors, once widely spaced and once narrowly spaced. Between them the two activities put four orientation mechanisms in front of students — kinesis, orthokinesis, klinotaxis and tropotaxis. Based on their findings in each activity, students will be asked to support or reject a hypothesis.
+In this lesson, students test hypotheses using simulated data through two activities, each with three conditions. The first activity covers kinesis: movement with no sensor, then two forms of orthokinesis where run length varies with stimulus intensity. The second activity covers taxis: klinotaxis (single sensor compared against a remembered reading), and tropotaxis with two sensors (widely spaced and narrowly spaced). Together, these activities introduce four orientation mechanisms: kinesis, orthokinesis, klinotaxis, and tropotaxis. After each activity, students evaluate whether their findings support or reject the hypothesis.
 
-Students will use the following file, which provides the grids required for the activities.
+Students use the following file for the required grids:
 
 [Grids for the activities (.pptx)](files/Kinesis-Taxis_grids.pptx)
 
-IMPORTANT: The grid is NOT for discrete Blue Arrow placement; the Blue Arrow moves in arrow lengths and lies across the grid in whichever place and orientation it wants! The grid only indicates the location of the arrow’s tip.
+**Note:** The grid is not for discrete Blue Arrow placement; the Blue Arrow moves in arrow lengths and can lie across the grid at any position and orientation. The grid only marks the arrow's tip location.
 
-![Example of a grid and Blue Arrow placement. The printed grid and an inset of the grid are shown, with the Blue Arrow at coordinates (2,3).](images/kinesis-and-taxis-lesson-plan-c3db12bd.png)
+![Example of grid and Blue Arrow placement. The printed grid and an inset are shown, with the Blue Arrow at coordinates (2,3).](images/kinesis-and-taxis-lesson-plan-c3db12bd.png)
 
-We also link an Excel file below that should make it easier for students to record their data.
+An Excel file is also available for easier data recording:
 
 [Data sheets for recording coordinates (.xlsx)](files/Kinesis-Taxis_data_sheets.xlsx)
 
-### Activity 1:  Kinesis Under 3 Different Conditions
+### Activity 1: Kinesis Under 3 Different Conditions
 
-The first set of three exercises demonstrates the nature of motion by **Kinesis** under three different experimental conditions:
+The first set of exercises demonstrates kinesis under three experimental conditions:
 
-- Condition 1: Without intensity-dependent behavior. No sensors are used.
-- Condition 2: With intensity-dependent behavior. One sensor is used. The run length depends on the stimulus intensity, causing the organism to move faster as it approaches the goal. This is orthokinesis.
-- Condition 3: With intensity-dependent behavior. One sensor is used. The organism moves slower as it approaches the target.
+- **Condition 1:** Without intensity-dependent behavior. No sensors are used.
+- **Condition 2:** With intensity-dependent behavior. One sensor; run length increases with stimulus intensity, causing faster movement toward the goal. This is orthokinesis.
+- **Condition 3:** With intensity-dependent behavior. One sensor; the organism moves slower as it approaches the target.
 
-Students will determine whether their data supports the following hypothesis:
+Students determine whether their data supports this hypothesis:
 
-> *Hypothesis:* Adding intensity-dependent behavior (i.e, varying **Run** distance with stimulus intensity a.k.a. orthokinesis), decreases the number of **Runs** required to reach the goal, i.e. goal will be reached more quickly under Condition 2 than under Condition 1.
+> *Hypothesis:* Adding intensity-dependent behavior (varying **Run** distance with stimulus intensity, i.e., orthokinesis) decreases the number of **Runs** required to reach the goal; the goal will be reached more quickly under Condition 2 than Condition 1.
 >
 
-Before students collect data, you can take a poll to determine whether they think condition 2 or 3 will be more effective. Next, they can use the following linked document with instructions and the grids file to run through the three conditions (Kinesis without sensors, Orthokinesis, and Orthokinesis in reverse).
+Before data collection, poll students on whether they think Condition 2 or 3 will be more effective. Students use the following document with instructions and the grids file to complete the three conditions (Kinesis without sensors, Orthokinesis, and Orthokinesis in reverse).
 
 [Rules for Kinesis, all three conditions (.docx)](files/Rules_for_Kinesis.docx)
 
 ### Activity 2: Taxis Under 3 Different Conditions
 
-The second set of three exercises demonstrates the nature of motion by **Taxis** under three different experimental Conditions:
+The second set of exercises demonstrates taxis under three experimental conditions:
 
-- Condition 1: With one sensor, plus memory to store stimulus values for successive comparison (klinotaxis).
-- Condition 2: With two sensors, simultaneous bilateral measurements of stimulus values (tropotaxis); sensors placed far apart.
-- Condition 3: With two sensors, simultaneous bilateral measurements of stimulus values (tropotaxis); sensors placed close together.
+- **Condition 1:** With one sensor plus memory to store stimulus values for successive comparison (klinotaxis).
+- **Condition 2:** With two sensors for simultaneous bilateral measurements (tropotaxis); sensors are widely spaced.
+- **Condition 3:** With two sensors for simultaneous bilateral measurements (tropotaxis); sensors are narrowly spaced.
 
-Students will determine whether their data supports these hypotheses:
+Students determine whether their data supports these hypotheses:
 
-> Hypothesis A: The presence of a single sensor that measures successive stimulus intensities will lead to source localization.
-Hypothesis B: The presence of two sensors that measures simultaneous, bilateral stimulus intensities will lead to faster source localization than a single sensor with memory. Hypothesis C: Widely spaced sensors will lead to faster source localization than narrowly spaced sensors.
+> **Hypothesis A:** A single sensor measuring successive stimulus intensities enables source localization.
+> **Hypothesis B:** Two sensors measuring simultaneous bilateral intensities enable faster source localization than a single sensor with memory.
+> **Hypothesis C:** Widely spaced sensors enable faster source localization than narrowly spaced sensors.
 >
-
-Students use the grids file linked above in combination with the following instructions.
-
-[Rules for Taxis, all three conditions (.docx)](files/Rules_for_Taxis.docx)
-
 ## Student Assessment
 
-You can use the following questions to assess students’ understanding:
+Assess students' understanding with these questions:
 
-1. Are the four mechanisms tested in these activities — kinesis, orthokinesis, klinotaxis and tropotaxis — effective for reaching the stimulus source? Do they differ in their effectiveness? Explain.
-2. Does the protocol in section B describe a form KLINOKINESIS or KLINOTAXIS? Explain.
-3. Does the spatial segregation of the sensors impact stimulus localization? Explain.
-4. What factors can be applied to robotic design?
+1. Are the four mechanisms tested — kinesis, orthokinesis, klinotaxis, and tropotaxis — effective for reaching the stimulus source? Do they differ in effectiveness? Explain.
+2. Does the protocol in section B describe KLINOKINESIS or KLINOTAXIS? Explain.
+3. Does sensor spatial segregation impact stimulus localization? Explain.
+4. What factors from these activities can be applied to robotic design?
+
 
 ## Example student data
 
 [All student paths, 2024 (.pptx)](files/Kinesis-Taxis_all_paths_2024.pptx)
 
-Six short clips of students working through the conditions, in the order the activities are presented above — the three kinesis conditions first, then the three taxis conditions.
+Six short clips show students working through the conditions in order: the three kinesis conditions first, then the three taxis conditions.
 
 - [Video: kinesis 1](https://youtu.be/BGXWkXicTWg)
 - [Video: kinesis 2](https://youtube.com/shorts/lPVNrK8Hsgw?feature=share)
