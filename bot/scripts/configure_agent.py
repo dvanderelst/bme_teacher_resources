@@ -231,9 +231,9 @@ def main():
     if not manifest:
         print(f"warning: no manifest in {KNOWLEDGE_DIR} -- "
               f"the agent will be stamped 'unknown'")
-    if re.search(r"-(stale|dirty)", str(manifest.get("fingerprint", ""))):
+    if "-stale" in str(manifest.get("fingerprint", "")):
         print(f"warning: fingerprint {manifest['fingerprint']} was built from a "
-              f"dirty tree; commit before deploying")
+              f"working tree with uncommitted changes; commit before deploying")
 
     client = None
     if not missing:

@@ -160,7 +160,10 @@ def main():
         out_dir = sys.argv[sys.argv.index("--out") + 1]
 
     base = os.getenv("BME_FILE_BASE", "")
-    fingerprint = os.getenv("BME_FINGERPRINT", "unknown")
+    # build.sh already rewrites git's "-dirty" to "-stale" for the PDF footer.
+    # Repeat it here so a manifest written by a standalone run cannot disagree
+    # with the documents built beside it.
+    fingerprint = os.getenv("BME_FINGERPRINT", "unknown").replace("-dirty", "-stale")
     edition = os.getenv("BME_EDITION", "unknown")
     if not base and not quiet:
         print("  knowledge: BME_FILE_BASE unset -- image and file links stay relative")
