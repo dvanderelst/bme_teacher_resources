@@ -14,7 +14,12 @@ builder = "railpack"
 [deploy]
 # $PORT is assigned by Railway; 0.0.0.0 because the container is behind its
 # proxy and binding to localhost would be unreachable.
-startCommand = "streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+#
+# The default in ${PORT:-8080} is not decoration. An unset PORT expands to
+# nothing, so the next argument slides into its place and streamlit exits with
+# "'--server.address' is not a valid integer" -- an error that names the wrong
+# flag and says nothing about the missing variable.
+startCommand = "streamlit run app/app.py --server.port ${PORT:-8080} --server.address 0.0.0.0 --server.headless true"
 
 # Streamlit's own endpoint. Other paths return the app's HTML with a 200, so a
 # healthcheck pointed at "/" would pass even when the app is broken.
