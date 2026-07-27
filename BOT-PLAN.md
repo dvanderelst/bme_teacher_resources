@@ -176,3 +176,14 @@ exists it becomes the direct answer to "why is my robot hitting the wall?", deli
 and no hedging.
 
 Settle section 1 of TODO.md before the bot goes in front of anyone.
+
+**Observed, once the agent was actually running.** It does not only repeat what the chapters say
+— it invents what they leave out, in exactly the places they trail off. Asked why the sound sensor
+needs ports 3 or 4, it explained that ports 1 and 2 "are digital and cannot read the analog signal".
+No chapter says that; chapter 1 stops at "the only ports with analog inputs" and never characterises
+the others. See TODO 1.8, which the answer lands squarely on.
+
+This is the worse half of the problem, because a wrong sentence can be reviewed and a silence
+cannot. Grep will not find the gaps, and reading for them means noticing an absence. The practical
+consequence is that the open hardware checks are not merely a correctness backlog: every one of
+them is a hole the bot will fill on its own, and the filling will sound as confident as the rest.

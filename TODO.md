@@ -111,6 +111,11 @@ never been checked over the range where it is actually used.
       the board photograph. Ports 1 and 2 cannot be read from it — their labels are half the size,
       upside down, and `A5` is indistinguishable from `L1` at 855 px. Makeblock's *Beginner's Guide*
       has no pinout table either, so this needs the board in your hand.
+      **Raised in priority by the bot.** Asked why the sound sensor needs ports 3 or 4, the
+      deployed agent answered that "ports 1 and 2 are digital and cannot read the analog
+      signal". No chapter says that. It is an invention filling the gap where the prose stops
+      at "the only ports with analog inputs" without saying what the others are — and it is
+      stated flatly to a teacher. Settling this closes the gap rather than papering over it.
 - [ ] Which motor connector is physically **backmost** — M1 or M2? The board photograph shows M2 left
       of M1 with the power switch above them, but no photograph we have shows the board mounted in the
       chassis, which is what "backmost" depends on. Would make the wrong-direction troubleshooting
