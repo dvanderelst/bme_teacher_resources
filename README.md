@@ -39,6 +39,10 @@ what you need in hand to settle it — the robot, a Mac, a Chromebook, a camera,
 the project's to make. That file and `git log` between them carry the reasoning behind the current
 state; the finished text deliberately does not.
 
+The next planned step is a chatbot to support teachers working through these materials, built from
+this content so that it cannot drift out of step with it. Nothing is built yet;
+[BOT-PLAN.md](BOT-PLAN.md) holds the design and the decisions taken so far.
+
 ## Layout
 
 ```
