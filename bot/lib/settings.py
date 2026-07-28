@@ -12,6 +12,7 @@ using it would mean generating that file from environment variables at deploy --
 machinery whose only purpose is to satisfy a file format, and a second place for
 the same key to live and disagree.
 """
+import json
 import os
 from pathlib import Path
 
@@ -56,3 +57,22 @@ def load_env(required=()):
 def get(key, default=None):
     config, _ = load_env()
     return config.get(key, default)
+
+
+def build_stamp():
+    """Return (edition, fingerprint) from the knowledge manifest.
+
+    Stamped onto every piece of feedback. Without it a report that the pairing
+    instructions are wrong cannot be told apart from one filed before they were
+    fixed, and these are meant to be acted on weeks later.
+
+    It has to come from the manifest rather than from git: the running
+    container has no history to ask. bot/knowledge/ is committed, which is what
+    makes this readable in production at all.
+    """
+    try:
+        manifest = json.loads((KNOWLEDGE_DIR / "manifest.json").read_text())
+    except (OSError, ValueError):
+        return "unknown", "unknown"
+    return (manifest.get("edition", "unknown"),
+            manifest.get("fingerprint", "unknown"))
