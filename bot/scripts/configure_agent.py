@@ -24,6 +24,10 @@ library. They describe how to behave, not what is true; in the library they
 would be retrievable as though they were course material, and the bot could
 quote its own rulebook back to a teacher.
 
+The model, temperature and reasoning effort are constants near the top of this
+file. Edit them there and run; there are no flags for them, because every run
+applies all three and a forgotten flag silently reset the agent.
+
     python bot/scripts/configure_agent.py --dry-run   # show the plan, change nothing
     python bot/scripts/configure_agent.py             # apply it
 
@@ -45,8 +49,23 @@ ENV_PATH = BOT_DIR / ".env"
 
 AGENT_NAME = "BmE Teacher Support Bot"
 AGENT_DESCRIPTION = "Assistant for teachers using the Biology Meets Engineering materials"
-DEFAULT_MODEL = "mistral-large-latest"
-DEFAULT_TEMPERATURE = 0.2
+
+# --- agent settings ---------------------------------------------------------
+# Edit these, then run the script. They are written here rather than passed as
+# flags because every run applies all of them: a run that forgot a flag used to
+# reset the agent to whatever the default was, quietly, and the only sign was
+# one line of output. Keeping them in the file means the deployed agent's
+# configuration is in git, visible in a diff, and the same on every run.
+#
+# MODEL must have the "reasoning" capability if REASONING_EFFORT is set, or the
+# API rejects the whole update -- mistral-large does not have it, medium and the
+# magistral models do. check_model() below preflights this and names the models
+# that would work, before anything is uploaded.
+MODEL = "mistral-medium-latest"
+TEMPERATURE = 0.2
+REASONING_EFFORT = "high"       # None to leave it out of the request entirely
+
+EFFORTS = (None, "none", "minimal", "low", "medium", "high", "xhigh")
 
 
 def load_env(required):
@@ -295,12 +314,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.strip().split("\n")[0])
     ap.add_argument("--dry-run", action="store_true",
                     help="show the plan and change nothing")
-    ap.add_argument("--model", default=DEFAULT_MODEL)
-    ap.add_argument("--temperature", type=float, default=DEFAULT_TEMPERATURE)
-    ap.add_argument("--reasoning-effort", default=None,
-                    choices=["none", "minimal", "low", "medium", "high", "xhigh"],
-                    help="omitted entirely unless given")
     args = ap.parse_args()
+
+    # Checked here rather than left to the API, which reports a bad effort as a
+    # 400 at the end of the run -- after the library has been re-uploaded.
+    if REASONING_EFFORT not in EFFORTS:
+        print(f"error: REASONING_EFFORT is {REASONING_EFFORT!r}; "
+              f"use one of {', '.join(str(e) for e in EFFORTS)}")
+        return 1
 
     required = ["MISTRAL_API_KEY", "MISTRAL_LIBRARY_ID", "AGENT_ID"]
     config, missing = load_env(required)
@@ -328,7 +349,7 @@ def main():
 
     # Preflight: nothing is uploaded until the agent settings are known good,
     # so a rejected flag cannot cost a full re-upload of the library.
-    bad = check_model(client, args.model, args.reasoning_effort)
+    bad = check_model(client, MODEL, REASONING_EFFORT)
     if bad:
         print("\n".join(f"error: {b}" for b in bad))
         return 1
@@ -343,8 +364,7 @@ def main():
     print("\nagent:")
     failures += configure_agent(client, config.get("AGENT_ID"),
                                 config.get("MISTRAL_LIBRARY_ID"), manifest,
-                                args.model, args.temperature,
-                                args.reasoning_effort,
+                                MODEL, TEMPERATURE, REASONING_EFFORT,
                                 args.dry_run or not client)
 
     if failures:
