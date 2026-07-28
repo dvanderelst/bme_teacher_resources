@@ -1,0 +1,13 @@
+# Theme for both pages, and anything added later.
+#
+# Streamlit reads this from the directory it is started in, which is bot/ in
+# production -- the Railway service's Root Directory, see railway.toml. Run it
+# locally the same way, `cd bot && streamlit run app/app.py`, or this file is
+# not found and the app comes up light.
+
+[theme]
+base = "dark"
+
+# The logo's red is #C00020, which is too dark to read as an accent against a
+# dark background. This is the same hue, lifted until it carries.
+primaryColor = "#E03A52"

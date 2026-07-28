@@ -53,7 +53,12 @@ st.session_state.setdefault("feedback_sent", {})
 user = st.session_state.user
 name = user.get("full_name") or user["username"]
 
-CATEGORIES = ["It is wrong or misleading",
+# One list, positive first. The sentiment column is derived from the choice
+# rather than asked for separately: two controls that can disagree -- a thumbs
+# up filed against "it is wrong" -- is a question nobody should have to answer.
+POSITIVE = "It was helpful — nothing wrong with it"
+CATEGORIES = [POSITIVE,
+              "It is wrong or misleading",
               "It is not in the materials at all",
               "It is unclear or hard to follow",
               "It should not have been blocked",
@@ -75,8 +80,8 @@ def close_report():
     st.session_state.feedback_open = None
 
 
-def file_report(index, sentiment, from_form=False):
-    """Store one report, and remember it so the buttons do not come back.
+def file_report(index):
+    """Store one report, and remember it so the button does not come back.
 
     Runs as a button callback rather than inline, which is what makes the form
     close cleanly: callbacks run before the page is redrawn, so the run that
@@ -94,12 +99,10 @@ def file_report(index, sentiment, from_form=False):
     not worth losing a teacher's place in a conversation over -- this runs
     while they are mid-lesson.
     """
-    if from_form:
-        category = st.session_state.get(f"category_{index}")
-        note = st.session_state.get(f"note_{index}") or ""
-        whole = st.session_state.get(f"whole_{index}", False)
-    else:
-        category, note, whole = None, "", False
+    category = st.session_state.get(f"category_{index}") or CATEGORIES[0]
+    note = st.session_state.get(f"note_{index}") or ""
+    whole = st.session_state.get(f"whole_{index}", False)
+    sentiment = "up" if category == POSITIVE else "down"
 
     if whole:
         scope, transcript = "conversation", st.session_state.messages
@@ -127,33 +130,37 @@ def file_report(index, sentiment, from_form=False):
 
 
 def report_controls(index):
-    """The thumbs under one answer, and the form the down-thumb opens."""
-    if index in st.session_state.feedback_sent:
-        st.caption("Thank you — that has been recorded."
-                   if st.session_state.feedback_sent[index] == "down"
-                   else "Noted, thank you.")
-        return
+    """The feedback button under one answer, and the form it opens.
 
-    good, bad, _ = st.columns([1, 1, 12])
-    good.button("👍", key=f"up_{index}", help="This answer was useful",
-                on_click=file_report, args=(index, "up"))
-    bad.button("👎", key=f"down_{index}", help="Something is wrong here",
-               on_click=open_report, args=(index,))
+    One button rather than a thumbs pair. Thumbs are cheap to press and cheap
+    to ignore, and what is actually worth having here is the sentence a teacher
+    would write -- including when something worked, which a bare thumbs-up
+    records without saying why. So every report goes through the same form, and
+    the first category is the positive one.
+    """
+    if index in st.session_state.feedback_sent:
+        st.caption("Thank you — that has been recorded.")
+        return
 
     if st.session_state.feedback_open != index:
+        st.button("Feedback", key=f"feedback_{index}",
+                  help="Tell us about this answer — good or bad",
+                  on_click=open_report, args=(index,))
         return
+
     with st.form(f"report_{index}"):
-        st.selectbox("What is wrong with it?", CATEGORIES, key=f"category_{index}")
+        st.selectbox("How was this answer?", CATEGORIES, key=f"category_{index}")
         st.text_area(
-            "What should it have said?", key=f"note_{index}",
-            placeholder="Anything you can tell us. What the robot actually "
-                        "did, what the chapter says, what you expected.")
-        st.checkbox("Include this whole conversation", key=f"whole_{index}")
-        st.caption("The answer above is sent either way. Your own questions "
-                   "are only sent if you tick the box.")
+            "Anything you can tell us", key=f"note_{index}",
+            placeholder="What the robot actually did, what the chapter says, "
+                        "what you expected — or what worked well and why.")
+        st.checkbox("Send this conversation with my report",
+                    key=f"whole_{index}")
+        st.caption("The answer above is included either way. Your own "
+                   "questions are sent only if you tick the box.")
         send, cancel = st.columns([1, 1])
-        send.form_submit_button("Send", type="primary", on_click=file_report,
-                                args=(index, "down"), kwargs={"from_form": True})
+        send.form_submit_button("Send", type="primary",
+                                on_click=file_report, args=(index,))
         cancel.form_submit_button("Cancel", on_click=close_report)
 
 
@@ -170,8 +177,21 @@ with st.sidebar:
         st.switch_page("app.py")
 
 st.title("BmE teacher assistant")
-st.caption("Answers come from the Biology Meets Engineering teacher materials. "
-           "If something looks wrong, it probably is — please say so.")
+
+# Said here, up front and at full size, rather than in a caption nobody reads.
+# The claim is unusual enough to be worth the space -- most things teachers are
+# asked to type into do keep what they type -- and it is only credible if it
+# also says exactly when that stops being true.
+st.info(
+    "**Nothing you type here is stored.** Your questions and the answers are "
+    "not logged, and no one at BmE can read this conversation.\n\n"
+    "Answers come from the Biology Meets Engineering teacher materials. If "
+    "something looks wrong, it probably is — and if something works well, that "
+    "is worth knowing too. Use **Feedback** under any answer to tell us.\n\n"
+    "That form is the only thing here that stores anything. It always includes "
+    "the answer you are reporting on, because a report about an answer nobody "
+    "can see is not much use. Your own questions are sent only if you tick the "
+    "box that offers it.")
 
 # Shown here rather than beside the thumbs, because a callback cannot draw to
 # the page. Saying it plainly matters: a teacher who thinks they have reported
