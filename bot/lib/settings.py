@@ -20,6 +20,20 @@ ENV_PATH = BOT_DIR / ".env"
 KNOWLEDGE_DIR = BOT_DIR / "knowledge"
 INSTRUCTIONS = BOT_DIR / "instructions.md"
 
+# Every name that may arrive from the real environment instead of bot/.env.
+#
+# It has to be written down somewhere, because the overlay below can only look
+# up keys it already knows the name of, and on a hosting platform there is no
+# .env file to learn them from. A key missing from this list is therefore
+# invisible in production however carefully it is set on the service.
+#
+# That failure is silent, which is what makes it worth a list. DATABASE_URL was
+# missing here, so the deployed app read no URL, fell back to a container-local
+# SQLite file, and rejected every login against an empty table -- while the
+# Postgres it was pointed at sat there correctly populated. Nothing in the logs
+# said so: SQLite creates its file on demand, so there was no error to see.
+KNOWN_KEYS = ("MISTRAL_API_KEY", "AGENT_ID", "MISTRAL_LIBRARY_ID", "DATABASE_URL")
+
 
 def load_env(required=()):
     """Return (config, missing). Never raises and never exits: callers decide
@@ -33,7 +47,7 @@ def load_env(required=()):
                 continue
             key, value = line.split("=", 1)
             config[key.strip()] = value.strip().strip('"').strip("'")
-    for key in set(required) | set(config):
+    for key in set(required) | set(config) | set(KNOWN_KEYS):
         if os.environ.get(key):
             config[key] = os.environ[key]
     return config, [k for k in required if not config.get(k)]
