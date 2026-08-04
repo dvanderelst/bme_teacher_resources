@@ -13,12 +13,14 @@ This repository holds the **source** of the teaching materials and the **teacher
 that answers questions about them. The finished document is
 [**biologymeetsengineering.org**](https://www.biologymeetsengineering.org), or download it directly:
 
+- [**Read it in your browser**](https://dvanderelst.github.io/bme_teacher_resources/)
+  — nothing to download; reflows on a phone or tablet
 - [**PDF**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest/download/BmE-teacher-materials.pdf)
   — to read or print
-- [**Web version**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest/download/BmE-teacher-materials.html)
-  — one file, images included, opens in a browser and works offline
+- [**Web version to keep**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest/download/BmE-teacher-materials.html)
+  — downloads one file with the images inside it, which then works with no network
 
-Both links always serve the newest edition, so they are safe to bookmark or pass on.
+All three always serve the newest edition, so they are safe to bookmark or pass on.
 
 You do not need any of the rest of this if you just want to teach from it.
 
@@ -98,9 +100,16 @@ cd book
 ```
 
 This builds both documents, stamps them with the tag, commits the regenerated bot knowledge set so
-the bot answers for the same edition, tags, pushes, and attaches the two files to a GitHub release.
-The two download links at the top of this file then serve the new edition automatically — they point
-at `releases/latest/`, so nothing has to be re-sent to anyone.
+the bot answers for the same edition, tags, pushes, attaches the two files to a GitHub release, and
+publishes the HTML to GitHub Pages. All three links at the top of this file then serve the new
+edition automatically, so nothing has to be re-sent to anyone.
+
+The Pages copy exists because release assets are always sent as downloads — GitHub stamps every one
+of them `content-disposition: attachment`, deliberately, so nobody can host arbitrary HTML and
+JavaScript on github.com. Pages serves the same file as a page you can simply read, at a fixed
+address a website can also point an iframe at. It is pushed as a parentless commit onto `gh-pages`,
+so the branch keeps no history and each release makes the previous 20 MB copy unreachable instead of
+stacking another one on top.
 
 [**RELEASING.md**](book/RELEASING.md) explains the sequence, why it is in that order, and what to do
 when a release goes wrong.

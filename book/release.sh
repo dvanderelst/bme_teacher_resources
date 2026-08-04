@@ -121,15 +121,18 @@ echo "==> pushed $BRANCH and $TAG"
 
 # --- publish ----------------------------------------------------------------
 EDITION=$(git log -1 --format=%cs)
+PAGES_URL="https://${REPO%%/*}.github.io/${REPO#*/}/"
 NOTES=$(cat <<NOTES
 Edition $TAG · $EDITION
 
-**[Download the PDF](https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.pdf)**
-· **[web version](https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.html)**
-(one file, images included, opens in a browser without a network connection)
+**[Read it in your browser]($PAGES_URL)** · **[Download the PDF](https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.pdf)**
 
-Both links always point at the newest edition, so they can be shared once and
-left alone. The version is printed in the footer of every PDF page.
+Or [download the web version](https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.html)
+to keep: one file with the images inside it, which works with no network once
+saved, and reflows on a phone or tablet in a way the PDF cannot.
+
+All three links always point at the newest edition, so they can be shared once
+and left alone. The version is printed in the footer of every PDF page.
 NOTES
 )
 
@@ -152,10 +155,46 @@ fi
 gh release create "$TAG" "$PDF" "$HTML" \
   --repo "$REPO" --title "Edition $TAG" --notes "$NOTES"
 
+# --- the readable-in-a-browser copy -----------------------------------------
+# Release assets are always sent as downloads: GitHub stamps every one of them
+# content-disposition: attachment, deliberately, so nobody can host arbitrary
+# HTML and JavaScript on github.com. No file name or content type gets around
+# it. So the HTML in the release is a file a teacher saves and opens, and this
+# is the copy they can simply read: GitHub Pages serves the same document at a
+# fixed address, which is also what a website would point an iframe at.
+#
+# Built with plumbing rather than a checkout, because switching branches in a
+# Dropbox folder invites the sync client to fight the working tree. Nothing
+# here touches it: the file is hashed straight into the object database and a
+# parentless commit is pushed over whatever gh-pages held.
+#
+# Parentless is the point. The branch keeps no history, so each release makes
+# the previous 20 MB copy unreachable rather than stacking another one up on
+# top of it, and the repository does not grow by an edition every time.
+echo "==> publishing the readable copy to GitHub Pages"
+HTML_BLOB=$(git hash-object -w "$HTML")
+EMPTY_BLOB=$(git hash-object -w -t blob /dev/null)
+# .nojekyll stops Pages running the document through Jekyll, which would try to
+# interpret parts of it as a template and mangle them.
+TREE=$(printf '100644 blob %s\tindex.html\n100644 blob %s\t.nojekyll\n' \
+  "$HTML_BLOB" "$EMPTY_BLOB" | git mktree)
+PAGES_COMMIT=$(git commit-tree "$TREE" -m "Edition $TAG")
+
+if git push --quiet --force origin "$PAGES_COMMIT:refs/heads/gh-pages"; then
+  # Turning Pages on is a one-off; 409 means it already is, which is fine.
+  gh api -X POST "repos/$REPO/pages" \
+    -f "source[branch]=gh-pages" -f "source[path]=/" >/dev/null 2>&1 || true
+  echo "    pushed; Pages takes a minute or two to rebuild"
+else
+  echo "    !! the Pages push failed. The release itself is published and fine;"
+  echo "       only the read-in-a-browser copy is still on the previous edition."
+fi
+
 cat <<DONE
 
 ==> published. The permanent links, unchanged from here on:
 
-  https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.pdf
-  https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.html
+  read in a browser  $PAGES_URL
+  download the PDF   https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.pdf
+  download the HTML  https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.html
 DONE
