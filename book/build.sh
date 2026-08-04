@@ -119,4 +119,10 @@ if grep -q -- '<!--' render/BmE-teacher-materials.html; then
 fi
 python3 tools/check-links.py --quiet || true
 N=$(python3 tools/notes.py --count)
-[ "$N" != "0" ] && echo "  $N outstanding revision note(s) -- python3 tools/notes.py"
+# An `if` rather than `[ ... ] && echo`: as the last line of the script, the
+# test's own exit status becomes the script's, so a clean build with no
+# outstanding notes would report failure. Nothing noticed while this was only
+# ever run by hand, but release.sh runs under set -e and stops on it.
+if [ "$N" != "0" ]; then
+  echo "  $N outstanding revision note(s) -- python3 tools/notes.py"
+fi
