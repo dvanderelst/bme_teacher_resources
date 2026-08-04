@@ -11,9 +11,9 @@ To program and control your mBot, connect it to your computer using one of these
 
 Older mBots could connect via a 2.4 GHz module or direct Bluetooth. We do not support these. Makeblock has discontinued the 2.4 GHz hardware, and with direct Bluetooth all robots in a classroom share the same address, preventing students from identifying which robot they are connecting to.
 
-Figure: The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6fb3632a.png))
+Figure: The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-6fb3632a.png))
 
-Figure: The USB cable that can be used to connect to the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-dd60485a.png))
+Figure: The USB cable that can be used to connect to the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-dd60485a.png))
 
 ## Pairing the Bluetooth dongle and the robot
 
@@ -33,9 +33,9 @@ Follow this sequence precisely: turn all robots off first, then put the dongle i
 
 **Note:** The button is also how a pairing gets broken: pressing it releases the robot, and that dongle will no longer connect to it until they are paired again. Once a set is paired and labelled, instruct students not to press it, and consider covering it with tape for the rest of the lesson. Remove the tape when you next need to pair that dongle to a different robot.
 
-Figure: Blue LED blinking on the robot's Bluetooth module. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-1f093a0d.jpg))
+Figure: Blue LED blinking on the robot's Bluetooth module. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-1f093a0d.jpg))
 
-Figure: When the dongle and the robot are paired, the blue LEDs on both will stop blinking. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-f62edb5b.jpg))
+Figure: When the dongle and the robot are paired, the blue LEDs on both will stop blinking. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-f62edb5b.jpg))
 
 ## Checking whether a dongle and a robot are paired
 
@@ -54,13 +54,13 @@ When writing a program from scratch, you must tell mBlock which robot to target.
 
 If the mBot does not appear in the `Devices` panel, click the `Add (+)` button at the bottom. A window listing supported devices appears. Select **mBot** — not mBot2, which is a different robot — and click `OK`. The mBot appears in the panel, and its control blocks become available in the palette.
 
-Figure: Click this button to add the robot to mBlock. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-c19638ac.png))
+Figure: Click this button to add the robot to mBlock. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-c19638ac.png))
 
-Figure: The devices area before adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bcbd96a0.png))
+Figure: The devices area before adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-bcbd96a0.png))
 
-Figure: Select the mBot from the menu. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-f2ecdd41.png))
+Figure: Select the mBot from the menu. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-f2ecdd41.png))
 
-Figure: The devices area after adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-7bfc097d.png))
+Figure: The devices area after adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-7bfc097d.png))
 
 ## Live versus Upload mode
 
@@ -105,7 +105,7 @@ This establishes the robot-to-dongle connection. The mBlock connection process v
 
 ### Using mBlock in the browser
 
-Figure: mBlock running in the browser, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6bb9e606.png))
+Figure: mBlock running in the browser, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-6bb9e606.png))
 
 #### Direct connection or mLink?
 
@@ -116,7 +116,7 @@ The browser version of mBlock can connect to the robot in two ways, selected via
 
 **The instructions below use direct connection**, as it is simpler and requires no installation — important for locked-down school computers. If the `Devices` panel shows `Switch to direct connection`, click it. If it shows `Switch to mLink`, you are already using direct connection.
 
-Figure: If the panel offers `Switch to direct connection`, click it. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-1dd0fc6c.png))
+Figure: If the panel offers `Switch to direct connection`, click it. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-1dd0fc6c.png))
 
 #### Using the Bluetooth dongle
 
@@ -124,9 +124,9 @@ With the robot on and dongle plugged in, click `Serial`. This may seem counterin
 
 The browser then prompts you to select a serial port. Choose the dongle's entry and click `Connect`.
 
-Figure: With direct connection selected, click `Serial` — not `Bluetooth`, even though the dongle is a Bluetooth device. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bd535d8d.png))
+Figure: With direct connection selected, click `Serial` — not `Bluetooth`, even though the dongle is a Bluetooth device. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-bd535d8d.png))
 
-Figure: The browser asks which serial port to use. Select the dongle and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-42631685.png))
+Figure: The browser asks which serial port to use. Select the dongle and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-42631685.png))
 
 #### Using the USB cable
 
@@ -136,17 +136,17 @@ The cable works identically. Keep mBlock on direct connection and select `Serial
 
 The browser's choice between direct connection and mLink does not apply here. Installed mBlock communicates directly with the robot, so no helper program or connection mode selection is needed.
 
-Figure: mBlock installed on Windows, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-45dbe002.png))
+Figure: mBlock installed on Windows, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-45dbe002.png))
 
 #### Using the Bluetooth dongle
 
 With the robot on and dongle plugged in, click `Connect`.
 
-Figure: In the installed version, click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-230537db.png))
+Figure: In the installed version, click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-230537db.png))
 
 A window opens asking how to connect. Select the `USB` tab. This may also seem counterintuitive: the dongle is a Bluetooth device, yet a `Bluetooth` tab appears beside `USB`. However, the dongle appears to the computer as a virtual serial port, and `USB` is where mBlock lists serial ports. If the dongle is recognized, a port appears in the dropdown. Click `Connect`.
 
-Figure: Select the `USB` tab, verify a port is listed in the dropdown, and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-e90f8ba9.png))
+Figure: Select the `USB` tab, verify a port is listed in the dropdown, and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-e90f8ba9.png))
 
 #### Using the USB cable
 
@@ -174,11 +174,11 @@ Connect the robot to the computer using the USB cable. Click `Setting`, then `Up
 
 You do **not** need to switch between `Live` and `Upload` mode first.
 
-Figure: The `Live` and `Upload` slider. You do not need to change it before resetting the firmware. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bf1a09ed.png))
+Figure: The `Live` and `Upload` slider. You do not need to change it before resetting the firmware. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-bf1a09ed.png))
 
-Figure: Select `Update Firmware`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-8aa4d6fa.png))
+Figure: Select `Update Firmware`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-8aa4d6fa.png))
 
-Figure: Click `Updates`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-05ea3950.png))
+Figure: Click `Updates`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/getting-started-draft-05ea3950.png))
 
 ## Next step
 

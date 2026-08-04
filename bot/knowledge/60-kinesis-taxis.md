@@ -41,7 +41,7 @@ Kinesis and taxis are two types of behavioral responses to external stimuli, wit
 
 For more information, consult these resources:
 
-[Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
+[Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
 
 [AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
 
@@ -64,15 +64,15 @@ In this lesson, students test hypotheses using simulated data through two activi
 
 Students use the following file for the required grids:
 
-[Grids for the activities (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_grids.pptx)
+[Grids for the activities (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_grids.pptx)
 
 **Note:** The grid is not for discrete Blue Arrow placement; the Blue Arrow moves in arrow lengths and can lie across the grid at any position and orientation. The grid only marks the arrow's tip location.
 
-Figure: Example of grid and Blue Arrow placement. The printed grid and an inset are shown, with the Blue Arrow at coordinates (2,3). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/kinesis-and-taxis-lesson-plan-c3db12bd.png))
+Figure: Example of grid and Blue Arrow placement. The printed grid and an inset are shown, with the Blue Arrow at coordinates (2,3). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/kinesis-and-taxis-lesson-plan-c3db12bd.png))
 
 An Excel file is also available for easier data recording:
 
-[Data sheets for recording coordinates (.xlsx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_data_sheets.xlsx)
+[Data sheets for recording coordinates (.xlsx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_data_sheets.xlsx)
 
 ### Activity 1: Kinesis Under 3 Different Conditions
 
@@ -88,7 +88,7 @@ Students determine whether their data supports this hypothesis:
 
 Before data collection, poll students on whether they think Condition 2 or 3 will be more effective. Students use the following document with instructions and the grids file to complete the three conditions (Kinesis without sensors, Orthokinesis, and Orthokinesis in reverse).
 
-[Rules for Kinesis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Rules_for_Kinesis.docx)
+[Rules for Kinesis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Rules_for_Kinesis.docx)
 
 ### Activity 2: Taxis Under 3 Different Conditions
 
@@ -114,7 +114,7 @@ Assess students' understanding with these questions:
 
 ## Example student data
 
-[All student paths, 2024 (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_all_paths_2024.pptx)
+[All student paths, 2024 (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_all_paths_2024.pptx)
 
 Six short clips show students working through the conditions in order: the three kinesis conditions first, then the three taxis conditions.
 

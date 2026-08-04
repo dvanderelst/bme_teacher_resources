@@ -18,7 +18,7 @@ Before programming the robot, explore the challenges programmers face through th
 
 **Aside:** You are an engineer hired to program a mobile robot to reach the house's front door (indicated by an arrow) when the bell rings. The robot must reach the front door from any location in the house.
 
-Figure: This image depicts the layout of an imaginary building. The building is serviced by a robot, which must be programmed to answer the door when the bell rings. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-b71247e9.png))
+Figure: This image depicts the layout of an imaginary building. The building is serviced by a robot, which must be programmed to answer the door when the bell rings. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-b71247e9.png))
 
 Discuss this with students. Programmers face two distinct challenges here, worth separating:
 
@@ -35,7 +35,7 @@ In this game, students write a program for a hypothetical robot and encounter bo
 
 Imagine you are an engineer hired to write the program controlling a robot arm in a cheese sandwich factory. The image below shows the robot arm can reach three locations labeled 1-3. Your task is to write a program that directs the robot to make complete cheese sandwiches, each consisting of bread, cheese, and bread.
 
-Figure: The Cheese Sandwich Maker game. Program the robot arm to use materials delivered on the conveyor belt (location 1) to build sandwiches on the truck's loading deck (location 3). Unneeded materials can be discarded on another conveyor belt (location 2). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-0aeb7e34.png))
+Figure: The Cheese Sandwich Maker game. Program the robot arm to use materials delivered on the conveyor belt (location 1) to build sandwiches on the truck's loading deck (location 3). Unneeded materials can be discarded on another conveyor belt (location 2). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-0aeb7e34.png))
 
 1. **Location 1** is the end of a conveyor belt delivering slices of bread and cheese. **Importantly, the order is random.** You cannot predict whether the next item will be bread or cheese.
 2. **Location 2** is the start of a second conveyor belt leading to additional factory robot arms. Use this to discard unneeded items. For example, if conveyor belt 1 delivers consecutive bread slices, the excess can be dropped onto conveyor belt 2.
@@ -49,13 +49,13 @@ For this game, the robot arm uses a simple programming language with just four c
 
 Every slip starts with `Step nr` and a pointing finger. Students write the instruction number here; these numbers are what the `Go to step nr` command references.
 
-Figure: `Robot go to location ____` sends the arm to location 1, 2, or 3. Students write the location in the blank. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-8607b09d.png))
+Figure: `Robot go to location ____` sends the arm to location 1, 2, or 3. Students write the location in the blank. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-8607b09d.png))
 
-Figure: `Go to step nr ____` jumps to another instruction by its step number. This allows students to skip part of a program or return to an earlier part to run it again. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-9b5c7cb1.png))
+Figure: `Go to step nr ____` jumps to another instruction by its step number. This allows students to skip part of a program or return to an earlier part to run it again. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-9b5c7cb1.png))
 
-Figure: `Pick up` and `Drop` act on whatever is at the arm's current location. Students check the box for the desired action. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-331392b1.jpg))
+Figure: `Pick up` and `Drop` act on whatever is at the arm's current location. Students check the box for the desired action. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-331392b1.jpg))
 
-Figure: `If holds ____ and below ____:` runs the indented instructions beneath it, but only when both conditions match the current situation. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/introduction-to-programming-8dc64988.png))
+Figure: `If holds ____ and below ____:` runs the indented instructions beneath it, but only when both conditions match the current situation. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/introduction-to-programming-8dc64988.png))
 
 Each blank in the `If` command can be filled with: Bread, Cheese, Not Bread, Not Cheese, Any, or Nothing.
 
@@ -96,9 +96,9 @@ This program contains a logic error. If the robot holds cheese with bread below,
 
 The commands are printed one per slip, formatted for [Avery Template 16154 Tickets With Tear-Away Stubs](https://www.avery.com/templates/16154) as front and back sheets. They also print well on ordinary paper and can be cut out by hand.
 
-[Slips, front sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Avery16154cheese_sandwich_front_windows.doc)
+[Slips, front sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Avery16154cheese_sandwich_front_windows.doc)
 
-[Slips, back sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Avery16154cheese_sandwich_back_windows.doc)
+[Slips, back sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Avery16154cheese_sandwich_back_windows.doc)
 
 If you prefer not to print and cut these yourself, we can send you a pre-printed set. Contact **Dieter Vanderelst** at vanderdt@ucmail.uc.edu.
 

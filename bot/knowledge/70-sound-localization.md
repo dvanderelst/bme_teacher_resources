@@ -18,7 +18,7 @@
 
 **Note:** Newer versions of the sensor have a potentiometer for adjusting sensitivity. For example, the sensor shown below has a small dial beside the microphone. Use a screwdriver to gently rotate the dial. If your sensor has such a dial, turn it to the halfway position on both sensors.
 
-Figure: An image of the sound sensor with a dial for changing sensitivity (indicated by the arrow). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-98af73ad.png))
+Figure: An image of the sound sensor with a dial for changing sensitivity (indicated by the arrow). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-98af73ad.png))
 
 ## Prerequisites
 
@@ -71,14 +71,14 @@ The graph below is an **audiogram**. It is worth explaining how to read one, as 
 
 Every point on a curve is a **threshold**: the faintest sound the animal can detect at that frequency. A curve that dips low means *good* hearing — the animal can detect fainter sounds. A curve that rises means hearing is *worse* there, requiring louder sounds before they register. The lowest point on a curve indicates the frequency the animal hears best. This graph does not indicate how loud a sound is; it shows how quiet a sound can be before becoming inaudible.
 
-Figure: Audiograms for four species, with the sound sensor's threshold in red. Each curve gives the faintest sound that animal can detect at each frequency, so **lower on the graph means more sensitive**. Humans hear best at around 3 kHz, where the threshold dips below 0 dB SPL. The red line is flat because the sensor is about equally sensitive at every frequency, and it lies above all four curves because it is far less sensitive than any of these ears. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-fd572681.png))
+Figure: Audiograms for four species, with the sound sensor's threshold in red. Each curve gives the faintest sound that animal can detect at each frequency, so **lower on the graph means more sensitive**. Humans hear best at around 3 kHz, where the threshold dips below 0 dB SPL. The red line is flat because the sensor is about equally sensitive at every frequency, and it lies above all four curves because it is far less sensitive than any of these ears. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-fd572681.png))
 
 These are average curves. Hearing thresholds for individuals can vary significantly. The graph shows that humans are typically most sensitive around 3 kHz. Like a mouse, a small animal typically has a higher best frequency. To find similar curves for other animals, search for "audiogram x" (replacing x with the animal). Researchers have measured audiograms for many species.
 
 The red line is the approximate threshold of the robot's sound sensor, estimated from manufacturer data. It sits at about 36 dB SPL — above every animal curve on the graph. The sensor is much less sensitive than any of these ears, which is not surprising, as animal ears are extraordinarily sensitive. Many sounds we hear easily are undetectable to the robot. The table of everyday sound levels gives context for what 36 dB SPL means.
 
-Figure: Everyday sounds and their approximate levels. The sensor's threshold of about 36 dB SPL falls between a quiet whisper and a quiet auditorium, so anything fainter than a quiet room will not register at all. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-58c2fb72.png))
-Figure: A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-abed05bc.png))
+Figure: Everyday sounds and their approximate levels. The sensor's threshold of about 36 dB SPL falls between a quiet whisper and a quiet auditorium, so anything fainter than a quiet room will not register at all. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-58c2fb72.png))
+Figure: A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-abed05bc.png))
 
 You can demonstrate the contrast with your own ears using an online tone generator, playing tones of different frequencies without touching the volume control.
 
@@ -96,7 +96,7 @@ The audiogram reveals a second difference. The sensor is almost equally sensitiv
 
 The curve describing how sensitive a microphone is at each frequency is called its **frequency response**. Because the red line is flat, an engineer would say this microphone has a *flat frequency response*. The red line is schematic rather than a measurement. A real one, measured from a simple microphone, is flat within a decibel or two across most of the range, with small ripples at the top end.
 
-Figure: A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-abed05bc.png))
+Figure: A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-abed05bc.png))
 
 You can demonstrate this contrast with an online tone generator, playing tones of different frequencies without changing the volume.
 
@@ -110,7 +110,7 @@ This has a practical consequence that is easy to overlook, and it matters for th
 
 The microphone is almost omnidirectional, meaning it is nearly equally sensitive to sounds from different directions. Our ears are not equally sensitive to all directions. Our heads and external ears block sound from specific directions and increase sound from others. This effect depends on frequency, making it a bit tricky to demonstrate. Use the directivity figure to convey this idea.
 
-Figure: How sensitivity varies with the direction a sound comes from, for one ear and one frequency. The sphere is cut away so the inside is visible, and warmer colors mark the directions the ear picks up best. Figure from [LmK Music Production, *What is HRTF?*](https://lmkprod.com/what-is-hrtf-brief-explanation/). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-d5560ae5.png))
+Figure: How sensitivity varies with the direction a sound comes from, for one ear and one frequency. The sphere is cut away so the inside is visible, and warmer colors mark the directions the ear picks up best. Figure from [LmK Music Production, *What is HRTF?*](https://lmkprod.com/what-is-hrtf-brief-explanation/). ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-d5560ae5.png))
 
 It shows the sensitivity of the left ear, at one frequency, as a function of the direction a sound arrives from. The sphere is cut in half so you can see inside, and warmer colors mark the directions the ear picks up best.
 
@@ -128,7 +128,7 @@ On the Makeblock sound sensor, the microphone is the round black disk on the sen
 
 The oscilloscope trace plots the signal reaching the robot over about ten seconds. At the first red arrow a sound starts playing, and the signal jumps up: the sensor has noticed. But it then falls away, and after about a second it is back at baseline even though the sound is still playing. At the second arrow the sound stops, and the signal dips below baseline for a second or so before recovering. What the sensor reports is not the sound but the *changes* in it.
 
-Figure: The sensor's output on an oscilloscope, over about ten seconds. The sound starts at the first arrow and stops at the second. Both edges produce a response that decays back to baseline within about a second; the steady sound in between produces nothing at all. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-lesson-plan-d9268e13.png))
+Figure: The sensor's output on an oscilloscope, over about ten seconds. The sound starts at the first arrow and stops at the second. Both edges produce a response that decays back to baseline within about a second; the steady sound in between produces nothing at all. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-lesson-plan-d9268e13.png))
 
 ### Conclusions
 
@@ -164,13 +164,13 @@ Before the development of radar, approaching airplanes were often detected and l
 
 [How warplanes were spotted before radar | CNN](https://www.cnn.com/style/article/war-sound-locators-before-radar/index.html)
 
-Figure: Two Dutch personal sound locators. Each funnels sound from a wide area into the operator's ears, and each turns on its base so the operator can sweep for the direction the sound is loudest. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-affed672.png))
+Figure: Two Dutch personal sound locators. Each funnels sound from a wide area into the operator's ears, and each turns on its base so the operator can sweep for the direction the sound is loudest. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-affed672.png))
 
-Figure: Four more locators. Note how many use pairs or quads of horns rather than one: separating the collectors widens the difference between what each ear receives, which is exactly what students are trying to achieve with their own pinnae. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-06410d6c.png))
+Figure: Four more locators. Note how many use pairs or quads of horns rather than one: separating the collectors widens the difference between what each ear receives, which is exactly what students are trying to achieve with their own pinnae. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-06410d6c.png))
 
-Figure: Left, a locator using honeycomb collectors rather than horns. Right, a row of them on wheeled carriages, ready to be moved into position. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-6587bd75.jpg))
+Figure: Left, a locator using honeycomb collectors rather than horns. Right, a row of them on wheeled carriages, ready to be moved into position. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-6587bd75.jpg))
 
-Figure: Left, a head-mounted locator, which is the closest of these to the pinnae students will build. Right, a large locator worked by three operators at once. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-f4295f63.png))
+Figure: Left, a head-mounted locator, which is the closest of these to the pinnae students will build. Right, a large locator worked by three operators at once. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-f4295f63.png))
 
 All these devices were designed to increase the cues available for sound localization. In this activity, students build their own devices to enhance sound localization.
 
@@ -178,13 +178,13 @@ All these devices were designed to increase the cues available for sound localiz
 
 Students pair up for their sound localization test. They build pinnae to enhance their ability to locate sound, then test their design's effectiveness. For inspiration, show students pictures of acoustic locators built in the early 20th century or various animal ears. Previously, we provided students with cardboard, pipe cleaners, tape, etc., to build artificial pinnae. Examples of student-built ears appear below.
 
-Figure: Pinnae made from card cones on a headband. The shape gathers sound from in front of the ear and shields it from behind. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-fe673636.jpg))
+Figure: Pinnae made from card cones on a headband. The shape gathers sound from in front of the ear and shields it from behind. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-fe673636.jpg))
 
-Figure: A flatter design, taped to the side of the head. Reflecting surfaces need not be cone-shaped to change what reaches the ear. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-540a5939.jpg))
+Figure: A flatter design, taped to the side of the head. Reflecting surfaces need not be cone-shaped to change what reaches the ear. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-540a5939.jpg))
 
-Figure: Large cones covering both ears. Designs this size change the loudness reaching each ear substantially, but they also make it hard to tell front from back. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-f88f6efd.jpg))
+Figure: Large cones covering both ears. Designs this size change the loudness reaching each ear substantially, but they also make it hard to tell front from back. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-f88f6efd.jpg))
 
-Figure: Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/testing-artificial-pinnae-e2beccd3.jpg))
+Figure: Picture of students engaged in the experiment, testing their self-made external pinnae. The large sheet of paper on the floor is not part of the current activity. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/testing-artificial-pinnae-e2beccd3.jpg))
 
 The procedure runs via an app, which walks a pair through the trials, tells them where to place the speaker, plays the sound, and scores the result.
 
@@ -192,11 +192,11 @@ The procedure runs via an app, which walks a pair through the trials, tells them
 
 It is designed for a phone; the quickest way to start a class is to put this QR code on the board. It also runs on a laptop.
 
-Figure: The code students can scan to open the sound localization app on their phones. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-app-qr.png))
+Figure: The code students can scan to open the sound localization app on their phones. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-app-qr.png))
 
 On the opening screen, a pair enters a name, chooses whether this run uses **Real ears** or **Artificial ears**, and sets the number of trials — fewer if time is short. The `Instructions` bar expands into a full description of the activity, including how to lay the setup out, so students can work from the app rather than from a handout.
 
-Figure: The opening screen. The `Instructions` bar at the top expands into the full procedure, including how to arrange the room. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/sound-localization-app-start.png))
+Figure: The opening screen. The `Instructions` bar at the top expands into the full procedure, including how to arrange the room. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/sound-localization-app-start.png))
 
 Each trial tells the pair where to place the speaker, waits while they play the sound, and records the listener's answer.
 ## Robot phonotaxis
@@ -221,23 +221,23 @@ In this step, students measure the microphones' directionality. Provide the robo
 
 **Note:** If you mount the sound sensors as shown, do not overtighten the screws. This might damage the sensors.
 
-Figure: The two sound sensors mounted on the front of the robot, angled outwards so that each faces a different side. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-5f001102.jpg))
+Figure: The two sound sensors mounted on the front of the robot, angled outwards so that each faces a different side. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-5f001102.jpg))
 
-Figure: One of the sensors close up. The microphone is the small black disc; the rest of the board amplifies and filters its signal. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-9b19fbad.jpg))
+Figure: One of the sensors close up. The microphone is the small black disc; the rest of the board amplifies and filters its signal. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-9b19fbad.jpg))
 
-Figure: The sound sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-e133beed.jpg))
+Figure: The sound sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-e133beed.jpg))
 
 Next, have students build a setup like the one shown below. Students can place a large sheet of paper or a whiteboard on the floor (as in the example) and draw several compass directions. In the example, angles from -40 to 40 degrees are drawn in 20-degree steps. Place the sound source at an angle of 0° and about 50 cm from the robot. The sound source can be a phone or a speaker.
 
-Figure: Measuring directionality. The robot sits at the centre of a protractor scale so it can be rotated to a known angle between readings. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-748fdb0b.jpg))
+Figure: Measuring directionality. The robot sits at the centre of a protractor scale so it can be rotated to a known angle between readings. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-748fdb0b.jpg))
 
 Have the sound source play the following sound on repeat. The sound consists of bursts of white noise. Temporal response of the Makeblock sound sensor explains why this sound is pulsed. Click the link below, then click the 3 dots in the sound player to download the file.
 
-[Pulsed tone for the robot (.mp3)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/pip_exported.mp3)
+[Pulsed tone for the robot (.mp3)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/pip_exported.mp3)
 
 Students should align the robot with each marked direction. Run the program below. In the program, ensure the `set left_scale` block contains the value 1. You can change this number by clicking on the small oval containing the number.
 
-Figure: The `left_scale` block, which holds the correction factor. It starts at 1, meaning no correction. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-35eb8c6f.png))
+Figure: The `left_scale` block, which holds the correction factor. It starts at 1, meaning no correction. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-35eb8c6f.png))
 
 When they click the green flag, the robot will take 20 measurements of sound intensity from the left and right microphones, then calculate the average. The robot will beep when done. Once the robot beeps, students should record the `left_sound` and `right_sound` values.
 
@@ -250,19 +250,19 @@ Adding the sound sensor extension
 
 Students can make the ears (microphones) directional by constructing artificial pinnae around the microphones. Students can use paper, modeling clay, or other materials. In the example below, we made external ears by rolling sheets of paper into cones. Notice the ears are quite large relative to the robot. Larger ears typically result in higher directionality. We also show images of a student's robot with external ears made from modeling clay.
 
-Figure: Paper cone ears, taped to the sensors and angled outwards. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-3b931d59.jpg))
+Figure: Paper cone ears, taped to the sensors and angled outwards. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-3b931d59.jpg))
 
-Figure: A moulded pair, shaped to gather sound from one side and shield the other. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-3c135ee9.jpg))
+Figure: A moulded pair, shaped to gather sound from one side and shield the other. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-3c135ee9.jpg))
 
-Figure: Another design. What matters is not realism but that the two ears face away from each other. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-5b1579be.jpg))
+Figure: Another design. What matters is not realism but that the two ears face away from each other. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-5b1579be.jpg))
 
-Figure: Students take the brief further than strictly necessary, which is no bad thing. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-caff0520.jpg))
+Figure: Students take the brief further than strictly necessary, which is no bad thing. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-caff0520.jpg))
 
 Once students have created ears for their robots, have them repeat the measurements above. The graph should now show clear directionality. If not, they should keep working on the ears until they achieve directional sensitivity. Without directional ears, the robot cannot localize sound.
 
 Below is an example of data collected with directional ears. These data show that the right ear picks up more sound when the source is to the robot's right (negative angles), and vice versa.
 
-Figure: The same measurement with ears fitted. The lines now separate and cross: each ear hears its own side more loudly, which is the difference the robot steers on. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-f4124490.png))
+Figure: The same measurement with ears fitted. The lines now separate and cross: each ear hears its own side more loudly, which is the difference the robot steers on. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-f4124490.png))
 
 One problem that often occurs with students' external ears is that the amount of sound picked up by the left and right ears is not the same at zero degrees. In the example data, when the sound source is directly in front of the robot, the left ear picks up more sound than the right. The left ear appears more sensitive overall. This indicates the left ear is more sensitive than the right. At angle zero, the right value is about 70% of the left ear value:
 
@@ -274,11 +274,11 @@ Student values will differ. Perhaps their right ear is more sensitive than the l
 
 We can correct for microphone sensitivity differences. The example program provides the `left_scale` block for this. Enter the result of the equation into that block to correct for differences. For the example above, enter 0.7.
 
-Figure: Setting the correction factor. Here the left microphone reads high, so `left_scale` is set below 1 to bring the two into agreement. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-3f2fd20b.png))
+Figure: Setting the correction factor. Here the left microphone reads high, so `left_scale` is set below 1 to bring the two into agreement. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-3f2fd20b.png))
 
 Students could rerun the measurements to check whether this correction results in the left and right ears picking up about the same amount of sound at zero degrees. Below is an example graph.
 
-Figure: After scaling. The two curves now cross close to zero degrees, so equal loudness means the sound really is straight ahead. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/robot-phonotaxis-6f33c641.png))
+Figure: After scaling. The two curves now cross close to zero degrees, so equal loudness means the sound really is straight ahead. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/robot-phonotaxis-6f33c641.png))
 
 Now, the left and right ear values are approximately equal at angle zero. Moreover, the left ear returns a higher value if the sound source is on the robot's left side (angle > 0). The right ear has a larger response when the sound source is on the robot's right side (angle < 0). These response curves enable phonotaxis.
 
@@ -286,7 +286,7 @@ Now, the left and right ear values are approximately equal at angle zero. Moreov
 
 Now have the robot follow a sound source. Students can run the example program. The robot should approach the sound source. They can try moving the sound source while the program runs to see if the robot notices the change.
 
-[Open the mBlock project](https://planet.mblock.cc/project/3941523). If your school blocks the Makeblock site, [download `sound_localization_approach.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sound_localization_approach.mblock) instead.
+[Open the mBlock project](https://planet.mblock.cc/project/3941523). If your school blocks the Makeblock site, [download `sound_localization_approach.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sound_localization_approach.mblock) instead.
 
 When running this program, enter the correction factor determined earlier in the same `left_scale` block as before.
 

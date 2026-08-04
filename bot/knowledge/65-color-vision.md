@@ -71,7 +71,7 @@ Students work in groups of at least three, with each group member wearing goggle
 - Rosco E-Colour+ #106 Primary Red
 - Rosco E-Colour+ #071 Tokyo Blue
 
-Figure: Examples of goggles prepared with red, blue, and green filters. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-4b0d8cdb.jpg))
+Figure: Examples of goggles prepared with red, blue, and green filters. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-4b0d8cdb.jpg))
 
 Each student wearing a particular filter acts as a proxy for one cone type in the human retina. The goggles make them sensitive to a specific wavelength band, mimicking how different cone types have different preferred wavelengths.
 
@@ -81,7 +81,7 @@ The goggles prevent a single student from discriminating colors, analogous to ho
 
 Both halves of this activity run in a single app: [colorvisionapp.up.railway.app](https://colorvisionapp.up.railway.app/). It requires no installation — any browser works — and opens to the screen below.
 
-Figure: The app's opening screen. `TRAIN` opens the trainer, `START` begins the competitive game, and the difficulty setting determines how long each round allows. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-app-start.png))
+Figure: The app's opening screen. `TRAIN` opens the trainer, `START` begins the competitive game, and the difficulty setting determines how long each round allows. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-app-start.png))
 
 `TRAIN` opens the trainer described next. `START` begins the competitive game described after it. Set the difficulty before starting: it determines how many seconds each round allows and multiplies the final score.
 
@@ -89,7 +89,7 @@ Figure: The app's opening screen. `TRAIN` opens the trainer, `START` begins the 
 
 Students use the trainer to practice identifying colors together before being timed.
 
-Figure: The trainer. The dropdown selects the color of the large rectangle; beneath each pair of goggles is a box showing how that color appears through them. With RED selected, only the red goggles see anything. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-trainer.png))
+Figure: The trainer. The dropdown selects the color of the large rectangle; beneath each pair of goggles is a box showing how that color appears through them. With RED selected, only the red goggles see anything. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-trainer.png))
 
 The trainer displays a large colored rectangle with three boxes below it, one under each pair of goggles. Each box shows how the top color appears through those goggles. Students select the rectangle's color from the dropdown.
 
@@ -103,35 +103,35 @@ Once students have explored, ask them to identify the color of the large rectang
 
 The table below relates what the three students see, bright (+) or dark (-), to the actual color on screen.
 
-Figure: The key relating what each pair of goggles sees to the color on screen. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-f1a76c67.png))
+Figure: The key relating what each pair of goggles sees to the color on screen. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-f1a76c67.png))
 
 It helps to give students a blank copy to fill in as they work through the trainer:
 
-[Color discrimination chart (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Color_Discrimination_Chart.docx)
+[Color discrimination chart (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Color_Discrimination_Chart.docx)
 
 ### Competitive Game
 
 After practicing in the trainer, groups play the timed version to reinforce what they have learned and to encourage quick teamwork. Wearing their goggles, they press `START`. Each round displays nine boxes of primary and secondary colors with a color name above them, and the group must select every box of that color.
 
-Figure: A round in progress. The named color is at the top, the ring above it shows the time left, and the group selects every box of that color. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-game.png))
+Figure: A round in progress. The named color is at the top, the ring above it shows the time left, and the group selects every box of that color. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-game.png))
 
 The game runs ten rounds. Each round starts at 100 points and ticks down as an audible clock counts off, so the faster a group finds all the correct boxes, the more points it retains. Selecting a wrong color costs 10 points and speeds up the clock, penalizing mistakes twice. The ten rounds therefore total at most 1000 points, and this total is multiplied by the difficulty setting — Easy ×1.0, Medium ×1.5, Hard ×2.0 — for a maximum of 2000 on Hard.
 
 At the end, groups enter a team name and submit their score. Encourage them to play more than once and try to beat their previous score.
 
-Figure: The final screen. The score is shown out of 1000 before the difficulty multiplier is applied. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-67265ec6.png))
+Figure: The final screen. The score is shown out of 1000 before the difficulty multiplier is applied. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-67265ec6.png))
 
 ### Watching the scores come in
 
 Submitted scores appear on an instructor dashboard, accessed via the `Instructor Dashboard` link at the bottom of the app's opening screen.
 
-Figure: The `Instructor Dashboard` link sits at the bottom of the opening screen. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-dashboard-link.png))
+Figure: The `Instructor Dashboard` link sits at the bottom of the opening screen. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-dashboard-link.png))
 
-Figure: The dashboard asks for a password. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-dashboard-login.png))
+Figure: The dashboard asks for a password. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-dashboard-login.png))
 
 Write to **Dieter Vanderelst** at vanderdt@ucmail.uc.edu for the password. Once logged in, select the date or dates your class is playing, and the dashboard lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard, encouraging groups to play again to climb the rankings.
 
-Figure: The dashboard, with team names blurred here. Choose one or more dates on the left, and the scores appear on the right, highest first. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-dashboard-scores.png))
+Figure: The dashboard, with team names blurred here. Choose one or more dates on the left, and the scores appear on the right, highest first. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-dashboard-scores.png))
 
 **Note:** Every teacher using the dashboard shares the same one, so you will see other schools' scores alongside your own. Picking your dates filters it to show only your class. Ask groups to invent a team name rather than use their own names, which keeps the board readable and is more fun.
 ## Activity: robot color discrimination
@@ -142,7 +142,7 @@ Students program a robot to follow a bicolored paper path using a color sensor t
 
 Students create a path using two different colors of paper (red and green in the example). They then program the robot to stay in the middle by turning left or right based on the color sensor's readings. In the example, the robot turns right when the sensor detects green and left when it detects red.
 
-Figure: The task. The color sensor points down at the boundary between the two colors, and the robot steers to keep it there. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-998025db.png))
+Figure: The task. The color sensor points down at the boundary between the two colors, and the robot steers to keep it there. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-998025db.png))
 
 ### Operation of the color sensor
 
@@ -150,9 +150,9 @@ Students can find detailed [information on the color sensor's operation](https:/
 
 Give students time to install the color sensor instead of the line follower sensor shown in the generic instructions. Caution students not to over-tighten the screws, as the caster wheel rests on some of the electronic components on the sensor board. This can prevent the wheel from moving or damage the components. See below for images of the color sensor installed on the robot.
 
-Figure: The color sensor mounted at the front of the robot, facing down. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-a15b7f94.jpg))
+Figure: The color sensor mounted at the front of the robot, facing down. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-a15b7f94.jpg))
 
-Figure: The same sensor seen from underneath, between the two motors. Its two white LEDs light the paper so the reading does not depend on the room lighting. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-bf6d4571.jpg))
+Figure: The same sensor seen from underneath, between the two motors. Its two white LEDs light the paper so the reading does not depend on the room lighting. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-bf6d4571.jpg))
 
 Students also construct a bicolored path using colored paper and tape, with each side a different color as illustrated above. An example is also shown in the video at the end of this guide.
 
@@ -178,32 +178,32 @@ Adding color sensor extension
 
 1. Open the program in mBlock, either in the browser or installed version. Either link works, and Step 1: Open the example program explains what to do with each.
 
-    [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/color_vision_communication.mblock) instead.
+    [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/color_vision_communication.mblock) instead.
 
 2. In mBlock, select mBot under the Devices tab on the left side of the screen. This displays the robot's code. Do not unplug the cable during this part of the activity.
 
-    Figure: Make sure you select the mBot under the Devices tab to see the code for the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-a5e7ceb3.png))
+    Figure: Make sure you select the mBot under the Devices tab to see the code for the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-a5e7ceb3.png))
 
 3. Connect to the robot using the USB cable. See Getting started with the robot for USB connection instructions.
 4. Upload the code to the robot by selecting `Upload` mode and clicking `Upload code`.
 
-Figure: Select the mBot in `Devices`, switch to `Upload`, then click `Upload Code`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-4d4b0a0b.png))
+Figure: Select the mBot in `Devices`, switch to `Upload`, then click `Upload Code`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-4d4b0a0b.png))
 
-Figure: The upload in progress. It takes a few moments, and the robot cannot be used until it finishes. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-41a422cc.png))
+Figure: The upload in progress. It takes a few moments, and the robot cannot be used until it finishes. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-41a422cc.png))
 
 Once uploaded, the robot's white light should flash every second, indicating it is collecting data using the color sensor. Keep the USB cable plugged in. mBlock will display a graph view showing the red, green, and blue light readings from the color sensor. These values also appear on the stage, at the top left of the mBlock window.
 
-Figure: mBlock's chart view, showing how much red, green and blue light the sensor is picking up. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-8d5aeda8.png))
+Figure: mBlock's chart view, showing how much red, green and blue light the sensor is picking up. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-8d5aeda8.png))
 
-Figure: The same three readings on the stage. They are labelled `Panda:` because the variables belong to the panda sprite. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-d29948b8.png))
+Figure: The same three readings on the stage. They are labelled `Panda:` because the variables belong to the panda sprite. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-d29948b8.png))
 
 With the robot connected to the computer via USB cable, students can now collect data on how the color sensor perceives the two different paper colors. Ask students to draw a few lines spanning the border between the two colors, spaced about 1 cm apart. For example, the figure below shows 7 marks spaced by 1 cm.
 
-Figure: Marks drawn across the boundary about 1 cm apart. Here there are seven, from 3 cm into the green to 3 cm into the red. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-9e9eb54f.png))
+Figure: Marks drawn across the boundary about 1 cm apart. Here there are seven, from 3 cm into the green to 3 cm into the red. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-9e9eb54f.png))
 
 Students can now observe how the red, green, and blue values change as the robot is placed and aligned with each mark. For example, in the image below, the robot is aligned with the leftmost marker.
 
-Figure: The robot lined up with one of the marks. The sensor's own lights show which patch of paper it is reading. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-c1d3a88e.jpg))
+Figure: The robot lined up with one of the marks. The sensor's own lights show which patch of paper it is reading. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-c1d3a88e.jpg))
 
 The goal is to observe how sensor readings change as the robot moves from one color to the other (here, green to red). Below are example measurements using the setup shown above, including a column showing the difference between red and green values.
 
@@ -221,7 +221,7 @@ Students can record this in a spreadsheet (the table has six columns and a handf
 
 Note that student values might differ depending on the paper colors used. For each paper, all channels have values greater than 0, indicating that each paper reflects some light from other wavelengths as well.
 
-Figure: The three channels as the sensor crosses the boundary. Red rises and green falls, while blue changes comparatively little. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-44ef58b4.png))
+Figure: The three channels as the sensor crosses the boundary. Red rises and green falls, while blue changes comparatively little. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-44ef58b4.png))
 
 Now that students have baseline data, they must develop an algorithm to program the robot to follow the midline. Give students time to write a rule for when the robot should turn right or left based on their data. Check student work before moving on. Students should have something similar to the example below.
 
@@ -233,7 +233,7 @@ In the example above, the setup uses green paper on the left and red on the righ
 
 Below, we plot the difference between Red and Green as a function of robot position. From this graph, we can derive a rule to keep the robot on the center line.
 
-Figure: The difference between red and green across the same positions. This is the curve the steering rule is read off: strongly negative on the green, strongly positive on the red, crossing zero near the middle. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-2a426533.png))
+Figure: The difference between red and green across the same positions. This is the curve the steering rule is read off: strongly negative on the green, strongly positive on the red, crossing zero near the middle. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-2a426533.png))
 
 A potential rule:
 
@@ -250,7 +250,7 @@ Below is a link to a program that implements the rule derived above. Student pro
 
 Students starting from scratch rather than from the example program will need to add the color sensor extension first, described in Adding color sensor extension at the end of this chapter.
 
-[Open the mBlock project](https://planet.mblock.cc/project/3954308). If your school blocks the Makeblock site, [download `color_vision_motion.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/color_vision_motion.mblock) instead.
+[Open the mBlock project](https://planet.mblock.cc/project/3954308). If your school blocks the Makeblock site, [download `color_vision_motion.mblock`](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/color_vision_motion.mblock) instead.
 
 The program works as follows. The first blocks read the red, green, and blue values detected by the color sensor. The purple block sets the onboard lights to a color that mimics the color seen by the color sensor, which helps debug the program. Next, the robot is set to move forward at a slow speed. Immediately after this, the red-minus-green value is checked. Based on this result, the robot turns left or right. See the video below for a demonstration.
 
@@ -258,11 +258,11 @@ The program works as follows. The first blocks read the red, green, and blue val
 
 To run the example program (or a student's program), upload it to the robot. Once uploaded, the USB cable can be disconnected. To change the program, reconnect the USB cable and upload the new version.
 
-Figure: One solution. The three channels are read into variables, the LEDs are set to the color the sensor reports, and the robot turns right or left when the red-minus-green difference passes the thresholds taken from the graph. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-8649dc81.png))
+Figure: One solution. The three channels are read into variables, the LEDs are set to the color the sensor reports, and the robot turns right or left when the red-minus-green difference passes the thresholds taken from the graph. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-8649dc81.png))
 
-Figure: The robot following the boundary between the two colors. The onboard LEDs are set to the color the sensor is reporting, making it possible to see what the robot thinks it is looking at. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-path-following.png))
+Figure: The robot following the boundary between the two colors. The onboard LEDs are set to the color the sensor is reporting, making it possible to see what the robot thinks it is looking at. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-path-following.png))
 
-[Video: the robot following the path (.mp4)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/color_vision_path_following.mp4)
+[Video: the robot following the path (.mp4)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/color_vision_path_following.mp4)
 
 ### Taking it further
 
@@ -271,7 +271,7 @@ The lesson can be extended in several ways:
 1. Construct the track's end and start with a third color. Program the robot to turn 180 degrees when it detects this color to return to the other end of the path.
 2. Switch off the white LEDs on the color sensor. Normally, these LEDs provide uniform, broad-spectrum light, making color discrimination easier. However, consider a real-world scenario where a robot must detect whether the floor is red or yellow under variable or suboptimal lighting. With poor lighting, overhead lamps may not emit sufficient yellow light, so reflected light from the floor will contain little yellow. The sensor will then struggle to distinguish yellow from red. Use the following block to switch off the white LEDs:
 
-    Figure: The block that switches the sensor's white fill LEDs off. Note that the port dropdown reads `port1` in this screenshot; set it to the port the color sensor is actually plugged into, which is port 2 everywhere else in this chapter. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/color-vision-lesson-plan-5972c66e.png))
+    Figure: The block that switches the sensor's white fill LEDs off. Note that the port dropdown reads `port1` in this screenshot; set it to the port the color sensor is actually plugged into, which is port 2 everywhere else in this chapter. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/color-vision-lesson-plan-5972c66e.png))
 
 3. Use secondary colors such as cyan, yellow, and/or magenta in the path.
 
@@ -283,10 +283,10 @@ First, ensure the mBot has been added to mBlock — see Adding the mBot to mBloc
 
 Then, click the `+` button at the bottom of the block palette, find `color sensor` in the list, and click `Add`.
 
-Figure: The `+` button at the foot of the block palette opens the extension list. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/adding-color-sensor-extension-4c6bddee.png))
+Figure: The `+` button at the foot of the block palette opens the extension list. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/adding-color-sensor-extension-4c6bddee.png))
 
-Figure: Find the color sensor extension and click `Add`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/adding-color-sensor-extension-2578cd3c.png))
+Figure: Find the color sensor extension and click `Add`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/adding-color-sensor-extension-2578cd3c.png))
 
-Figure: A new category appears in the palette, holding the blocks that read the color sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/adding-color-sensor-extension-7d2f1d27.png))
+Figure: A new category appears in the palette, holding the blocks that read the color sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/images/adding-color-sensor-extension-7d2f1d27.png))
 
 **Tip:** The color sensor only works in `Upload` mode, not in `Live` mode. See Live versus Upload mode.

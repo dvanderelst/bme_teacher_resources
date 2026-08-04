@@ -30,8 +30,8 @@ Use this as a quick reference when checking school network access or preparing o
 - [Avery Template 16154 Tickets With Tear-Away Stubs](https://www.avery.com/templates/16154) — Template for printing the cheese-sandwich-factory command slips.
 
 **Local files and handouts:**
-- [Slips, front sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Avery16154cheese_sandwich_front_windows.doc)
-- [Slips, back sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Avery16154cheese_sandwich_back_windows.doc)
+- [Slips, front sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Avery16154cheese_sandwich_front_windows.doc)
+- [Slips, back sheet (.doc)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Avery16154cheese_sandwich_back_windows.doc)
 
 ### Chapter 7: Kinesis and Taxis
 
@@ -48,12 +48,12 @@ Use this as a quick reference when checking school network access or preparing o
 - [Video: taxis 3](https://youtube.com/shorts/MlRwHJofd_g?feature=share)
 
 **Local files and handouts:**
-- [Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
-- [Grids for the activities (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_grids.pptx)
-- [Data sheets for recording coordinates (.xlsx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_data_sheets.xlsx)
-- [Rules for Kinesis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Rules_for_Kinesis.docx)
-- [Rules for Taxis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Rules_for_Taxis.docx)
-- [All student paths, 2024 (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Kinesis-Taxis_all_paths_2024.pptx)
+- [Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
+- [Grids for the activities (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_grids.pptx)
+- [Data sheets for recording coordinates (.xlsx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_data_sheets.xlsx)
+- [Rules for Kinesis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Rules_for_Kinesis.docx)
+- [Rules for Taxis, all three conditions (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Rules_for_Taxis.docx)
+- [All student paths, 2024 (.pptx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Kinesis-Taxis_all_paths_2024.pptx)
 
 ### Chapter 8: Color Vision
 
@@ -64,8 +64,8 @@ Use this as a quick reference when checking school network access or preparing o
 - [information on the operation of the color sensor](https://www.mouser.co.uk/datasheet/2/348/bh1745nuc-e-519994.pdf) — Technical specification for the Me color sensor.
 
 **Local files and handouts:**
-- [Color discrimination chart (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Color_Discrimination_Chart.docx)
-- [Video: the robot following the path (.mp4)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/color_vision_path_following.mp4)
+- [Color discrimination chart (.docx)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Color_Discrimination_Chart.docx)
+- [Video: the robot following the path (.mp4)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/color_vision_path_following.mp4)
 
 ### Chapter 9: Sound Localization
 
@@ -77,7 +77,7 @@ Use this as a quick reference when checking school network access or preparing o
 - [soundlocalizationapp-production.up.railway.app](https://soundlocalizationapp-production.up.railway.app) — Web application for sound localization activities.
 
 **Local files and handouts:**
-- [Pulsed tone for the robot (.mp3)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/pip_exported.mp3)
+- [Pulsed tone for the robot (.mp3)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/pip_exported.mp3)
 
 ### Chapter 10: Sonar
 
@@ -97,7 +97,7 @@ Use this as a quick reference when checking school network access or preparing o
 - [Video: a sonar cane for visually impaired users](https://www.youtube.com/watch?v=cnW1_XMUIzM)
 
 **Local files and handouts:**
-- [Echolocation in insectivores and rodents (.pdf)](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/Echolocation_in_Insectivores_and_Rodents.pdf)
+- [Echolocation in insectivores and rodents (.pdf)](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/Echolocation_in_Insectivores_and_Rodents.pdf)
 
 ---
 
@@ -116,18 +116,18 @@ Local copies of all mBlock programs are included in the `files/programs/` direct
 School networks sometimes block the Makeblock site, so these local copies ensure you can always access the programs.
 
 - **MyFirstProgram.mblock** — Chapter 4
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/MyFirstProgram.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3934903)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/MyFirstProgram.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3934903)
 - **color_vision_communication.mblock** — Chapter 8
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/color_vision_communication.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954097)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/color_vision_communication.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954097)
 - **color_vision_motion.mblock** — Chapter 8
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/color_vision_motion.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954308)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/color_vision_motion.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954308)
 - **sound_localization_directionality.mblock** — Chapter 9
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sound_localization_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941521)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sound_localization_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941521)
 - **sound_localization_approach.mblock** — Chapter 9
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sound_localization_approach.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941523)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sound_localization_approach.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941523)
 - **sonar_directionality.mblock** — Chapter 10
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sonar_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916152)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sonar_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916152)
 - **sonar_obstacle_avoidance.mblock** — Chapter 10
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sonar_obstacle_avoidance.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916162)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sonar_obstacle_avoidance.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916162)
 - **sonar_cane.mblock** — Chapter 10
-  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/files/programs/sonar_cane.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916250)
+  [Local copy](https://github.com/dvanderelst/bme_teacher_resources/raw/v0.1/book/content/files/programs/sonar_cane.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916250)
