@@ -79,9 +79,15 @@ $UNEXPECTED"
 printf '%s\n' "==> built" "  $(du -h "$PDF"  | cut -f1)  $PDF" "  $(du -h "$HTML" | cut -f1)  $HTML"
 
 if [ "$DRY" -eq 1 ]; then
+  # Put the knowledge set back. The build stamped it with a tag that does not
+  # exist, and leaving it dirty would make the real run refuse on its own
+  # clean-tree guard -- a dry run that breaks the release it is rehearsing for.
+  # Safe to do bluntly: the tree was verified clean above, so this restores it
+  # exactly, and everything under bot/knowledge/ is generated in the first place.
+  (cd "$ROOT" && git checkout -q -- bot/knowledge && git clean -qfd bot/knowledge)
   echo "==> dry run: nothing committed, tagged, pushed or published"
-  echo "    the two files above are the ones a release would carry; open them"
-  echo "    and check the footer reads '$TAG' before doing this for real"
+  echo "    bot/knowledge/ restored; render/ still holds the two files above"
+  echo "    open them and check the footer reads '$TAG' before doing this for real"
   exit 0
 fi
 

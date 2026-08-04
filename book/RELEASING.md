@@ -29,9 +29,13 @@ cd book
 ./release.sh v1.0             # the real thing; asks before anything goes public
 ```
 
-Do the dry run first. It produces exactly the files a real release would carry, leaves them in
-`render/`, and touches nothing remote. Open the PDF and confirm the footer reads `v1.0` and that
-there is no red *do not distribute* box on the cover.
+Do the dry run first. It runs every check, produces exactly the files a real release would carry and
+leaves them in `render/`, but commits, tags, pushes and publishes nothing. Open the PDF and confirm
+the footer reads `v1.0` and that there is no red *do not distribute* box on the cover.
+
+Building regenerates `bot/knowledge/` as a side effect (see step 3 below), stamped with a tag that
+does not exist yet, so a dry run restores it before exiting. Otherwise it would leave the tree dirty
+and the real run would refuse on its own clean-tree guard — a rehearsal that breaks the performance.
 
 Versions are `v1.0`, `v1.1`, `v2.0` — the script rejects anything else, so the tag names stay
 sortable and predictable. There is no rule about what earns a minor versus a major bump; use your
