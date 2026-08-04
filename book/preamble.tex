@@ -56,6 +56,19 @@
 \renewenvironment{quote}{\begin{snugshade}\begin{oldquote}}%
                         {\end{oldquote}\end{snugshade}}
 
+% --- block reference entries --------------------------------------------------
+% The block reference is a lookup chapter, written as a definition list: each
+% block signature is the term, what it does is the definition. LaTeX's default
+% puts the definition on the same line as the term, which for signatures as long
+% as "count with [i] from (n) to (n) by step (n) repeat" leaves the description
+% starting somewhere in the middle of a line and gives the eye nothing to scan
+% down. nextline puts every signature on a line of its own.
+%
+% This restyles description lists throughout the document; at present the block
+% reference is the only chapter that uses one.
+\usepackage{enumitem}
+\setlist[description]{style=nextline, leftmargin=1.2em, itemsep=0.35em}
+
 % --- cross-references --------------------------------------------------------
 % These materials are meant to be printable, so an internal cross-reference has
 % to work on paper as well as under a mouse. tools/xref.lua appends \pageofref to

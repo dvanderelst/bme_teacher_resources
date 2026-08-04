@@ -12,9 +12,14 @@ mkdir -p render
 
 # Handouts, media and mBlock programs travel with the repository, and are linked
 # from the source relatively. tools/abs-links.lua rewrites those to full URLs, so
-# they still resolve from a downloaded PDF or a saved HTML file. Note this is
-# dead until the first push -- see TODO 6.6.
-export BME_FILE_BASE="https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/"
+# they still resolve from a downloaded PDF or a saved HTML file.
+#
+# A day-to-day build points at main, which is what you want while editing: the
+# links track the latest content. A *release* must not, because main moves on
+# and a PDF handed out last spring would quietly start serving next spring's
+# handouts. release.sh overrides this to point at the tag, freezing the links to
+# the edition that carries them.
+export BME_FILE_BASE="${BME_FILE_BASE:-https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/}"
 
 if git rev-parse --git-dir >/dev/null 2>&1; then
   FINGERPRINT=$(git describe --tags --always --dirty 2>/dev/null || echo uncommitted)
@@ -25,13 +30,18 @@ else
   FINGERPRINT=no-git; ISO=$(date +%F)
 fi
 EDITION=$(date -d "$ISO" +"%-d %B %Y" 2>/dev/null || echo "$ISO")
-echo "edition: $EDITION   fingerprint: $FINGERPRINT"
 
 # Check if this is a stale build (uncommitted changes)
 STALE=0
 if [[ "$FINGERPRINT" == *-stale* ]]; then
   STALE=1
 fi
+
+# release.sh builds the documents *before* the tag exists, so it passes the tag
+# it is about to create. Deliberately applied after the staleness test above: an
+# override renames the build, it cannot silence the "do not distribute" cover.
+FINGERPRINT="${BME_FINGERPRINT:-$FINGERPRINT}"
+echo "edition: $EDITION   fingerprint: $FINGERPRINT"
 
 # running footer, generated so the version is baked into every page
 cat > render/_version.tex <<TEX
@@ -92,6 +102,13 @@ pandoc "${ARGS[@]}" --standalone --embed-resources --mathml \
 rm -f render/_version.tex
 rm -f render/_stale_warning.tex 2>/dev/null || true
 ls -lh render/ | awk 'NR>1{print "  "$9"  "$5}'
+
+# --- knowledge set for the teacher-support bot -------------------------------
+# Regenerated here rather than on demand, because a bot that answers from the
+# working tree contradicts the PDF a teacher is holding. Same source, same
+# BME_FILE_BASE, same fingerprint as the two documents above.
+echo "--- knowledge (bot) ---"
+BME_FINGERPRINT="$FINGERPRINT" BME_EDITION="$EDITION" python3 tools/knowledge.py
 
 # safety net: a revision note must never reach a reader
 if pdftotext render/BmE-teacher-materials.pdf - 2>/dev/null | grep -q -- '<!--'; then

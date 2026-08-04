@@ -9,9 +9,16 @@ and localize stimuli, then build and program mBot robots that do something compa
 
 ## Looking for the materials themselves?
 
-This repository holds the **source**. The finished document — a PDF to download and print, and a
-single-file web version — is published at
-[**biologymeetsengineering.org**](https://www.biologymeetsengineering.org).
+This repository holds the **source** of the teaching materials and the **teacher-support bot** 
+that answers questions about them. The finished document is
+[**biologymeetsengineering.org**](https://www.biologymeetsengineering.org), or download it directly:
+
+- [**PDF**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest/download/BmE-teacher-materials.pdf)
+  — to read or print
+- [**Web version**](https://github.com/dvanderelst/bme_teacher_resources/releases/latest/download/BmE-teacher-materials.html)
+  — one file, images included, opens in a browser and works offline
+
+Both links always serve the newest edition, so they are safe to bookmark or pass on.
 
 You do not need any of the rest of this if you just want to teach from it.
 
@@ -54,12 +61,20 @@ book/
 ├── metadata.yaml     title, print layout, fonts
 ├── preamble.tex      LaTeX for the PDF only
 ├── build.sh          renders content/ -> render/
+├── release.sh        builds, tags and publishes an edition
+├── RELEASING.md      how that works and what to do when it goes wrong
 ├── convert.py        one-time Notion migration. Already run. Do not re-run.
 └── tools/            filters and checks used by the build
+
+bot/
+├── app/              the teacher-support chatbot
+├── overlay/          hand-written pedagogy notes and misconceptions
+└── knowledge/        generated knowledge base (do not hand-edit)
 ```
 
 `book/render/` is deliberately not committed. It is a build artifact, and a 14 MB PDF that changes
-completely on every rebuild would bloat history fast. Build it and upload it to the website.
+completely on every rebuild would bloat history fast. It is distributed as a release asset instead,
+which lives outside git history — see [Releasing](#releasing).
 
 ## Building
 
@@ -73,6 +88,22 @@ Produces `render/BmE-teacher-materials.pdf` and a single self-contained
 `render/BmE-teacher-materials.html` (images embedded, works offline). The edition date and version
 fingerprint are derived from git, so there is nothing to remember to bump; tag a commit and the
 fingerprint becomes the tag rather than a bare hash.
+
+## Releasing
+
+```sh
+cd book
+./release.sh v1.0 --dry-run   # build and check; publishes nothing
+./release.sh v1.0             # the real thing
+```
+
+This builds both documents, stamps them with the tag, commits the regenerated bot knowledge set so
+the bot answers for the same edition, tags, pushes, and attaches the two files to a GitHub release.
+The two download links at the top of this file then serve the new edition automatically — they point
+at `releases/latest/`, so nothing has to be re-sent to anyone.
+
+[**RELEASING.md**](book/RELEASING.md) explains the sequence, why it is in that order, and what to do
+when a release goes wrong.
 
 ## Editing
 
@@ -102,7 +133,9 @@ no longer maintained and should not be edited.
 
 Handouts, media and the mBlock programs live in `book/content/files/` and are linked relatively from
 the source. `tools/abs-links.lua` rewrites those to full URLs into this repository when building, so
-they still resolve from a downloaded PDF or a saved HTML file. The base URL is set in `build.sh`.
+they still resolve from a downloaded PDF or a saved HTML file. The base URL is set in `build.sh` and
+points at `main`, so a working build tracks the latest content; `release.sh` repoints it at the tag,
+so a published edition's links stay frozen to the content it was built from.
 
 Every mBlock program is linked twice: to `planet.mblock.cc`, and to our own copy in
 `content/files/programs/`, because some school networks block the Makeblock site.

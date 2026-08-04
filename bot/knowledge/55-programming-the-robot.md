@@ -1,8 +1,6 @@
 # Programming the robot
 
-> **Tip**
->
-> This introduction assumes you and your students have mBlock installed or accessible online ([Installing mBlock](#installing-mblock)), can connect to the robot ([Getting started with the robot](#getting-started-with-the-robot)), and have successfully run a test program ([Running your first program](#running-your-first-program)).
+**Tip:** This introduction assumes you and your students have mBlock installed or accessible online (Installing mBlock), can connect to the robot (Getting started with the robot), and have successfully run a test program (Running your first program).
 
 This chapter introduces students to programming the mBot robot using mBlock, a visual programming language. Unlike text-based languages, users create programs by manipulating graphical blocks. While often considered simpler, specialized visual languages are widely used in engineering and science, making them compelling alternatives to traditional programming depending on context.
 
@@ -31,7 +29,7 @@ Algebra I
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the Educational standards chapter.
 
 ## Learning objectives
 
@@ -52,19 +50,19 @@ Below is the mBlock interface, which appears nearly identical in both installed 
 1. **Program area:** Drag and drop blocks here to build a program.
 2. **Block palette:** Lists available blocks, organized into categories such as Sensing and Control. Drag blocks from here to the program area. The [extension] button at the bottom adds more blocks by installing extensions.
 3. **Stage:** Displays variable values while a program runs. Useful for debugging.
-4. **Devices panel:** Shows devices whose blocks are available. The mBot appears here once added; see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
+4. **Devices panel:** Shows devices whose blocks are available. The mBot appears here once added; see Adding the mBot to mBlock.
 
-![The four regions of the mBlock window, with the mBot already added: (1) where you build the program, (2) the blocks you build it from, listed by category, (3) the stage, where variable values appear while a program runs, and (4) the devices the blocks belong to.](images/programming-the-robot-interface.png)
+Figure: The four regions of the mBlock window, with the mBot already added: (1) where you build the program, (2) the blocks you build it from, listed by category, (3) the stage, where variable values appear while a program runs, and (4) the devices the blocks belong to. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-interface.png))
 
 ### Useful blocks
 
-The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons. Every block, with what it does and what its dropdowns offer, is listed in the [Block reference](#block-reference).
+The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons. Every block, with what it does and what its dropdowns offer, is listed in the Block reference.
 
 1. **Looks:** Only relevant if the robot has an LCD (sold separately). For our purposes, this category is not needed.
 2. **Show:** Controls the onboard LEDs and buzzer. Blocks come in two forms: `LED all shows color red` sets the LEDs and continues, while `LED all shows color red for 1 secs` holds for that second then turns them off.
 3. **Action:** Controls the motors. Two forms exist with an important difference: `move forward at power 50 % for 1 secs` moves for a set time then hands control back, while `move forward at power 50 %` starts the motors and immediately proceeds to the next block. Also includes `stop moving`.
 4. **Sensing:** Reads the robot's sensors — onboard light sensor, ultrasonic (sonar) sensor, line follower, button. Blocks for additional sensors (sound, color) are available as extensions.
-5. **Events:** Determines when a program starts. Two are relevant: `when flag clicked` starts programs in Live mode (used throughout these materials), while `when mBot (mcore) starts up` starts uploaded programs (needed for the Color Vision lesson). See [Live versus Upload mode](#live-versus-upload-mode).
+5. **Events:** Determines when a program starts. Two are relevant: `when flag clicked` starts programs in Live mode (used throughout these materials), while `when mBot (mcore) starts up` starts uploaded programs (needed for the Color Vision lesson). See Live versus Upload mode.
 6. **Control:** Controls program flow: `forever` and `repeat` for repetition, `if ... then` and `if ... then ... else` for conditionals, and `wait` for pausing.
 7. **Operators:** Arithmetic and comparison — add, subtract, multiply, divide, `<`, `=`, `>`. The `abs of` block (used in the last challenge) is here, accessible via a dropdown.
 8. **Variables:** Contains blocks for working with variables. When you assign a sensor's output to a variable, its block appears here.
@@ -80,7 +78,7 @@ Most programs follow a repeating pattern:
 
 These steps repeat continuously. Programs following this pattern start with two key blocks: `when flag clicked` from Events (the program's starting point, telling mBlock where to begin) and `forever` from Control (which repeats all enclosed blocks until the program stops). This template provides a foundation for most programs.
 
-![The starting point for most programs in these lessons: `when flag clicked` from Events, with `forever` from Control underneath it. Everything else goes inside the `forever` block.](images/programming-the-robot-658b06bf.png)
+Figure: The starting point for most programs in these lessons: `when flag clicked` from Events, with `forever` from Control underneath it. Everything else goes inside the `forever` block. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-658b06bf.png))
 
 ### Working with variables in mBlock
 
@@ -95,30 +93,25 @@ The images below illustrate this process. A window appears where you enter the v
 Choose descriptive names connected to the variable's purpose. For this introduction, we create a simple counting program, so we name the variable `count`.
 After creation, a block with that name appears under the `Variables` menu.
 
-![Step 1: select the `Variables` category.](images/programming-the-robot-496da0e0.png)
+Figure: Step 1: select the `Variables` category. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-496da0e0.png))
 
-![Step 2: Click `Make a Variable`.](images/programming-the-robot-4703540e.png)
+Figure: Step 2: Click `Make a Variable`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-4703540e.png))
 
+Figure: Step 3: choose a name for your variable. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-32dcbd91.png))
 
-![Step 3: choose a name for your variable.](images/programming-the-robot-32dcbd91.png)
-
-![Step 4: use the new blocks.](images/programming-the-robot-f6a631e9.png)
+Figure: Step 4: use the new blocks. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-f6a631e9.png))
 
 Now use the new variable in a simple program (demonstrating variable use without the robot).
 Although this program does not use the robot's sensors or motors, you must connect to the robot to run it.
 
 The program sets `count` to zero, then repeatedly increments it by 1, waits a second, and checks if `count` exceeds 10, at which point it resets to zero.
-![The counting program. `count` is set to zero, then raised by one every second until it passes 10, at which point it is set back to zero.](images/programming-the-robot-292d0d09.png)
+Figure: The counting program. `count` is set to zero, then raised by one every second until it passes 10, at which point it is set back to zero. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-292d0d09.png))
 
-![The value of `count` shown on the stage while the program runs. Every variable you make appears here, which is what makes it possible to see what a program is doing.](images/programming-the-robot-43ff905e.png)
+Figure: The value of `count` shown on the stage while the program runs. Every variable you make appears here, which is what makes it possible to see what a program is doing. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-43ff905e.png))
 
-> **Note**
->
-> The green block can be found under `Operators`. To add the `count` block inside the green block, go to `Variables` and drag the `count` block to the left hand hole in the green block.
+**Note:** The green block can be found under `Operators`. To add the `count` block inside the green block, go to `Variables` and drag the `count` block to the left hand hole in the green block.
 
-> **Tip**
->
-> You can make as many variables as a program needs. The current value of every one of them is shown on the stage — the white area at the top left, where the panda sits — as in the second figure above. This display is the most useful debugging tool in mBlock, and the next section leans on it heavily.
+**Tip:** You can make as many variables as a program needs. The current value of every one of them is shown on the stage — the white area at the top left, where the panda sits — as in the second figure above. This display is the most useful debugging tool in mBlock, and the next section leans on it heavily.
 
 ### Advice worth passing on
 
@@ -142,55 +135,50 @@ Students must locate individual blocks themselves, which is part of the learning
 
 ### Challenge 1: Blinking the LEDs
 
-> Challenge: Construct a program that turns the onboard LEDs on for a second and off for a second.
->
+**Aside:** Challenge: Construct a program that turns the onboard LEDs on for a second and off for a second.
 
 In this challenge, students create a program to blink the robot's onboard LEDs, a common introductory hardware programming example.
 
 The solution requires only two blocks inside the loop. `LED all shows color red for 1 secs` lights the LEDs red for one second then turns them off; the block below does the same with black for the second half of the cycle. Since each block holds the program while active, no `wait` blocks are needed — adding them would extend the cycle. Use the standard `when flag clicked` and `forever` blocks as the backbone.
 
-![One solution to the blinking challenge. Each `shows color ... for 1 secs` block holds the program for its second, so the two together give one second on and one second off.](images/programming-the-robot-blink-solution.png)
+Figure: One solution to the blinking challenge. Each `shows color ... for 1 secs` block holds the program for its second, so the two together give one second on and one second off. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-blink-solution.png))
 
 ### Challenge 2: Reading a sensor
 
-> Challenge: Construct a program that briefly blinks the onboard LEDs when the light sensor reads below 500.
->
+**Aside:** Challenge: Construct a program that briefly blinks the onboard LEDs when the light sensor reads below 500.
 
-The robot has an onboard light sensor (described in [Switches and onboard sensors](#switches-and-onboard-sensors)). This sensor returns values from 0 to 1000 depending on the light intensity. For this challenge:
+The robot has an onboard light sensor (described in Switches and onboard sensors). This sensor returns values from 0 to 1000 depending on the light intensity. For this challenge:
 
 1. Read the light sensor and store the value in a variable.
 2. If the value is below 500, briefly blink the LEDs.
 
 One solution appears below. The program first ensures the LEDs are off, then repeatedly reads the light sensor. If the reading (stored in `light`) is below 500, it briefly toggles the onboard LEDs.
 
-![One solution to the light sensor challenge. The reading is stored in the variable `light` on every pass, and the LEDs blink only while that value is below 500.](images/programming-the-robot-efc4bf9d.png)
+Figure: One solution to the light sensor challenge. The reading is stored in the variable `light` on every pass, and the LEDs blink only while that value is below 500. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-efc4bf9d.png))
 
 ### Challenge 3: Sound detection
 
-> Challenge: Construct a program that blinks the LEDs when sound exceeds a threshold. The blink duration should scale with loudness.
->
+**Aside:** Challenge: Construct a program that blinks the LEDs when sound exceeds a threshold. The blink duration should scale with loudness.
 
 For this activity, connect a sound sensor to the robot via a cable, as shown below.
 
-![A sound sensor attached to the robot and taped to the top.](images/programming-the-robot-1dea6db5.jpg)
+Figure: A sound sensor attached to the robot and taped to the top. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-1dea6db5.jpg))
 
 #### Adding the sound sensor extension
 
-![The sound sensor.](images/programming-the-robot-8b214556.jpg)
+Figure: The sound sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-8b214556.jpg))
 
-> **Tip**
->
-> The sound sensor is not available by default; install an extension to use it.
+**Tip:** The sound sensor is not available by default; install an extension to use it.
 
 To use the sound sensor, install an extension in mBlock. Click the `+` button at the bottom of the block panel, select `Light Sound` from the list, and click `Add`. This adds a new `light sound` category containing the sound sensor block.
 
-![Step 1: click the `+` button.](images/programming-the-robot-7fb8f50a.png)
+Figure: Step 1: click the `+` button. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-7fb8f50a.png))
 
-![Step 3: Select the `Light Sound` extension.](images/programming-the-robot-6f149564.png)
+Figure: Step 3: Select the `Light Sound` extension. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-6f149564.png))
 
-![Adding the extension to mBlock gives you access to a new category of blocks.](images/programming-the-robot-29c70a6b.png)
+Figure: Adding the extension to mBlock gives you access to a new category of blocks. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-29c70a6b.png))
 
-![One of the new blocks is a block that allows you to read out the sound sensor.](images/programming-the-robot-8267ed01.png)
+Figure: One of the new blocks is a block that allows you to read out the sound sensor. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-8267ed01.png))
 
 #### Solution
 
@@ -202,23 +190,22 @@ $$
 
 With `min` set to 200, the program responds to noise: louder sounds produce longer LED blinks.
 
-![One solution to the sound challenge. The sound sensor on port 3 is read; `min` holds the threshold, and LED duration scales with how far the reading exceeds it.](images/programming-the-robot-d2e74147.png)
+Figure: One solution to the sound challenge. The sound sensor on port 3 is read; `min` holds the threshold, and LED duration scales with how far the reading exceeds it. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-d2e74147.png))
 
 ### Challenge 4: Keeping your distance
 
 This challenge uses the motors and sonar sensor. The robot must maintain a fixed distance from an object: it moves forward if the distance increases and backward if it decreases.
 
-> Challenge: Program the robot to maintain a fixed distance from an object in front of the sonar.
->
+**Aside:** Challenge: Program the robot to maintain a fixed distance from an object in front of the sonar.
 
 Below is this challenge in action. The robot maintains its distance from the box; moving the box causes the robot to follow. This uses blocks from the `Action` category for motor control. These assume motors are connected to the correct ports (left motor to M1, right motor to M2). If the robot moves opposite to the command, the motor connectors are likely swapped. Multiple solutions exist; the program below is one approach.
 
-![The distance challenge in action. The robot holds its distance from the box; moving the box along the arrow makes the robot follow it.](images/programming-the-robot-e395427b.jpg)
+Figure: The distance challenge in action. The robot holds its distance from the box; moving the box along the arrow makes the robot follow it. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-e395427b.jpg))
 
-The program works as follows: at startup, it reads and stores the initial distance in `preferred_distance` (step 1). It then repeatedly reads the current distance into `current_distance` and calculates the difference from `preferred_distance`. If the absolute difference is less than 2 cm (step 3), the robot stops (step 6). If `abs(difference) > 2`, the robot moves: if `difference < 0`, it is too close and moves backward; if `difference > 0`, it moves forward. This maintains the robot at approximately `preferred_distance` from the obstacle. Create variables `difference`, `current_distance`, and `preferred_distance` first (see [Working with variables in mBlock](#working-with-variables-in-mblock)).
+The program works as follows: at startup, it reads and stores the initial distance in `preferred_distance` (step 1). It then repeatedly reads the current distance into `current_distance` and calculates the difference from `preferred_distance`. If the absolute difference is less than 2 cm (step 3), the robot stops (step 6). If `abs(difference) > 2`, the robot moves: if `difference < 0`, it is too close and moves backward; if `difference > 0`, it moves forward. This maintains the robot at approximately `preferred_distance` from the obstacle. Create variables `difference`, `current_distance`, and `preferred_distance` first (see Working with variables in mBlock).
 
 Moving the box causes the robot to follow while maintaining distance.
 
 The program tolerates a 2 cm error margin. You can experiment with smaller values. However, the program becomes unstable at a certain point: the robot oscillates without stopping. This happens for two reasons: the sonar distance readings contain noise, and the program has a delay between movement and updated distance readings. Even with a noise-free sonar, this delay would cause oscillation.
 
-![One solution to the distance challenge. (1) The starting distance is stored in `preferred_distance`. Then, on each pass: (2) current distance is read and the difference calculated, (3) the difference is compared against a 2 cm tolerance, (4) the robot moves forward if too far, (5) backward if too close, and (6) stops if within range.](images/programming-the-robot-55d3603f.png)
+Figure: One solution to the distance challenge. (1) The starting distance is stored in `preferred_distance`. Then, on each pass: (2) current distance is read and the difference calculated, (3) the difference is compared against a 2 cm tolerance, (4) the robot moves forward if too far, (5) backward if too close, and (6) stops if within range. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/programming-the-robot-55d3603f.png))

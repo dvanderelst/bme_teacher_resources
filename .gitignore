@@ -9,6 +9,21 @@
 !/TODO.md
 !/BOT-PLAN.md
 !/book/
+!/bot/
+!/bot/scripts/
+/bot/.env
+/bot/config.json
+/bot/users.txt
+
+# Belt and braces. The whitelist above re-admits everything under /bot/, so a
+# secret dropped into a subdirectory that does not exist yet would be tracked
+# by default. These match at any depth, so a new app/ or lib/ cannot leak one.
+# ".env.example" is deliberately still committable as a template. "users.txt"
+# has no template: it holds plaintext passwords, and bot/scripts/set_users.py
+# prints the format when the file is missing.
+**/.env
+**/secrets.toml
+**/users.txt
 
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on
@@ -34,3 +49,4 @@
 .DS_Store
 __pycache__/
 *.pyc
+local.db

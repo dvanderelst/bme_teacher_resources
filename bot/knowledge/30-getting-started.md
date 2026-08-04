@@ -1,6 +1,6 @@
 # Getting started with the robot
 
-This chapter assumes you already have **mBlock** installed or running in your browser. If not, complete [Installing mBlock](#installing-mblock) first, then return here.
+This chapter assumes you already have **mBlock** installed or running in your browser. If not, complete Installing mBlock first, then return here.
 
 ## Connection options
 
@@ -11,15 +11,13 @@ To program and control your mBot, connect it to your computer using one of these
 
 Older mBots could connect via a 2.4 GHz module or direct Bluetooth. We do not support these. Makeblock has discontinued the 2.4 GHz hardware, and with direct Bluetooth all robots in a classroom share the same address, preventing students from identifying which robot they are connecting to.
 
-![The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode.](images/getting-started-draft-6fb3632a.png)
+Figure: The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6fb3632a.png))
 
-![The USB cable that can be used to connect to the robot.](images/getting-started-draft-dd60485a.png)
+Figure: The USB cable that can be used to connect to the robot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-dd60485a.png))
 
 ## Pairing the Bluetooth dongle and the robot
 
-> **Note**
->
-> With multiple robots in the room, pair each dongle to a specific robot. This ensures the computer using that dongle connects only to its paired robot, allowing you to distinguish identical mBots. Pairing is only needed once per robot.
+**Note:** With multiple robots in the room, pair each dongle to a specific robot. This ensures the computer using that dongle connects only to its paired robot, allowing you to distinguish identical mBots. Pairing is only needed once per robot.
 
 Follow this sequence precisely: turn all robots off first, then put the dongle into pairing mode, then power on only the robot you are pairing.
 
@@ -31,17 +29,13 @@ Follow this sequence precisely: turn all robots off first, then put the dongle i
 6. Label the robot and dongle as a set. The dongle will only connect to this robot; use the labels to match them later.
 7. Repeat for each remaining robot, turning it off before pairing the next one.
 
-> **Note**
->
-> The dongle flashes at two speeds, and they mean opposite things. **Fast** means it is in pairing mode and will bond with the next robot switched on nearby. **Slow** means it is already paired and cannot find its robot — usually because that robot is switched off, out of range, or is not the one this dongle belongs to. A slowly flashing dongle looks like a dongle waiting to pair, and this is the single most likely reason for a pairing that appears to work and then does not connect. It is why step 3 presses the button rather than checking the light first.
+**Note:** The dongle flashes at two speeds, and they mean opposite things. **Fast** means it is in pairing mode and will bond with the next robot switched on nearby. **Slow** means it is already paired and cannot find its robot — usually because that robot is switched off, out of range, or is not the one this dongle belongs to. A slowly flashing dongle looks like a dongle waiting to pair, and this is the single most likely reason for a pairing that appears to work and then does not connect. It is why step 3 presses the button rather than checking the light first.
 
-> **Note**
->
-> The button is also how a pairing gets broken: pressing it releases the robot, and that dongle will no longer connect to it until they are paired again. Once a set is paired and labelled, instruct students not to press it, and consider covering it with tape for the rest of the lesson. Remove the tape when you next need to pair that dongle to a different robot.
+**Note:** The button is also how a pairing gets broken: pressing it releases the robot, and that dongle will no longer connect to it until they are paired again. Once a set is paired and labelled, instruct students not to press it, and consider covering it with tape for the rest of the lesson. Remove the tape when you next need to pair that dongle to a different robot.
 
-![Blue LED blinking on the robot's Bluetooth module.](images/getting-started-draft-1f093a0d.jpg)
+Figure: Blue LED blinking on the robot's Bluetooth module. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-1f093a0d.jpg))
 
-![When the dongle and the robot are paired, the blue LEDs on both will stop blinking.](images/getting-started-draft-f62edb5b.jpg)
+Figure: When the dongle and the robot are paired, the blue LEDs on both will stop blinking. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-f62edb5b.jpg))
 
 ## Checking whether a dongle and a robot are paired
 
@@ -60,21 +54,21 @@ When writing a program from scratch, you must tell mBlock which robot to target.
 
 If the mBot does not appear in the `Devices` panel, click the `Add (+)` button at the bottom. A window listing supported devices appears. Select **mBot** — not mBot2, which is a different robot — and click `OK`. The mBot appears in the panel, and its control blocks become available in the palette.
 
-![Click this button to add the robot to mBlock.](images/getting-started-draft-c19638ac.png)
+Figure: Click this button to add the robot to mBlock. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-c19638ac.png))
 
-![The devices area before adding the mBot.](images/getting-started-draft-bcbd96a0.png)
+Figure: The devices area before adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bcbd96a0.png))
 
-![Select the mBot from the menu.](images/getting-started-draft-f2ecdd41.png)
+Figure: Select the mBot from the menu. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-f2ecdd41.png))
 
-![The devices area after adding the mBot.](images/getting-started-draft-7bfc097d.png)
+Figure: The devices area after adding the mBot. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-7bfc097d.png))
 
 ## Live versus Upload mode
 
 When programming your mBot, you can run code in **Live mode** or **Upload mode**.
 
-> **The short version**
->
-> Use Live mode for all lessons except Color Vision. Live mode displays sensor readings and variable values in real time, making the robot effective for teaching. The color sensor is the exception: mBlock does not support it in Live mode, so Color Vision programs must be uploaded. However, uploading overwrites the robot's firmware, requiring a reset before returning to Live mode.
+**Aside:** **The short version**
+
+Use Live mode for all lessons except Color Vision. Live mode displays sensor readings and variable values in real time, making the robot effective for teaching. The color sensor is the exception: mBlock does not support it in Live mode, so Color Vision programs must be uploaded. However, uploading overwrites the robot's firmware, requiring a reset before returning to Live mode.
 
 **Live mode**
 
@@ -86,11 +80,11 @@ The program is copied to the robot, allowing it to run independently: upload it,
 
 **Switching from Upload back to Live mode**
 
-After using Upload mode, reset the robot's firmware to return to Live mode, as described in [Resetting the firmware](#resetting-the-firmware).
+After using Upload mode, reset the robot's firmware to return to Live mode, as described in Resetting the firmware.
 
-> **Why?**
->
-> Live mode requires special firmware — Makeblock calls this the **Online firmware** — that enables communication with the computer. When you use Upload mode, your program replaces this firmware. Resetting restores the Online firmware, which re-enables Live mode. (Makeblock's documentation refers to this as *updating* the firmware, which is the terminology used in mBlock.)
+**Aside:** **Why?**
+
+Live mode requires special firmware — Makeblock calls this the **Online firmware** — that enables communication with the computer. When you use Upload mode, your program replaces this firmware. Resetting restores the Online firmware, which re-enables Live mode. (Makeblock's documentation refers to this as *updating* the firmware, which is the terminology used in mBlock.)
 
 ## Connecting to the robot
 
@@ -98,10 +92,10 @@ After using Upload mode, reset the robot's firmware to return to Live mode, as d
 
 Before connecting to the robot, verify the following:
 
-1. You have mBlock, either in the browser or installed. See [Installing mBlock](#installing-mblock).
-2. You have chosen a connection method: USB cable or Bluetooth dongle. See [Connection options](#connection-options).
-3. If using the Bluetooth dongle, it is paired with the robot. See [Pairing the Bluetooth dongle and the robot](#pairing-the-bluetooth-dongle-and-the-robot).
-4. You have added the mBot to mBlock. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
+1. You have mBlock, either in the browser or installed. See Installing mBlock.
+2. You have chosen a connection method: USB cable or Bluetooth dongle. See Connection options.
+3. If using the Bluetooth dongle, it is paired with the robot. See Pairing the Bluetooth dongle and the robot.
+4. You have added the mBot to mBlock. See Adding the mBot to mBlock.
 
 ### Switching on and plugging in
 
@@ -111,18 +105,18 @@ This establishes the robot-to-dongle connection. The mBlock connection process v
 
 ### Using mBlock in the browser
 
-![mBlock running in the browser, with the mBot already added to the `Devices` panel.](images/getting-started-draft-6bb9e606.png)
+Figure: mBlock running in the browser, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-6bb9e606.png))
 
 #### Direct connection or mLink?
 
 The browser version of mBlock can connect to the robot in two ways, selected via a link at the top of the `Devices` panel:
 
 - **Direct connection.** The browser communicates directly with the robot. No additional software is required, but this only works in Chrome and Chromium.
-- **mLink.** The helper program described in [Installing mBlock](#installing-mblock) handles communication. Use this for browsers that cannot connect directly.
+- **mLink.** The helper program described in Installing mBlock handles communication. Use this for browsers that cannot connect directly.
 
 **The instructions below use direct connection**, as it is simpler and requires no installation — important for locked-down school computers. If the `Devices` panel shows `Switch to direct connection`, click it. If it shows `Switch to mLink`, you are already using direct connection.
 
-![If the panel offers `Switch to direct connection`, click it.](images/getting-started-draft-1dd0fc6c.png)
+Figure: If the panel offers `Switch to direct connection`, click it. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-1dd0fc6c.png))
 
 #### Using the Bluetooth dongle
 
@@ -130,9 +124,9 @@ With the robot on and dongle plugged in, click `Serial`. This may seem counterin
 
 The browser then prompts you to select a serial port. Choose the dongle's entry and click `Connect`.
 
-![With direct connection selected, click `Serial` — not `Bluetooth`, even though the dongle is a Bluetooth device.](images/getting-started-draft-bd535d8d.png)
+Figure: With direct connection selected, click `Serial` — not `Bluetooth`, even though the dongle is a Bluetooth device. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bd535d8d.png))
 
-![The browser asks which serial port to use. Select the dongle and click `Connect`.](images/getting-started-draft-42631685.png)
+Figure: The browser asks which serial port to use. Select the dongle and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-42631685.png))
 
 #### Using the USB cable
 
@@ -142,17 +136,17 @@ The cable works identically. Keep mBlock on direct connection and select `Serial
 
 The browser's choice between direct connection and mLink does not apply here. Installed mBlock communicates directly with the robot, so no helper program or connection mode selection is needed.
 
-![mBlock installed on Windows, with the mBot already added to the `Devices` panel.](images/getting-started-draft-45dbe002.png)
+Figure: mBlock installed on Windows, with the mBot already added to the `Devices` panel. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-45dbe002.png))
 
 #### Using the Bluetooth dongle
 
 With the robot on and dongle plugged in, click `Connect`.
 
-![In the installed version, click `Connect`.](images/getting-started-draft-230537db.png)
+Figure: In the installed version, click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-230537db.png))
 
 A window opens asking how to connect. Select the `USB` tab. This may also seem counterintuitive: the dongle is a Bluetooth device, yet a `Bluetooth` tab appears beside `USB`. However, the dongle appears to the computer as a virtual serial port, and `USB` is where mBlock lists serial ports. If the dongle is recognized, a port appears in the dropdown. Click `Connect`.
 
-![Select the `USB` tab, verify a port is listed in the dropdown, and click `Connect`.](images/getting-started-draft-e90f8ba9.png)
+Figure: Select the `USB` tab, verify a port is listed in the dropdown, and click `Connect`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-e90f8ba9.png))
 
 #### Using the USB cable
 
@@ -172,7 +166,7 @@ After uploading a program, the robot cannot be used in Live mode until you reset
 
 ## Resetting the firmware
 
-Live mode requires the robot to have its standard firmware, as explained in [Live versus Upload mode](#live-versus-upload-mode). Typically this is already in place.
+Live mode requires the robot to have its standard firmware, as explained in Live versus Upload mode. Typically this is already in place.
 
 However, if the robot was used in Upload mode — by a previous class or for the Color Vision lesson — that firmware has been overwritten by the uploaded program. Live mode will not function until you restore it. If uncertain, resetting causes no harm.
 
@@ -180,12 +174,12 @@ Connect the robot to the computer using the USB cable. Click `Setting`, then `Up
 
 You do **not** need to switch between `Live` and `Upload` mode first.
 
-![The `Live` and `Upload` slider. You do not need to change it before resetting the firmware.](images/getting-started-draft-bf1a09ed.png)
+Figure: The `Live` and `Upload` slider. You do not need to change it before resetting the firmware. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-bf1a09ed.png))
 
-![Select `Update Firmware`.](images/getting-started-draft-8aa4d6fa.png)
+Figure: Select `Update Firmware`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-8aa4d6fa.png))
 
-![Click `Updates`.](images/getting-started-draft-05ea3950.png)
+Figure: Click `Updates`. ([image](https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/images/getting-started-draft-05ea3950.png))
 
 ## Next step
 
-Once you can connect to the robot, run the example program in [Running your first program](#running-your-first-program). It verifies the entire setup — software, connection, and robot — in a couple of minutes, and introduces the pattern used throughout the lessons for opening programs.
+Once you can connect to the robot, run the example program in Running your first program. It verifies the entire setup — software, connection, and robot — in a couple of minutes, and introduces the pattern used throughout the lessons for opening programs.
