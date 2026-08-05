@@ -112,6 +112,8 @@ There is a second consequence, and it is the one worth showing students. As the 
 
 ![How a whisker is moved, and where it is sensed. **A**, the muscle is relaxed and the whisker lies back. **B**, the muscle contracts, pulls on the follicle, and swings the whisker forward; repeating that cycle is whisking. **C**, the whisker runs into something. The dashed line is where it would have carried on had the obstacle not been there. Note where the bending happens: a whisker tapers, so it is stiffest at the base and most flexible near the tip, and the shaft therefore leaves the follicle almost straight and does its bending out at the far end, which curls away from the obstacle. But that far end is dead keratin with no nerves in it, so nothing is sensed where the contact actually happened. The mechanoreceptors are clustered around the follicle at the base, and the bend is what they measure. Schematic, and not to scale.](images/touch-and-whiskers-follicle.png)
 
+<!-- Let's make it clear that this is a link to a youtube video. And do the same for other links to youtube videos. -->
+
 [Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ) — watch the left panel. Taking the head motion out is what makes the point: what is left is the whiskers being *aimed*, independently of where the animal is walking.
 
 This is the same idea as the [Sonar](#sonar) lesson in a different medium. A bat decides when to call and what to call, and so decides what its next echo will be about. A rat decides where its whiskers go, and so decides what its next contact will be about. In both cases the animal is not a passive receiver, and that control is much of what makes the sense useful.
@@ -122,7 +124,10 @@ The difference is range. A bat's decision reaches metres; a rat's reaches perhap
 
 **Rats and mice** use whiskers as a primary sense. They judge the width of a gap before entering it, tell rough surfaces from smooth, and locate objects relative to their own head — in the dark, in burrows, where vision has nothing to work with.
 
+<!-- Maybe we can include this image? https://en.wikipedia.org/wiki/Whiskers#/media/File:Sea-lion_seal_vibrissa.png -->
+
 **Seals** use them in water. A harbour seal can follow the hydrodynamic trail left by a swimming fish: the disturbed water in its wake, which persists for many seconds. A seal with its eyes and ears covered can pick up such a trail and follow the fish's path. Seal whiskers are not smooth cylinders but wavy, undulating along their length, and this shape suppresses the vortices the whisker would otherwise shed as the seal swims. A smooth whisker would vibrate in its own wake and drown out the signal. The undulation is noise cancellation built into the shape of a hair.
+
 
 The investment in the sense shows in the wiring: aquatic mammals have roughly ten times as many nerve endings around a whisker follicle as land mammals do.
 
@@ -260,7 +265,7 @@ Here is the whole of reading two whiskers. It does nothing with the numbers yet;
 
 ![The smallest useful whisker program: read each whisker into a variable, forever. Port 3 and port 4 are the only two the light sensor block offers, so a two-whisker robot uses both. Naming the variables is not decoration — every program later in this chapter is written in terms of them, and a threshold comparison is far easier to debug when the reading has a name.](images/touch-and-whiskers-read-two.png)
 
-[Open the mBlock project](https://planet.mblock.cc/project/8233113).
+[Open the mBlock project](https://planet.mblock.cc/project/8233113). If your school blocks the Makeblock site, [download `mBotReadWhisker.mblock`](files/programs/mBotReadWhisker.mblock) instead.
 
 Run this and watch the variables on the stage while bending each whisker by hand. That is also the calibration step below, done informally: you are reading off the resting value and the bent value before deciding anything.
 
@@ -319,9 +324,8 @@ A worked version, building straight on the reading program from earlier:
 
 ![One way to write the obstacle avoidance challenge. The two thresholds are set once at the start and then never mentioned again, which is what makes this program easy to retune: a robot reacting too late or too eagerly is fixed by editing two numbers at the top rather than hunting through the logic. Note that the two thresholds are different — they belong to two different whiskers, and there is no reason two sensors should agree.](images/touch-and-whiskers-avoid-obstacles.png)
 
-[Open the mBlock project](https://planet.mblock.cc/project/8233137).
+[Open the mBlock project](https://planet.mblock.cc/project/8233137). If your school blocks the Makeblock site, [download `mBotWhiskerAvoidance.mblock`](files/programs/mBotWhiskerAvoidance.mblock) instead.
 
-<!-- TODO: mirrors. Every other robot activity in the book pairs its planet.mblock.cc link with a copy in content/files/programs/, because some school networks block the Makeblock site, and check-links.py counts the two and complains when they do not match -- it is complaining now. Export both projects from the IDE and drop them in as whisker_read.mblock and whisker_obstacle_avoidance.mblock, then add the usual "If your school blocks the Makeblock site, download ... instead" sentence to both. -->
 
 
 ### Challenge 2: Following a wall
@@ -376,9 +380,8 @@ The last row is the one to dwell on. The robot moves its whole body to bring its
 <!-- D: what is left on this chapter.
 
      1. The chapter has not been taught FROM. The activities themselves have been run with students -- that is where the module document and the whisker lab data came from -- but nobody has yet worked through this text as written and checked that its port numbers, thresholds, calibration steps and troubleshooting table match what a robot actually does. That is the difference between the activities being tested and the chapter being tested.
-     2. The two .mblock mirrors, which check-links.py reports on every build. planet.mblock.cc does not serve the files over a plain URL; they have to be exported from the IDE.
-     3. Required materials chapter entries beyond the whisker sensors, with quantities per group.
-     4. A photograph of a robot with whiskers mounted. In TODO.md as well, since it needs a robot in front of a camera.
-     5. The standards section stays a placeholder for now, deliberately.
+     2. Required materials chapter entries beyond the whisker sensors, with quantities per group.
+     3. A photograph of a robot with whiskers mounted. In TODO.md as well, since it needs a robot in front of a camera.
+     4. The standards section stays a placeholder for now, deliberately.
 
-     Settled: the resting reading is about 400, not 300. The homunculus photograph stays as it is, uncropped, which also keeps it clear of ShareAlike. -->
+     Settled: the resting reading is about 400, not 300; both programs now have local mirrors, and the project file for the avoidance example carries the corrected comparison. The homunculus photograph stays as it is, uncropped, which also keeps it clear of ShareAlike. -->

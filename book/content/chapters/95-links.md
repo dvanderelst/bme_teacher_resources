@@ -123,7 +123,7 @@ Use this as a quick reference when checking school network access or preparing o
 
 ## All mBlock programs
 
-Local copies of the mBlock programs are included in the `files/programs/` directory.
+Local copies of all mBlock programs are included in the `files/programs/` directory.
 School networks sometimes block the Makeblock site, so these local copies ensure you can always access the programs.
 
 - **MyFirstProgram.mblock** — Chapter 4
@@ -142,9 +142,7 @@ School networks sometimes block the Makeblock site, so these local copies ensure
   [Local copy](files/programs/sonar_obstacle_avoidance.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916162)
 - **sonar_cane.mblock** — Chapter 11
   [Local copy](files/programs/sonar_cane.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916250)
-- **mBotReadWhisker** — Chapter 12
-  [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233113) — local copy to follow
-- **mBotWhiskerAvoidance** — Chapter 12
-  [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233137) — local copy to follow
-
-<!-- TODO: those two are the only programs in the book without a local copy, which is also what check-links.py is complaining about on every build. Export both from the mBlock IDE into content/files/programs/, add the [Local copy] links here, and put the usual "If your school blocks the Makeblock site" sentence in the chapter. Then "all mBlock programs" can go back into the sentence above. -->
+- **mBotReadWhisker.mblock** — Chapter 12
+  [Local copy](files/programs/mBotReadWhisker.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233113)
+- **mBotWhiskerAvoidance.mblock** — Chapter 12
+  [Local copy](files/programs/mBotWhiskerAvoidance.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233137)
