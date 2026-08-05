@@ -12,7 +12,8 @@
 #   ./release.sh v1.0 --dry-run   build and check only; touches nothing remote
 #   ./release.sh v1.0 --yes       no confirmation prompt
 #
-# Full explanation of the sequence and why it is in this order: RELEASING.md
+# Full explanation of the sequence and why it is in this order:
+# BUILDING_AND_RELEASING.md in the repository root.
 set -euo pipefail
 cd "$(dirname "$0")"
 ROOT=$(git rev-parse --show-toplevel)
