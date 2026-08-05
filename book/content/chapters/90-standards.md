@@ -8,6 +8,8 @@
 
 [Educational standards: Sound Localization](#educational-standards-sound-localization)
 
+[Educational standards: Touch and Whiskers](#educational-standards-touch-and-whiskers)
+
 ## Educational standards Kinesis Taxis
 
 ### Next Generation Science Standards
@@ -347,3 +349,11 @@ Science and Engineering Practices:
     - d. Students understand how automation works and use algorithmic thinking to develop a sequence of steps to create and test automated solutions.
 - 1.7 Global Collaborator
     - c. Students contribute constructively to project teams, assuming various roles and responsibilities to work effectively toward a common goal.
+
+## Educational standards Touch and Whiskers
+
+The standards alignment for this lesson has not been written yet. The lesson itself is complete enough to teach, and the four sets above show the shape the entry will take: Next Generation Science Standards, ISTE, and the Ohio, Indiana and West Virginia science standards.
+
+If you need the alignment before we have published it — for a curriculum map, a grant report, or an administrator — write to us and we will help you put it together for your state. The addresses are under [Questions, corrections, and help](#questions-corrections-and-help).
+
+<!-- TODO: write this section properly. It needs the same four blocks as the other lessons: NGSS performance expectations, disciplinary core ideas and crosscutting concepts; ISTE; then Ohio, Indiana and West Virginia. The lesson covers sensory receptors and signal transduction, structure and function in the whisker as a lever, and the engineering design of a contact sensor, so LS1.A and the HS-ETS1 engineering expectations are the obvious starting points -- but somebody who knows the standards should write it rather than somebody pattern-matching from the other four. -->

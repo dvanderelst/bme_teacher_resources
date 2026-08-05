@@ -6,7 +6,7 @@
 | :--- | :--- |
 | mBot | The same robot as every other chapter. |
 | Bluetooth Dongle | A dongle for connecting the robot to a computer. Currently the recommended connection method. |
-| Whisker sensors | Two per robot for the obstacle avoidance challenge, one for wall following; more if a group extends the activity. These are ours rather than Makeblock's — the same form factor as a Makeblock sensor, with a flex sensor as the active part — so they cannot be bought and have to come from us. Treat them as consumable: they are damaged by creasing, by bending the wrong way, and slowly by oxidation. |
+| Whisker sensors | Two per robot for the obstacle avoidance challenge, one for wall following; more if a group extends the activity. These are ours rather than Makeblock's — the same form factor as a Makeblock sensor, with a flex sensor as the active part — so they cannot be bought anywhere. Write to us for a set: the addresses are under [Questions, corrections, and help](#questions-corrections-and-help). Treat them as consumable: they are damaged by creasing, by bending the wrong way, and slowly by oxidation. |
 | 3D printed brackets | Brackets for mounting sensors on the front of the robot in different orientations. |
 | Lego compatible blocks | Blocks compatible with the robot's screw holes, giving students freedom in how they angle the whiskers. |
 | Gaffer's tape | Versatile tape useful throughout the activities. |
@@ -21,7 +21,7 @@
 | Painter's tape | For attaching the cardboard. It comes off again without damaging the sensor. |
 | Airtight box and desiccant | Where the whisker sensors live between lessons, lying flat. |
 
-<!-- TODO: add all of this to the Required materials chapter as well, with quantities per group. The supplier question is answered and the answer is us: the whisker sensors are custom and cannot be bought from Makeblock, so that chapter needs to say plainly how a teacher gets a set, and the materials list should stop implying everything is orderable. Worth deciding what we tell a teacher who finds this book without knowing us -- build instructions for the board, or a note to write to the address in the colophon? -->
+<!-- TODO: still to add to the Required materials chapter, with quantities per group. Note that chapter currently reads as a shopping list, and one line on it now is not orderable -- it may need a sentence at the top saying so, rather than leaving a teacher to discover it at the bottom of a table. -->
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ How does an animal build a picture of its surroundings using only touch, and wha
 
 The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
 
-<!-- TODO: the standards chapter has no Touch and Whiskers section yet. It needs one -- NGSS, ISTE, and the Ohio, Indiana and West Virginia sets -- plus a link at the top of that chapter alongside the other four lessons. -->
+<!-- TODO: the standards chapter now has a Touch and Whiskers section, but it is a placeholder saying the alignment is not written yet. Replace it with the real thing. -->
 
 ## Learning Objectives
 
@@ -53,7 +53,7 @@ In this lesson students investigate touch: first their own, then a rat's, then a
 
 The lesson has two parts. In Part 1 students measure the spatial acuity of their own skin, learn what the different receptors in it are for, and see how a rat solves the same problem with whiskers. In Part 2 they give a robot whiskers made from flex sensors, calibrate them, and choose one of two challenges to build.
 
-<!-- TODO: the module folder has "Whisking with Robots.mp4". The Sonar chapter opens with three video links and that works well; this chapter should probably open the same way. Check whether the video is ours to distribute, and if it is, decide where it lives -- content/files/ like the other media, or a link if it is hosted somewhere already. -->
+<!-- TODO: the chapter has no opening video, and the Sonar chapter shows how well that works. The candidate is /home/dieter/Dropbox/ITEST/summer-program/modules/touch/Whisking with Robots.mp4 -- 25 MB, dated June 2019, from the summer-program touch module, not in this repository. Nobody currently remembers what is in it or where it came from, so: watch it, decide whether it is ours to distribute, and if it is, either put it in content/files/ like the other media or link it if it is hosted somewhere. If it turns out not to be ours or not to be good, a public clip of rat whisking would do the same job. -->
 
 ## Part 1: Touch in animals
 
@@ -210,21 +210,23 @@ This makes it a much better model of a whisker than a switch would be. A switch 
 
 ## Reading a whisker in mBlock
 
-A whisker plugs into an RJ25 port like any other sensor, and is read with the **`light sensor [port] light intensity`** block, choosing the whisker's port from the block's dropdown. Not the sonar block, not the line follower block. The block comes from an extension, which has to be added in mBlock before it appears.
+A whisker plugs into an RJ25 port and is read with the **`light sensor [port] light intensity`** block, choosing the whisker's port from the block's dropdown. Not the sonar block, not the line follower block. The block comes from an extension, which has to be added in mBlock before it appears.
+
+That block only offers **ports 3 and 4**, so those are the two the whiskers go in. With one whisker either will do; the obstacle avoidance challenge needs both, which uses up both of the mBot's analogue ports.
 
 Reading a whisker with the light sensor block is not a workaround; it is what the sensor is. The board presents a varying resistance to the port exactly as a light-dependent resistor does, so mBlock's light sensor block reads it correctly and the whisker lives under the same port restrictions as a light sensor would.
 
-<!-- TODO: which ports does that actually leave on the mCore? The lesson needs two whiskers at once for the obstacle avoidance challenge, and a teacher needs to be told which two sockets to use, in a sentence, without experimenting. Check on a robot and write the port numbers in here. -->
-
 > **Note**
 >
-> The value **goes down** when the whisker bends. This is the opposite of what everyone expects, students and teachers alike, and it is correct for this setup: bending the sensor reduces the number mBlock reports.
+> The value **goes down** when the whisker bends. This is the opposite of what everyone expects, students and teachers alike, and it is correct: bending the sensor reduces the number mBlock reports. An unbent whisker reads somewhere around 300, and bending it takes the reading down from there.
+>
+> *Around* 300, because whiskers vary. Two sensors sitting untouched on the same robot will not report the same number, which is why each one is calibrated separately and why left and right get their own thresholds. A threshold copied from another group's robot, or from another whisker on the same robot, will not work.
 >
 > The rule to teach is a general one, worth more than the specific fact: trust what you measure, not what you assume the sensor ought to do. Bend the whisker by hand and watch the number before writing a single line of behaviour.
 
 ## Calibration
 
-Nothing in Part 2 works until this is done, and it must be redone for each whisker — two flex sensors will not have the same resting value, and there is no reason they should.
+Nothing in Part 2 works until this is done, and it must be redone for every whisker. Resting values sit near 300 but vary from sensor to sensor, so the numbers a group needs are the ones their own robot reports, not the ones in this book.
 
 | Step | What to do |
 | :--- | :--- |
@@ -320,8 +322,4 @@ The last row is where the comparison breaks down, and it is worth saying so. The
 
 **"The value goes up when the whisker bends more."** Not in this setup. Bending lowers the number mBlock reports. Measure it and see.
 
-## Student Assessment
-
-<!-- TODO: write. The other sensor chapters ask three or four questions after each activity, and the Kinesis and Taxis chapter has a worked Student Assessment section to model on. Candidates: why does a lower two-point threshold mean more cortex; why does the robot's whisker have to be calibrated when a ruler does not; what could the robot do if its whiskers could move independently of its body. -->
-
-<!-- D: outstanding for this chapter. Part 1 is now closed out against your comments. Remaining: 1. Standards section in chapter 90, plus its link. 2. Required materials chapter entries, including how a teacher obtains whisker sensors. 3. Part 2 still needs your pass -- the bend-direction, cardboard-reach and storage points from your top comment are not yet written into the Warning callout and the mounting text. 4. Which ports the light sensor block leaves free on the mCore. 5. Photographs: a finished poker or calipers in use, the whisker build, an example robot path. 6. The introduction video, licensing checked. 7. An example mBlock program -- every other robot activity links one, hosted on planet.mblock.cc with a local mirror in content/files/programs/. 8. Run the whole thing on a robot. -->
+<!-- D: outstanding for this chapter. 1. Part 2 needs your pass -- the bend-direction, cardboard-reach and storage points from your review are still not written into the Warning callout and the mounting text. 2. Required materials chapter entries. 3. The real standards section, replacing the placeholder. 4. The opening video. 5. Photographs: calipers or a poker in use, the whisker build, an example robot path. 6. An example mBlock program -- every other robot activity links one, on planet.mblock.cc with a local mirror in content/files/programs/. 7. Run the whole thing on a robot. Assessment questions are deliberately not on this list: dropped, and only Kinesis and Taxis has such a section anyway. -->
