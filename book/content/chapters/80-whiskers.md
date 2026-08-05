@@ -258,6 +258,8 @@ Here is the whole of reading two whiskers. It does nothing with the numbers yet;
 
 ![The smallest useful whisker program: read each whisker into a variable, forever. Port 3 and port 4 are the only two the light sensor block offers, so a two-whisker robot uses both. Naming the variables is not decoration — every program later in this chapter is written in terms of them, and a threshold comparison is far easier to debug when the reading has a name.](images/touch-and-whiskers-read-two.png)
 
+[Open the mBlock project](https://planet.mblock.cc/project/8233113).
+
 Run this and watch the variables on the stage while bending each whisker by hand. That is also the calibration step below, done informally: you are reading off the resting value and the bent value before deciding anything.
 
 > **Note**
@@ -315,8 +317,12 @@ A worked version, building straight on the reading program from earlier:
 
 ![One way to write the obstacle avoidance challenge. The two thresholds are set once at the start and then never mentioned again, which is what makes this program easy to retune: a robot reacting too late or too eagerly is fixed by editing two numbers at the top rather than hunting through the logic. Note that the two thresholds are different — they belong to two different whiskers, and there is no reason two sensors should agree.](images/touch-and-whiskers-avoid-obstacles.png)
 
+[Open the mBlock project](https://planet.mblock.cc/project/8233104).
+
+<!-- TODO: mirrors. Every other robot activity in the book pairs its planet.mblock.cc link with a copy in content/files/programs/, because some school networks block the Makeblock site, and check-links.py counts the two and complains when they do not match -- it is complaining now. Export both projects from the IDE and drop them in as whisker_read.mblock and whisker_obstacle_avoidance.mblock, then add the usual "If your school blocks the Makeblock site, download ... instead" sentence to both. -->
+
 <!-- TODO: two problems with this screenshot, both needing a re-export rather than anything I can fix here.
-     1. THE PROGRAM DOES NOT WORK AS SHOWN. The first condition reads `whisker1 > threshold1 and whisker2 > whisker2`. The second half compares whisker2 with itself, which is never true, so the "drive forward" branch can never run and the robot will never move off. It should be `whisker2 > threshold2`. Easy to miss on screen and impossible for a teacher to debug from a picture, so this must be corrected before the chapter ships.
+     1. THE PROGRAM STILL DOES NOT WORK AS SHOWN, in the second screenshot as in the first. The opening condition reads `whisker1 > threshold1 and whisker2 > whisker2`. The right-hand half compares whisker2 with itself, which is never true, so the "drive forward" branch can never run and the robot never moves off. It should be `whisker2 > threshold2`. Checked at 3x magnification on the new image, so this is not a rendering artefact. Worth establishing whether the mBlock project itself (8233104) has the same comparison or only the screenshot does: if the project is right, all that is needed is a fresh capture; if the project is wrong, fix it there first, because that link is what teachers will actually open.
      2. The numbers disagree with the text. This program uses thresholds of 400 and 375, and a threshold has to sit between the resting and bent readings -- but the Note above tells teachers an unbent whisker reads "somewhere around 300", which would put both thresholds above resting and make the forward branch fail for a second reason. Either the ~300 figure is wrong or these thresholds are from a robot whose whiskers rest much higher. Whichever it is, the two need to agree, because a teacher who calibrates and gets 300 will conclude the lesson is wrong.
      Worth adding while you are re-exporting: the book links a downloadable .mblock for every other robot activity, hosted on planet.mblock.cc with a local mirror in content/files/programs/. These two are pictures only, so students have to retype them. -->
 
