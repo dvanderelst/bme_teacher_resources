@@ -53,7 +53,6 @@ In this lesson students investigate touch: first their own, then a rat's, then a
 
 The lesson has two parts. In Part 1 students measure the spatial acuity of their own skin, learn what the different receptors in it are for, and see how a rat solves the same problem with whiskers. In Part 2 they give a robot whiskers made from flex sensors, calibrate them, and choose one of two challenges to build.
 
-<!-- TODO: the chapter has no opening video, and the Sonar chapter shows how well that works. The candidate is /home/dieter/Dropbox/ITEST/summer-program/modules/touch/Whisking with Robots.mp4 -- 25 MB, dated June 2019, from the summer-program touch module, not in this repository. Nobody currently remembers what is in it or where it came from, so: watch it, decide whether it is ours to distribute, and if it is, either put it in content/files/ like the other media or link it if it is hosted somewhere. If it turns out not to be ours or not to be good, a public clip of rat whisking would do the same job. -->
 
 ## Part 1: Touch in animals
 
@@ -322,4 +321,4 @@ The last row is where the comparison breaks down, and it is worth saying so. The
 
 **"The value goes up when the whisker bends more."** Not in this setup. Bending lowers the number mBlock reports. Measure it and see.
 
-<!-- D: outstanding for this chapter. 1. Part 2 needs your pass -- the bend-direction, cardboard-reach and storage points from your review are still not written into the Warning callout and the mounting text. 2. Required materials chapter entries. 3. The real standards section, replacing the placeholder. 4. The opening video. 5. Photographs: calipers or a poker in use, the whisker build, an example robot path. 6. An example mBlock program -- every other robot activity links one, on planet.mblock.cc with a local mirror in content/files/programs/. 7. Run the whole thing on a robot. Assessment questions are deliberately not on this list: dropped, and only Kinesis and Taxis has such a section anyway. -->
+<!-- D: outstanding for this chapter. 1. Part 2 needs your pass -- the bend-direction, cardboard-reach and storage points from your review are still not written into the Warning callout and the mounting text. 2. Required materials chapter entries. 3. The real standards section, replacing the placeholder. 4. Photographs: calipers or a poker in use, the whisker build, an example robot path. 5. An example mBlock program -- every other robot activity links one, on planet.mblock.cc with a local mirror in content/files/programs/. 6. Run the whole thing on a robot. Assessment questions are deliberately not on this list: dropped, and only Kinesis and Taxis has such a section anyway. -->
