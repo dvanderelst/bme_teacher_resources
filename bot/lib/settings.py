@@ -67,8 +67,10 @@ def build_stamp():
     fixed, and these are meant to be acted on weeks later.
 
     It has to come from the manifest rather than from git: the running
-    container has no history to ask. bot/knowledge/ is committed, which is what
-    makes this readable in production at all.
+    container has no history to ask. bot/knowledge/manifest.json is committed
+    for exactly this reason -- the generated chapters beside it are not, since
+    they reach the bot through Mistral, but this one file has to survive into
+    the deployment or every report a teacher files is stamped "unknown".
     """
     try:
         manifest = json.loads((KNOWLEDGE_DIR / "manifest.json").read_text())

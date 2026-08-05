@@ -70,9 +70,11 @@ BME_FILE_BASE="https://github.com/$REPO/raw/$TAG/book/content/" \
 [ -s "$HTML" ] || die "$HTML was not produced"
 
 # build.sh regenerates the bot's knowledge set, stamped with the same
-# fingerprint, so a rebuild always leaves the tree dirty under bot/knowledge/.
-# That is expected and gets committed below. Anything *else* changing means the
-# build wrote somewhere it should not have, and the release stops.
+# fingerprint. Only manifest.json is tracked -- the generated chapters are
+# ignored, because they reach the bot through Mistral rather than through git --
+# so a rebuild leaves exactly one file dirty, and it gets committed below.
+# Anything *else* changing means the build wrote somewhere it should not have,
+# and the release stops.
 UNEXPECTED=$(cd "$ROOT" && git status --porcelain | grep -vE '^.. bot/knowledge/' || true)
 [ -z "$UNEXPECTED" ] || die "the build changed files outside bot/knowledge/:
 $UNEXPECTED"
@@ -108,8 +110,10 @@ CONFIRM
 fi
 
 # --- commit, tag, push ------------------------------------------------------
-# The knowledge set is committed before tagging so the tag covers the bot's
-# copy of the edition too: PDF, HTML and bot all answer for the same $TAG.
+# The manifest is committed before tagging so the tag records which edition the
+# bot was given: PDF, HTML and bot all answer for the same $TAG. The generated
+# chapters are not committed -- they regenerate from this tag deterministically,
+# which is what makes leaving them out safe.
 if [ -n "$(cd "$ROOT" && git status --porcelain)" ]; then
   (cd "$ROOT" && git add bot/knowledge && git commit -qm "Release $TAG")
   echo "==> committed regenerated knowledge set"

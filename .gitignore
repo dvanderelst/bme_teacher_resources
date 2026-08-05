@@ -26,6 +26,21 @@
 **/secrets.toml
 **/users.txt
 
+# --- inside bot/ ------------------------------------------------------------
+# The knowledge set is generated from book/content/chapters by knowledge.py, and
+# reaches the bot through Mistral rather than through git -- configure_agent.py
+# uploads it from a local build. Committing it duplicated the whole book inside
+# the repository, rewrote sixteen files on every release, and left the working
+# tree dirty after every build, which made the release guard harder to reason
+# about than the thing it was guarding.
+#
+# manifest.json is the exception and must stay tracked. lib/settings.py reads it
+# INSIDE THE DEPLOYED CONTAINER to stamp an edition onto every piece of feedback;
+# the container has no git history to ask instead. Untrack it and every report a
+# teacher files arrives stamped "unknown", which is what makes a report readable
+# weeks later.
+/bot/knowledge/*.md
+
 # --- inside book/ -----------------------------------------------------------
 # Rendered output is a build artifact, not source. Committing 14 MB binaries on
 # every rebuild would bloat history. The finished PDF and HTML are distributed
