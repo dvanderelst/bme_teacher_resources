@@ -21,7 +21,7 @@
 | Painter's tape | For attaching the cardboard. It comes off again without damaging the sensor. |
 | Airtight box and desiccant | Where the whisker sensors live between lessons, lying flat. |
 
-<!-- TODO: still to add to the Required materials chapter, with quantities per group. Note that chapter currently reads as a shopping list, and one line on it now is not orderable -- it may need a sentence at the top saying so, rather than leaving a teacher to discover it at the bottom of a table. -->
+<!-- TODO: the whisker entries are in the Required materials chapter now, but the rest of this table is not, and that chapter still reads as a list of things to order when one line on it cannot be ordered. Worth a sentence at the top of it saying so, rather than leaving a teacher to find out at the bottom of a table. -->
 
 ## Prerequisites
 
@@ -222,6 +222,8 @@ This makes it a far better model of a whisker than a switch would be. A switch r
 >
 > What the two share is the thing that matters for this lesson — a slender probe that deflects on contact, and a deflection converted into a signal. Where they differ, the robot is arguably doing the easier thing.
 
+![A whisker sensor. The board is the same shape as a Makeblock sensor and plugs into an RJ25 port like one, but the board is ours and the working part is the flex sensor clamped to the front of it. The segmented side facing up here is the metallic side: the whisker bends away from it, and bending it the other way is what ruins the sensor.](images/touch-and-whiskers-sensor.png)
+
 > **Warning**
 >
 > Flex sensors are fragile in specific ways, and a class will destroy them if not told.
@@ -264,15 +266,15 @@ Run this and watch the variables on the stage while bending each whisker by hand
 
 > **Note**
 >
-> The value **goes down** when the whisker bends. This is the opposite of what you might expect, students and teachers alike, and it is correct: bending the sensor reduces the number mBlock reports. An unbent whisker reads somewhere around 300, and bending it takes the reading down from there.
+> The value **goes down** when the whisker bends. This is the opposite of what you might expect, students and teachers alike, and it is correct: bending the sensor reduces the number mBlock reports. An unbent whisker reads somewhere around 400, and bending it takes the reading down from there.
 >
-> *Around* 300, because whiskers vary. Two sensors sitting untouched on the same robot will not report the same number, which is why each one is calibrated separately and why left and right get their own thresholds. A threshold copied from another group's robot, or from another whisker on the same robot, will not work.
+> *Around* 400, because whiskers vary. Two sensors sitting untouched on the same robot will not report the same number, which is why each one is calibrated separately and why left and right get their own thresholds. A threshold copied from another group's robot, or from another whisker on the same robot, will not work.
 >
 > The rule to teach is a general one, worth more than the specific fact: trust what you measure, not what you assume the sensor ought to do. Bend the whisker by hand and watch the number before writing a single line of behaviour.
 
 ## Calibration
 
-Nothing in Part 2 works until this is done, and it must be redone for every whisker. Resting values sit near 300 but vary from sensor to sensor, so the numbers a group needs are the ones their own robot reports, not the ones in this book.
+Nothing in Part 2 works until this is done, and it must be redone for every whisker. Resting values sit near 400 but vary from sensor to sensor, so the numbers a group needs are the ones their own robot reports, not the ones in this book. A threshold goes *below* the resting reading it was measured from, since bending drives the value down — which is why the example program's thresholds of 400 and 375 sit where they do.
 
 | Step | What to do |
 | :--- | :--- |
@@ -321,7 +323,6 @@ A worked version, building straight on the reading program from earlier:
 
 <!-- TODO: mirrors. Every other robot activity in the book pairs its planet.mblock.cc link with a copy in content/files/programs/, because some school networks block the Makeblock site, and check-links.py counts the two and complains when they do not match -- it is complaining now. Export both projects from the IDE and drop them in as whisker_read.mblock and whisker_obstacle_avoidance.mblock, then add the usual "If your school blocks the Makeblock site, download ... instead" sentence to both. -->
 
-<!-- TODO: the numbers still disagree with the text. This program drives forward while whisker1 > 400 and whisker2 > 375, so resting readings have to sit ABOVE those thresholds -- but the Note under "Reading a whisker in mBlock" tells teachers an unbent whisker reads "somewhere around 300", which would leave the forward branch permanently false. One of the two is wrong: either resting is higher than 300 on the robots these thresholds came from, or the thresholds belong to a different robot. Whichever it is, a teacher who calibrates, reads 300, copies these numbers and gets a robot that never moves will blame the lesson. Measure a couple of whiskers and fix whichever number is wrong. (The condition bug is fixed -- 8233137 and the new screenshot both read `whisker2 > threshold2`.) -->
 
 ### Challenge 2: Following a wall
 
@@ -372,15 +373,12 @@ The last row is the one to dwell on. The robot moves its whole body to bring its
 
 **"The value goes up when the whisker bends more."** Not in this setup. Bending lowers the number mBlock reports. Measure it and see.
 
-<!-- D: what is left on this chapter, in the order that blocks the most.
+<!-- D: what is left on this chapter.
 
-     1. NOBODY HAS RUN IT. Not one activity, not one program, not the build. Everything below is downstream of this.
-     2. The threshold numbers. The example program drives forward while whisker1 > 400 and whisker2 > 375; the text tells teachers an unbent whisker reads about 300. Both cannot be right, and the failure lands on a teacher whose robot never moves. Measuring two or three whiskers settles it.
-     3. The two .mblock mirrors, which check-links.py reports on every build.
-     4. Required materials chapter entries, including how a teacher gets whisker sensors.
-     5. The real standards section, replacing the placeholder in chapter 90.
-     6. Photographs: calipers or a poker in use, a built whisker on a robot, an example path.
+     1. The chapter has not been taught FROM. The activities themselves have been run with students -- that is where the module document and the whisker lab data came from -- but nobody has yet worked through this text as written and checked that its port numbers, thresholds, calibration steps and troubleshooting table match what a robot actually does. That is the difference between the activities being tested and the chapter being tested.
+     2. The two .mblock mirrors, which check-links.py reports on every build. planet.mblock.cc does not serve the files over a plain URL; they have to be exported from the IDE.
+     3. Required materials chapter entries beyond the whisker sensors, with quantities per group.
+     4. A photograph of a robot with whiskers mounted. In TODO.md as well, since it needs a robot in front of a camera.
+     5. The standards section stays a placeholder for now, deliberately.
 
-     And one decision that is yours rather than mine, which I dropped from the file by accident when clearing resolved notes and am putting back: the homunculus photograph shows a nude, anatomically complete model. It is a standard museum teaching object and the picture is not prurient, but this book goes into schools. Cropping to the upper body would settle it, at the cost of making it an adaptation -- which then has to be released CC BY-SA 4.0 and marked as changed. Manageable, but it has to be done deliberately.
-
-     Not on this list: assessment questions, dropped at your request; the opening video, dropped because it showed an older robot; the "more whiskers" extension, dropped because there are only two ports. -->
+     Settled: the resting reading is about 400, not 300. The homunculus photograph stays as it is, uncropped, which also keeps it clear of ShareAlike. -->

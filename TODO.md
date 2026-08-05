@@ -266,6 +266,19 @@ the phonotaxis section.
 
 ## 5. Needs a camera
 
+### 5.0 A robot with whiskers on it
+The Touch and Whiskers chapter has a photograph of the whisker sensor itself, but nothing showing one
+**mounted**. That is the picture a teacher actually needs: how far forward the whiskers project, how
+far apart they sit, what angle they are set at, and what a cardboard extension looks like taped on.
+
+Two shots would cover it — the robot from above with both whiskers fitted, and a close-up of one
+mount. A third of the robot touching a wall, with the whisker visibly bent, would earn its place as
+well: it is the moment the whole lesson turns on and it is currently described rather than shown.
+
+Worth doing at the same time as the run-through the chapter still needs, since the robot will be
+built and on the table anyway.
+
+
 ### 5.1 Replace the web-sourced product photographs
 Three, not the five I listed before. I have now looked at all of them instead of guessing from
 captions, and two of my earlier candidates are plainly your own photographs — the desk, the robot
