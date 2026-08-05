@@ -115,6 +115,11 @@ cd book
 Do the dry run first, open the PDF, check the footer reads `v1.0` and there is no red *do not
 distribute* box on the cover. Then run it properly.
 
+**`release.sh` runs `build.sh` itself**, and that is the only way the tag and the pinned handout
+links get into the documents. So do not build first — you cannot usefully, and you should not try:
+a manual build leaves `bot/knowledge/` dirty, and the release will then refuse on its own clean-tree
+guard. If that happens, `git checkout -- bot/knowledge` and start the release again.
+
 Afterwards, point the bot at the edition you just published:
 
 ```sh
@@ -151,8 +156,9 @@ lies about itself.
 already taken. Every one of those is a way to ship bytes that do not match the version printed on
 them — the one failure a teacher cannot see or report usefully.
 
-**2. Build with the tag passed in.** `build.sh` normally derives the version from `git describe`, but
-at this point the tag does not exist: it is created in step 4, on a commit that does not exist yet
+**2. Build with the tag passed in.** `release.sh` calls `build.sh` here, which is why you never run
+it yourself for a release. `build.sh` normally derives the version from `git describe`, but at this
+point the tag does not exist: it is created in step 4, on a commit that does not exist yet
 either. So `release.sh` passes `BME_FINGERPRINT=v1.0`.
 
 The override is applied *after* `build.sh` has tested the tree for uncommitted changes. Renaming a
