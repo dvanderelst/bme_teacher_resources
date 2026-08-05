@@ -372,4 +372,15 @@ The last row is the one to dwell on. The robot moves its whole body to bring its
 
 **"The value goes up when the whisker bends more."** Not in this setup. Bending lowers the number mBlock reports. Measure it and see.
 
-<!-- D: outstanding for this chapter. 1. Part 2 needs your pass -- the bend-direction, cardboard-reach and storage points from your review are still not written into the Warning callout and the mounting text. 2. Required materials chapter entries. 3. The real standards section, replacing the placeholder. 4. Photographs: calipers or a poker in use, the whisker build, an example robot path. 5. An example mBlock program -- every other robot activity links one, on planet.mblock.cc with a local mirror in content/files/programs/. 6. Run the whole thing on a robot. Assessment questions are deliberately not on this list: dropped, and only Kinesis and Taxis has such a section anyway. -->
+<!-- D: what is left on this chapter, in the order that blocks the most.
+
+     1. NOBODY HAS RUN IT. Not one activity, not one program, not the build. Everything below is downstream of this.
+     2. The threshold numbers. The example program drives forward while whisker1 > 400 and whisker2 > 375; the text tells teachers an unbent whisker reads about 300. Both cannot be right, and the failure lands on a teacher whose robot never moves. Measuring two or three whiskers settles it.
+     3. The two .mblock mirrors, which check-links.py reports on every build.
+     4. Required materials chapter entries, including how a teacher gets whisker sensors.
+     5. The real standards section, replacing the placeholder in chapter 90.
+     6. Photographs: calipers or a poker in use, a built whisker on a robot, an example path.
+
+     And one decision that is yours rather than mine, which I dropped from the file by accident when clearing resolved notes and am putting back: the homunculus photograph shows a nude, anatomically complete model. It is a standard museum teaching object and the picture is not prurient, but this book goes into schools. Cropping to the upper body would settle it, at the cost of making it an adaptation -- which then has to be released CC BY-SA 4.0 and marked as changed. Manageable, but it has to be done deliberately.
+
+     Not on this list: assessment questions, dropped at your request; the opening video, dropped because it showed an older robot; the "more whiskers" extension, dropped because there are only two ports. -->
