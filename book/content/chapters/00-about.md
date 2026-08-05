@@ -32,6 +32,10 @@ The license above covers our own writing, diagrams, and photographs. It does **n
   mCore main board is Makeblock's and is credited as such in its caption.
 - The reproduced primers on animal orientation and on echolocation in insectivores and rodents;
   the rights to these primers remain with their respective authors and publishers.
+- The photograph of the sensory homunculus in the *Touch and Whiskers* chapter, which is by Wikimedia
+  Commons user Mpj29 and carries its own Creative Commons licence, CC BY-SA 4.0, credited in its
+  caption. You may reuse it, but a version you have altered has to be released under CC BY-SA 4.0 and
+  marked as changed — a stricter condition than the one on the rest of these materials.
 - Anything reached by an external link — videos, journal articles, manufacturer documentation.
 
 ## How to get the current version {.unnumbered}

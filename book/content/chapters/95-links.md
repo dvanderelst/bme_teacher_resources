@@ -33,7 +33,7 @@ Use this as a quick reference when checking school network access or preparing o
 - [Slips, front sheet (.doc)](files/Avery16154cheese_sandwich_front_windows.doc)
 - [Slips, back sheet (.doc)](files/Avery16154cheese_sandwich_back_windows.doc)
 
-### Chapter 7: Kinesis and Taxis
+### Chapter 8: Kinesis and Taxis
 
 **External websites:**
 - [AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
@@ -55,7 +55,7 @@ Use this as a quick reference when checking school network access or preparing o
 - [Rules for Taxis, all three conditions (.docx)](files/Rules_for_Taxis.docx)
 - [All student paths, 2024 (.pptx)](files/Kinesis-Taxis_all_paths_2024.pptx)
 
-### Chapter 8: Color Vision
+### Chapter 9: Color Vision
 
 **External websites:**
 - [PhET Color Vision simulation](https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html) — Interactive simulation from University of Colorado for exploring color vision.
@@ -67,7 +67,7 @@ Use this as a quick reference when checking school network access or preparing o
 - [Color discrimination chart (.docx)](files/Color_Discrimination_Chart.docx)
 - [Video: the robot following the path (.mp4)](files/color_vision_path_following.mp4)
 
-### Chapter 9: Sound Localization
+### Chapter 10: Sound Localization
 
 **External websites:**
 - [How We Localize Sound — Physics Today](https://pubs.aip.org/physicstoday/article/52/11/24/410870/How-We-Localize-SoundRelying-on-a-variety-of-cues) — Scientific article on sound localization mechanisms.
@@ -79,7 +79,7 @@ Use this as a quick reference when checking school network access or preparing o
 **Local files and handouts:**
 - [Pulsed tone for the robot (.mp3)](files/pip_exported.mp3)
 
-### Chapter 10: Sonar
+### Chapter 11: Sonar
 
 **External websites:**
 - [web page that lists the many applications of their sensors](https://maxbotix.com/blogs/blog/ultrasonic-sensor-applications) — Overview of real-world applications for sonar sensors.
@@ -99,6 +99,17 @@ Use this as a quick reference when checking school network access or preparing o
 **Local files and handouts:**
 - [Echolocation in insectivores and rodents (.pdf)](files/Echolocation_in_Insectivores_and_Rodents.pdf)
 
+### Chapter 12: Touch and Whiskers
+
+**External websites:**
+- [brainmapper.org](https://brainmapper.org) — Two-point discrimination protocol and poker template, from the Max Planck Florida Institute for Neuroscience.
+- [brainmapper.org/experiment](https://brainmapper.org/experiment) — Where the six measured distances are entered to generate a homunculus.
+- [Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ)
+- [Harbour seal whiskers, in three minutes](https://www.youtube.com/watch?v=-ozBE6f3hrE) — Anatomy, the undulated shape, and a seal following a wake by touch alone.
+- [Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI) — A robot with actively sweeping whiskers and a moving head.
+- [Biomimetic vibrissal sensing for robots](https://doi.org/10.1098/rstb.2011.0164) — Pearson et al. (2011), the case for whiskers on robots. Not open access.
+- [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — Licence of the sensory homunculus photograph.
+
 ---
 
 ## Email addresses
@@ -112,22 +123,28 @@ Use this as a quick reference when checking school network access or preparing o
 
 ## All mBlock programs
 
-Local copies of all mBlock programs are included in the `files/programs/` directory.
+Local copies of the mBlock programs are included in the `files/programs/` directory.
 School networks sometimes block the Makeblock site, so these local copies ensure you can always access the programs.
 
 - **MyFirstProgram.mblock** — Chapter 4
   [Local copy](files/programs/MyFirstProgram.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3934903)
-- **color_vision_communication.mblock** — Chapter 8
+- **color_vision_communication.mblock** — Chapter 9
   [Local copy](files/programs/color_vision_communication.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954097)
-- **color_vision_motion.mblock** — Chapter 8
+- **color_vision_motion.mblock** — Chapter 9
   [Local copy](files/programs/color_vision_motion.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3954308)
-- **sound_localization_directionality.mblock** — Chapter 9
+- **sound_localization_directionality.mblock** — Chapter 10
   [Local copy](files/programs/sound_localization_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941521)
-- **sound_localization_approach.mblock** — Chapter 9
+- **sound_localization_approach.mblock** — Chapter 10
   [Local copy](files/programs/sound_localization_approach.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3941523)
-- **sonar_directionality.mblock** — Chapter 10
+- **sonar_directionality.mblock** — Chapter 11
   [Local copy](files/programs/sonar_directionality.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916152)
-- **sonar_obstacle_avoidance.mblock** — Chapter 10
+- **sonar_obstacle_avoidance.mblock** — Chapter 11
   [Local copy](files/programs/sonar_obstacle_avoidance.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916162)
-- **sonar_cane.mblock** — Chapter 10
+- **sonar_cane.mblock** — Chapter 11
   [Local copy](files/programs/sonar_cane.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3916250)
+- **mBotReadWhisker** — Chapter 12
+  [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233113) — local copy to follow
+- **mBotWhiskerAvoidance** — Chapter 12
+  [Open on planet.mblock.cc](https://planet.mblock.cc/project/8233137) — local copy to follow
+
+<!-- TODO: those two are the only programs in the book without a local copy, which is also what check-links.py is complaining about on every build. Export both from the mBlock IDE into content/files/programs/, add the [Local copy] links here, and put the usual "If your school blocks the Makeblock site" sentence in the chapter. Then "all mBlock programs" can go back into the sentence above. -->
