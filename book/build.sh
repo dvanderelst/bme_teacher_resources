@@ -126,3 +126,15 @@ N=$(python3 tools/notes.py --count)
 if [ "$N" != "0" ]; then
   echo "  $N outstanding revision note(s) -- python3 tools/notes.py"
 fi
+
+# The bot is not updated by building, and must not be: this script runs on every
+# edit, and pushing the working tree to a live agent would put drafts in front of
+# teachers. That happens at release time instead. But when the build IS of a
+# clean tagged commit -- no -stale, no commits since the tag -- the knowledge set
+# just written is exactly what the bot should be serving, and saying so costs one
+# line. No prompt: release.sh runs this script under set -e, and a question here
+# would hang a release.
+if [[ "$FINGERPRINT" =~ ^v[0-9]+(\.[0-9]+)*$ ]]; then
+  echo "  this is edition $FINGERPRINT exactly -- to point the bot at it:"
+  echo "    python bot/scripts/configure_agent.py"
+fi

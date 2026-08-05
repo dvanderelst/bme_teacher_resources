@@ -30,7 +30,7 @@ flowchart TD
 
     PDF --> REL["book/release.sh"]
     HTML --> REL
-    KN --> CFG["bot/scripts/configure_agent.py"]
+    KN -->|only at release time| CFG["bot/scripts/configure_agent.py"]
 
     REL --> GH["GitHub release<br/>permanent download links"]
     REL --> PAGES["GitHub Pages<br/>readable in a browser"]
@@ -45,6 +45,12 @@ flowchart TD
 
 The three shaded boxes in the middle are the only commands you ever need to run. Everything else is a
 consequence of them.
+
+Note the label on the edge into `configure_agent.py`. Building regenerates `bot/knowledge/` on disk,
+but it does **not** update the bot, and should not: you build while editing, dozens of times, on
+drafts. Pushing that to a live agent would put unfinished chapters in front of teachers, which is the
+one failure this whole arrangement exists to prevent. The bot is updated after a *release* — and
+`release.sh` now ends by telling you so.
 
 ## The three things you can do
 
@@ -67,13 +73,20 @@ Nothing is published. Run it as often as you like.
 
 ### 2. Update the bot
 
+Two different jobs, and only one of them is tied to a release.
+
+**Changing how it behaves** — its instructions, model, temperature — is independent of the book and
+can be done whenever:
+
 ```sh
-cd book && ./build.sh                              # regenerate bot/knowledge/
-cd ..
 python bot/scripts/configure_agent.py --dry-run    # what would change
 python bot/scripts/configure_agent.py              # do it
 python bot/scripts/test_agent.py                   # ask it something
 ```
+
+**Changing what it knows** belongs to a release. The same command does it, but run it *after*
+`release.sh`, not after a build — see §3. Running it mid-draft points the bot at chapters no teacher
+can read yet.
 
 `configure_agent.py` deletes every document in the Mistral library and re-uploads, because uploading
 is not idempotent: run it twice without the delete and the library holds two copies of every chapter,

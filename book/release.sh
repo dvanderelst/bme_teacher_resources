@@ -193,7 +193,17 @@ fi
 
 cat <<DONE
 
-==> published. The permanent links, unchanged from here on:
+==> published, and the documents are done. One step left, and it is not
+    automatic: the bot is still answering from the previous edition.
+
+      python bot/scripts/configure_agent.py
+
+    That pushes the knowledge set this release just committed to Mistral.
+    It is deliberately separate -- it needs an API key, it talks to a live
+    service, and it is the one step here that changes what teachers are
+    told rather than what they can download.
+
+==> the permanent links, unchanged from here on:
 
   read in a browser  $PAGES_URL
   download the PDF   https://github.com/$REPO/releases/latest/download/BmE-teacher-materials.pdf
