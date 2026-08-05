@@ -6,7 +6,7 @@
 | :--- | :--- |
 | mBot | The same robot as every other chapter. |
 | Bluetooth Dongle | A dongle for connecting the robot to a computer. Currently the recommended connection method. |
-| Whisker sensors | Two per robot for the obstacle avoidance challenge, one for wall following; more if a group extends the activity. These are ours rather than Makeblock's — the same form factor as a Makeblock sensor, with a flex sensor as the active part — so they cannot be bought anywhere. Write to us for a set: the addresses are under [Questions, corrections, and help](#questions-corrections-and-help). Treat them as consumable: they are damaged by creasing, by bending the wrong way, and slowly by oxidation. |
+| Whisker sensors | Two per robot for the obstacle avoidance challenge, one for wall following. Two is the ceiling: the block that reads them only offers two ports. Bring spares — these break. These are ours rather than Makeblock's — the same form factor as a Makeblock sensor, with a flex sensor as the active part — so they cannot be bought anywhere. Write to us for a set: the addresses are under [Questions, corrections, and help](#questions-corrections-and-help). Treat them as consumable: they are damaged by creasing, by bending the wrong way, and slowly by oxidation. |
 | 3D printed brackets | Brackets for mounting sensors on the front of the robot in different orientations. |
 | Lego compatible blocks | Blocks compatible with the robot's screw holes, giving students freedom in how they angle the whiskers. |
 | Gaffer's tape | Versatile tape useful throughout the activities. |
@@ -52,7 +52,6 @@ The educational standards applicable to this lesson are listed in the [Education
 In this lesson students investigate touch: first their own, then a rat's, then a robot's. Touch is the sense that requires contact, and that constraint shapes everything about how animals use it. An eye or an ear can be pointed at something far away. A whisker has to be put on the object, which means the animal has to move — and moving the sensor to gather information is the thread that runs through this whole lesson.
 
 The lesson has two parts. In Part 1 students measure the spatial acuity of their own skin, learn what the different receptors in it are for, and see how a rat solves the same problem with whiskers. In Part 2 they give a robot whiskers made from flex sensors, calibrate them, and choose one of two challenges to build.
-
 
 ## Part 1: Touch in animals
 
@@ -191,33 +190,63 @@ The point to land is that the distortion is the class's own data made visible. T
 
 ## Part 2: Giving the robot whiskers
 
+Students often find the idea odd — whiskers belong on animals, and a robot has cameras. It is worth saying at the outset that mechanical whiskers are not a novelty borrowed from biology for this lesson. They are among the oldest sensors in robotics, for the same reasons they are useful to a rat: a wire and a switch are cheap, they need almost no computation, and they report an obstacle that is already touching you.
+
+Rodney Brooks's *Genghis*, a six-legged walking robot built at MIT around 1991, is the standard example. It navigated rough ground with a set of simple behaviours layered on top of each other, and one of those layers was called, plainly, "whiskers".
+
+The case for them is not only that they are cheap. A whisker works where the sensors we usually reach for do not. Vision needs light, and a robot in a pipe, a burrow, a collapsed building or an unlit room has none. Sonar and cameras both struggle in dust and smoke. Under any of those conditions, feeling your way is not a poor substitute for looking — it is the sensible thing to do, which is exactly why the animals that live in the dark evolved whiskers rather than better eyes.
+
+There is a second motivation, which turns the lesson around. Building a robot with whiskers is also a way of *studying* whiskers: a physical model whose parameters you can change, and which tells you something about the animal when it fails. Pearson and colleagues make both arguments, and their review is the place to send a teacher who wants more than this chapter has room for.
+
+> Pearson, M. J., Mitchinson, B., Sullivan, J. C., Pipe, A. G., and Prescott, T. J. (2011). Biomimetic vibrissal sensing for robots. *Philosophical Transactions of the Royal Society B* **366**(1581), 3085–3096. [doi:10.1098/rstb.2011.0164](https://doi.org/10.1098/rstb.2011.0164). Not open access.
+
 ## The flex sensor
 
-The robot's whisker is a flex sensor: a thin strip whose electrical resistance changes as it bends. Flat, it is about 10 kΩ; bending raises the resistance. Mounted so that it projects forward and to the side, it does exactly what a vibrissa does — the tip meets the object, the strip bends along its length, and the change is read at the anchored end.
+The robot's whisker is a flex sensor: a thin strip whose electrical resistance changes as it bends. Flat, it is about 10 kΩ; bending raises the resistance. Mounted so that it projects forward and to the side, it meets an obstacle tip-first and bends, and the bending is what the robot reads.
 
-This makes it a much better model of a whisker than a switch would be. A switch reports contact or no contact. A flex sensor reports *how much* it is bent, which is a graded measure of deflection, and that is closer to what the follicle actually gives the animal.
-
-> **Warning**
->
-> Flex sensors are fragile in a specific way, and students will destroy them if not told.
->
-> They bend in **one direction only**. Bending the wrong way damages them.
->
-> They must not be **creased or sharply folded**. A crease is permanent and the sensor is finished.
->
-> Mount so that the bending region is free to flex, and do not tape over it. Seat the connector fully and provide strain relief, so the sensor is not being worked at the plug every time the robot moves.
-
-## Reading a whisker in mBlock
-
-A whisker plugs into an RJ25 port and is read with the **`light sensor [port] light intensity`** block, choosing the whisker's port from the block's dropdown. Not the sonar block, not the line follower block. The block comes from an extension, which has to be added in mBlock before it appears.
-
-That block only offers **ports 3 and 4**, so those are the two the whiskers go in. With one whisker either will do; the obstacle avoidance challenge needs both, which uses up both of the mBot's analogue ports.
-
-Reading a whisker with the light sensor block is not a workaround; it is what the sensor is. The board presents a varying resistance to the port exactly as a light-dependent resistor does, so mBlock's light sensor block reads it correctly and the whisker lives under the same port restrictions as a light sensor would.
+This makes it a far better model of a whisker than a switch would be. A switch reports contact or no contact. A flex sensor reports *how much* it is bent — a graded measure of deflection, which is much closer to what the follicle gives the animal than a yes-or-no would be.
 
 > **Note**
 >
-> The value **goes down** when the whisker bends. This is the opposite of what everyone expects, students and teachers alike, and it is correct: bending the sensor reduces the number mBlock reports. An unbent whisker reads somewhere around 300, and bending it takes the reading down from there.
+> There is one place where the copy is not a copy, and it is worth pointing out rather than glossing over, because it is the sort of thing a sharp student notices.
+>
+> An animal's whisker senses nothing along its length. The shaft is dead, and every receptor sits at the base. The flex sensor is the other way round: the strip *is* the sensing element, and it responds to bending anywhere along itself. The robot's whisker is sensitive along its whole length; the rat's is sensitive at one end only.
+>
+> What the two share is the thing that matters for this lesson — a slender probe that deflects on contact, and a deflection converted into a signal. Where they differ, the robot is arguably doing the easier thing.
+
+> **Warning**
+>
+> Flex sensors are fragile in specific ways, and a class will destroy them if not told.
+>
+> They bend in **one direction only** — away from the metallic side. Bent the other way, they are damaged.
+>
+> They must not be **creased or sharply folded**. A crease is permanent and the sensor is finished.
+>
+> Mount so the bending region is free to flex, and do not tape over it. Seat the connector fully and provide strain relief, so the sensor is not worked at the plug every time the robot moves.
+>
+> **Between lessons they live flat, in an airtight box with a desiccant sachet.** The metallic layer oxidises, and a set left in a drawer over a summer will read differently, or not at all. This one is invisible until it has already happened.
+
+### Making the whisker longer
+
+The flex sensor is only about 10 cm long, which is a short whisker for a robot the size of an mBot: it detects the wall at the moment the robot has more or less arrived at it.
+
+Reach is extended by taping a strip of cardboard to the end of the sensor with painter's tape — painter's tape because it peels off again without taking the sensor with it. The cardboard does no sensing, so bending happens only in the 10 cm that can bend, but the robot now meets obstacles further out and has time to react.
+
+This is worth pointing out to students rather than doing for them, because it accidentally rebuilds the animal's arrangement. A cardboard extension is a dead length of whisker that transmits force back to a sensing region nearer the base — which is what a vibrissa is. The trick is also the tuning knob for the whole activity: how long the cardboard is, how stiff it is, and where it is taped all change how the whisker bends and therefore how early and how strongly the robot reacts. Groups that fiddle with this get better robots than groups that do not.
+
+## Reading a whisker in mBlock
+
+A whisker plugs into an RJ25 port and is read with the **`light sensor [port] light intensity`** block, choosing the whisker's port from the block's dropdown. Not the sonar block, not the line follower block. That block lives in the same light-and-sound extension as the sound sensor blocks, so if you have run the sound localization lesson it is already installed; if not, add the extension in mBlock first or the block will not be there to find.
+
+The block offers **ports 3 and 4** and no others, so those are the two the whiskers go in. One whisker can use either. Two whiskers use both, and that is the robot's limit.
+
+> **Note**
+>
+> Do not read too much into the block being called *light sensor*. The whisker is not measuring light. Both sensors happen to work by changing their resistance, and this block reads whatever resistance is on the port and reports a number — the label reflects what the block was written for, not what is plugged into it. The only consequence for the lesson is the one above: the whisker inherits the light sensor's ports.
+
+> **Note**
+>
+> The value **goes down** when the whisker bends. This is the opposite of what you might expect, students and teachers alike, and it is correct: bending the sensor reduces the number mBlock reports. An unbent whisker reads somewhere around 300, and bending it takes the reading down from there.
 >
 > *Around* 300, because whiskers vary. Two sensors sitting untouched on the same robot will not report the same number, which is why each one is calibrated separately and why left and right get their own thresholds. A threshold copied from another group's robot, or from another whisker on the same robot, will not work.
 >
@@ -278,12 +307,6 @@ Otherwise: drive forward
 
 This is a different kind of program from the first challenge, and the difference is worth naming for students. Obstacle avoidance reacts to an event. Wall following runs a continuous feedback loop, making small corrections against a target it never quite settles on — which is much closer to how an animal actually uses a whisker, and also why it is the harder of the two to tune.
 
-### Extension: more whiskers
-
-Animals have arrays, not pairs. Can students improve their robot by adding whiskers?
-
-This is an extension to a challenge that already works, not a third challenge, and it is deliberately open-ended. It should be tied back to both sides of the lesson: to the biology, where more whiskers and denser receptors mean finer spatial resolution, and to the engineering, where every added sensor is another thing to calibrate and another branch in the code. That trade-off is real for the rat too.
-
 ## Troubleshooting
 
 | Problem | Likely cause | What to try |
@@ -300,14 +323,14 @@ This is an extension to a challenge that already works, not a third challenge, a
 | In the animal | In the robot | The connection |
 | :--- | :--- | :--- |
 | The shaft bends on contact | The flex sensor bends on contact | Both turn a physical deflection into a signal |
-| Sensing happens at the follicle | Resistance is read at the connector | Both measure the bend at the anchored end, not the tip |
+| Sensing happens at the follicle; the shaft is dead | The strip itself is the sensor, along its whole length | The one place the robot is *not* a copy — see the note under The flex sensor |
 | Left and right whiskers compared | Left and right thresholds compared | Both use two sides to decide which way to go |
 | Turn away from the side touched | Contact on the left, turn right | The same rule, arrived at independently |
 | Wall following by whisker contact | Wall following by threshold loop | Both keep just enough contact to stay near the surface |
-| An array of whiskers | Several flex sensors | More sensors, finer spatial picture, more to calibrate |
+| An array of whiskers, dozens of them | Two, and no room for a third | Where the comparison runs out: the rat's spatial picture is built from many whiskers at once, and the robot has left and right |
 | Whisking | The robot moving through space | Both gather information by moving the sensor |
 
-The last row is where the comparison breaks down, and it is worth saying so. The robot moves its whole body to bring its whiskers to things. A rat moves its whiskers independently of its head, several times a second, and can therefore examine something without approaching it. That is a real difference in capability, not just in degree.
+The last row is the one to dwell on. The robot moves its whole body to bring its whiskers to things. A rat moves its whiskers independently of its head, several times a second, and can therefore examine something without going to it. That is a difference in capability, not just in degree — and it is the reason the robot has to drive into a wall to learn the wall is there.
 
 ## Common misconceptions
 
