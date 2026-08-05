@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1680 700" width="1680" height="700">
+  <!--
+    Whisker follicle: how a whisker is moved, and where it is sensed.
+    Source drawing for touch-and-whiskers-follicle.png. Edit this, not the PNG.
+    Re-render with book/content/images/src/render.sh, which runs inkscape at
+    300 dpi. Beware: XML forbids a double hyphen inside a comment, so the flags
+    cannot be written out here.
+
+    Drawn for the Touch and Whiskers chapter rather than reusing a published
+    figure. Anatomy follows Grant and Goss (2021), Mammal Review 52:148, the
+    "How do whiskers work?" section, in three respects:
+
+      * the intrinsic muscle is a SLING, anchored behind the follicle. It pulls
+        the deep end of the follicle backwards, and because the follicle pivots
+        near the skin surface the shaft outside the skin swings the other way,
+        forwards. Getting this backwards is the obvious mistake and this drawing
+        made it first time round.
+      * the pivot sits close to the surface, so it is marked.
+      * receptors in the follicle feed superficial and deep vibrissal nerves,
+        which coalesce into the infraorbital nerve and reach the brain via the
+        trigeminal. The nerve is drawn leaving the base for that reason.
+
+    Schematic and deliberately not to scale.
+  -->
+  <defs>
+    <style>
+      .lbl   { font-family: "DejaVu Sans", sans-serif; font-size: 25px; fill: #1a1a1a; }
+      .lbli  { font-family: "DejaVu Sans", sans-serif; font-size: 23px; font-style: italic; fill: #444; }
+      .panel { font-family: "DejaVu Sans", sans-serif; font-size: 29px; font-weight: bold; fill: #1a1a1a; }
+      .lead  { stroke: #1a1a1a; stroke-width: 2; fill: none; }
+      .skin  { fill: #f2ded6; stroke: #8a7268; stroke-width: 2.5; }
+      .epi   { fill: #e2c4b8; stroke: #8a7268; stroke-width: 2.5; }
+      .foll  { fill: #cbb49f; stroke: #6b5a49; stroke-width: 3; }
+      .shaft { fill: #3b3128; stroke: #241d16; stroke-width: 2; }
+      .musR  { fill: #dda3a3; stroke: #8f4b4b; stroke-width: 2.5; }
+      .musC  { fill: #b04f4f; stroke: #6f2f2f; stroke-width: 2.5; }
+      .obj   { fill: #d9d9d9; stroke: #555; stroke-width: 3; }
+      .arrow { stroke: #1a1a1a; stroke-width: 3.5; fill: none; }
+      .nerve { stroke: #c8960c; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .nervT { stroke: #c8960c; stroke-width: 7; fill: none; stroke-linecap: round; }
+      .pivot { fill: #ffffff; stroke: #1a1a1a; stroke-width: 3; }
+      .ghost { stroke: #9a9a9a; stroke-width: 4; fill: none; stroke-dasharray: 12 10; }
+      .shaftS{ stroke: #3b3128; fill: none; stroke-linecap: round; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+
+    <!-- follicle, its nerve supply and its receptors; reused by every panel -->
+    <g id="follicle">
+      <g class="nerve">
+        <path d="M 244,424 Q 256,486 278,540"/>
+        <path d="M 244,464 Q 258,500 278,540"/>
+        <path d="M 316,424 Q 304,486 282,540"/>
+        <path d="M 316,464 Q 302,500 282,540"/>
+        <path d="M 262,500 L 276,540"/>
+        <path d="M 298,500 L 284,540"/>
+      </g>
+      <path class="nervT" d="M 280,540 L 280,600"/>
+      <rect class="foll" x="252" y="330" width="56" height="180" rx="26"/>
+      <g fill="#2f6f9f" stroke="#1d4a6b" stroke-width="2">
+        <circle cx="244" cy="424" r="9"/><circle cx="244" cy="464" r="9"/>
+        <circle cx="316" cy="424" r="9"/><circle cx="316" cy="464" r="9"/>
+        <circle cx="262" cy="500" r="9"/><circle cx="298" cy="500" r="9"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- ============ PANEL A : muscle relaxed, whisker back ============ -->
+  <g transform="translate(0,0)">
+    <text class="panel" x="40" y="46">A · Muscle relaxed</text>
+
+    <rect class="skin" x="40" y="330" width="480" height="270"/>
+    <rect class="epi"  x="40" y="330" width="480" height="34"/>
+
+    <!-- the sling, anchored behind the follicle: stretched long and thin -->
+    <path class="musR" d="M 88,340 Q 200,414 348,482 Q 342,510 322,508 Q 168,442 66,368 Z"/>
+
+    <g transform="rotate(-26, 280, 347)"><use xlink:href="#follicle"/>
+      <path class="shaft" d="M 266,347 L 275,58 L 285,58 L 294,347 Z"/>
+    </g>
+
+    <circle class="pivot" cx="280" cy="347" r="10"/>
+
+    <text class="lbl" x="336" y="104">whisker shaft</text>
+    <line class="lead" x1="330" y1="112" x2="238" y2="190" marker-end="url(#ah)"/>
+
+    <text class="lbl" x="330" y="306">skin surface</text>
+    <line class="lead" x1="470" y1="316" x2="470" y2="336" marker-end="url(#ah)"/>
+
+    <text class="lbli" x="150" y="586">muscle, slack</text>
+  </g>
+
+  <!-- ============ PANEL B : muscle contracted, whisker forward ============ -->
+  <g transform="translate(560,0)">
+    <text class="panel" x="40" y="46">B · Muscle contracted</text>
+
+    <rect class="skin" x="40" y="330" width="480" height="270"/>
+    <rect class="epi"  x="40" y="330" width="480" height="34"/>
+
+    <!-- the sling, shortened and thickened: it hauls the deep end backwards -->
+    <path class="musC" d="M 92,338 Q 152,410 212,470 Q 190,514 156,490 Q 106,428 62,370 Z"/>
+
+    <g transform="rotate(26, 280, 347)"><use xlink:href="#follicle"/>
+      <path class="shaft" d="M 266,347 L 275,58 L 285,58 L 294,347 Z"/>
+    </g>
+
+    <circle class="pivot" cx="280" cy="347" r="10"/>
+
+    <!-- what the muscle does, and what the whisker therefore does -->
+    <path class="arrow" d="M 236,486 Q 190,470 158,452" marker-end="url(#ah)"/>
+    <text class="lbli" x="196" y="562">the base is pulled back</text>
+
+    <path class="arrow" d="M 118,196 Q 176,116 292,100" marker-end="url(#ah)"/>
+    <text class="lbl" x="46" y="268">so the whisker</text>
+    <text class="lbl" x="46" y="300">swings forward</text>
+  </g>
+
+  <!-- ============ PANEL C : contact, bending, sensing at the base ============ -->
+  <g transform="translate(1120,0)">
+    <text class="panel" x="40" y="46">C · The whisker touches</text>
+
+    <rect class="skin" x="40" y="330" width="480" height="270"/>
+    <rect class="epi"  x="40" y="330" width="480" height="34"/>
+
+    <rect class="obj" x="372" y="56" width="60" height="244" rx="6"/>
+
+    <!-- Where the whisker would be if the obstacle were not there. Drawn AFTER
+         the obstacle, deliberately: the whole point is that it carries on into
+         the space the obstacle occupies, so it has to be visible across it. -->
+    <path class="ghost" d="M 280,347 L 384,62"/>
+
+    <g transform="rotate(20, 280, 347)"><use xlink:href="#follicle"/></g>
+    <circle class="pivot" cx="280" cy="347" r="10"/>
+    <!-- The bend belongs at the FAR end, not at the base. Whiskers taper, so
+         they are far more flexible towards the tip (Grant and Goss 2021), which
+         means the shaft leaves the follicle going more or less straight and does
+         its bending out where it meets the obstacle. Two strokes rather than a
+         tapered outline, so the S-curve stays easy to adjust: the proximal one
+         is thicker, the distal one thinner, which also gives the taper.
+         The first version of this drawing bent the shaft sharply at the base and
+         ran it straight to the wall, which is the wrong way round twice over. -->
+    <path class="shaftS" stroke-width="21" d="M 280,347 C 318,246 342,202 362,164"/>
+    <path class="shaftS" stroke-width="12" d="M 362,164 C 374,126 352,90 318,68"/>
+
+    <text class="lbl" x="46" y="112">nothing is sensed</text>
+    <text class="lbl" x="46" y="144">along the shaft</text>
+
+    <text class="lbl" x="42" y="250">the bend is felt</text>
+    <text class="lbl" x="42" y="282">here, at the base</text>
+    <path class="lead" d="M 168,296 Q 208,384 248,436" marker-end="url(#ah)"/>
+
+    <text class="lbl" x="330" y="576">to the brain</text>
+    <line class="lead" x1="326" y1="566" x2="286" y2="552" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- ============ shared key ============ -->
+  <g transform="translate(28,640)">
+    <circle cx="14" cy="14" r="9" fill="#2f6f9f" stroke="#1d4a6b" stroke-width="2"/>
+    <text class="lbl" x="36" y="23">mechanoreceptors</text>
+
+    <path class="nervT" d="M 286,14 L 316,14"/>
+    <text class="lbl" x="330" y="23">vibrissal nerve</text>
+
+    <rect x="566" y="4" width="26" height="20" rx="8" class="foll"/>
+    <text class="lbl" x="604" y="23">follicle</text>
+
+    <rect x="726" y="4" width="26" height="20" rx="6" class="musC"/>
+    <text class="lbl" x="764" y="23">muscle</text>
+
+    <circle class="pivot" cx="906" cy="14" r="9"/>
+    <text class="lbl" x="928" y="23">pivot</text>
+
+    <rect x="1048" y="4" width="26" height="20" class="shaft"/>
+    <text class="lbl" x="1086" y="23">whisker — dead keratin, no nerves in it</text>
+  </g>
+</svg>
