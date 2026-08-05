@@ -374,7 +374,7 @@ The final comparison deserves emphasis. The robot moves its entire body to bring
 
 <!-- D: what is left on this chapter.
 
-     1. The chapter has not been taught FROM. The activities themselves have been run with students -- that is where the module document and the whisker lab data came from -- but nobody has yet worked through this text as written and checked that its port numbers, thresholds, calibration steps and troubleshooting table match what a robot actually does.
+     1. A read-through against a robot, once, to catch transcription errors. The lesson itself is not in question -- it has been taught, and every number in here came from someone who taught it. What has not happened is anyone following THIS PROSE with a robot on the desk, which is how you catch a port named wrongly or a step described in the wrong order. An editorial check, not a validation.
      2. Required materials chapter entries beyond the whisker sensors, with quantities per group.
      3. A photograph of a robot with whiskers mounted. In TODO.md 5.0 as well, since it needs a robot in front of a camera.
      4. The standards section stays a placeholder for now, deliberately. -->
