@@ -200,6 +200,14 @@ There is a second motivation, which turns the lesson around. Building a robot wi
 
 > Pearson, M. J., Mitchinson, B., Sullivan, J. C., Pipe, A. G., and Prescott, T. J. (2011). Biomimetic vibrissal sensing for robots. *Philosophical Transactions of the Royal Society B* **366**(1581), 3085–3096. [doi:10.1098/rstb.2011.0164](https://doi.org/10.1098/rstb.2011.0164). Not open access.
 
+Their robot is worth showing before students build anything of their own.
+
+[Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI)
+
+Shrewbot's whiskers are *active*: they sweep back and forth rather than sitting still, which is whisking done in hardware. Ask students to watch the head rather than the whiskers. When the robot touches something, it turns its head to bring the sweeping whiskers onto the object and go over it again — it is not waiting to be touched, it is deciding where to touch next, and that is the whole of active sensing in one movement.
+
+It is also the thing the robot in this lesson cannot do. Our whiskers are bolted to the chassis, so the only way to aim them is to drive the whole robot. Worth planting now, because the point comes back at the end of the chapter.
+
 ## The flex sensor
 
 The robot's whisker is a flex sensor: a thin strip whose electrical resistance changes as it bends. Flat, it is about 10 kΩ; bending raises the resistance. Mounted so that it projects forward and to the side, it meets an obstacle tip-first and bends, and the bending is what the robot reads.
@@ -243,6 +251,14 @@ The block offers **ports 3 and 4** and no others, so those are the two the whisk
 > **Note**
 >
 > Do not read too much into the block being called *light sensor*. The whisker is not measuring light. Both sensors happen to work by changing their resistance, and this block reads whatever resistance is on the port and reports a number — the label reflects what the block was written for, not what is plugged into it. The only consequence for the lesson is the one above: the whisker inherits the light sensor's ports.
+
+> **Note**
+>
+Here is the whole of reading two whiskers. It does nothing with the numbers yet; it simply puts each whisker into a variable, once per loop, so that everything afterwards can talk about `whisker1` and `whisker2` rather than repeating the sensor block.
+
+![The smallest useful whisker program: read each whisker into a variable, forever. Port 3 and port 4 are the only two the light sensor block offers, so a two-whisker robot uses both. Naming the variables is not decoration — every program later in this chapter is written in terms of them, and a threshold comparison is far easier to debug when the reading has a name.](images/touch-and-whiskers-read-two.png)
+
+Run this and watch the variables on the stage while bending each whisker by hand. That is also the calibration step below, done informally: you are reading off the resting value and the bent value before deciding anything.
 
 > **Note**
 >
@@ -294,6 +310,15 @@ If right < threshold: turn left
 ```
 
 Keeping the left and right readings in separate variables with obvious names makes this far easier to debug than nesting the comparisons.
+
+A worked version, building straight on the reading program from earlier:
+
+![One way to write the obstacle avoidance challenge. The two thresholds are set once at the start and then never mentioned again, which is what makes this program easy to retune: a robot reacting too late or too eagerly is fixed by editing two numbers at the top rather than hunting through the logic. Note that the two thresholds are different — they belong to two different whiskers, and there is no reason two sensors should agree.](images/touch-and-whiskers-avoid-obstacles.png)
+
+<!-- TODO: two problems with this screenshot, both needing a re-export rather than anything I can fix here.
+     1. THE PROGRAM DOES NOT WORK AS SHOWN. The first condition reads `whisker1 > threshold1 and whisker2 > whisker2`. The second half compares whisker2 with itself, which is never true, so the "drive forward" branch can never run and the robot will never move off. It should be `whisker2 > threshold2`. Easy to miss on screen and impossible for a teacher to debug from a picture, so this must be corrected before the chapter ships.
+     2. The numbers disagree with the text. This program uses thresholds of 400 and 375, and a threshold has to sit between the resting and bent readings -- but the Note above tells teachers an unbent whisker reads "somewhere around 300", which would put both thresholds above resting and make the forward branch fail for a second reason. Either the ~300 figure is wrong or these thresholds are from a robot whose whiskers rest much higher. Whichever it is, the two need to agree, because a teacher who calibrates and gets 300 will conclude the lesson is wrong.
+     Worth adding while you are re-exporting: the book links a downloadable .mblock for every other robot activity, hosted on planet.mblock.cc with a local mirror in content/files/programs/. These two are pictures only, so students have to retype them. -->
 
 ### Challenge 2: Following a wall
 
