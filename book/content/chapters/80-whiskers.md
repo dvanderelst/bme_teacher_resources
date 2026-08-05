@@ -1,11 +1,5 @@
 # Touch and Whiskers
 
-<!-- D: DRAFT for review. Written from the module document at bme_agent/agent/agent_files/documents/touch_whiskers.md, which is the most complete account of this lesson we have, plus the summer-program module folder at ITEST/summer-program/modules/touch/. Nothing here has been re-checked against a robot. Comments welcome in the usual way. -->
-
-<!-- D: RESOLVED, was the blocking question. The robot is the standard mBot, four ports, like every other chapter -- the Ranger in the module document was wrong. The whisker is our own sensor: a board in the same form factor as a Makeblock sensor (PCB plus RJ25), with a SparkFun/Adafruit flex sensor as the active element (datasheet https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/FLEX%20SENSOR%20DATA%20SHEET%202014.pdf, part https://www.adafruit.com/product/182). It is read in mBlock with the light sensor block, which needs the extension installed, so it lives under the same port constraints as a light sensor rather than on ports 6-10.
-     Three practical points from you, all folded into Part 2: bend one way only, away from the metallic side; reach extends past the flex sensor's ~10 cm with cardboard strips and painter's tape, which also changes how the whisker bends; and the metallic layer oxidises, so they are stored flat in an airtight box with desiccant.
-     Still open in Part 2: which ports the light sensor block actually offers on the mCore, and whether two whiskers plus anything else will fit. -->
-
 ## Materials
 
 | Item | Description |
@@ -28,8 +22,6 @@
 | Airtight box and desiccant | Where the whisker sensors live between lessons, lying flat. |
 
 <!-- TODO: add all of this to the Required materials chapter as well, with quantities per group. The supplier question is answered and the answer is us: the whisker sensors are custom and cannot be bought from Makeblock, so that chapter needs to say plainly how a teacher gets a set, and the materials list should stop implying everything is orderable. Worth deciding what we tell a teacher who finds this book without knowing us -- build instructions for the board, or a note to write to the address in the colophon? -->
-
-<!-- D: both methods now written up under "Two ways to make the points" -- calipers first, since that is what we actually use, with brainmapper's card-and-toothpick pokers as the alternative for a class without enough calipers. A photograph of either would still help. -->
 
 ## Prerequisites
 
@@ -62,7 +54,6 @@ In this lesson students investigate touch: first their own, then a rat's, then a
 The lesson has two parts. In Part 1 students measure the spatial acuity of their own skin, learn what the different receptors in it are for, and see how a rat solves the same problem with whiskers. In Part 2 they give a robot whiskers made from flex sensors, calibrate them, and choose one of two challenges to build.
 
 <!-- TODO: the module folder has "Whisking with Robots.mp4". The Sonar chapter opens with three video links and that works well; this chapter should probably open the same way. Check whether the video is ours to distribute, and if it is, decide where it lives -- content/files/ like the other media, or a link if it is hosted somewhere already. -->
-<!-- Response: I will link videos as am leaving comments -->
 
 ## Part 1: Touch in animals
 
@@ -93,8 +84,6 @@ The pattern is worth drawing out rather than leaving students to memorise four n
 
 ### A whisker senses at its base
 
-<!-- D: expanded from both papers you left in documentation_resources -- Grant and Goss (2021) for the anatomy and the taper, and Mongeau and Rodgers (2026), "Active sensing: how the rat moves its whiskers", Current Biology 36:R102, for the array, the equal-angle result and foveal whisking. The Current Biology piece is a Dispatch on Bresee, Luo et al. in the same issue; if we cite anything it should probably be the primary paper rather than the commentary, which I have not got. Note it is Elsevier and NOT open access, so no figures from it. Grant and Goss is CC BY and its figures could be used. -->
-
 Nearly every mammal has whiskers. Humans are one of the few exceptions, and the reason is worth pausing on before students meet a rat: we investigate objects by handling them, with fingertips that have the finest spatial acuity on the body — which is exactly what they will have measured in Activity 1. An animal that cannot pick things up needs another way to feel them.
 
 A whisker, or vibrissa, is a specialised hair — stiffer than fur, thicker at the base, tapered along its length, and slightly curved. Like any hair, the shaft itself is dead keratin with no nerves in it. Nothing is sensed along the whisker.
@@ -108,8 +97,6 @@ The tip touches. The base senses. Students find this genuinely surprising, and i
 From the follicle, superficial and deep vibrissal nerves carry the signal away, join to form the infraorbital nerve, and reach the brain through the trigeminal — the same nerve that serves the rest of the face. The orderly grid on the snout is then preserved the whole way up: as barrelettes in the brainstem, barreloids in the thalamus, and finally the barrels in the cortex. A single whisker can be followed from the hair to a cluster of cells, which is why this system became a workhorse of sensory neuroscience.
 
 An array matters as much as an individual whisker. A rat has some fifty of them, in a stereotyped pattern of five rows that is consistent enough between animals that individual whiskers can be identified and named. Different whiskers bend differently against the same object, so what the animal gets is a spatial pattern of deflections rather than one yes-or-no signal. The brain reflects the investment: in the somatosensory cortex each whisker has its own cluster of cells, called a barrel, and the barrels are laid out in the same arrangement as the whiskers on the face.
-
-<!-- TODO: figure. A whisker as a lever: shaft, follicle, receptors at the base, and an arrow showing the bending moment. Drawn rather than photographed. Note the images/ naming convention -- existing files are <chapter-slug>-<hash>.png, so these would be whiskers-*.png. There is a DrawingWhiskers.odg in WorkStuff which may already be this. -->
 
 ### Whisking is active sensing
 
@@ -126,11 +113,6 @@ That sounds like a limitation and turns out to be an elegant piece of engineerin
 There is a second consequence, and it is the one worth showing students. As the whiskers sweep forward, their tips converge — the same array covers a smaller patch of space, so the sampling gets denser exactly where the animal is about to touch something. It has been called *foveal whisking*, by analogy with the fovea in the eye, though the better analogy is a microscope: turning the zoom knob shrinks the field of view and concentrates the detail. The rat can do this on demand, which the retina's fixed geometry cannot.
 
 ![How a whisker is moved, and where it is sensed. **A**, the muscle is relaxed and the whisker lies back. **B**, the muscle contracts, pulls on the follicle, and swings the whisker forward; repeating that cycle is whisking. **C**, the whisker runs into something. The dashed line is where it would have carried on had the obstacle not been there. Note where the bending happens: a whisker tapers, so it is stiffest at the base and most flexible near the tip, and the shaft therefore leaves the follicle almost straight and does its bending out at the far end, which curls away from the obstacle. But that far end is dead keratin with no nerves in it, so nothing is sensed where the contact actually happened. The mechanoreceptors are clustered around the follicle at the base, and the bend is what they measure. Schematic, and not to scale.](images/touch-and-whiskers-follicle.png)
-
-<!-- D: the mechanism above (sling behind the follicle, pivot near the surface, whisking rates, the vibrissal-to-trigeminal path, barrelettes/barreloids/barrels, ten times the innervation in aquatic mammals) all comes from Grant and Goss (2021), "What can whiskers tell us about mammalian evolution, behaviour, and ecology", Mammal Review 52:148-163, doi 10.1111/mam.12253 -- the copy you put in documentation_resources/. Worth noting for later: unlike the seal paper, that one IS CC BY, so its figures could be reproduced with attribution if we ever want one. It also has two things I have not used and you may want to: whiskers taper, so they are more flexible towards the tip, which is thought to help with texture; and humans still carry vestigial whisker muscles in the upper lip, which is a good line for a classroom. Add it to the links chapter too. -->
-
-<!-- D: drawn rather than borrowed. The seal figure was panel g of figure 1 of Gupta et al., npj Flexible Electronics 10:62 (2026), https://doi.org/10.1038/s41528-026-00565-1 -- open access, but Crossref and OpenAlex both report it CC BY-NC-ND 4.0, and NoDerivatives forbids exactly what we wanted to do with it (lift one panel out and crop off its label). So this is ours: source at images/src/touch-and-whiskers-follicle.svg, rendered by images/src/render.sh. Edit the SVG, re-run that, commit both. It also absorbs the whisker-as-lever figure that was wanted under "A whisker senses at its base", which is why panel C is there.
-     Still worth your eye: (1) the receptors are drawn as a ring of dots around the follicle, which is schematic to the point of being a cartoon -- if that overstates what is known, say so and I will change it. (2) Panel C shows the shaft bending but not the object's position along it; if radial distance matters for the lesson, that could be a fourth panel. (3) Colours are chosen to survive greyscale printing, but nobody has printed it yet. -->
 
 [Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ) — watch the left panel. Taking the head motion out is what makes the point: what is left is the whiskers being *aimed*, independently of where the animal is walking.
 
@@ -206,12 +188,7 @@ The six distances go into the dropdown boxes at [brainmapper.org/experiment](htt
 
 The point to land is that the distortion is the class's own data made visible. The brain allocates cortex in proportion to acuity, not area, which is why the map of the body inside the head is not shaped like the body.
 
-<!-- D: dropped, per your comment -- the blindfolded human whisker activity (identifying cone/rectangle/sphere and ranking sandpaper by roughness) is gone, along with the sandpaper and blindfolds in the materials table. Its data lives on in ITEST/data_processing/WhiskerLab.xlsx if it is ever wanted back. One thing it was carrying that nothing else now does: students arrived at whisking themselves, by noticing they could not hold the whisker still. Part 2 now has to make that point rather than let them discover it -- worth a look when you read the Part 2 opening. -->
-
 ![The sensory homunculus: a human body redrawn with each part scaled to the amount of cortex devoted to feeling it rather than to its actual size. The hands, lips and tongue dominate; the trunk and legs almost disappear. This is the same shape a class's own two-point measurements produce. Photograph by Wikimedia Commons user Mpj29, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).](images/touch-and-whiskers-homunculus.png)
-
-<!-- D: licence checked and it is usable, with conditions. The file is CC BY-SA 4.0, own work by Commons user Mpj29 (File:Sensory Homunculus Figure (side view, black background).gif). ShareAlike does NOT reach the rest of the book: including a BY-SA work in a collection leaves the collection's own terms alone, so the chapter stays CC BY-NC and only this image is BY-SA, which is why the credit is in the caption rather than hidden in a footnote. Two conditions follow from that. It must not be ADAPTED -- crop it or recolour it and the result has to be released BY-SA and marked as changed -- so I have only converted GIF to PNG and scaled it, which is format-shifting rather than adaptation. And LICENSE section 3 needs a bullet: unlike everything else listed there, this one IS licensed to us, just on different terms from the rest.
-     One thing for you to decide rather than me: the model is nude and anatomically complete. It is a standard museum teaching object and the picture is not prurient, but this book goes into schools, and some districts are twitchy. Cropping to the upper body would solve it -- at the cost of triggering the ShareAlike clause above, which is manageable but needs doing properly. Your call. -->
 
 ## Part 2: Giving the robot whiskers
 
