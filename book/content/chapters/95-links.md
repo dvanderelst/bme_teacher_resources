@@ -36,10 +36,10 @@ Use this as a quick reference when checking school network access or preparing o
 ### Chapter 8: Kinesis and Taxis
 
 **External websites:**
-- [AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
-- [Kinesis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
-- [Taxis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=n02SW9fs_VU)
-- [Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
+- [Video: AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
+- [Video: Kinesis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
+- [Video: Taxis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=n02SW9fs_VU)
+- [Video: Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
 - [Video: kinesis 1](https://youtu.be/BGXWkXicTWg)
 - [Video: kinesis 2](https://youtube.com/shorts/lPVNrK8Hsgw?feature=share)
 - [Video: kinesis 3](https://youtube.com/shorts/m6It0r6OQFA?feature=share)
@@ -84,9 +84,9 @@ Use this as a quick reference when checking school network access or preparing o
 **External websites:**
 - [web page that lists the many applications of their sensors](https://maxbotix.com/blogs/blog/ultrasonic-sensor-applications) — Overview of real-world applications for sonar sensors.
 - [Sonar is also used to map the seafloor](https://oceanservice.noaa.gov/facts/sonar.html) — NOAA explanation of underwater sonar technology.
-- [Feeling the Force of Sperm Whales Ultrasound — BBC Earth](https://www.youtube.com/watch?v=tw7E7owEBm8)
-- [Bat echolocating and capturing moths](https://www.youtube.com/watch?v=MgRh_Q_xwys)
-- [A sonar parking sensor: Toyota's enhanced parking support](https://www.youtube.com/watch?v=BGd38676nF0)
+- [Video: Feeling the Force of Sperm Whales Ultrasound — BBC Earth](https://www.youtube.com/watch?v=tw7E7owEBm8)
+- [Video: Bat echolocating and capturing moths](https://www.youtube.com/watch?v=MgRh_Q_xwys)
+- [Video: A sonar parking sensor: Toyota's enhanced parking support](https://www.youtube.com/watch?v=BGd38676nF0)
 - [How Ultrasonic Sensors Work](https://maxbotix.com/blogs/blog/how-ultrasonic-sensors-work) — Technical explanation of ultrasonic sensor operation.
 - [Frontiers | Echolocation in Oilbirds and swiftlets](https://doi.org/10.3389/fphys.2013.00123) — Research article on echolocation in oilbirds and swiftlets.
 - [Functional Convergence in Bat and Toothed Whale Biosonars | Physiology](https://doi.org/10.1152/physiol.00008.2013) — Scientific paper comparing biosonar systems in bats and toothed whales.
@@ -104,9 +104,9 @@ Use this as a quick reference when checking school network access or preparing o
 **External websites:**
 - [brainmapper.org](https://brainmapper.org) — Two-point discrimination protocol and poker template, from the Max Planck Florida Institute for Neuroscience.
 - [brainmapper.org/experiment](https://brainmapper.org/experiment) — Where the six measured distances are entered to generate a homunculus.
-- [Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ)
-- [Harbour seal whiskers, in three minutes](https://www.youtube.com/watch?v=-ozBE6f3hrE) — Anatomy, the undulated shape, and a seal following a wake by touch alone.
-- [Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI) — A robot with actively sweeping whiskers and a moving head.
+- [Video: Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ)
+- [Video: Harbour seal whiskers, in three minutes](https://www.youtube.com/watch?v=-ozBE6f3hrE) — Anatomy, the undulated shape, and a seal following a wake by touch alone.
+- [Video: Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI) — A robot with actively sweeping whiskers and a moving head.
 - [Biomimetic vibrissal sensing for robots](https://doi.org/10.1098/rstb.2011.0164) — Pearson et al. (2011), the case for whiskers on robots. Not open access.
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — Licence of the sensory homunculus photograph.
 

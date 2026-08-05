@@ -112,9 +112,7 @@ There is a second consequence, and it is the one worth showing students. As the 
 
 ![How a whisker is moved, and where it is sensed. **A**, the muscle is relaxed and the whisker lies back. **B**, the muscle contracts, pulls on the follicle, and swings the whisker forward; repeating that cycle is whisking. **C**, the whisker runs into something. The dashed line is where it would have carried on had the obstacle not been there. Note where the bending happens: a whisker tapers, so it is stiffest at the base and most flexible near the tip, and the shaft therefore leaves the follicle almost straight and does its bending out at the far end, which curls away from the obstacle. But that far end is dead keratin with no nerves in it, so nothing is sensed where the contact actually happened. The mechanoreceptors are clustered around the follicle at the base, and the bend is what they measure. Schematic, and not to scale.](images/touch-and-whiskers-follicle.png)
 
-<!-- Let's make it clear that this is a link to a youtube video. And do the same for other links to youtube videos. -->
-
-[Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ) — watch the left panel. Taking the head motion out is what makes the point: what is left is the whiskers being *aimed*, independently of where the animal is walking.
+[Video: Rat whiskers moving, with the movement of the head subtracted](https://www.youtube.com/watch?v=d7rSsMZyThQ) — watch the left panel. Taking the head motion out is what makes the point: what is left is the whiskers being *aimed*, independently of where the animal is walking.
 
 This is the same idea as the [Sonar](#sonar) lesson in a different medium. A bat decides when to call and what to call, and so decides what its next echo will be about. A rat decides where its whiskers go, and so decides what its next contact will be about. In both cases the animal is not a passive receiver, and that control is much of what makes the sense useful.
 
@@ -124,16 +122,15 @@ The difference is range. A bat's decision reaches metres; a rat's reaches perhap
 
 **Rats and mice** use whiskers as a primary sense. They judge the width of a gap before entering it, tell rough surfaces from smooth, and locate objects relative to their own head — in the dark, in burrows, where vision has nothing to work with.
 
-<!-- Maybe we can include this image? https://en.wikipedia.org/wiki/Whiskers#/media/File:Sea-lion_seal_vibrissa.png -->
+![Two vibrissae side by side, at the same scale. **A**, a California sea lion's — a smooth cylinder. **B**, a harbour seal's — undulated along its whole length. The seal's shape is what stops the whisker shedding vortices and vibrating in its own wake as the animal swims, which is the difference between reading a fish's trail and drowning it out in self-made noise. Photograph by Murphy, Eberhardt, Calhoun, Mann and Mann (2013), [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/).](images/touch-and-whiskers-vibrissae.png)
 
 **Seals** use them in water. A harbour seal can follow the hydrodynamic trail left by a swimming fish: the disturbed water in its wake, which persists for many seconds. A seal with its eyes and ears covered can pick up such a trail and follow the fish's path. Seal whiskers are not smooth cylinders but wavy, undulating along their length, and this shape suppresses the vortices the whisker would otherwise shed as the seal swims. A smooth whisker would vibrate in its own wake and drown out the signal. The undulation is noise cancellation built into the shape of a hair.
-
 
 The investment in the sense shows in the wiring: aquatic mammals have roughly ten times as many nerve endings around a whisker follicle as land mammals do.
 
 Seals whisk as well, and recent work suggests why they bother. A whisker held forward is the more sensitive arrangement, but holding it there costs continuous muscular effort. Rather than pay that all the time, the seal keeps its whiskers back and sweeps them rhythmically instead — buying most of the sensitivity for a fraction of the energy. It is a trade-off students can appreciate directly, and the same one an engineer makes when deciding how often to poll a sensor.
 
-[Harbour seal whiskers, in three minutes](https://www.youtube.com/watch?v=-ozBE6f3hrE) — the anatomy, then the undulated shape, then the experiment itself: a blindfolded seal following the wake of a small remote-controlled submarine using nothing but touch.
+[Video: Harbour seal whiskers, in three minutes](https://www.youtube.com/watch?v=-ozBE6f3hrE) — the anatomy, then the undulated shape, then the experiment itself: a blindfolded seal following the wake of a small remote-controlled submarine using nothing but touch.
 
 > **Note**
 >
@@ -207,7 +204,7 @@ There is a second motivation, which turns the lesson around. Building a robot wi
 
 Their robot is worth showing before students build anything of their own.
 
-[Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI)
+[Video: Shrewbot: shrew whiskers inspire robot design](https://www.youtube.com/watch?v=oRgE3-niJSI)
 
 Shrewbot's whiskers are *active*: they sweep back and forth rather than sitting still, which is whisking done in hardware. Ask students to watch the head rather than the whiskers. When the robot touches something, it turns its head to bring the sweeping whiskers onto the object and go over it again — it is not waiting to be touched, it is deciding where to touch next, and that is the whole of active sensing in one movement.
 
@@ -326,8 +323,6 @@ A worked version, building straight on the reading program from earlier:
 
 [Open the mBlock project](https://planet.mblock.cc/project/8233137). If your school blocks the Makeblock site, [download `mBotWhiskerAvoidance.mblock`](files/programs/mBotWhiskerAvoidance.mblock) instead.
 
-
-
 ### Challenge 2: Following a wall
 
 Keep one whisker just barely in contact with the wall. Lose contact, turn slightly towards it; bend too far, turn slightly away.
@@ -384,4 +379,4 @@ The last row is the one to dwell on. The robot moves its whole body to bring its
      3. A photograph of a robot with whiskers mounted. In TODO.md as well, since it needs a robot in front of a camera.
      4. The standards section stays a placeholder for now, deliberately.
 
-     Settled: the resting reading is about 400, not 300; both programs now have local mirrors, and the project file for the avoidance example carries the corrected comparison. The homunculus photograph stays as it is, uncropped, which also keeps it clear of ShareAlike. -->
+     Settled: every YouTube link is now labelled as a video, matching the convention Kinesis and Taxis already used; the vibrissa comparison photograph is in, CC BY 2.5, credited in its caption. The resting reading is about 400, not 300; both programs now have local mirrors, and the project file for the avoidance example carries the corrected comparison. The homunculus photograph stays as it is, uncropped, which also keeps it clear of ShareAlike. -->

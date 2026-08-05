@@ -43,11 +43,11 @@ For more information, consult these resources:
 
 [Primer: fundamental types of animal spatial orientation and stimulus localization (.docx)](files/A_Primer_on_fundamental_types_of_animal_spatial_orientation_and_stimulus_localization.docx)
 
-[AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
+[Video: AP Biology Lab 11: Animal Behavior](https://www.youtube.com/watch?v=jSKkecFzD50)
 
-[Kinesis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
+[Video: Kinesis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=AAJNaoYKMbA&t=34s)
 
-[Taxis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=n02SW9fs_VU)
+[Video: Taxis (Animal Movement) — Animal Behaviour](https://www.youtube.com/watch?v=n02SW9fs_VU)
 
 > **Note**
 >
@@ -58,7 +58,7 @@ For more information, consult these resources:
 
 Show the pill bug experiment video below. Have students make observations and record what they notice and wonder. Ask them to identify testable questions, highlighting these as they are discussed. Also highlight vocabulary words students use to describe pill bug movement (random, faster, slower, etc.). Tell students they will explore an organism's movement toward an attractive source through a game-like activity, determining whether the data supports the given hypothesis.
 
-[Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
+[Video: Pill Bug Project 1 — the clip starts at 12:40](https://www.youtube.com/watch?v=IUjkRKEqKaE&t=760s)
 
 ## Testing hypotheses about kinesis and taxis
 

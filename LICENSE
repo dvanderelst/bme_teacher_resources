@@ -82,13 +82,20 @@ above does not extend to it:
     `book/content/files/`, and any other third-party document reproduced there;
     rights remain with their respective authors and publishers.
 
-  * The photograph of the sensory homunculus in the Touch and Whiskers chapter
-    (`book/content/images/touch-and-whiskers-homunculus.png`) is by Wikimedia
-    Commons user Mpj29 and is licensed **CC BY-SA 4.0**, not under the CC BY-NC
-    grant above. It is reproduced unaltered apart from conversion from GIF to
-    PNG and scaling. If you adapt that image, your version must be released
-    under CC BY-SA 4.0 and marked as changed; the rest of these materials are
-    unaffected by that requirement.
+  * Two images in the Touch and Whiskers chapter carry their own Creative Commons
+    licences rather than the CC BY-NC grant above. Both may be reused, on their
+    own terms, and both are credited in their captions:
+
+      - `touch-and-whiskers-homunculus.png`, the sensory homunculus, by Wikimedia
+        Commons user Mpj29, **CC BY-SA 4.0**. Reproduced unaltered apart from
+        conversion from GIF to PNG and scaling. If you adapt it, your version must
+        be released under CC BY-SA 4.0 and marked as changed. The rest of these
+        materials are unaffected by that requirement.
+
+      - `touch-and-whiskers-vibrissae.png`, the smooth and undulated vibrissae, by
+        Murphy, Eberhardt, Calhoun, Mann and Mann, from PLoS ONE 8(7):e69872
+        (2013), **CC BY 2.5**. Attribution is the only condition; adaptations are
+        permitted and need not carry the same licence.
 
   * Linked external material — YouTube videos, journal articles, manufacturer
     documentation — remains with its owners. Links are provided for reference

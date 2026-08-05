@@ -54,11 +54,11 @@ During Part 2, students build a robot that uses two sensors to avoid obstacles, 
 
 This part of the lesson introduces sonar in technology and animals. You can begin by showing the three short video clips below. The sperm whale and bat videos introduce students to echolocation. We also include a video of a sonar-based parking sensor.
 
-[Feeling the Force of Sperm Whales Ultrasound — BBC Earth](https://www.youtube.com/watch?v=tw7E7owEBm8)
+[Video: Feeling the Force of Sperm Whales Ultrasound — BBC Earth](https://www.youtube.com/watch?v=tw7E7owEBm8)
 
-[Bat echolocating and capturing moths](https://www.youtube.com/watch?v=MgRh_Q_xwys)
+[Video: Bat echolocating and capturing moths](https://www.youtube.com/watch?v=MgRh_Q_xwys)
 
-[A sonar parking sensor: Toyota's enhanced parking support](https://www.youtube.com/watch?v=BGd38676nF0)
+[Video: A sonar parking sensor: Toyota's enhanced parking support](https://www.youtube.com/watch?v=BGd38676nF0)
 
 ### The principle of sonar
 
