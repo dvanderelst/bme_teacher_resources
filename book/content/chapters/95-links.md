@@ -1,7 +1,6 @@
 # All links used in these materials {.unnumbered}
 
-This chapter lists every link that appears in these materials, grouped by chapter.
-Use this as a quick reference when checking school network access or preparing offline alternatives.
+This chapter lists every link that appears in these materials, grouped by chapter. Use this as a quick reference when checking school network access or preparing offline alternatives.
 
 ## By chapter
 
@@ -123,8 +122,7 @@ Use this as a quick reference when checking school network access or preparing o
 
 ## All mBlock programs
 
-Local copies of all mBlock programs are included in the `files/programs/` directory.
-School networks sometimes block the Makeblock site, so these local copies ensure you can always access the programs.
+Local copies of all mBlock programs are included in the `files/programs/` directory. School networks sometimes block the Makeblock site, so these local copies ensure you can always access the programs.
 
 - **MyFirstProgram.mblock** — Chapter 4
   [Local copy](files/programs/MyFirstProgram.mblock) | [Open on planet.mblock.cc](https://planet.mblock.cc/project/3934903)

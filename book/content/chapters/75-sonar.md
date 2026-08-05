@@ -156,8 +156,7 @@ So × 1.25 brings the sensor into line with the time-of-flight calculation almos
 >
 > **correction factor = true distance / reported distance**
 >
-> Do this at two or three distances, say half a metre, one metre and two metres. You should get roughly the same answer each time.
-> If that answer is close to **1**, the under-reporting has been fixed in your version of mBlock and the correction is no longer needed — remove the multiplier, or the robot will think obstacles are further away than they are and leave everything too late. If it is close to **1.25**, our programs will work as they are. If it is something else, put your own number in place of 1.25, which appears in the `do_sensing` block of the obstacle avoidance program and near the top of the sonar cane program.
+> Do this at two or three distances, say half a metre, one metre and two metres. You should get roughly the same answer each time. If that answer is close to **1**, the under-reporting has been fixed in your version of mBlock and the correction is no longer needed — remove the multiplier, or the robot will think obstacles are further away than they are and leave everything too late. If it is close to **1.25**, our programs will work as they are. If it is something else, put your own number in place of 1.25, which appears in the `do_sensing` block of the obstacle avoidance program and near the top of the sonar cane program.
 
 #### Directionality and Range
 #### Directionality and Range

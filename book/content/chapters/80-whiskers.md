@@ -362,20 +362,15 @@ The final comparison deserves emphasis. The robot moves its entire body to bring
 
 ## Common misconceptions
 
-**"Whiskers feel at the tip."**
-The tip makes contact, but the sensing occurs at the follicle where the shaft bends. Consider it as a flexible lever: the tip touches the object, but the base measures the resulting deflection.
+**"Whiskers feel at the tip."** The tip makes contact, but the sensing occurs at the follicle where the shaft bends. Consider it as a flexible lever: the tip touches the object, but the base measures the resulting deflection.
 
-**"Better touch sensitivity means feeling things more intensely."**
-In the two-point discrimination task, better sensitivity means finer spatial resolution—the ability to distinguish two nearby touches as separate. It concerns precision, not strength.
+**"Better touch sensitivity means feeling things more intensely."** In the two-point discrimination task, better sensitivity means finer spatial resolution—the ability to distinguish two nearby touches as separate. It concerns precision, not strength.
 
-**"Tonic means slow to respond."**
-Slow-adapting describes how long the receptor continues firing, not how quickly it begins. A slow-adapting receptor can respond instantly to initial contact.
+**"Tonic means slow to respond."** Slow-adapting describes how long the receptor continues firing, not how quickly it begins. A slow-adapting receptor can respond instantly to initial contact.
 
-**"Antennae are basically whiskers."**
-While antennae and whiskers perform similar functions (touch and movement sensing near the body), they are anatomically unrelated structures. The behaviors may be analogous, but the underlying biology differs.
+**"Antennae are basically whiskers."** While antennae and whiskers perform similar functions (touch and movement sensing near the body), they are anatomically unrelated structures. The behaviors may be analogous, but the underlying biology differs.
 
-**"The value goes up when the whisker bends more."**
-In this configuration, the opposite is true. Bending lowers the number mBlock reports. Always verify this by testing before writing control logic.
+**"The value goes up when the whisker bends more."** In this configuration, the opposite is true. Bending lowers the number mBlock reports. Always verify this by testing before writing control logic.
 
 <!-- D: what is left on this chapter.
 

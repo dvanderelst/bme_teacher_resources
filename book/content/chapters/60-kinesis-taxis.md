@@ -51,8 +51,7 @@ For more information, consult these resources:
 
 > **Note**
 >
-> **Definitions**
-> **Kinesis:** Undirected movement with rotational tumbles and linear runs, where either tumble frequency or run speed/distance depends on stimulus intensity. The first is klinokinesis, the second orthokinesis; these activities use orthokinesis. Kinesis is simpler than taxis and requires fewer sensory and neural resources. Examples: pill bugs (woodlice, roly-polies) alter speed at different temperatures; flatworms (like planarians) alter turn frequency in response to light.
+> **Definitions** **Kinesis:** Undirected movement with rotational tumbles and linear runs, where either tumble frequency or run speed/distance depends on stimulus intensity. The first is klinokinesis, the second orthokinesis; these activities use orthokinesis. Kinesis is simpler than taxis and requires fewer sensory and neural resources. Examples: pill bugs (woodlice, roly-polies) alter speed at different temperatures; flatworms (like planarians) alter turn frequency in response to light.
 >
 > **Taxis:** Directed movement toward or away from a stimulus source. Examples include virtually all guided animal behavior.
 
@@ -103,9 +102,7 @@ The second set of exercises demonstrates taxis under three experimental conditio
 
 Students determine whether their data supports these hypotheses:
 
-> **Hypothesis A:** A single sensor measuring successive stimulus intensities enables source localization.
-> **Hypothesis B:** Two sensors measuring simultaneous bilateral intensities enable faster source localization than a single sensor with memory.
-> **Hypothesis C:** Widely spaced sensors enable faster source localization than narrowly spaced sensors.
+> **Hypothesis A:** A single sensor measuring successive stimulus intensities enables source localization. **Hypothesis B:** Two sensors measuring simultaneous bilateral intensities enable faster source localization than a single sensor with memory. **Hypothesis C:** Widely spaced sensors enable faster source localization than narrowly spaced sensors.
 >
 ## Student Assessment
 
@@ -115,7 +112,6 @@ Assess students' understanding with these questions:
 2. Does the protocol in section B describe KLINOKINESIS or KLINOTAXIS? Explain.
 3. Does sensor spatial segregation impact stimulus localization? Explain.
 4. What factors from these activities can be applied to robotic design?
-
 
 ## Example student data
 

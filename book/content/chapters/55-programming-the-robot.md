@@ -90,22 +90,17 @@ A variable is a named container holding a value. Think of it as a labeled box: `
 
 Students often do not initially understand why variables are necessary. Explain that sensor readings change constantly: asking the sonar for a distance twice yields two different numbers. To compare the current distance with a previous reading, one value must be stored. This is what the last challenge does — it stores the starting distance in `preferred_distance` while allowing `current_distance` to update. Without a variable, there is nothing to compare against.
 
-To use a variable, first create it. In mBlock, click the `Variables` menu, then `Make a Variable`.
-The images below illustrate this process. A window appears where you enter the variable's name.
-Choose descriptive names connected to the variable's purpose. For this introduction, we create a simple counting program, so we name the variable `count`.
-After creation, a block with that name appears under the `Variables` menu.
+To use a variable, first create it. In mBlock, click the `Variables` menu, then `Make a Variable`. The images below illustrate this process. A window appears where you enter the variable's name. Choose descriptive names connected to the variable's purpose. For this introduction, we create a simple counting program, so we name the variable `count`. After creation, a block with that name appears under the `Variables` menu.
 
 ![Step 1: select the `Variables` category.](images/programming-the-robot-496da0e0.png)
 
 ![Step 2: Click `Make a Variable`.](images/programming-the-robot-4703540e.png)
 
-
 ![Step 3: choose a name for your variable.](images/programming-the-robot-32dcbd91.png)
 
 ![Step 4: use the new blocks.](images/programming-the-robot-f6a631e9.png)
 
-Now use the new variable in a simple program (demonstrating variable use without the robot).
-Although this program does not use the robot's sensors or motors, you must connect to the robot to run it.
+Now use the new variable in a simple program (demonstrating variable use without the robot). Although this program does not use the robot's sensors or motors, you must connect to the robot to run it.
 
 The program sets `count` to zero, then repeatedly increments it by 1, waits a second, and checks if `count` exceeds 10, at which point it resets to zero.
 ![The counting program. `count` is set to zero, then raised by one every second until it passes 10, at which point it is set back to zero.](images/programming-the-robot-292d0d09.png)
