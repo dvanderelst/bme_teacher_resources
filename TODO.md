@@ -4,63 +4,25 @@ Everything still outstanding, in one place. Grouped by **what you need in hand**
 these are cheap once you're in the right place and impossible when you're not.
 
 Every chapter of the book has been through a full review, and everything that could be settled at a
-desk has been. The 6 August 2026 test session settled almost everything that needed a robot; its
-notes are in `TestAugust06.md` and its evidence in `documentation_resources/`. What is listed below
-is what that session did not reach: a Mac, a Chromebook, two sensor readings nobody looked at, three
-menus nobody opened, and the editorial calls that are the project's to make rather than a reviewer's.
-The photography is done — every photograph of the kit in the book is now our own.
+desk has been. The 6 August 2026 test session settled everything that needed the robot; its notes are
+in `TestAugust06.md` and its evidence in `documentation_resources/`.
 
-Items are deleted when they close, and the numbering was reset on 2026-08-06 after the August tests
-closed most of the list, so numbers here do not match numbers in older commit messages. `git log`
-says what happened to each.
+**Nothing left on this list needs the robot, or mBlock.** What remains is what that session could not
+reach — a Mac and a Chromebook — and the editorial calls that are the project's to make rather than a
+reviewer's. The photography is done too: every photograph of the kit in the book is now our own, and
+every figure is either ours, redrawn by us, or carries a licence and a credit.
+
+Items are deleted when they close, and the numbering has been reset twice on 2026-08-06 as the list
+shrank, so numbers here do not match numbers in older commit messages. `git log` says what happened
+to each.
 
 *Last updated: 2026-08-06*
 
 ---
 
-## 1. Needs mBlock, but not a robot
+## 1. Needs a Mac
 
-Half an hour with mBlock open and the mBot added to the `Devices` panel, which does not require the
-robot to be plugged in.
-
-### 1.1 Three dropdowns the *Block reference* describes but does not enumerate
-Everything else in that chapter was confirmed against mBlock; these three were not, so the chapter
-says "the chosen side" and "the dropdown selects which" rather than listing the options. Open each
-one and the chapter can be made complete.
-
-- [ ] `stop [all ▾]` (Control)
-- [ ] `line follower sensor ... detects [leftside ▾] being [black ▾]` (Sensing)
-- [ ] `IR remote [A ▾] pressed?` (Sensing)
-
-
-<!-- Stop block options: all, this script, other scripts in sprites// Line follower options. First slot: port 1, port 2, port 3, port 4. Second slot: left side, right side, all, none, Third slot: black, white. IR remote block options: A, B, C, D, E, F, up, down, left, right, set, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 -->
-
----
-
-## 2. Needs a robot
-
-### 2.1 Does the onboard light sensor really return 0–1000?
-The challenge threshold of 500 depends on it, and the *Block reference* states the range as "roughly
-0–1000" on the strength of documentation rather than measurement.
-
-- [ ] Read it in a bright room and under a covering hand, and note both ends
-
-<!-- Yes, the range is 0-1000 -->
-
-### 2.2 A sonar photograph in which the `T` and `R` can be read
-The letters are on the board — that much is settled — but the photograph now in *Sonar*
-(`sonar-sensor-photo.jpg`) is too dark around the transducers for them to be made out, and the caption
-therefore has to assert what the picture cannot show.
-
-- [ ] Reshoot with more light on that part of the board. **In hand as of 6 August 2026.**
-
-<!-- We addressed this already -->
-
----
-
-## 3. Needs a Mac
-
-### 3.1 The Mac instructions have never been tested
+### 1.1 The Mac instructions have never been tested
 Recovered from a 2023 comment thread: *"These instructions were collated based on the makeblock
 website and apple help website. They have not been tested."* Two further comments doubt whether the
 mLink window appears on Mac at all, and one is still unresolved.
@@ -81,9 +43,9 @@ not see the robot at all, and the fix is to install mLink for its driver.
 
 ---
 
-## 4. Needs a Chromebook
+## 2. Needs a Chromebook
 
-### 4.1 Is the Chromebook route still alive, and does it need mLink?
+### 2.1 Is the Chromebook route still alive, and does it need mLink?
 Two questions that are really one. The old page used "Add to Chrome" → **"Add App"** — the deprecated
 Chrome *App* flow — and Makeblock now lists the Chrome version as merged into the web version. If
 that path is dead, Chromebook schools have no working route unless direct connection covers them, as
@@ -99,24 +61,11 @@ what actually happens.
 
 ---
 
-## 5. Needs only your judgement
+## 3. Needs only your judgement
 
 These need no hardware. They're the editorial calls I deliberately did not make for you.
 
-### 5.1 Read the PDF
-Chapter ordering is **my guess, not your judgement**. In particular: I put *Introduction to
-Programming* and *Programming the robot* before the three sensor lessons, and *Educational
-standards* as a reference chapter at the back rather than distributed per lesson.
-
-<!-- I agree with this order. -->
-
-- [ ] Also in scope: in *Sound Localization* the assessment sits **before** the activities that
-      generate the data it asks about, roughly 150 lines earlier. The cross-references carry page
-      numbers so it works on paper, but you may prefer to move the assessment after the activities.
-
-<!-- I agree with this order. -->
-
-### 5.2 Sound Localization — the Q2 answer doesn't match the question
+### 3.1 Sound Localization — the Q2 answer doesn't match the question
 Question 2 asks whether ear *placement angle* affects localisation. The answer supplied instead
 discusses **left/right microphone sensitivity mismatch** — a different question, already covered in
 the phonotaxis section.
@@ -124,7 +73,7 @@ the phonotaxis section.
 - [ ] Write the answer that addresses placement angle. This needs your data on what ear angle
       actually does, which is why it is here rather than done.
 
-### 5.3 Kinesis and Taxis — Assessment Q2 cites a section that does not exist
+### 3.2 Kinesis and Taxis — Assessment Q2 cites a section that does not exist
 - [ ] Q2 refers to *"the protocol in section B"*. There is no section B and never was: both handouts
       are organised as "Condition 1 / 2 / 3", with no lettered sections anywhere. Q2 asks whether the
       protocol describes klinokinesis or klinotaxis, and the only protocol where that is a real
@@ -133,7 +82,7 @@ the phonotaxis section.
       rather than a reference repair: either rename the handout condition, or reword the question to
       describe the protocol instead of citing it.
 
-### 5.4 The materials database is still thin for one lesson
+### 3.3 The materials database is still thin for one lesson
 | Lesson | Items |
 |---|---|
 | Sonar | 16 |
@@ -162,7 +111,7 @@ the phonotaxis section.
       both, which is a bridge rather than a fix. Standardising means editing the chapter or
       regenerating the two `.docx` handouts, and only you know whether those are already printed.
 
-### 5.5 Loose ends in the prose
+### 3.4 Loose ends in the prose
 - [ ] *Programming the robot*: your backlog says *"Create programs under 'Programming the robot'"* —
       it is the only lesson with no `.mblock` programs
 - [ ] Backlog: *"Create Master slide deck"*, *"Use the slides below to illustrate the working
@@ -178,7 +127,7 @@ the phonotaxis section.
       expressing it), while *Programming the robot* uses "Challenge 1–4" for the four exercises.
       Self-consistent within each chapter, but the same word carries two meanings across a page turn.
 
-### 5.6 The bat-and-dolphin directionality figure in *Sonar*
+### 3.5 The bat-and-dolphin directionality figure in *Sonar*
 `sonar-lesson-plan-c01f834f.png` — the two beam patterns seen from above — is from Madsen, P. T. &
 Surlykke, A. (2013), *Functional Convergence in Bat and Toothed Whale Biosonars*, Physiology 28,
 276–283, and is credited in its caption. It is the last figure in the book taken from someone else's
@@ -191,7 +140,7 @@ same as being allowed to reproduce it.
       the microphone response were redrawn, or replace it with a measurement of our own robot, which
       would be better still: the students measure exactly this in Activity 1
 
-### 5.7 Whether to rewrite git history for the replaced product photographs
+### 3.6 Whether to rewrite git history for the replaced product photographs
 The Makeblock studio shots — the dongle, the USB cable, the RJ25 cable, the default-configuration
 robot — and the Makeblock board diagram are gone from the working tree but remain in the history,
 where they were already public from the Notion site. While you are the only person with a clone,
@@ -205,9 +154,9 @@ figure cannot be relabelled without it.
 
 ---
 
-## 6. Mechanical
+## 4. Mechanical
 
-### 6.1 Getting a new edition onto the website
+### 4.1 Getting a new edition onto the website
 Not a GitHub job — you've ruled that out, and rightly: teachers didn't use Notion and won't use
 GitHub either. So the only route to a teacher is biologymeetsengineering.org, which makes uploading
 the build the step that actually publishes anything. Worth being deliberate about it, and note the

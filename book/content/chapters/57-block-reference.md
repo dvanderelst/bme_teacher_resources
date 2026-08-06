@@ -110,7 +110,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `light sensor [on-board ▾] light intensity`
 
-:   **Reporter.** Ambient light level, higher values meaning more light. The onboard sensor reads roughly 0–1000. Dropdown: `port3`, `port4`, `on-board` — so this block reads an external light sensor as well as the onboard one, and like the sound sensor it is limited to the two analog ports.
+:   **Reporter.** Ambient light level, higher values meaning more light. The onboard sensor reads **0 to 1000**, checked on the robot, which is what makes the threshold of 500 used in the programming challenge a sensible midpoint. Dropdown: `port3`, `port4`, `on-board` — so this block reads an external light sensor as well as the onboard one, and like the sound sensor it is limited to the two analog ports.
 
 `line follower sensor [port ▾] value`
 
@@ -118,7 +118,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `line follower sensor [port ▾] detects [leftside ▾] being [black ▾] ?`
 
-:   **Boolean.** True when the chosen side of the line-follower sensor sees the chosen surface colour. A per-sub-sensor alternative to reading the combined value.
+:   **Boolean.** True when the chosen side of the line-follower sensor sees the chosen surface colour. A per-sub-sensor alternative to reading the combined value. Three dropdowns: the port (`port1` to `port4`); which sub-sensor to ask about (`left side`, `right side`, `all`, `none`); and the surface (`black`, `white`). `all` is true only when both sub-sensors see that surface, `none` only when neither does — so `all` + `black` is the same test as a combined value of 0, and `none` + `black` the same as a value of 3.
 
 `when on-board button [pressed ▾] ?`
 
@@ -126,7 +126,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `IR remote [A ▾] pressed?`
 
-:   **Boolean.** True while the named button on an infrared remote is being pressed.
+:   **Boolean.** True while the named button on an infrared remote is being pressed. The dropdown lists every button on Makeblock's remote: `A` to `F`, `up`, `down`, `left`, `right`, `set`, and `0` to `9`. No lesson uses the remote, and one is not supplied with the kit.
 
 `send IR message (text)`
 
@@ -243,7 +243,7 @@ Where a program starts. The choice between the first two is the choice between t
 
 `stop [all ▾]`
 
-:   Stops running scripts; the dropdown selects which. This stops the *program*, not the motors — a robot whose motors were started by a non-timed Action block keeps driving, so pair this with `stop moving`.
+:   Stops running scripts. Dropdown: `all`, `this script`, `other scripts in sprites`. This stops the *program*, not the motors — a robot whose motors were started by a non-timed Action block keeps driving, so pair this with `stop moving`.
 
 ---
 
