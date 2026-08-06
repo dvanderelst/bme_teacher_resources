@@ -21,8 +21,6 @@
 | Painter's tape | For attaching the cardstock. Removes cleanly without damaging the sensor. |
 | Airtight box and desiccant | For storing whisker sensors between lessons, lying flat. |
 
-<!-- TODO: the whisker entries are in the Required materials chapter, but the rest of this table is not, and that chapter still reads as a list of things to order when one line on it cannot be ordered. Worth a sentence at the top of it saying so, rather than leaving a teacher to find out at the bottom of a table. -->
-
 ## Prerequisites
 
 Student knowledge: High school Biology and Algebra 2 or equivalent.

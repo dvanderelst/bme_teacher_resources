@@ -82,28 +82,14 @@ the phonotaxis section.
       rather than a reference repair: either rename the handout condition, or reword the question to
       describe the protocol instead of citing it.
 
-### 3.3 The materials database is still thin for one lesson
-| Lesson | Items |
-|---|---|
-| Sonar | 16 |
-| Color Vision | 12 |
-| Sound Localization | 11 |
-| Programming the robot | 7 |
-| Taxis/Kinesis | 5 |
-| **Intro Programming** | **1** |
+### 3.3 Loose ends in the Required materials chapter
 
 - [ ] *"Add model magic to materials"* — which lesson, and how much per group?
 - [ ] *"Create material list to make external pinnae"* — Sound Localization says "cardboard paper,
       pipe cleaners, tape, etc." in prose. Turning "etc." into a table is a purchasing decision.
-- [ ] **Intro Programming still lists one item.** The cheese-sandwich game needs the two Avery label
-      sheets already linked from the chapter, and presumably materials to build a sandwich from. Not
-      obvious from the source what you hand out.
 - [ ] **The Required materials chapter has no quantities**, despite its opening sentence promising
       "the quantity required per student (or group of students)". Some entries say how many inside
       their description; most do not. Either add a column or drop the promise.
-- [ ] **One line on that table cannot be ordered at all** — the whisker sensors are ours and are not
-      sold. A teacher reading a purchasing list finds that out at the bottom. Worth a sentence at the
-      top of the chapter saying so.
 - [ ] The chapter calls the manipulative the **Blue Arrow** and measures in *arrow lengths*; both
       rules handouts call the same object the **Blue Bug** and measure in *bug-lengths*. The figure
       shows an arrow, so neither name is wrong about the artwork, but a group holding the handout and
@@ -114,11 +100,6 @@ the phonotaxis section.
 ### 3.4 Loose ends in the prose
 - [ ] *Programming the robot*: your backlog says *"Create programs under 'Programming the robot'"* —
       it is the only lesson with no `.mblock` programs
-- [ ] Backlog: *"Create Master slide deck"*, *"Use the slides below to illustrate the working
-      principle of sonar"*, *"Update robot color vision activity?"*
-- [ ] `files/burst_short.wav` is tracked but linked from nowhere — a 0.5 second mono 44.1 kHz burst,
-      presumably meant as a stimulus alongside `pip_exported.mp3`. Either it lost its reference in the
-      migration or it was superseded by the .mp3. Link it where it belongs, or delete it.
 - [ ] The *Touch and Whiskers* standards section is still a placeholder. It needs the same four blocks
       as the other lessons, written by somebody who knows the standards rather than somebody
       pattern-matching from the other four.

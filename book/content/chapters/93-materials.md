@@ -25,7 +25,7 @@ Below, we list the materials required for each lesson plan and the quantity requ
 | Airtight box and desiccant | Whisker sensors are stored flat in these between lessons; the flex sensor's metallic layer oxidises. |
 | Calipers | Used to set the point spacing in the two-point discrimination activity. One pair per group. |
 | Index cards, toothpicks and sticky tape | The alternative to calipers: brainmapper.org's paper pokers, made by the students. |
-| Printed programming blocks | These are the paper stubs used during the Cheese Sandwich Factory game. |
+| Printed programming blocks | The paper slips used during the Cheese Sandwich Factory game, printed from the two templates linked in the chapter. They are the only material that game needs: students write a program with the slips, they do not build a sandwich. |
 | Colored paper | This paper can be used to build the tracks for the color vision robot activity. |
 | Gaffers tape | It’s tape. What else can I say. It comes in handy everywhere. |
 | Batteries | The robot takes 4 AA batteries. These should last a while. This is a 100 pack of AA batteries Providing more than 8 batteries per robot should allow swapping out the batteries and getting new stock without interruption to the curriculum. |
