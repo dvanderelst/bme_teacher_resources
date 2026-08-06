@@ -32,6 +32,9 @@ one and the chapter can be made complete.
 - [ ] `line follower sensor ... detects [leftside ▾] being [black ▾]` (Sensing)
 - [ ] `IR remote [A ▾] pressed?` (Sensing)
 
+
+<!-- Stop block options: all, this script, other scripts in sprites// Line follower options. First slot: port 1, port 2, port 3, port 4. Second slot: left side, right side, all, none, Third slot: black, white. IR remote block options: A, B, C, D, E, F, up, down, left, right, set, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 -->
+
 ---
 
 ## 2. Needs a robot
@@ -42,12 +45,16 @@ The challenge threshold of 500 depends on it, and the *Block reference* states t
 
 - [ ] Read it in a bright room and under a covering hand, and note both ends
 
+<!-- Yes, the range is 0-1000 -->
+
 ### 2.2 A sonar photograph in which the `T` and `R` can be read
 The letters are on the board — that much is settled — but the photograph now in *Sonar*
 (`sonar-sensor-photo.jpg`) is too dark around the transducers for them to be made out, and the caption
 therefore has to assert what the picture cannot show.
 
 - [ ] Reshoot with more light on that part of the board. **In hand as of 6 August 2026.**
+
+<!-- We addressed this already -->
 
 ---
 
@@ -101,9 +108,13 @@ Chapter ordering is **my guess, not your judgement**. In particular: I put *Intr
 Programming* and *Programming the robot* before the three sensor lessons, and *Educational
 standards* as a reference chapter at the back rather than distributed per lesson.
 
+<!-- I agree with this order. -->
+
 - [ ] Also in scope: in *Sound Localization* the assessment sits **before** the activities that
       generate the data it asks about, roughly 150 lines earlier. The cross-references carry page
       numbers so it works on paper, but you may prefer to move the assessment after the activities.
+
+<!-- I agree with this order. -->
 
 ### 5.2 Sound Localization — the Q2 answer doesn't match the question
 Question 2 asks whether ear *placement angle* affects localisation. The answer supplied instead

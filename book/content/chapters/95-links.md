@@ -92,7 +92,8 @@ This chapter lists every link that appears in these materials, grouped by chapte
 - [Functional Convergence in Bat and Toothed Whale Biosonars | Physiology](https://doi.org/10.1152/physiol.00008.2013) — Scientific paper comparing biosonar systems in bats and toothed whales.
 - [Calculation speed of sound in humid air and the air pressure humidity moist air water vapor density of water atmospheric pressure - sengpielaudio Sengpiel Berlin](https://sengpielaudio.com/calculator-airpressure.htm) — Tool for calculating speed of sound under various atmospheric conditions.
 - [Echolocation - Bats (U.S. National Park Service)](https://www.nps.gov/subjects/bats/echolocation.htm) — National Park Service resource on bat echolocation.
-- [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html) — Source for dolphin echolocation spectrogram.
+- [Surlykke & Kalko (2008), *Echolocating bats cry out loud to detect their prey*](https://doi.org/10.1371/journal.pone.0002036) — Open access. Source of the eleven-species call comparison, and worth reading for how loudly bats actually shout.
+- [Luís, Couchinho & dos Santos (2016), *A quantitative analysis of pulsed signals emitted by wild bottlenose dolphins*](https://doi.org/10.1371/journal.pone.0157781) — Open access. Source of the dolphin click train and creak.
 - [Wikimedia Commons: the pipistrelle recording](https://commons.wikimedia.org/wiki/File:Chirps190918-22s.mp3) — The original of the slowed-down bat recording below, with its full description and licence.
 - [Thingiverse](https://www.thingiverse.com/dvanderelst/designs) — 3D-printable brackets and parts for mounting sensors.
 - [Video: a sonar cane for visually impaired users](https://www.youtube.com/watch?v=cnW1_XMUIzM)

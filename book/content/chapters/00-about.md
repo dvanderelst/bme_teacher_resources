@@ -30,7 +30,7 @@ The license above covers our own writing, diagrams, and photographs — includin
   Makeblock Co., Ltd.; screenshots appear here to document how to operate the software.
 - The reproduced primers on animal orientation and on echolocation in insectivores and rodents;
   the rights to these primers remain with their respective authors and publishers.
-- Seven figures and one sound recording that carry their own Creative Commons licences rather than
+- Nine figures and one sound recording that carry their own Creative Commons licences rather than
   the one above. Each is credited where it appears, which is where the names and the licence links
   are; the table below is only so you can find them all at once.
 - Anything reached by an external link — videos, journal articles, manufacturer documentation.
@@ -43,10 +43,12 @@ The license above covers our own writing, diagrams, and photographs — includin
 | Four bats, micro and mega | Sonar | CC BY-SA 4.0 |
 | Four toothed whales | Sonar | CC BY 4.0, but see below |
 | How a toothed whale makes and hears sound | Sonar | CC BY-SA 4.0 |
+| Echolocation calls of eleven bat species | Sonar | CC BY 4.0 |
+| Dolphin click train and creak | Sonar | CC BY 4.0, cropped |
 | Spectrogram of a pipistrelle's calls | Sonar | CC BY-SA 4.0 |
 | `files/pipistrelle_chirps_20x_slowed.mp3` | Sonar | CC BY-SA 4.0 |
 
-What this means if you are adapting these materials: all eight need their credit carried over. The
+What this means if you are adapting these materials: all ten need their credit carried over. The
 five marked **ShareAlike** additionally require that a version you have *altered* be released under
 that same ShareAlike licence and marked as changed — and, going the other way, those five may be
 used commercially, unlike the rest of the book. The spectrogram and the recording are by the same

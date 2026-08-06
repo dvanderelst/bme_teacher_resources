@@ -202,9 +202,17 @@ Recording by [Drahkrub](http://de.wikipedia.org/wiki/Benutzer:Drahkrub), CC BY-S
 
 [Echolocation - Bats (U.S. National Park Service)](https://www.nps.gov/subjects/bats/echolocation.htm)
 
-Echolocating whales and dolphins' calls typically contain an even broader range of frequencies than bats' calls. Below is the spectrogram of dolphin sonar sounds. The sounds contain frequencies from 0 to 150 kHz (the highest frequency measured).
+The pipistrelle is one species, and it would be misleading to leave the impression that all bats sound alike. They do not. The figure below puts eleven species side by side, recorded in the same study and drawn on the same time scale, and the calls are strikingly different from one another.
 
-![A spectrogram of eight echolocation clicks from a dolphin, about 40 milliseconds apart. Each click is the narrow vertical stripe, and it spans the whole height of the plot: a single click contains everything from the lowest frequencies shown up to about 150 kHz. Compare this with the bat call above, and with the sensor's single frequency of 40 kHz. Source: [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html).](images/sonar-lesson-plan-342a9881.jpg)
+![Search-phase echolocation calls of eleven bat species, the waveform above and the spectrogram below, all on the same 20 ms scale. Reading left to right: *Molossus molossus*, which hunts in open air; then eight edge-space foragers, *Cormura brevirostris*, *Centronycteris centralis*, *Saccopteryx bilineata*, *S. leptura*, *Pteronotus gymnonotus*, *Lasiurus ega*, *Myotis albescens* and *M. nigricans*; and finally two trawling bats that take prey from the water surface, *Noctilio leporinus* and *N. albiventris*. Some hold a nearly constant frequency, some sweep steeply downwards, some stack several harmonics at once, and the calls range from under 10 ms to a few ms long. Figure from Surlykke, A. & Kalko, E. K. V. (2008), *Echolocating bats cry out loud to detect their prey*, PLoS ONE 3(4):e2036, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/sonar-bat-call-designs.jpg)
+
+A useful question for a class: why would species that all hunt insects at night not converge on one best call? The answer is in the labels — a bat hunting in open air, one working close to vegetation, and one snatching prey off water are solving different problems, and the call is shaped to the problem.
+
+Echolocating whales and dolphins use something different again: not a sweep but a **click**, so short that it contains every frequency at once.
+
+![Two kinds of pulsed signal from wild bottlenose dolphins, waveform above and spectrogram below. **A**, a slow click train: each click is a single vertical stripe running the full height of the plot, which is what "contains every frequency at once" looks like. **B**, a creak — the same clicks repeated so fast they merge, which is what a dolphin does as it closes on prey, and the direct counterpart of the bat's feeding buzz in the figure above. The plot stops at about 90 kHz because the recorder sampled at 192 kHz, not because the dolphin does: the clicks carry on past the top of the picture. Panels A and B from Luís, A. R., Couchinho, M. N. & dos Santos, M. E. (2016), *A quantitative analysis of pulsed signals emitted by wild bottlenose dolphins*, PLOS ONE 11(7):e0157781, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the two remaining panels of the original figure are not shown.](images/sonar-dolphin-clicks.jpg)
+
+Compare all three with the mBot's sensor, which emits one frequency, 40 kHz, and nothing else.
 
 > **Tip**
 >
