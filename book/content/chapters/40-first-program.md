@@ -22,9 +22,9 @@ The two methods differ from this point.
 
 ![The program open in the online version of mBlock.](images/getting-started-draft-390bb096.png)
 
-**From the downloaded file.** No project page appears. Open mBlock, select `File > Open from my computer`, and choose the downloaded `.mblock` file. The program opens directly.
+**From the downloaded file.** No project page appears. Open mBlock, select `File > Open from your computer`, and choose the downloaded `.mblock` file. The program opens directly.
 
-In either case, you can save your own copy. Use `File > Save to my computer` to save as an `.mblock` file, and `File > Open from my computer` to reopen it later. Both options work identically in browser and installed versions, so files saved in one open in the other.
+In either case, you can save your own copy. Use `File > Save to your computer` to save as an `.mblock` file, and `File > Open from your computer` to reopen it later. Both options work identically in browser and installed versions, so files saved in one open in the other.
 
 ## Step 2: Connect to the robot in Live mode
 

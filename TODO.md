@@ -4,175 +4,63 @@ Everything still outstanding, in one place. Grouped by **what you need in hand**
 these are cheap once you're in the right place and impossible when you're not.
 
 Every chapter of the book has been through a full review, and everything that could be settled at a
-desk has been. What is left is what could not: checks that need the robot, a Mac, a Chromebook or a
-camera, and decisions that are the project's to make rather than a reviewer's. If you are picking this
-up cold, read this file and then `git log`; between them they carry the reasoning that the finished
-text deliberately leaves out.
+desk has been. The 6 August 2026 test session settled almost everything that needed a robot; its
+notes are in `TestAugust06.md` and its evidence in `documentation_resources/`. What is listed below
+is what that session did not reach: a Mac, a Chromebook, two sensor readings nobody looked at, three
+menus nobody opened, and the editorial calls that are the project's to make rather than a reviewer's.
+The photography is done — every photograph of the kit in the book is now our own.
 
-Closed items are deleted rather than struck through, so gaps in the numbering (1.5, 1.10, 4.4, 4.5,
-4.7, 4.9, 5.2, 6.2) are items that are done. `git log` says what happened to each.
+Items are deleted when they close, and the numbering was reset on 2026-08-06 after the August tests
+closed most of the list, so numbers here do not match numbers in older commit messages. `git log`
+says what happened to each.
 
-*Last updated: 2026-07-26*
-
----
-
-## 1. Needs a robot
-
-The first item is the big one. Do it before revising any prose, because it may delete a whole
-section.
-
-### 1.1 ★ Can you now switch between Live and Upload mode without resetting the firmware?
-Your own note said: *"It seems you might now be able to switch back and forth between modi. Check
-this."*
-
-If that's true, the firmware-reset procedure is **obsolete** — and with it a good part of the
-*Getting started* chapter, plus the caveats scattered through Color Vision. This is the single
-highest-leverage check on the list.
-
-- [ ] Reset still required
-- [ ] No longer required → rewrite *Getting started* §Resetting the firmware, and remove the
-      Color Vision warnings that depend on it
-
-### 1.2 Does the firmware reset work over the Bluetooth dongle, or only USB?
-Your note: *"Double check whether the new Bluetooth dongle also allows using Upload mode."*
-The chapter currently says **use the USB cable** — the conservative choice. If the dongle works,
-relax that sentence.
-
-- [ ] Dongle works   - [ ] USB required
-
-### 1.3 Does "Update Firmware" offer a choice of Factory vs Online firmware?
-Makeblock distinguishes the two; Live mode needs **Online**. You confirmed Online is correct — the
-open question is whether mBlock ever asks. If it does and a teacher picks Factory, Live mode still
-fails and it looks like the reset didn't work.
-
-- [ ] No choice offered   - [ ] Choice offered → say which to pick
-
-### 1.4 What is the connect control called? — largely answered
-The screenshots settle most of this, and the chapter now matches them:
-
-| Context | Control | Then |
-|---|---|---|
-| Browser, direct connection | `Bluetooth` / `Serial` buttons | choose `Serial`; Chrome asks which port |
-| Browser, via mLink | a single `Connect` button | |
-| Installed mBlock | `Connect` | a dialog with `USB` / `Bluetooth` / `2.4G` tabs; choose `USB` |
-
-- [ ] Confirm this is still what v5.6.0 shows — the screenshots are from v5.4.3.
-
-### 1.6 Does the mBot need re-adding to mBlock for every new program?
-Open one of the supplied `.mblock` files in a fresh session — is the mBot already under Devices?
-The old pages contradicted each other.
-
-- [ ] Already present   - [ ] Must re-add every time
-
-### 1.7 Is the sonar under-reporting still there?
-The question has changed shape. You checked years ago, across several distances, that the error is
-proportional rather than a fixed offset — which is what makes a single multiplier the right fix, and
-it is now what the chapter says instead of "an internet search indicated". So the model is settled.
-
-What is not settled is whether the bug is still there. mBlock has been updated many times since, and
-if Makeblock has corrected it, our x 1.25 becomes an error of the same size in the opposite
-direction: the robot would believe obstacles are 25% further away than they are, and would leave
-every turn and every beep too late. A teacher would see a robot that clips things it should have
-avoided, with no obvious reason.
-
-Measure at two or three distances — say 50 cm, 1 m and 2 m — against a flat wall, and divide true by
-reported each time:
-
-| True | Reported | Ratio |
-|---|---|---|
-| 50 cm | | |
-| 100 cm | | |
-| 200 cm | | |
-
-- [ ] Ratio still about **1.25** — nothing to do
-- [ ] Ratio now about **1.0** — the bug is fixed; remove the multiplier from both programs and rewrite
-      the section, which then becomes a short historical note rather than an instruction
-- [ ] Something else — put that number in the programs instead
-
-Where it lives, confirmed by reading the .mblock files rather than the screenshots: four occurrences
-in `sonar_obstacle_avoidance`, two in `sonar_cane`, and none in `sonar_directionality`, which is
-correct — that program only reports whether an echo came back, and students measure the real distance
-on the floor.
-
-While measuring, note the ratio at 50 cm particularly. The programs turn at 30 cm and beep from about
-120 cm, but the only calibration point we have ever published is at 184 cm, so the correction has
-never been checked over the range where it is actually used.
-
-### 1.8 Smaller confirmations
-- [x] Colour sensor genuinely requires **port 2** (or is that just convention?) — **answered: it is
-      convention.** The colour sensor and the line follower both work in any of the four ports, so the
-      `port1` in the *Color Vision* §Taking it further screenshot is harmless. Port 2 remains the
-      lesson convention and the chapters need no change; the *Block reference* records the rule.
-- [ ] Onboard light sensor really returns **0–1000** (the challenge threshold of 500 depends on it)
-- [ ] Sound-sensor sensitivity dial: is "both to the same halfway position" still right, and does it
-      interact with the `left_scale` calibration students derive later?
-- [ ] Pin labels beside **ports 1 and 2** — one appears to include `A5`. If so, "sound sensors must
-      go in ports 3 or 4" is slightly too strict. Ports 3 and 4 carry `A0`–`A3`, confirmed by reading
-      the board photograph. Ports 1 and 2 cannot be read from it — their labels are half the size,
-      upside down, and `A5` is indistinguishable from `L1` at 855 px. Makeblock's *Beginner's Guide*
-      has no pinout table either, so this needs the board in your hand.
-      **Raised in priority by the bot.** Asked why the sound sensor needs ports 3 or 4, the
-      deployed agent answered that "ports 1 and 2 are digital and cannot read the analog
-      signal". No chapter says that. It is an invention filling the gap where the prose stops
-      at "the only ports with analog inputs" without saying what the others are — and it is
-      stated flatly to a teacher. Settling this closes the gap rather than papering over it.
-- [ ] Which motor connector is physically **backmost** — M1 or M2? The board photograph shows M2 left
-      of M1 with the power switch above them, but no photograph we have shows the board mounted in the
-      chassis, which is what "backmost" depends on. Would make the wrong-direction troubleshooting
-      much faster to follow.
-- [ ] **Screenshot drift.** Every mBlock screenshot in the document dates from 2024; the current PC
-      release is v5.6.0 (April 2025). Three of them print a version on screen: the installed-mBlock
-      screenshot shows **v5.4.3**, and two of the installer screenshots show **mBlock 5.4.3** and
-      **mLink2 2.1.1**. Spot-check the Devices panel, the `+` extension button and the Connect dialog.
-      Installer dialogs should age better than the editor. This matters more in a PDF than it did on a
-      website — a teacher who printed it in September has a wrong picture all year.
-- [ ] The mBlock `File` menu wording. The chapter had it both ways — "Save to **your** computer" and
-      "Save to **my** computer". I standardised on "my computer", matching "Open from my computer",
-      but one of the two spellings was wrong and it is worth reading the menu once.
-- [x] **Where is the dongle's button?** — **answered: the Bluetooth symbol on the top face is
-      the button**, and it is also the indicator light. Named in the pairing sequence and in the
-      caption of the dongle photograph. A photo with the button marked would still be an
-      improvement over words, but is no longer needed for the instructions to be followable.
-- [ ] **"Panda window."** Several chapters call the variable-values panel the "panda window". Confirm
-      that is still what it looks like and a name teachers recognise, or replace it with a neutral
-      description.
-- [ ] **Three dropdowns the *Block reference* describes but does not enumerate.** Everything else in
-      that chapter was confirmed against mBlock or Makeblock's documentation; these three were not, so
-      the chapter says "the chosen side" and "the dropdown selects which" rather than listing options.
-      Open each one and the chapter can be made complete:
-      `stop [all ▾]` (Control) · `line follower sensor ... detects [leftside ▾] being [black ▾]`
-      (Sensing) · `IR remote [A ▾] pressed?` (Sensing). Also worth a glance: whether the palette
-      offers any onboard gyro/accelerometer block at all — none appears in the screenshots the
-      chapter was built from, and no lesson uses one.
-
-### 1.9 Is mLink needed at all in the browser? — mostly answered
-Your note asked what the minimum software is for the browser route. The screenshots answer most of
-it: the dialog in *Connecting to the robot* is Chrome's own "ide.mblock.cc wants to connect to a
-serial port" prompt, which is the browser's Web Serial support talking to the dongle directly. mLink
-is not involved. Both chapters now say so, and *Installing mBlock* no longer presents mLink as
-mandatory — which matters, because it means a locked-down school computer needs **nothing installed**
-to run the browser route in Chrome.
-
-Two gaps left, both needing a robot:
-
-- [ ] Does **firmware update / reset** work over the direct connection, or does that step still need
-      mLink or the installed mBlock? This is the one operation that reaches deepest into the board.
-- [ ] On a **Chromebook**, is the direct connection available, or is mLink still required there?
-      Ties in with 3.1.
-
-If the direct connection covers everything, the mLink material can shrink to a footnote.
+*Last updated: 2026-08-06*
 
 ---
 
-## 2. Needs a Mac
+## 1. Needs mBlock, but not a robot
 
-### 2.1 The Mac instructions have never been tested
+Half an hour with mBlock open and the mBot added to the `Devices` panel, which does not require the
+robot to be plugged in.
+
+### 1.1 Three dropdowns the *Block reference* describes but does not enumerate
+Everything else in that chapter was confirmed against mBlock; these three were not, so the chapter
+says "the chosen side" and "the dropdown selects which" rather than listing the options. Open each
+one and the chapter can be made complete.
+
+- [ ] `stop [all ▾]` (Control)
+- [ ] `line follower sensor ... detects [leftside ▾] being [black ▾]` (Sensing)
+- [ ] `IR remote [A ▾] pressed?` (Sensing)
+
+---
+
+## 2. Needs a robot
+
+### 2.1 Does the onboard light sensor really return 0–1000?
+The challenge threshold of 500 depends on it, and the *Block reference* states the range as "roughly
+0–1000" on the strength of documentation rather than measurement.
+
+- [ ] Read it in a bright room and under a covering hand, and note both ends
+
+### 2.2 A sonar photograph in which the `T` and `R` can be read
+The letters are on the board — that much is settled — but the photograph now in *Sonar*
+(`sonar-sensor-photo.jpg`) is too dark around the transducers for them to be made out, and the caption
+therefore has to assert what the picture cannot show.
+
+- [ ] Reshoot with more light on that part of the board. **In hand as of 6 August 2026.**
+
+---
+
+## 3. Needs a Mac
+
+### 3.1 The Mac instructions have never been tested
 Recovered from a 2023 comment thread: *"These instructions were collated based on the makeblock
 website and apple help website. They have not been tested."* Two further comments doubt whether the
 mLink window appears on Mac at all, and one is still unresolved.
 
-This carries into the new *Installing mBlock* chapter, whose Mac section descends from that
-material. It is the **only platform where we have no evidence the instructions work**.
+This carries into the *Installing mBlock* chapter, whose Mac section descends from that material. It
+is now the **only platform where we have no evidence the instructions work** — Windows and Linux were
+both walked end to end in August 2026.
 
 - [ ] Apple Silicon build installs and runs
 - [ ] Installer blocked by Gatekeeper? does right-click → Open work?
@@ -180,27 +68,35 @@ material. It is the **only platform where we have no evidence the instructions w
 - [ ] Does mLink show a "running" window on Mac, as on Windows?
 - [ ] Does the dongle connect from a Mac?
 
+Worth knowing before you start: on Windows the mBlock installer no longer installs the serial driver
+and mLink's installer still does. If the same is true on Mac, a Mac with only mBlock installed may
+not see the robot at all, and the fix is to install mLink for its driver.
+
 ---
 
-## 3. Needs a Chromebook
+## 4. Needs a Chromebook
 
-### 3.1 Is the Chromebook install path still alive?
-The old page used "Add to Chrome" → **"Add App"** — the deprecated Chrome *App* flow — and Makeblock
-now lists the Chrome version as merged into the web version. If this path is dead, Chromebook
-schools have **no working route at all**.
+### 4.1 Is the Chromebook route still alive, and does it need mLink?
+Two questions that are really one. The old page used "Add to Chrome" → **"Add App"** — the deprecated
+Chrome *App* flow — and Makeblock now lists the Chrome version as merged into the web version. If
+that path is dead, Chromebook schools have no working route unless direct connection covers them, as
+it does on Windows and Linux. The download page still lists a Chromebook build of mLink, so Makeblock
+evidently thinks it is needed.
 
-The new chapter describes it vaguely enough to be true either way, but it needs replacing with what
-actually happens.
+The chapter describes the install vaguely enough to be true either way, but it needs replacing with
+what actually happens.
 
 - [ ] Walk the current path and record the steps
+- [ ] Is direct connection available in the Chromebook's Chrome? If so, the Chromebook section
+      shrinks to a sentence and the mLink material can go
 
 ---
 
-## 4. Needs only your judgement
+## 5. Needs only your judgement
 
 These need no hardware. They're the editorial calls I deliberately did not make for you.
 
-### 4.1 Read the PDF
+### 5.1 Read the PDF
 Chapter ordering is **my guess, not your judgement**. In particular: I put *Introduction to
 Programming* and *Programming the robot* before the three sensor lessons, and *Educational
 standards* as a reference chapter at the back rather than distributed per lesson.
@@ -209,7 +105,7 @@ standards* as a reference chapter at the back rather than distributed per lesson
       generate the data it asks about, roughly 150 lines earlier. The cross-references carry page
       numbers so it works on paper, but you may prefer to move the assessment after the activities.
 
-### 4.2 Sound Localization — the Q2 answer doesn't match the question
+### 5.2 Sound Localization — the Q2 answer doesn't match the question
 Question 2 asks whether ear *placement angle* affects localisation. The answer supplied instead
 discusses **left/right microphone sensitivity mismatch** — a different question, already covered in
 the phonotaxis section.
@@ -217,7 +113,7 @@ the phonotaxis section.
 - [ ] Write the answer that addresses placement angle. This needs your data on what ear angle
       actually does, which is why it is here rather than done.
 
-### 4.3 Kinesis and Taxis — Assessment Q2 cites a section that does not exist
+### 5.3 Kinesis and Taxis — Assessment Q2 cites a section that does not exist
 - [ ] Q2 refers to *"the protocol in section B"*. There is no section B and never was: both handouts
       are organised as "Condition 1 / 2 / 3", with no lettered sections anywhere. Q2 asks whether the
       protocol describes klinokinesis or klinotaxis, and the only protocol where that is a real
@@ -226,7 +122,7 @@ the phonotaxis section.
       rather than a reference repair: either rename the handout condition, or reword the question to
       describe the protocol instead of citing it.
 
-### 4.6 The materials database is still thin for one lesson
+### 5.4 The materials database is still thin for one lesson
 | Lesson | Items |
 |---|---|
 | Sonar | 16 |
@@ -242,6 +138,12 @@ the phonotaxis section.
 - [ ] **Intro Programming still lists one item.** The cheese-sandwich game needs the two Avery label
       sheets already linked from the chapter, and presumably materials to build a sandwich from. Not
       obvious from the source what you hand out.
+- [ ] **The Required materials chapter has no quantities**, despite its opening sentence promising
+      "the quantity required per student (or group of students)". Some entries say how many inside
+      their description; most do not. Either add a column or drop the promise.
+- [ ] **One line on that table cannot be ordered at all** — the whisker sensors are ours and are not
+      sold. A teacher reading a purchasing list finds that out at the bottom. Worth a sentence at the
+      top of the chapter saying so.
 - [ ] The chapter calls the manipulative the **Blue Arrow** and measures in *arrow lengths*; both
       rules handouts call the same object the **Blue Bug** and measure in *bug-lengths*. The figure
       shows an arrow, so neither name is wrong about the artwork, but a group holding the handout and
@@ -249,7 +151,7 @@ the phonotaxis section.
       both, which is a bridge rather than a fix. Standardising means editing the chapter or
       regenerating the two `.docx` handouts, and only you know whether those are already printed.
 
-### 4.8 Loose ends in the prose
+### 5.5 Loose ends in the prose
 - [ ] *Programming the robot*: your backlog says *"Create programs under 'Programming the robot'"* —
       it is the only lesson with no `.mblock` programs
 - [ ] Backlog: *"Create Master slide deck"*, *"Use the slides below to illustrate the working
@@ -257,56 +159,38 @@ the phonotaxis section.
 - [ ] `files/burst_short.wav` is tracked but linked from nowhere — a 0.5 second mono 44.1 kHz burst,
       presumably meant as a stimulus alongside `pip_exported.mp3`. Either it lost its reference in the
       migration or it was superseded by the .mp3. Link it where it belongs, or delete it.
+- [ ] The *Touch and Whiskers* standards section is still a placeholder. It needs the same four blocks
+      as the other lessons, written by somebody who knows the standards rather than somebody
+      pattern-matching from the other four.
 - [ ] Minor, and only if it bothers you: *Introduction to Programming* uses "Challenge 1" and
       "Challenge 2" for the two conceptual halves of programming (working out the algorithm, then
       expressing it), while *Programming the robot* uses "Challenge 1–4" for the four exercises.
       Self-consistent within each chapter, but the same word carries two meanings across a page turn.
 
----
+### 5.6 The bat-and-dolphin directionality figure in *Sonar*
+`sonar-lesson-plan-c01f834f.png` — the two beam patterns seen from above — is from Madsen, P. T. &
+Surlykke, A. (2013), *Functional Convergence in Bat and Toothed Whale Biosonars*, Physiology 28,
+276–283, and is credited in its caption. It is the last figure in the book taken from someone else's
+work that we have neither redrawn nor confirmed the licence of. Crossref records **no licence** for
+that article, so it is presumably subscription material rather than open access: citing it is not the
+same as being allowed to reproduce it.
 
-## 5. Needs a camera
+- [ ] Check the licence properly — the APS permissions page, or write and ask
+- [ ] If it is not reusable, redraw it from the published data the way the Maxbotix beam pattern and
+      the microphone response were redrawn, or replace it with a measurement of our own robot, which
+      would be better still: the students measure exactly this in Activity 1
 
-### 5.0 A robot with whiskers on it
-The Touch and Whiskers chapter has a photograph of the whisker sensor itself, but nothing showing one
-**mounted**. That is the picture a teacher actually needs: how far forward the whiskers project, how
-far apart they sit, what angle they are set at, and what a cardboard extension looks like taped on.
+### 5.7 Whether to rewrite git history for the replaced product photographs
+The Makeblock studio shots — the dongle, the USB cable, the RJ25 cable, the default-configuration
+robot — and the Makeblock board diagram are gone from the working tree but remain in the history,
+where they were already public from the Notion site. While you are the only person with a clone,
+dropping them from history is easy. It stops being easy once anyone else clones the repo.
 
-Two shots would cover it — the robot from above with both whiskers fitted, and a close-up of one
-mount. A third of the robot touching a wall, with the whisker visibly bent, would earn its place as
-well: it is the moment the whole lesson turns on and it is currently described rather than shown.
+- [ ] Decide, and if the answer is yes, do it before the repository is shared
 
-Worth doing at the same time as the run-through the chapter still needs, since the robot will be
-built and on the table anyway.
-
-
-### 5.1 Replace the web-sourced product photographs
-Three, not the five I listed before. I have now looked at all of them instead of guessing from
-captions, and two of my earlier candidates are plainly your own photographs — the desk, the robot
-labelled `vanderdt04`, the hand-drawn red arrows.
-
-The three that are studio product shots on pure white backgrounds, and are not yours:
-
-| File | Shows | Chapter |
-|---|---|---|
-| `getting-started-draft-6fb3632a.png` | the Bluetooth dongle | Getting started |
-| `getting-started-draft-dd60485a.png` | the USB cable | Getting started |
-| `introduction-to-the-robot-676c1e4d.png` | the RJ25 sensor cable | Introduction to the robot |
-
-Worth reshooting regardless of the licensing question: your own photos would show the **actual kit
-teachers receive**, with the coloured port stickers the text keeps referring to.
-
-On git history: these were already served publicly from the Notion site, so pushing does not expose
-them for the first time — it makes them permanent. While you are the only person with a clone,
-rewriting history to drop them is easy. It stops being easy once anyone else clones the repo.
-
-### 5.3 The mCore board diagram is Makeblock's, not ours
-`introduction-to-the-robot-51abd850.png` — the labelled main-board diagram — is a Makeblock
-illustration. It carries "Diagram by Makeblock." in its caption, and the licence carve-out now covers
-diagrams as well as photographs, so the licensing is straight.
-
-- [ ] The underlying choice is still open: keep the diagram with its credit, or redraw it so the book
-      owns the artwork outright. Reshooting is not an option, it being a line drawing rather than a
-      photo.
+The `board.svg` that the new board figure was exported from is 36 MB and lives in
+`documentation_resources`, which is not tracked. Worth keeping wherever you keep the originals: the
+figure cannot be relabelled without it.
 
 ---
 
@@ -319,10 +203,10 @@ the build the step that actually publishes anything. Worth being deliberate abou
 order — the fingerprint is baked in at build time, so tagging after building stamps the bare hash:
 
 ```sh
-git tag -a 2026-07 -m "Edition of July 2026"   # 1. tag first
-cd book && ./build.sh                          # 2. footer picks the tag up
-                                               # 3. upload render/*.pdf and *.html
-git push origin main && git push origin 2026-07
+git tag -a 2026-08 -m "Edition of August 2026"   # 1. tag first
+cd book && ./build.sh                            # 2. footer picks the tag up
+                                                 # 3. upload render/*.pdf and *.html
+git push origin main && git push origin 2026-08
 ```
 
 - [ ] Upload both files to the website
@@ -333,8 +217,3 @@ git push origin main && git push origin 2026-07
 
 The last one is worth the ten seconds. When someone reports a problem, the first question is which
 version they have, and it is printed at the foot of every page.
-
-### 6.3 A Live/Upload screenshot to delete — gated on 1.1
-*Getting started* line 189 still carries an image captioned *"Use the slider to switch the software
-to `Live` mode"*, which contradicts the text now saying no mode toggle is needed. Delete once 1.1
-and 1.3 are settled. One line of markdown.

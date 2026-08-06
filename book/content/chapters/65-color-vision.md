@@ -164,7 +164,7 @@ Students also construct a bicolored path using colored paper and tape, with each
 
 ### Procedure
 
-The color sensor only works in `Upload` mode. Programs must be uploaded to the robot using a USB cable, which can then be disconnected. The robot then runs the uploaded program autonomously. Every time the robot is switched on, it will run this program without needing computer communication. More information about the robot's operational modes is [available here](#getting-started-with-the-robot).
+The color sensor only works in `Upload` mode. Programs must be uploaded to the robot, over the USB cable or the Bluetooth dongle, and the connection can then be dropped. The instructions below use the cable throughout, because the first step is easier with a connection you can see. The robot then runs the uploaded program autonomously. Every time the robot is switched on, it will run this program without needing computer communication. More information about the robot's operational modes is [available here](#getting-started-with-the-robot).
 
 The fact that the sensor only works in `Upload` mode makes programming more challenging. The main issue is that sensor values cannot be observed while the program runs without a USB connection. This makes it difficult to identify the correct sensor values to respond to.
 

@@ -11,9 +11,9 @@ To program and control your mBot, connect it to your computer using one of these
 
 Older mBots could connect via a 2.4 GHz module or direct Bluetooth. We do not support these. Makeblock has discontinued the 2.4 GHz hardware, and with direct Bluetooth all robots in a classroom share the same address, preventing students from identifying which robot they are connecting to.
 
-![The Bluetooth dongle that can be used to connect to the robot. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode.](images/getting-started-draft-6fb3632a.png)
+![The Bluetooth dongle that can be used to connect to the robot, with its cap off. The Bluetooth symbol on its top face is the pairing button as well as the indicator light — press it to put the dongle into pairing mode.](images/getting-started-dongle.jpg)
 
-![The USB cable that can be used to connect to the robot.](images/getting-started-draft-dd60485a.png)
+![The USB cable that can be used to connect to the robot. The square end goes into the robot; the flat end into the computer.](images/getting-started-usb-cable.jpg)
 
 ## Pairing the Bluetooth dongle and the robot
 
@@ -58,6 +58,8 @@ If separating the pair from either end causes the other to blink, they are corre
 
 When writing a program from scratch, you must tell mBlock which robot to target. This is not necessary when starting from one of our programs, which are pre-configured.
 
+A program remembers its device. Add the mBot once, save the program, and it is still there when the file is opened again — on another day or on another computer. Only a brand-new, empty program starts without a device.
+
 If the mBot does not appear in the `Devices` panel, click the `Add (+)` button at the bottom. A window listing supported devices appears. Select **mBot** — not mBot2, which is a different robot — and click `OK`. The mBot appears in the panel, and its control blocks become available in the palette.
 
 ![Click this button to add the robot to mBlock.](images/getting-started-draft-c19638ac.png)
@@ -86,7 +88,7 @@ The program is copied to the robot, allowing it to run independently: upload it,
 
 **Switching from Upload back to Live mode**
 
-After using Upload mode, reset the robot's firmware to return to Live mode, as described in [Resetting the firmware](#resetting-the-firmware).
+After using Upload mode, reset the robot's firmware to return to Live mode, as described in [Resetting the firmware](#resetting-the-firmware). Clicking `Live` in the `Mode Switch` row is not enough on its own — the mode switch changes what mBlock does, not what is on the robot, and the firmware has to be put back. This has not changed in recent versions of mBlock.
 
 > **Why?**
 >
@@ -122,7 +124,11 @@ The browser version of mBlock can connect to the robot in two ways, selected via
 
 **The instructions below use direct connection**, as it is simpler and requires no installation — important for locked-down school computers. If the `Devices` panel shows `Switch to direct connection`, click it. If it shows `Switch to mLink`, you are already using direct connection.
 
+Direct connection is not a reduced mode: everything in this book works over it, including uploading a program and [resetting the firmware](#resetting-the-firmware). On Linux, where mLink could not be made to run at all, it is the only route — and it is a complete one.
+
 ![If the panel offers `Switch to direct connection`, click it.](images/getting-started-draft-1dd0fc6c.png)
+
+![mBlock in the browser on Linux, connected over direct connection and running a program in Live mode. No mLink, and nothing installed.](images/getting-started-linux-direct.png)
 
 #### Using the Bluetooth dongle
 
@@ -140,7 +146,7 @@ The cable works identically. Keep mBlock on direct connection and select `Serial
 
 ### Using locally installed mBlock
 
-The browser's choice between direct connection and mLink does not apply here. Installed mBlock communicates directly with the robot, so no helper program or connection mode selection is needed.
+The browser's choice between direct connection and mLink does not apply here, and the panel does not offer it: there is no `Switch to…` link, only `Connect`. Installed mBlock communicates directly with the robot, so no helper program or connection mode selection is needed.
 
 ![mBlock installed on Windows, with the mBot already added to the `Devices` panel.](images/getting-started-draft-45dbe002.png)
 
@@ -163,8 +169,10 @@ The steps are identical to the dongle: click `Connect` and select the `USB` tab.
 Most programs run in Live mode, so this is rarely needed. The exception is the Color Vision lesson, where programs must be uploaded because the color sensor does not work in Live mode.
 
 1. Ensure the program starts with the `when mBot (mcore) starts up` block rather than `when flag clicked`. An uploaded program runs when the robot powers on, requiring this starting block.
-2. Use the toggle to switch mBlock to `Upload` mode.
-3. Connect to the robot as described above, then click `Upload`.
+2. Click `Upload` in the `Mode Switch` row of the `Devices` panel. It is a pair of buttons, `Upload` and `Live`, not a toggle you drag.
+3. Connect to the robot as described above, then click `Upload Code`.
+
+Uploading works over the Bluetooth dongle as well as over the USB cable.
 
 The program compiles and transfers to the robot. Power the robot off and on again to start it. To upload a modified program, repeat these steps.
 
@@ -176,15 +184,21 @@ Live mode requires the robot to have its standard firmware, as explained in [Liv
 
 However, if the robot was used in Upload mode — by a previous class or for the Color Vision lesson — that firmware has been overwritten by the uploaded program. Live mode will not function until you restore it. If uncertain, resetting causes no harm.
 
-Connect the robot to the computer using the USB cable. Click `Setting`, then `Update Firmware`, then `Updates` in the pop-up window. Once complete, the robot works in Live mode again.
+Connect the robot to the computer, either with the USB cable or over its paired Bluetooth dongle. **The dongle works for this**, which is worth knowing: resetting the firmware is the operation that reaches deepest into the board, and it is the one you would expect to need a cable. It does not, and it also works over the browser's direct connection, so a room with no cables and no installed software can still recover a robot from Upload mode.
+
+Click `Setting`, then `Update Firmware`. The window that opens has a `Firmware Version` dropdown offering two entries: **`Online firmware`** and `Factory firmware`. Live mode needs the Online firmware, which is the one already selected, so leave it alone and click `Updates`. Choosing Factory firmware instead leaves the robot unable to enter Live mode, and looks exactly like a reset that did not work.
+
+Once complete, the robot works in Live mode again.
 
 You do **not** need to switch between `Live` and `Upload` mode first.
 
-![The `Live` and `Upload` slider. You do not need to change it before resetting the firmware.](images/getting-started-draft-bf1a09ed.png)
+![The `Mode Switch` buttons and, below them, `Setting`. You do not need to change the mode before resetting the firmware.](images/getting-started-draft-bf1a09ed.png)
 
 ![Select `Update Firmware`.](images/getting-started-draft-8aa4d6fa.png)
 
-![Click `Updates`.](images/getting-started-draft-05ea3950.png)
+![The `Firmware Version` dropdown, opened. `Online firmware` is the default and the one Live mode needs; `Factory firmware` is the other entry and is not what you want here.](images/getting-started-firmware-version.png)
+
+![Leave the version as it is and click `Updates`.](images/getting-started-draft-05ea3950.png)
 
 ## Next step
 

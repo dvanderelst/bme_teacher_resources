@@ -171,7 +171,7 @@ For this activity, connect a sound sensor to the robot via a cable, as shown bel
 
 #### Adding the sound sensor extension
 
-![The sound sensor.](images/programming-the-robot-8b214556.jpg)
+![The sound sensor. The microphone is the black disc at the right-hand end; everything between it and the RJ25 socket amplifies and filters what the microphone picks up, so that the board reports a single loudness value.](images/sound-sensor-photo.jpg)
 
 > **Tip**
 >

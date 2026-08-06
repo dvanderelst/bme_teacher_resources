@@ -17,8 +17,8 @@
 | Printed poker template | Printed from brainmapper.org and glued to the card; it sets the spacings. |
 | Sticky tape | For fixing the points to the card. |
 | Calipers | An alternative to the paper pokers. Set them to a spacing and poke with the tips of the jaws. |
-| Cardboard strips | Taped to a whisker sensor to extend its reach past the flex sensor's own length, and to change how it bends. |
-| Painter's tape | For attaching the cardboard. Removes cleanly without damaging the sensor. |
+| Cardstock | Cut to a taper and taped to a whisker sensor to extend its reach past the flex sensor's own length, and to change how it bends. Not corrugated cardboard, which is too stiff and too thick. |
+| Painter's tape | For attaching the cardstock. Removes cleanly without damaging the sensor. |
 | Airtight box and desiccant | For storing whisker sensors between lessons, lying flat. |
 
 <!-- TODO: the whisker entries are in the Required materials chapter, but the rest of this table is not, and that chapter still reads as a list of things to order when one line on it cannot be ordered. Worth a sentence at the top of it saying so, rather than leaving a teacher to find out at the bottom of a table. -->
@@ -241,19 +241,37 @@ This design provides a better model of biological whiskers than a simple switch.
 >
 > **Store sensors flat in an airtight box with a desiccant sachet between lessons.** The metallic layer oxidizes over time, and sensors left in a drawer over an extended period may read differently or fail entirely. This degradation occurs gradually and may not be noticed until it is too late.
 
+### Mounting the whiskers on the robot
+
+Nothing about the mounting is prescribed — the point is that students work out an arrangement and then live with its consequences. What the pictures below show is one arrangement that works, offered so that a group starting from a pile of parts has somewhere to start from.
+
+Both whiskers are bolted to brackets on the front of the chassis, in the holes the sonar sensor would otherwise use, and splayed outward so that the pair covers a wide arc rather than two overlapping ones straight ahead. Splaying them also keeps the tips apart, so that the left whisker is genuinely reporting about the left. The sensor boards sit clear of the chassis with the flex strip free to bend, which matters: a whisker that rubs on a bracket reads as permanently bent.
+
+![Two whiskers fitted, as they come — the extension described in the next section is not on them yet. **Left**, from the front: the boards are bolted to brackets at the front of the chassis and the whiskers splay outward, each covering its own side. **Top right**, the same mount from below, showing the bracket that carries the board and holds it clear of the wheels. **Bottom right**, from above: the RJ25 cables run back over the board to ports 3 and 4, with enough slack that the robot's own movement never pulls on a plug.](images/touch-and-whiskers-mounted.jpg)
+
+Two practical points. The whisker must sit neutral when nothing is touching it: mounted with a slight pre-bend, it reports a bent value all the time, and no threshold will save it. This is the most common reason a whisker robot reacts to obstacles that are not there. And the whisker must reach further forward than the widest part of the robot, or the chassis makes contact first and the whisker never gets a chance to report — which is what the next section is for.
+
 ### Making the whisker longer
 
-The flex sensor is only about 10 cm long, which provides a short reach for a robot the size of an mBot: the whisker detects a wall at the moment the robot has essentially arrived at it.
+Mounted as it comes, the flex sensor is only about 10 cm long, which is a short reach for a robot the size of an mBot: the whisker detects a wall at the moment the robot has essentially arrived at it.
 
-Reach can be extended by taping a strip of cardboard to the end of the sensor using painter's tape, which removes cleanly without damaging the sensor. The cardboard does not sense; bending still occurs only in the 10 cm flex sensor portion. However, the robot now contacts obstacles further away, providing more time to react.
+Reach can be extended with a strip of **cardstock** — not corrugated cardboard, which is far too stiff and too thick to behave like a whisker. Cut the strip to a long taper, so that it is widest where it meets the sensor and comes to a point at the far end, then tape it to the **back** of the flex sensor with painter's tape: one piece at the base, where the strip overlaps the sensor, and one at the tip of the sensor itself. Painter's tape is specified because it peels off again without taking the sensor's surface with it.
 
-This extension demonstrates an important biological parallel to students. A cardboard strip functions as a dead length of whisker that transmits force back to the sensing region near the base—exactly what a vibrissa does. The cardboard's length, stiffness, and attachment point all affect how the whisker bends and therefore how early and strongly the robot responds. Groups that experiment with these parameters typically achieve better performance than those that do not.
+Two details in that sentence matter more than they look. The strip goes on the **back** — the side the whisker bends towards — so that the tape is never in the way of the bend and never has to stretch. And the taper is what makes the extension behave like a whisker rather than a stick: a tapered strip is floppiest at its tip, so it gives way at the point of contact instead of levering the whole sensor sideways, which is both how a real vibrissa works and what lets the thing survive being driven into a wall.
+
+The cardstock does not sense. All the bending that gets measured still happens in the 10 cm flex sensor. What the extension buys is reach: the robot now meets an obstacle much further out, and has correspondingly longer to do something about it.
+
+![What the extension is and what it buys. **Inset**, a flex sensor with a cardstock strip taped on, and beside it a spare strip cut to the same taper. **Left**, the robot approaching a sheet of paper: the whiskers reach it well before any part of the chassis does. **Right**, from above, the left whisker bent around a roll of tape while the right one is still straight — one number falling while the other does not, which is the whole signal the program has to work with.](images/touch-and-whiskers-extension.jpg)
+
+This extension demonstrates an important biological parallel to students. A cardstock strip functions as a dead length of whisker that transmits force back to the sensing region near the base—exactly what a vibrissa does. Its length, stiffness, and attachment point all affect how the whisker bends and therefore how early and strongly the robot responds. Groups that experiment with these parameters typically achieve better performance than those that do not.
 
 ### Reading a whisker in mBlock
 
-A whisker connects to an RJ25 port and is read using the **`light sensor [port] light intensity`** block, with the appropriate port selected from the block's dropdown menu. This is not the sonar block or the line follower block. The block is part of the light-and-sound extension, the same extension that provides the sound sensor blocks. If the sound localization lesson has been completed, this extension is already installed; otherwise, it must be added in mBlock before the block will appear.
+A whisker connects to an RJ25 port and is read using the **`light sensor [port] light intensity`** block, with the appropriate port selected from the block's dropdown menu. This is not the sonar block or the line follower block.
 
-The block provides access only to **ports 3 and 4**, which are the two ports whiskers must use. A single whisker can use either port. Two whiskers require both ports, which exhausts the mBot's analog input capacity.
+**No extension is needed.** This block is in the `Sensing` category as soon as the mBot has been added to `Devices`, alongside the sonar and line-follower blocks. There is a second, near-identical `light sensor` block in the Light & Sound extension, and it reads the same sensor on the same ports — but that extension exists for the *sound* sensor, and nothing in this lesson requires it. If you have completed the Sound Localization lesson you will have both blocks in the palette and either will work.
+
+Its dropdown offers **`port3`, `port4` and `on-board`**. The first two are the ports a whisker can use — `on-board` reads the light sensor built into the board, which is not what you want here. A single whisker can use either port; two whiskers require both, which exhausts the mBot's analog input capacity.
 
 > **Note**
 >
@@ -269,7 +287,7 @@ The block provides access only to **ports 3 and 4**, which are the two ports whi
 
 The simplest functional program reads both whiskers into variables continuously. This program does not yet use the values; it merely assigns each whisker reading to a variable once per loop, allowing subsequent code to reference `whisker1` and `whisker2` rather than repeatedly accessing the sensor blocks.
 
-![The smallest useful whisker program: read each whisker into a variable, forever. Port 3 and port 4 are the only two the light sensor block offers, so a two-whisker robot uses both. Naming the variables is not merely organizational—every program later in this chapter references them, and threshold comparisons are significantly easier to debug when the reading has a descriptive name.](images/touch-and-whiskers-read-two.png)
+![The smallest useful whisker program: read each whisker into a variable, forever. Port 3 and port 4 are the only two external ports the light sensor block offers, so a two-whisker robot uses both. Naming the variables is not merely organizational—every program later in this chapter references them, and threshold comparisons are significantly easier to debug when the reading has a descriptive name.](images/touch-and-whiskers-read-two.png)
 
 [Open the mBlock project](https://planet.mblock.cc/project/8233113). If access to the Makeblock site is blocked, [download `mBotReadWhisker.mblock`](files/programs/mBotReadWhisker.mblock) instead.
 
@@ -376,5 +394,6 @@ The final comparison deserves emphasis. The robot moves its entire body to bring
 
      1. A read-through against a robot, once, to catch transcription errors. The lesson itself is not in question -- it has been taught, and every number in here came from someone who taught it. What has not happened is anyone following THIS PROSE with a robot on the desk, which is how you catch a port named wrongly or a step described in the wrong order. An editorial check, not a validation.
      2. Required materials chapter entries beyond the whisker sensors, with quantities per group.
-     3. A photograph of a robot with whiskers mounted. In TODO.md 5.0 as well, since it needs a robot in front of a camera.
-     4. The standards section stays a placeholder for now, deliberately. -->
+     3. The standards section stays a placeholder for now, deliberately.
+
+     Photographs of a mounted whisker were added on 2026-08-06 (Mounting the whiskers on the robot). -->

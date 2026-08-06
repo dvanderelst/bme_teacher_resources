@@ -73,6 +73,7 @@ This chapter lists every link that appears in these materials, grouped by chapte
 - [Online Tone Generator - generate pure tones of any frequency](https://www.szynalski.com/tone-generator/) — Tool for generating pure tones of any frequency for testing.
 - [LmK Music Production, *What is HRTF?*](https://lmkprod.com/what-is-hrtf-brief-explanation/) — Explanation of Head-Related Transfer Function.
 - [How warplanes were spotted before radar | CNN](https://www.cnn.com/style/article/war-sound-locators-before-radar/index.html) — Historical article on early sound-based detection systems.
+- [Animal Audiogram Database](https://www.animalaudiograms.org) — Audiograms curated from peer-reviewed papers by the Museum für Naturkunde Berlin. Free, no account needed. Several species can be overlaid on one plot and the data downloaded. Currently marine mammals and birds only.
 - [soundlocalizationapp-production.up.railway.app](https://soundlocalizationapp-production.up.railway.app) — Web application for sound localization activities.
 
 **Local files and handouts:**
@@ -92,11 +93,13 @@ This chapter lists every link that appears in these materials, grouped by chapte
 - [Calculation speed of sound in humid air and the air pressure humidity moist air water vapor density of water atmospheric pressure - sengpielaudio Sengpiel Berlin](https://sengpielaudio.com/calculator-airpressure.htm) — Tool for calculating speed of sound under various atmospheric conditions.
 - [Echolocation - Bats (U.S. National Park Service)](https://www.nps.gov/subjects/bats/echolocation.htm) — National Park Service resource on bat echolocation.
 - [Acoustical Society of America](https://acoustics.org/pressroom/httpdocs/163rd/Mishima_2aAO5.html) — Source for dolphin echolocation spectrogram.
+- [Wikimedia Commons: the pipistrelle recording](https://commons.wikimedia.org/wiki/File:Chirps190918-22s.mp3) — The original of the slowed-down bat recording below, with its full description and licence.
 - [Thingiverse](https://www.thingiverse.com/dvanderelst/designs) — 3D-printable brackets and parts for mounting sensors.
 - [Video: a sonar cane for visually impaired users](https://www.youtube.com/watch?v=cnW1_XMUIzM)
 
 **Local files and handouts:**
 - [Echolocation in insectivores and rodents (.pdf)](files/Echolocation_in_Insectivores_and_Rodents.pdf)
+- [A common pipistrelle closing on prey, slowed down twenty times (.mp3)](files/pipistrelle_chirps_20x_slowed.mp3) — The recording the spectrogram in the chapter was made from. By [Drahkrub](http://de.wikipedia.org/wiki/Benutzer:Drahkrub), CC BY-SA 4.0.
 
 ### Chapter 12: Touch and Whiskers
 

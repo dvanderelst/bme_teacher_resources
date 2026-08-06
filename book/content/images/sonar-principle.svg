@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="DejaVu Sans" font-size="19" fill="#222">
+<text x="62" y="52" font-size="20"><tspan font-weight="bold">1</tspan>  The emitter <tspan font-weight="bold">T</tspan> sends out a short burst of ultrasound.</text>
+<path d="M268.2,154.2 A120,120 0 0 1 268.2,195.8" fill="none" stroke="#1f6fb4" stroke-width="3.6" opacity="1.00"/>
+<path d="M361.7,137.7 A215,215 0 0 1 361.7,212.3" fill="none" stroke="#1f6fb4" stroke-width="3.6" opacity="0.89"/>
+<path d="M455.3,121.2 A310,310 0 0 1 455.3,228.8" fill="none" stroke="#1f6fb4" stroke-width="3.6" opacity="0.78"/>
+<path d="M548.8,104.7 A405,405 0 0 1 548.8,245.3" fill="none" stroke="#1f6fb4" stroke-width="3.6" opacity="0.67"/>
+<path d="M642.4,88.2 A500,500 0 0 1 642.4,261.8" fill="none" stroke="#1f6fb4" stroke-width="3.6" opacity="0.56"/>
+<path d="M300,175 L690,175" stroke="white" stroke-width="11" fill="none"/><path d="M300,175 L690,175" stroke="#1f6fb4" stroke-width="3.4" fill="none" marker-end="url(#ab)"/>
+<rect x="117" y="83" width="66" height="184" rx="9" fill="#2f2f2f"/><circle cx="150" cy="129" r="26" fill="#f2c14e" stroke="#111" stroke-width="2.5"/><text x="150" y="137" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">T</text><circle cx="150" cy="221" r="26" fill="#d8d8d8" stroke="#111" stroke-width="2.5"/><text x="150" y="229" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">R</text>
+<rect x="742" y="80" width="50" height="190" rx="6" fill="#c7c7c7" stroke="#555" stroke-width="2.5"/>
+<text x="62" y="313" font-size="20"><tspan font-weight="bold">2</tspan>  It reflects off the object and comes back to the receiver <tspan font-weight="bold">R</tspan>.</text>
+<path d="M623.8,475.8 A120,120 0 0 1 623.8,434.2" fill="none" stroke="#c2660a" stroke-width="3.6" stroke-dasharray="14 10" opacity="1.00"/>
+<path d="M530.3,492.3 A215,215 0 0 1 530.3,417.7" fill="none" stroke="#c2660a" stroke-width="3.6" stroke-dasharray="14 10" opacity="0.89"/>
+<path d="M436.7,508.8 A310,310 0 0 1 436.7,401.2" fill="none" stroke="#c2660a" stroke-width="3.6" stroke-dasharray="14 10" opacity="0.78"/>
+<path d="M343.2,525.3 A405,405 0 0 1 343.2,384.7" fill="none" stroke="#c2660a" stroke-width="3.6" stroke-dasharray="14 10" opacity="0.67"/>
+<path d="M249.6,541.8 A500,500 0 0 1 249.6,368.2" fill="none" stroke="#c2660a" stroke-width="3.6" stroke-dasharray="14 10" opacity="0.56"/>
+<path d="M690,455 L215,455" stroke="white" stroke-width="11" fill="none"/><path d="M690,455 L215,455" stroke="#c2660a" stroke-width="3.4" fill="none" marker-end="url(#aa)"/>
+<rect x="117" y="363" width="66" height="184" rx="9" fill="#2f2f2f"/><circle cx="150" cy="409" r="26" fill="#d8d8d8" stroke="#111" stroke-width="2.5"/><text x="150" y="417" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">T</text><circle cx="150" cy="501" r="26" fill="#f2c14e" stroke="#111" stroke-width="2.5"/><text x="150" y="509" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">R</text>
+<rect x="742" y="360" width="50" height="190" rx="6" fill="#c7c7c7" stroke="#555" stroke-width="2.5"/>
+<text x="150" y="581" text-anchor="middle" font-size="18">sonar sensor</text>
+<text x="767" y="581" text-anchor="middle" font-size="18">object</text>
+<path d="M183,621 L183,639 M183,630 L742,630 M742,621 L742,639" stroke="#222" stroke-width="2.4" fill="none"/>
+<text x="462" y="616" text-anchor="middle" font-size="20">distance <tspan font-style="italic">d</tspan></text>
+<text x="462" y="662" text-anchor="middle" font-size="18" fill="#777">the sensor times the round trip, so the sound covers <tspan font-style="italic">d</tspan> twice</text>
+<defs>
+<marker id="ab" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0,0 9,3.5 0,7" fill="#1f6fb4"/></marker>
+<marker id="aa" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0,0 9,3.5 0,7" fill="#c2660a"/></marker>
+</defs>
+</g></svg>

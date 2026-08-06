@@ -18,7 +18,7 @@ Before programming the robot, explore the challenges programmers face through th
 
 > You are an engineer hired to program a mobile robot to reach the house's front door (indicated by an arrow) when the bell rings. The robot must reach the front door from any location in the house.
 
-![This image depicts the layout of an imaginary building. The building is serviced by a robot, which must be programmed to answer the door when the bell rings.](images/introduction-to-programming-b71247e9.png)
+![The layout of an imaginary house, served by a robot that has to answer the door. The hard part is not the route drawn here: it is that the robot has to reach the front door from *wherever it happens to be*, which rules out simply listing the turns.](images/introduction-to-programming-house.png)
 
 Discuss this with students. Programmers face two distinct challenges here, worth separating:
 
@@ -35,7 +35,7 @@ In this game, students write a program for a hypothetical robot and encounter bo
 
 Imagine you are an engineer hired to write the program controlling a robot arm in a cheese sandwich factory. The image below shows the robot arm can reach three locations labeled 1-3. Your task is to write a program that directs the robot to make complete cheese sandwiches, each consisting of bread, cheese, and bread.
 
-![The Cheese Sandwich Maker game. Program the robot arm to use materials delivered on the conveyor belt (location 1) to build sandwiches on the truck's loading deck (location 3). Unneeded materials can be discarded on another conveyor belt (location 2).](images/introduction-to-programming-0aeb7e34.png)
+![The Cheese Sandwich Maker game. The arm can reach three places. **1**, the end of a conveyor belt delivering slices of bread and cheese in an order nobody can predict. **2**, the start of a second belt, for anything not wanted. **3**, the deck of a truck, where the sandwich is assembled; when it is complete the truck drives off and an empty one takes its place. A sandwich is bread, then cheese, then bread.](images/introduction-to-programming-factory.png)
 
 1. **Location 1** is the end of a conveyor belt delivering slices of bread and cheese. **Importantly, the order is random.** You cannot predict whether the next item will be bread or cheese.
 2. **Location 2** is the start of a second conveyor belt leading to additional factory robot arms. Use this to discard unneeded items. For example, if conveyor belt 1 delivers consecutive bread slices, the excess can be dropped onto conveyor belt 2.

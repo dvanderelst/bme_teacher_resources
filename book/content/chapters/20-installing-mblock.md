@@ -9,7 +9,7 @@ There are two ways to use it; both work with all our lesson plans:
 
 Both options use the same editor. The blocks, menus, and screens are identical, so the instructions and screenshots in these materials apply to either choice. Programs saved in one version open in the other.
 
-The differences are practical rather than functional: the installed version works offline, while the browser version requires mLink running alongside it.
+The differences are practical rather than functional: the installed version works offline, while the browser version needs a network connection — but, in Chrome, nothing installed at all.
 
 To install mBlock, mLink, or both, download them from Makeblock's download page: [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads). Everything below starts there.
 
@@ -20,7 +20,7 @@ To install mBlock, mLink, or both, download them from Makeblock's download page:
 | Windows | Either. Installing is slightly more reliable. |
 | Mac | Either. Take care to select the correct version — see below. |
 | Chromebook | Browser only |
-| Linux | Browser only |
+| Linux | Browser only, using Chrome or Chromium and direct connection. mLink is not usable — see the note under [Step 1: Install mLink](#step-1-install-mlink). |
 
 If your class uses mixed hardware, the browser version ensures everyone uses identical software.
 
@@ -32,21 +32,23 @@ Some school computers restrict software installation, blocking either the mBlock
 
 1. Go to [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads).
 2. Find the **mBlock PC version** section and download the Windows version. Both `.exe` and `.msi` packages are available. Use the `.exe` installer normally; the `.msi` is for IT departments deploying software centrally.
-3. Run the downloaded installer and follow the prompts.
+3. Run the downloaded installer and follow the prompts. There is nothing to configure and nothing to choose; it takes a minute or two.
 
-    ![The mBlock installer running. There is nothing to configure; it takes a minute or two.](images/installing-mblock-installer.png)
+    ![The mBlock installer running, here version 5.6.0.](images/installing-mblock-installer.png)
 
-4. Near the end, the installer offers to install a **device driver**, which enables computer-to-robot communication. Click `Install`. If you see `Driver Install Failure`, the driver is likely already installed. Click `Uninstall`, then `Install` to retry.
+4. Click `Finish`.
 
-    ![The driver window, which appears separately from the installer. `CH341SER.INF` should appear in the box; click `INSTALL`. Use `UNINSTALL` first if the install fails.](images/installing-mblock-driver-setup.png)
+    ![The end of the installation. Version 5.6.0 does not offer to launch mBlock afterwards; start it from the Start menu.](images/installing-mblock-finish.png)
 
-    ![Confirmation that the driver installed. The message says "drive" rather than "driver" — this is expected. Click `OK`, then close the driver window behind it.](images/installing-mblock-driver-installed.png)
+> **Note**
+>
+> Older versions of mBlock installed a **device driver** as part of setup — the CH340 USB-to-serial driver. Version 5.6.0 does not: on a Windows 11 machine that had never had Makeblock software on it, the installer ran start to finish with no driver step at all.
+>
+> It matters when a connection that ought to work does not. Both the robot's USB port and the Bluetooth dongle present themselves to Windows as serial ports, and without the driver neither may appear. The symptom is an empty port list in the `Connect` dialog, or a browser that offers nothing to connect to.
+>
+> The fix is to install the driver, which the **mLink** installer still does — see [Step 1: Install mLink](#step-1-install-mlink) below. Installing mLink purely for its driver is harmless: you can go on using the installed mBlock and ignore mLink entirely.
 
-5. Click `Finish`.
-
-    ![The end of the installation. `Run mBlock` is selected by default, so mBlock opens when you click `Finish`.](images/installing-mblock-finish.png)
-
-**Windows requirement:** mBlock requires **64-bit** Windows 7 or 10 and will not install on 32-bit systems. Verify older school laptops meet this requirement before the lesson.
+**Windows requirement:** mBlock requires **64-bit** Windows 7 or 10 and will not install on 32-bit systems. Verify older school laptops meet this requirement before the lesson. It also runs on Windows 11, which is what we tested on.
 
 ### Mac
 
@@ -74,21 +76,31 @@ Chrome can communicate directly with the robot via serial port, which our instru
 
 For non-Chrome browsers, install **mLink** first, then open the editor.
 
-> Use **Chrome**, where the online editor is most reliable. On Linux, mLink only works with Chrome and Chromium, not other Chromium-based browsers.
+> **Use Chrome or Chromium itself**, not merely a browser built on Chromium. Direct connection relies on the browser's own serial-port support, and that is where the differences between Chromium-based browsers show up: in our tests, Vivaldi on Windows failed to connect over direct connection, while Chromium on Linux connected without trouble. If direct connection fails in a browser that is *nearly* Chrome, try actual Chrome before concluding the robot or the dongle is at fault.
 
 ### Step 1: Install mLink
 
-Download mLink from [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads). Versions are available for Windows, Mac, Linux, and Chromebook.
+Download mLink from [mblock.cc/pages/downloads](https://mblock.cc/pages/downloads). The page lists five downloads: Windows, Mac, `linux.deb`, `linux.rpm`, and Chromebook.
 
-**Windows** — download and run the installer. As with mBlock, the installer offers to install a device driver at the end. Click `Install`; if you see `Driver Install Failure`, select `Uninstall`, then `Install` again. Requires Windows 7 or 10, 64-bit.
+**Windows** — download and run the installer. Near the end it opens a separate window offering to install a **device driver**, the one described in the note above. Click `INSTALL`; if you see `Driver Install Failure`, click `UNINSTALL`, then `INSTALL` again. Requires Windows 7 or 10, 64-bit; Windows 11 works.
 
 ![The mLink installer. Note that the program calls itself mLink2, which is the same as the download page's mLink.](images/installing-mblock-mlink-installer.png)
 
-![The end of the mLink installation. As with mBlock, `Run mLink2` is selected by default, so it starts immediately.](images/installing-mblock-mlink-finish.png)
+![The driver window, which appears separately from the installer. `CH341SER.INF` should appear in the box; click `INSTALL`. Use `UNINSTALL` first if the install fails.](images/installing-mblock-driver-setup.png)
+
+![Confirmation that the driver installed. Click `OK`, then close the driver window behind it.](images/installing-mblock-driver-installed.png)
+
+![The end of the mLink installation. `Run mLink2` is selected by default, so it starts immediately.](images/installing-mblock-mlink-finish.png)
 
 **Mac** — download and run the installer. Requires macOS 10.12 or later. If macOS blocks the installer, use the same workarounds described earlier.
 
-**Linux** — two packages are available: `.deb` for Debian and Ubuntu-based systems, `.rpm` for Fedora and Red Hat-based systems. Install the package matching your distribution.
+**Linux** — two packages are available: `.deb` for Debian and Ubuntu-based systems, `.rpm` for Fedora and Red Hat-based systems.
+
+> **Note**
+>
+> **On Linux, do not bother with mLink.** The `.deb` is mLink **1.2.0** — several major versions behind the 2.1.1 that Windows gets — and although it installs without complaint on Linux Mint 22.3, it then registers nothing: no menu entry, no command on the path, no way we could find to start it.
+>
+> Use the browser's direct connection instead, in Chrome or Chromium. We connected, ran a program in Live mode, uploaded, and reset the firmware that way, with nothing installed. See [Direct connection or mLink?](#direct-connection-or-mlink).
 
 **Chromebook** — open the downloads page in Chrome, find the Chromebook version of mLink, click `Download`, and follow Chrome's prompts to add it.
 
@@ -96,14 +108,18 @@ Download mLink from [mblock.cc/pages/downloads](https://mblock.cc/pages/download
 
 mLink must be running before the browser can detect the robot.
 
-- **Windows** — start mLink from the Start menu. It opens a window confirming it is running. **Leave this window open.** The first time, Windows displays a firewall prompt. Click `Allow Access`; otherwise, the browser cannot communicate with mLink.
+- **Windows** — start mLink from the Start menu. It opens a window confirming it is running. **Leave this window open.** The first time, Windows displays a firewall prompt. Click `Allow Access`; otherwise, the browser cannot communicate with mLink. mLink also puts an icon in the notification area, which is where it hides once the window is closed.
 - **Mac** — start mLink from Applications. It opens a window confirming it is running. Leave it open.
-- **Linux** — start it from a terminal with `mblock-mlink start`.
+- **Linux** — not available in practice; use direct connection instead, as described above.
 - **Chromebook** — nothing to start; Chrome handles it once mLink is added.
+
+With mLink running, the browser will ask permission to hand over to it the first time you connect. Answer `Open mLink2`.
 
 ![The Windows firewall prompt, which appears the first time mLink runs. Select `Private networks`, since mLink and the browser are on the same machine. Click `Allow access`.](images/installing-mblock-firewall.png)
 
 ![mLink running. This window must remain open; closing it prevents the browser from detecting the robot. It is a launcher, so `Create now` under **mBlock block-based editor** opens the same editor as the next step.](images/installing-mblock-mlink-running.png)
+
+![The browser asking to hand over to mLink. Click `Open mLink2`. Ticking the box stops it asking again on this computer.](images/installing-mblock-mlink-open-prompt.png)
 
 ### Step 3: Open the editor
 

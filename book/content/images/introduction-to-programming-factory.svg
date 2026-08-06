@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="660" viewBox="0 0 1020 660">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="DejaVu Sans" font-size="19" fill="#222">
+<text x="510" y="46" text-anchor="middle" font-size="30" font-weight="bold">Cheese Sandwich Maker 2000</text>
+<rect x="55" y="268" width="345" height="30" rx="15" fill="#33383d"/><circle cx="90" cy="283" r="9" fill="#7b8794"/><circle cx="182" cy="283" r="9" fill="#7b8794"/><circle cx="273" cy="283" r="9" fill="#7b8794"/><circle cx="365" cy="283" r="9" fill="#7b8794"/><rect x="55" y="261" width="345" height="7" fill="#9aa5b1"/>
+<g><rect x="71" y="227" width="46" height="34" rx="5" fill="#f2c14e" stroke="#c99a18" stroke-width="2.5"/><circle cx="84" cy="239" r="4.5" fill="#c99a18"/><circle cx="102" cy="237" r="3.5" fill="#c99a18"/><circle cx="94" cy="251" r="4" fill="#c99a18"/></g>
+<g><path d="M153,261 L153,240 Q153,227 166,227 L186,227 Q199,227 199,240 L199,261 Z" fill="#e9cfa8" stroke="#c2a170" stroke-width="2.5"/><path d="M159,257 L193,257" stroke="#c2a170" stroke-width="2" opacity="0.6"/></g>
+<g><rect x="235" y="227" width="46" height="34" rx="5" fill="#f2c14e" stroke="#c99a18" stroke-width="2.5"/><circle cx="248" cy="239" r="4.5" fill="#c99a18"/><circle cx="266" cy="237" r="3.5" fill="#c99a18"/><circle cx="258" cy="251" r="4" fill="#c99a18"/></g>
+<g><path d="M317,261 L317,240 Q317,227 330,227 L350,227 Q363,227 363,240 L363,261 Z" fill="#e9cfa8" stroke="#c2a170" stroke-width="2.5"/><path d="M323,257 L357,257" stroke="#c2a170" stroke-width="2" opacity="0.6"/></g>
+<path d="M175,330 L330,330" stroke="#7b8794" stroke-width="4" marker-end="url(#mv)"/>
+<circle cx="330" cy="160" r="23" fill="#2e8b57"/><text x="330" y="169" text-anchor="middle" font-size="26" font-weight="bold" fill="white">1</text>
+<text x="228" y="372" text-anchor="middle" font-size="19">supply of bread and cheese</text>
+<text x="228" y="398" text-anchor="middle" font-size="18" fill="#666">the order is random</text>
+<rect x="620" y="268" width="345" height="30" rx="15" fill="#33383d"/><circle cx="655" cy="283" r="9" fill="#7b8794"/><circle cx="747" cy="283" r="9" fill="#7b8794"/><circle cx="838" cy="283" r="9" fill="#7b8794"/><circle cx="930" cy="283" r="9" fill="#7b8794"/><rect x="620" y="261" width="345" height="7" fill="#9aa5b1"/>
+<path d="M690,330 L845,330" stroke="#7b8794" stroke-width="4" marker-end="url(#mv)"/>
+<circle cx="638" cy="176" r="23" fill="#2e8b57"/><text x="638" y="185" text-anchor="middle" font-size="26" font-weight="bold" fill="white">2</text>
+<text x="792" y="372" text-anchor="middle" font-size="19">away to other machines</text>
+<text x="792" y="398" text-anchor="middle" font-size="18" fill="#666">put unwanted slices here</text>
+<rect x="464" y="314" width="92" height="30" rx="8" fill="#33383d"/>
+<rect x="484" y="244" width="52" height="76" rx="12" fill="#e8890c"/>
+<path d="M510,244 L414,144" stroke="#f5a623" stroke-width="30" stroke-linecap="round"/>
+<path d="M414,144 L414,214" stroke="#f5a623" stroke-width="26" stroke-linecap="round"/>
+<circle cx="510" cy="244" r="17" fill="#1b4f72"/><circle cx="510" cy="244" r="8" fill="#5dade2"/>
+<circle cx="414" cy="144" r="17" fill="#1b4f72"/><circle cx="414" cy="144" r="8" fill="#5dade2"/>
+<path d="M398,218 L392,244 M430,218 L436,244" stroke="#1b4f72" stroke-width="9" stroke-linecap="round"/>
+<text x="480" y="374" text-anchor="middle" font-size="19">robot arm</text>
+<rect x="430" y="470" width="150" height="52" rx="6" fill="#e8890c" stroke="#33383d" stroke-width="3"/>
+<path d="M580,522 L580,436 L636,436 L662,476 L662,522 Z" fill="#f5a623" stroke="#33383d" stroke-width="3"/>
+<path d="M590,444 L630,444 L650,472 L590,472 Z" fill="white" stroke="#33383d" stroke-width="2.5"/>
+<circle cx="472" cy="526" r="24" fill="#33383d"/><circle cx="472" cy="526" r="11" fill="#9aa5b1"/>
+<circle cx="626" cy="526" r="24" fill="#33383d"/><circle cx="626" cy="526" r="11" fill="#9aa5b1"/>
+<rect x="426" y="460" width="158" height="10" rx="4" fill="#9aa5b1"/>
+<g><path d="M482,460 L482,439 Q482,426 495,426 L515,426 Q528,426 528,439 L528,460 Z" fill="#e9cfa8" stroke="#c2a170" stroke-width="2.5"/><path d="M488,456 L522,456" stroke="#c2a170" stroke-width="2" opacity="0.6"/></g>
+<circle cx="404" cy="454" r="23" fill="#2e8b57"/><text x="404" y="463" text-anchor="middle" font-size="26" font-weight="bold" fill="white">3</text>
+<text x="546" y="582" text-anchor="middle" font-size="19">the sandwich is built on the truck</text>
+<text x="546" y="608" text-anchor="middle" font-size="18" fill="#666">when it is finished, the truck drives off</text>
+<defs><marker id="mv" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0,0 9,3.5 0,7" fill="#7b8794"/></marker></defs>
+</g></svg>

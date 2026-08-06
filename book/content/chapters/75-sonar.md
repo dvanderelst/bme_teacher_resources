@@ -66,17 +66,17 @@ In principle, sonar is simple: a sound pulse is emitted, and the returned echoes
 
 [How Ultrasonic Sensors Work](https://maxbotix.com/blogs/blog/how-ultrasonic-sensors-work)
 
-Sonar as a distance sensor is widespread. For example, parking sensors on cars often use sonar. Many robots also use sonar to detect obstacles. Below is a picture of NAO, an advanced humanoid robot, which features four sonar sensors in the torso that help it avoid bumping into obstacles.
+Sonar as a distance sensor is widespread. For example, parking sensors on cars often use sonar. Many robots also use sonar to detect obstacles. Below is a picture of NAO, an advanced humanoid robot, which features four sonar sensors in its chest that help it avoid bumping into obstacles. They are arrowed in the photograph; without the arrows most people look straight past them, which is worth a moment with a class — sensors on a finished product are usually invisible.
 
-![The NAO robot is an advanced humanoid robot with four sonar sensors in its torso. These sensors help the robot avoid bumping into obstacles by detecting objects and calculating distance.](images/sonar-lesson-plan-d1293026.png)
+![The chest of a NAO, with the four sonar sensors arrowed. They are the small dark circles set into the blue chest panel, and they are easy to miss until someone points at them. They work on the same principle as the mBot's — emit a pulse, time the echo, report a distance — and are there for the same reason, to keep the robot from walking into things. Photograph by Wikimedia Commons user ubahnverleih, released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/); arrows added.](images/sonar-nao-sonar-sensors.jpg)
 
 The sonar sensor used by the mBot is a typical example of sonar as a distance sensor. The device looks like it has two sensors. However, the sensor consists of two transducers with different functions. One of the tin cylinders is the emitter (marked with a T), and the other is the receiver (marked with an R). The emitter produces ultrasound bursts, while the receiver is a microphone listening for the echoes.
 
-![The mBot sonar sensor. One of the two cylinders is the emitter, while the other is the receiver.](images/sonar-lesson-plan-b7c001ad.png)
+![The mBot sonar sensor — Makeblock's *Me Ultrasonic Sensor*. One of the two metal cylinders is the emitter and the other the receiver, marked `T` and `R` on the board beside them. For everything the lessons do, it does not matter which is which.](images/sonar-sensor-photo.jpg)
 
-The sensor reports distance: it uses the time delay between the emitted sound and the returning echo to estimate the distance to the object. This is illustrated below. In this image, the same device is used as an emitter and receiver. Some sonar sensors can also use the emitter as a microphone. In our sensor, the emitter and receiver are separate.
+The sensor reports distance: it uses the time delay between the emitted sound and the returning echo to estimate the distance to the object, as illustrated below. Our sensor keeps the two jobs apart — the burst leaves the emitter, and the echo arrives at the receiver — which is why the diagram shows two transducers. Some sonar sensors use a single transducer for both, switching it from loudspeaker to microphone once the pulse has left.
 
-![The principle. The sensor emits a pulse, the pulse reflects off an object, and the time until the reflection returns gives the distance.](images/sonar-lesson-plan-19f7e7c8.png)
+![How the sensor measures a distance. **1**, the emitter `T` sends out a short burst of ultrasound, which spreads as it travels. **2**, the burst reflects off whatever it meets, and part of it comes back to the receiver `R`. All the sensor measures is the time between those two moments. Because the sound has to travel out to the object *and back*, that time covers the distance twice — which is where the division by two comes from when the distance is worked out later in this chapter.](images/sonar-principle.png)
 ### Animals that use sonar
 
 #### Bats
@@ -87,7 +87,7 @@ Most microbats are capable of echolocation. They emit ultrasonic sounds through 
 
 Megabats, which include fruit bats and flying foxes, generally do not use echolocation to navigate or hunt. Instead, they rely primarily on their excellent eyesight and sense of smell. Megabats have large eyes and well-developed visual centers in their brains, which help them find food (fruits, nectar, or pollen) and navigate through forests or open spaces at night. Megabats include the Fruit Bat (Family Pteropodidae) and Flying Foxes (Genus *Pteropus*), predominantly found in tropical and subtropical regions of Africa, Asia, Australia, and the Pacific Islands.
 
-![Microbats and megabats. Broadly, it is the microbats that echolocate; the fruit-eating megabats mostly navigate by sight and smell.](images/sonar-lesson-plan-c31a35a4.jpg)
+![Four bats, two of each kind, and the difference is written on their faces. **A**, a lesser long-eared bat (*Nyctophilus geoffroyi*) and **B**, a common pipistrelle (*Pipistrellus pipistrellus*) — microbats, and both echolocate. **C**, an eastern tube-nosed bat (*Nyctimene robinsoni*) and **D**, a greater short-nosed fruit bat (*Cynopterus sphinx*) — megabats, which mostly do not. The microbats have ears out of all proportion to their heads and small eyes; the megabats have large forward-facing eyes, small ears, and a long snout. An animal that finds its way by listening for its own echoes needs to collect them, and it is the ear that has grown to do it. Photographs: **A** by Chloe Johnson, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); **B** by Manuel Werner, [CC BY-SA 2.0 DE](https://creativecommons.org/licenses/by-sa/2.0/de/deed.en); **C** by Wikimedia Commons user Mnolf, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/); **D** by Shantanu Kuveskar, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Cropped and arranged by us; this figure is released under CC BY-SA 4.0 rather than the book's licence.](images/sonar-bats-micro-mega.jpg){#fig:bats}
 
 #### Whales
 
@@ -97,9 +97,9 @@ Toothed whales, such as dolphins, porpoises, sperm whales, and orcas (killer wha
 
 Baleen whales like humpback, blue, and fin whales do not echolocate.
 
-![Toothed whales echolocate.](images/sonar-lesson-plan-76fb404b.jpg)
+![Four toothed whales, all of them echolocators. Clockwise from top left: a false killer whale (*Pseudorca crassidens*), an Amazon river dolphin (*Inia geoffrensis*), a beluga (*Delphinapterus leucas*) and a bottlenose dolphin (*Tursiops truncatus*). The Amazon river dolphin is the one to look at twice: it hunts in flooded forest so turbid that eyes are of little use, and it has the sonar to match. Montage by Wikimedia Commons user PaleoNeolitic, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), from photographs by Hideyuki Kamon ([CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)), Jorge Andrade and Steve Snodgrass (both [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) and Gobierno CDMX ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)).](images/sonar-lesson-plan-76fb404b.jpg)
 
-![Toothed whales produce sonar sounds using phonic lips in their heads. Bats produce sonar sounds using vocal cords, akin to how humans produce speech.](images/sonar-lesson-plan-8458aef6.png)
+![Toothed whales produce sonar sounds using phonic lips in their heads. Bats produce sonar sounds using vocal cords, akin to how humans produce speech. Note also where the sound goes in and out: outgoing clicks are shaped by the fatty melon in the forehead, while returning echoes are picked up through the lower jaw and carried to the ear. Diagram by Wikimedia Commons user Jooja, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), redrawn from an earlier version by Emoscopes.](images/sonar-lesson-plan-8458aef6.png)
 
 Besides bats and whales, several other animals use echolocation. Certain shrew species, such as the Eurasian water shrew (*Neomys fodiens*) and the American water shrew (*Sorex palustris*), emit ultrasonic calls to navigate and locate prey in dark or underwater environments. Oilbirds (*Steatornis caripensis*) are nocturnal birds found in Central and South America that navigate and locate food in dark caves using clicking or sonar-like vocalizations. Some swiftlets, such as the black-nest swiftlet (*Aerodramus maximus*), use echolocation to navigate within dark cave habitats by emitting calls and listening to echoes bouncing off cave walls.
 
@@ -137,18 +137,21 @@ The value of 34.3 cm/millisecond for the speed of sound holds for temperatures a
 
 #### The sensor under-reports distance
 
-The distance the sensor reports is not the distance calculated from the echo. It is consistently too small. In the measurement above, with the wall about 184 cm away, the sensor reported **142 cm**. This appears to be a quirk of the sensor rather than a fault in one unit. Checks at several distances found the error to be proportional — the reading is always short by roughly the same fraction, not by a fixed number of centimetres. This is why a single multiplier is the right way to correct it.
+The distance the sensor reports is not the distance to the object. It is consistently too small. In the measurement above, with the wall about 184 cm away, the sensor reported **142 cm**. This appears to be a quirk of the sensor rather than a fault in one unit, and it is still there: the measurements below were repeated in August 2026 with mBlock 5.6.0, and the sensor under-reports exactly as it always has.
 
-The programs in this lesson multiply the reported distance by **1.25** to compensate. It is worth understanding rather than taking on trust, because it does not quite reconcile:
+The error is *proportional* rather than a fixed offset — the reading is short by the same fraction at every distance — which is what makes a single multiplier the right way to correct it. Five distances, each measured with a laser distance meter from the face of the sensor board:
 
-| | Distance |
-|---|---|
-| Reported by the sensor | 142 cm |
-| Sensor reading × 1.25 | 177.5 cm |
-| Calculated from the echo delay | 178.4 cm |
-| Measured with a laser distance meter | about 184 cm |
+| Reported by the sensor | Measured with a laser | True / reported |
+|---|---|---|
+| 31.6 cm | 42 cm | 1.33 |
+| 40.9 cm | 53 cm | 1.30 |
+| 54.2 cm | 71 cm | 1.31 |
+| 68.0 cm | 88 cm | 1.29 |
+| 81.6 cm | 106 cm | 1.30 |
 
-So × 1.25 brings the sensor into line with the time-of-flight calculation almost exactly, and still leaves it about 6 cm short of the laser measurement. Correcting all the way to 184 cm would take a factor of about 1.30. That remaining gap is small enough to come from the assumed speed of sound, or from the two instruments not measuring from quite the same point on the robot.
+The ratio barely moves across the range, and these are the distances the programs actually work over: the obstacle-avoidance robot turns at 30 cm and the cane starts beeping at about 120 cm. **The programs in this lesson therefore multiply the reported distance by 1.3.**
+
+That also settles the older single measurement at the top of this section: 142 cm × 1.3 = 184.6 cm, which is the laser reading almost exactly. The time-of-flight calculation from the recorded echo gave 178.4 cm, about 3% lower — close enough that the difference sits comfortably inside the assumed speed of sound and the fact that the microphone recording, the laser and the sensor do not all measure from quite the same point on the robot.
 
 > **Note**
 >
@@ -156,7 +159,7 @@ So × 1.25 brings the sensor into line with the time-of-flight calculation almos
 >
 > **correction factor = true distance / reported distance**
 >
-> Do this at two or three distances, say half a metre, one metre and two metres. You should get roughly the same answer each time. If that answer is close to **1**, the under-reporting has been fixed in your version of mBlock and the correction is no longer needed — remove the multiplier, or the robot will think obstacles are further away than they are and leave everything too late. If it is close to **1.25**, our programs will work as they are. If it is something else, put your own number in place of 1.25, which appears in the `do_sensing` block of the obstacle avoidance program and near the top of the sonar cane program.
+> Do this at two or three distances, say half a metre, one metre and two metres. You should get roughly the same answer each time. If that answer is close to **1**, the under-reporting has been fixed in your version of mBlock and the correction is no longer needed — remove the multiplier, or the robot will think obstacles are further away than they are and leave everything too late. If it is close to **1.3**, our programs will work as they are. If it is something else, put your own number in place of 1.3, which appears in the `do_sensing` block of the obstacle avoidance program and near the top of the sonar cane program.
 
 #### Directionality and Range
 #### Directionality and Range
@@ -169,11 +172,11 @@ The conclusion is that for a given target object, the sensor has a maximum range
 
 To make this more tangible, consider the following graph from Maxbotix, a manufacturer of sonar sensors. This is not the sensor used in this lesson, but the example is illustrative.
 
-![The region in which a Maxbotix sensor can detect a 10 cm wooden pole, each grid square being 30 cm. The sensor sits at the bottom, pointing up. Straight ahead it reaches about 240 cm; along the blue arrow, only about 20 degrees off axis, about 190 cm. The red dots are a different sensor setting and can be ignored.](images/sonar-lesson-plan-3ea35653.jpg)
+![Where a Maxbotix ultrasonic rangefinder can detect a 10 cm wooden pole. The sensor sits at the bottom, pointing up, and each grid square is 30 cm. The shaded region is everywhere the pole is picked up: 238 cm straight ahead, but 154 cm at 20 degrees off the axis and only 74 cm at 30 degrees. Redrawn by us from Maxbotix's published beam pattern, measured off their plot; a second outline for a different sensor setting has been left out.](images/sonar-beam-pattern.png)
 
-Each grid square measures 30 × 30 cm. The sensor is at the bottom of the graph, pointing upwards. The black line shows the area where the sensor can detect a 10 cm diameter wooden pole. The red dots show the same for another sensor setting (which can be ignored). In this case, the pole can be detected at a maximum range of 240 cm (8 squares × 30 cm) straight ahead.
+Each grid square measures 30 × 30 cm, and the sensor is at the bottom, pointing upwards. The shaded region is where the sensor can detect a 10 cm diameter wooden pole. Straight ahead, it picks the pole up at **238 cm** — very nearly eight squares.
 
-In contrast, in the direction of the blue arrow (about 20 degrees off axis), the maximum detection distance is about 190 cm — 50 cm (20%) less at an angle of only 20 degrees from the centerline. At 30 degrees, the detection distance is only about 120 cm (50% reduction).
+Away from the axis the range collapses, and faster than most people expect. At **20 degrees** off the centreline it is **154 cm**, a third less, for a change of direction you would struggle to see by eye. By **30 degrees** it is **74 cm** — under a third of the range straight ahead. The beam is not a cone with a hard edge but a narrow teardrop that falls away steeply on both sides.
 
 This shows that the Maxbotix sensor is very directional: detection distances fall rapidly as the angle from the centerline increases. The same holds for our mBot sensor. Makeblock specifies a detection range of 3 to 400 cm for this sensor. However, the upper figure is theoretical: it assumes a very large object straight ahead. In practice the range is substantially smaller, especially for smaller objects. There is also a lower limit — objects closer than about 3 cm cannot be detected at all.
 
@@ -183,9 +186,19 @@ Students will explore the directionality and the problem with sound mirrors in t
 
 Here, we relate the above concepts to animal sonar, enabling students to see parallels and differences between artificial sonar systems and biological echolocators.
 
-Above, we learned that the mBot sonar sensor emits sound pulses of about 40 kHz. Many echolocating bats use calls with a broad frequency range. Below is a recording of the big brown bat, from the U.S. National Park Service website. This plot is a spectrogram, showing the frequencies in the bat's calls as a function of time. This spectrogram shows that this bat's call contains frequencies between about 60 and 25 kHz. You can play a slowed-down version of the sound recording on the U.S. National Park Service website. By slowing down the recording, the sound becomes audible to humans. When you listen, you will notice that this bat's calls sound like 'chirps' — indeed, bat calls are often called chirps, as this is what they sound like on slowed-down recordings.
+Above, we learned that the mBot sonar sensor emits sound pulses of about 40 kHz — one frequency, the same every time. Many echolocating bats instead use calls that sweep across a broad range of frequencies. Below is a recording of a common pipistrelle, the small bat in [panel **B** of the bat photographs](#fig:bats), hunting over a canal in Germany. The plot is a spectrogram: it shows which frequencies are present in the sound, as a function of time, with the calls appearing as the bright hooks.
 
-![A big brown bat's calls, recorded by the U.S. National Park Service. Each stroke is one call, sweeping downwards from about 60 kHz to about 25 kHz. The calls come closer together towards the right as the bat closes on a target.](images/sonar-lesson-plan-bcb99b25.png)
+Two things are worth pointing out to a class. Each call **sweeps downwards**, from around 80 kHz to around 45 kHz: one call spans some 35 kHz, where the sensor emits a single frequency and nothing else. And towards the right the calls come faster and faster until they run together — the **feeding buzz**, the moment the bat has closed on an insect and wants an answer every few milliseconds rather than every hundred.
+
+![Echolocation calls of a common pipistrelle (*Pipistrellus pipistrellus*) closing on prey, covering about 1.1 seconds. Time runs left to right, frequency bottom to top over a range of 0 to 160 kHz. Each bright hook is one call, sweeping down from roughly 80 to 45 kHz — the entire call is far above the top of human hearing, which stops around 20 kHz. At the right the calls crowd together into the feeding buzz. Spectrogram by [Drahkrub](http://de.wikipedia.org/wiki/Benutzer:Drahkrub), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).](images/sonar-pipistrelle-spectrogram.png)
+
+The whole 1.1 seconds is inaudible as recorded. Slowing the playback down fixes that, because it divides the frequencies by the same factor it multiplies the duration: played twenty times slower, a 45 kHz call comes out at about 2 kHz, comfortably within human hearing, and the 1.1 seconds becomes 22 seconds.
+
+[Listen: the same recording, slowed down twenty times (.mp3)](files/pipistrelle_chirps_20x_slowed.mp3)
+
+Play it alongside the spectrogram, since they are the same 1.1 seconds: the regular chirps at the start, then the buzz at the end that students almost always describe as a raspberry. This is where the word *chirp* comes from — it is what these calls sound like once they are slowed into our range, and it has stuck as the everyday name for a bat call.
+
+Recording by [Drahkrub](http://de.wikipedia.org/wiki/Benutzer:Drahkrub), CC BY-SA 4.0, made near the Rhine–Main–Danube Canal north of Fürth in September 2018. The U.S. National Park Service has a similar page with North American species, if you would like a second example:
 
 [Echolocation - Bats (U.S. National Park Service)](https://www.nps.gov/subjects/bats/echolocation.htm)
 
@@ -214,7 +227,7 @@ In this activity, students create a graph (on the floor) to understand what a si
 >
 > For this activity, plug the sonar sensor into port 1. The robot should be equipped with only one sonar sensor for this activity (see image below).
 
-![For this activity, the robot should be equipped with a single sonar sensor (this is the default configuration of the robot). **In this stock image, the sonar is plugged into port 2 but we use port 1 for this activity.**](images/activity-1-measuring-the-sonars-directivity-60d0fadf.jpg)
+![The robot as this activity needs it: a single sonar sensor on the front, which is how the robot comes out of the box. The cable goes to **port 1** — the socket under the `1` sticker, with the one under `2` left empty — because that is the port the example program reads.](images/sonar-activity-single-sensor.jpg)
 
 Open the Sonar Directionality Program in mBlock 5 from the link below and connect to your robot using the dongle connection. [See here for instructions](#getting-started-with-the-robot) on how to connect to the robot.
 
@@ -224,7 +237,7 @@ Open the Sonar Directionality Program in mBlock 5 from the link below and connec
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -255,7 +268,7 @@ This effect can be observed by pointing the robot at a smooth surface (like a wa
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -296,7 +309,7 @@ Students could be asked to design a program for the robot that allows it to avoi
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 
@@ -308,7 +321,7 @@ The safe distance is defined at the start of the program. Here, it is set to 30 
 
 Let us break down the program into simpler terms:
 
-1. `do_sensing`: This block collects data from both sonar sensors. It measures the distances to obstacles on the left and right sides of the robot. It also multiplies both values by 1.25, for the reason given in [The sensor under-reports distance](#the-sensor-under-reports-distance).
+1. `do_sensing`: This block collects data from both sonar sensors. It measures the distances to obstacles on the left and right sides of the robot. It also multiplies both values by 1.3, for the reason given in [The sensor under-reports distance](#the-sensor-under-reports-distance).
 2. `min_distance`: This variable stores the smaller of the two distances measured. It tells us how close the nearest obstacle is, regardless of which side it is on.
 3. `min_side`: This variable tracks which sensor (left or right) detected the closest obstacle. It is crucial for deciding which way the robot should turn to avoid the obstacle.
 
@@ -397,7 +410,7 @@ We provide an example program. The program is linked and displayed below.
 >
 > Clicking the link to the program will open the mBlock website. To see the actual program, click `Source` at the bottom left of the page that opened.
 >
-> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to my computer`. The downloaded program can then be edited using mBlock if installed on your computer.
+> You can use the program in the online version of mBlock or download it to your computer by selecting `File` and `Save to your computer`. The downloaded program can then be edited using mBlock if installed on your computer.
 >
 > See [Step 1: Open the example program](#step-1-open-the-example-program) for an example and more instructions.
 

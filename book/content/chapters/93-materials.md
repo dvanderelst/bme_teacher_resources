@@ -21,7 +21,7 @@ Below, we list the materials required for each lesson plan and the quantity requ
 | Lego compatible blocks | These blocks are compatible with the screws and the hole spacing used by the robot. Therefore these blocks allow students freedom in mounting sensors (as an alternative to the brackets we provide) |
 | Materials to make robot ears | Students can make ears out of magic clay or craft paper. |
 | Whisker sensors | Used in the Touch and Whiskers lesson. Two per robot. **These cannot be bought.** The board is ours — a Makeblock form factor with a flex sensor as the working part — so contact the BmE team for a set; the addresses are in [Questions, corrections, and help](#questions-corrections-and-help). Order spares: they are damaged by creasing and by bending the wrong way. |
-| Cardboard strips and painter's tape | Taped to a whisker sensor to extend its reach and change how it bends. |
+| Cardstock and painter's tape | The cardstock is cut to a taper and taped to a whisker sensor to extend its reach and change how it bends. Not corrugated cardboard. |
 | Airtight box and desiccant | Whisker sensors are stored flat in these between lessons; the flex sensor's metallic layer oxidises. |
 | Calipers | Used to set the point spacing in the two-point discrimination activity. One pair per group. |
 | Index cards, toothpicks and sticky tape | The alternative to calipers: brainmapper.org's paper pokers, made by the students. |

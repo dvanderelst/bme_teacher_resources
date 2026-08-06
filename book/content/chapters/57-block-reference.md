@@ -102,6 +102,8 @@ There is no dedicated "off" block for the LEDs. Set the colour to black in the p
 
 The onboard sensors and the sensors in the robot's default configuration. The external sound sensor and the RGB LED module are in the Light & Sound extension.
 
+The ten blocks below are the whole category — there is no gyroscope or accelerometer block for the mBot, and no onboard sensor for one. Makeblock's larger robots have them, so a teacher arriving from an mBot2 or a Ranger will look for tilt and orientation blocks and not find them.
+
 `ultrasonic sensor [port ▾] distance(cm)`
 
 :   **Reporter.** Distance in centimetres from the sonar sensor on the selected port to whatever is in front of it. Any of the four ports.
@@ -365,7 +367,7 @@ Requires the `light sound` extension.
 
 `sound sensor [port ▾] loudness`
 
-:   **Reporter.** The current sound level at an external Makeblock sound sensor, higher values meaning louder. Dropdown: ports 3 and 4 only, these being the board's only analog inputs.
+:   **Reporter.** The current sound level at an external Makeblock sound sensor, higher values meaning louder. Dropdown: ports 3 and 4 only, these being the board's only analog inputs — port 3 carries `A2` and `A3`, port 4 carries `A0` and `A1`, and ports 1 and 2 carry digital pins only (`11`/`12` and `9`/`10`). The board prints this beside each connector.
 
 `light sensor [port ▾] light intensity`
 

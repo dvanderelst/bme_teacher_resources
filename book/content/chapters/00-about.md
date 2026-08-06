@@ -22,22 +22,50 @@ If you are unsure whether your use counts as non-commercial — a paid teacher-t
 
 ## Material we do not own {.unnumbered}
 
-The license above covers our own writing, diagrams, and photographs. It does **not** cover:
+The license above covers our own writing, diagrams, and photographs — including every photograph and diagram of the robot and its parts, all of which are now ours, taken or drawn from the kit we hand to teachers. It does **not** cover:
 
 - The Biology Meets Engineering logo, the University of Cincinnati name, and marks. These identify the programme rather than teaching anything, so the licence does not cover them.
   Please adapt the materials as much as you like, but remove the logo from your version, so that it is clear the result is yours rather than ours.
 - Screenshots of the mBlock software. mBlock, mBot, and Makeblock are products and trademarks of
   Makeblock Co., Ltd.; screenshots appear here to document how to operate the software.
-- Photographs and diagrams of Makeblock hardware not made by the project. The labelled drawing of the
-  mCore main board is Makeblock's and is credited as such in its caption.
 - The reproduced primers on animal orientation and on echolocation in insectivores and rodents;
   the rights to these primers remain with their respective authors and publishers.
-- Two images in the *Touch and Whiskers* chapter, which carry their own Creative Commons licences
-  rather than the one above, and are credited in their captions. The sensory homunculus is by
-  Wikimedia Commons user Mpj29 under CC BY-SA 4.0: you may reuse it, but a version you have altered
-  has to be released under CC BY-SA 4.0 and marked as changed. The photograph comparing a smooth and
-  an undulated vibrissa is by Murphy and colleagues under CC BY 2.5, which asks only for the credit.
+- Seven figures and one sound recording that carry their own Creative Commons licences rather than
+  the one above. Each is credited where it appears, which is where the names and the licence links
+  are; the table below is only so you can find them all at once.
 - Anything reached by an external link — videos, journal articles, manufacturer documentation.
+
+| Item | Chapter | Licence |
+| :--- | :--- | :--- |
+| Audiograms of eleven species | Sound Localization | CC BY 4.0, adapted |
+| The sensory homunculus | Touch and Whiskers | CC BY-SA 4.0 |
+| Smooth and undulated vibrissae | Touch and Whiskers | CC BY 2.5 |
+| Four bats, micro and mega | Sonar | CC BY-SA 4.0 |
+| Four toothed whales | Sonar | CC BY 4.0, but see below |
+| How a toothed whale makes and hears sound | Sonar | CC BY-SA 4.0 |
+| Spectrogram of a pipistrelle's calls | Sonar | CC BY-SA 4.0 |
+| `files/pipistrelle_chirps_20x_slowed.mp3` | Sonar | CC BY-SA 4.0 |
+
+What this means if you are adapting these materials: all eight need their credit carried over. The
+five marked **ShareAlike** additionally require that a version you have *altered* be released under
+that same ShareAlike licence and marked as changed — and, going the other way, those five may be
+used commercially, unlike the rest of the book. The spectrogram and the recording are by the same
+person, whose licence asks specifically that the credit include the URL of his user page, so keep
+that link rather than just the name.
+
+The audiogram figure is the one we have altered ourselves: it is the authors' figure with the robot's
+sensor line drawn onto it. Its CC BY licence permits that, provided the change is declared, which the
+caption does. Because CC BY carries no ShareAlike condition, the altered figure needs no special
+licence of its own — only the credit.
+
+The whale montage needs one more word. Its creator released it as CC BY 4.0, which asks only for
+credit, but one of the four photographs inside it is CC BY-SA 2.0. We have therefore credited all
+five people involved and would treat the figure as ShareAlike if you intend to alter it, which is the
+cautious reading rather than the one the Commons page states.
+
+Not in the table, because it asks nothing of you: the photograph of the NAO robot in *Sonar* is
+CC0 — released into the public domain — and we credit its photographer in the caption as a courtesy
+rather than an obligation.
 
 ## How to get the current version {.unnumbered}
 

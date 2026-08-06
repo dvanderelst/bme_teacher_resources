@@ -16,12 +16,6 @@
 | Speaker | A speaker for playing sounds during sound localization activities. |
 | Measuring Tape | Measuring tape for setting up sound localization experiments. |
 
-> **Note**
->
-> Newer versions of the sensor have a potentiometer for adjusting sensitivity. For example, the sensor shown below has a small dial beside the microphone. Use a screwdriver to gently rotate the dial. If your sensor has such a dial, turn it to the halfway position on both sensors.
-
-![An image of the sound sensor with a dial for changing sensitivity (indicated by the arrow).](images/sound-localization-lesson-plan-98af73ad.png)
-
 ## Prerequisites
 
 Students should be familiar with Microsoft Excel or Google Sheets, able to enter data, and create and read simple graphs. They should also understand how humans hear sound and have some understanding of algorithmic thinking and the design process.
@@ -73,14 +67,49 @@ The graph below is an **audiogram**. It is worth explaining how to read one, as 
 
 Every point on a curve is a **threshold**: the faintest sound the animal can detect at that frequency. A curve that dips low means *good* hearing — the animal can detect fainter sounds. A curve that rises means hearing is *worse* there, requiring louder sounds before they register. The lowest point on a curve indicates the frequency the animal hears best. This graph does not indicate how loud a sound is; it shows how quiet a sound can be before becoming inaudible.
 
-![Audiograms for four species, with the sound sensor's threshold in red. Each curve gives the faintest sound that animal can detect at each frequency, so **lower on the graph means more sensitive**. Humans hear best at around 3 kHz, where the threshold dips below 0 dB SPL. The red line is flat because the sensor is about equally sensitive at every frequency, and it lies above all four curves because it is far less sensitive than any of these ears.](images/sound-localization-lesson-plan-fd572681.png){#fig:audiogram}
+![Audiograms for eleven species, with the mBot's sound sensor added as the dashed black line. Each curve gives the faintest sound that animal can detect at each frequency, so **lower on the graph means more sensitive**, and the U shape says that every ear has a best frequency with sensitivity falling away on either side of it. Humans hear best at around 3 kHz, where the threshold dips below 0 dB SPL. The sensor's line is flat because it is about equally sensitive at every frequency. Audiogram figure from Lue, P.-Y., Oliver, M. H., Neeff, M., Thorne, P. R. & Suzuki-Kerr, H. (2023), *Sheep as a large animal model for hearing research: comparison to common laboratory animals and humans*, Laboratory Animal Research 39:31, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the sensor line and its label are our addition.](images/sound-localization-audiogram.png){#fig:audiogram}
 
-These are average curves. Hearing thresholds for individuals can vary significantly. The graph shows that humans are typically most sensitive around 3 kHz. Like a mouse, a small animal typically has a higher best frequency. To find similar curves for other animals, search for "audiogram x" (replacing x with the animal). Researchers have measured audiograms for many species.
+These are average curves. Hearing thresholds for individuals can vary significantly. The graph shows that humans are typically most sensitive around 3 kHz, and that the smaller the animal, the higher its best frequency tends to be: the mouse and the rat hear best above 10 kHz, which is territory a human ear barely reaches at all. The sheep, pig, dog, cat and monkey — animals nearer our own size — have their best frequencies much closer to ours.
 
-The red line is the approximate threshold of the robot's sound sensor, estimated from manufacturer data. It sits at about 36 dB SPL — above every animal curve on the graph. The sensor is much less sensitive than any of these ears, which is not surprising, as animal ears are extraordinarily sensitive. Many sounds we hear easily are undetectable to the robot. The [table of everyday sound levels](#fig:levels) gives context for what 36 dB SPL means.
+Curves like these have been measured for a great many species, and there is a database of them: the [Animal Audiogram Database](https://www.animalaudiograms.org), built at the Museum für Naturkunde Berlin. It is free, needs no account to browse, and every curve in it was extracted by hand from a peer-reviewed paper and linked back to it. You can select several species and have them drawn on one set of axes, which is to say you can build a version of the figure above for whichever animals you like, and download the numbers behind it.
 
-![Everyday sounds and their approximate levels. The sensor's threshold of about 36 dB SPL falls between a quiet whisper and a quiet auditorium, so anything fainter than a quiet room will not register at all.](images/sound-localization-lesson-plan-58c2fb72.png){#fig:levels}
-![A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike.](images/sound-localization-lesson-plan-abed05bc.png){#fig:freqresp}
+One caveat worth knowing before you send a class there: it currently covers **marine mammals and birds**, so it has none of the eleven species plotted above. A group comparing a seal, a dolphin and a penguin can produce that kind of plot in a couple of minutes; for a terrestrial mammal, searching for "audiogram" and the animal's name is still the way.
+
+### Where the sensor's line comes from
+
+The dashed line is the approximate threshold of the robot's sound sensor, and it is worth seeing where the number comes from rather than taking it on trust. Makeblock's datasheet gives the microphone a **signal-to-noise ratio of 54 dB**. By convention that is measured against a 1 pascal sound — which is 94 dB SPL — so the microphone's own electrical hiss is equivalent to a sound of
+
+$$94 - 54 = 40\ \text{dB SPL}$$
+
+Below that level, whatever the microphone produces is buried in its own noise. So **40 dB SPL** is the sensor's floor, and that is where the line is drawn.
+
+Treat it as an upper bound on the sensor's quality rather than a precise figure. Makeblock does not say which capsule is on the board, and capsules of this class are commonly specified at 60 dB rather than 54, which would put the floor nearer 34 dB SPL. We use the number the manufacturer publishes for the board they actually sell.
+
+Two things follow. First, this is a *best case*: it is the microphone capsule alone, in silence. The amplifier on the sensor board adds noise of its own, the robot's analog-to-digital converter rounds the result to one of 1024 steps, and a classroom with children in it sits at 50 to 60 dB SPL. In a real room the robot's threshold is set by the room, not by the microphone.
+
+Second, look at where that line falls. It is above every curve on the graph, so there is no animal here that the sensor can out-hear — but the margin varies enormously. Against a human, a cat or a dog, whose curves bottom out around or below 0 dB SPL, the sensor is 45 to 50 dB worse — a factor of two to three hundred in sound pressure. Against the mouse and the rat it is only a few decibels worse. The small rodents' ears, for all that they reach far higher frequencies than ours, are not especially sensitive in absolute terms, and a cheap electret microphone is nearly their equal.
+
+The table below gives context for what 40 dB SPL means. It sits at the bottom of the range for a normal conversation, so the robot can just hear people talking; and it is above a very calm room, so an empty, quiet classroom registers as nothing at all. Leaves rustling, at about 10 dB SPL, carry a thousandth of the sound power the sensor needs before it notices anything.
+
+| Sound | Measured | dB SPL |
+| :--- | :--- | ---: |
+| Threshold of pain | at the ear | 120 |
+| Two-stroke chainsaw | 1 m | 110 |
+| Jackhammer | 1 m | 100 |
+| Hearing damage, from long exposure | at the ear | 85 |
+| Vacuum cleaner | 1.8 m | 85 |
+| Television | in the room | 75 |
+| Passenger car at 30 km/h | 10 m | 65–70 |
+| Normal conversation | 1 m | 40–60 |
+| **The mBot's sound sensor — its threshold** | — | **40** |
+| Very calm room | in the room | 20–30 |
+| Leaves rustling; calm breathing | in the room | 10 |
+| Threshold of human hearing, at 1 kHz | at the ear | 0 |
+| Anechoic chamber, University of Salford | in the room | −12 |
+
+Two rows of that table are worth dwelling on with a class. **Normal conversation spans 40 to 60 dB**, which straddles the sensor's threshold: the robot hears the loud half of a conversation and misses the quiet half. And the **threshold of human hearing is 0 dB**, forty decibels below the sensor — a hundredfold difference in sound pressure, and that is before considering that our ears reach it only in the narrow band around 3 kHz where they are best.
+
+Values are drawn from the *Sound pressure* article on Wikipedia, which cites a source for each; the selection and the wording here are ours.
 
 You can demonstrate the contrast with your own ears using an online tone generator, playing tones of different frequencies without touching the volume control.
 
@@ -94,11 +123,11 @@ This has a practical consequence that is easy to miss, and it matters for the ro
 
 ### Frequency response
 
-The [audiogram](#fig:audiogram) reveals a second difference. The sensor is almost equally sensitive from 20 Hz to 20,000 Hz and beyond, which is why its line is flat and trails off at the right-hand edge. Our ears are not like that. Two sounds with the same physical amplitude at 2 kHz and 10 kHz do not sound equally loud to us: the 2 kHz tone sounds louder.
+The [audiogram](#fig:audiogram) reveals a second difference. The sensor is almost equally sensitive at every frequency, which is why its line is straight and level while every animal curve is a U. Our ears are not like that. Two sounds with the same physical amplitude at 2 kHz and 10 kHz do not sound equally loud to us: the 2 kHz tone sounds louder.
 
-The curve describing how sensitive a microphone is at each frequency is called its **frequency response**. Because the red line is flat, an engineer would say this microphone has a *flat frequency response*. The red line is schematic rather than a measurement. A [real one, measured from a simple microphone](#fig:freqresp), is flat within a decibel or two across most of the range, with small ripples at the top end.
+The curve describing how sensitive a microphone is at each frequency is called its **frequency response**. Because the sensor's line is flat, an engineer would say this microphone has a *flat frequency response*. That line is schematic rather than a measurement — a single number drawn across the whole range. A [measured one](#fig:freqresp) is not perfectly flat, but it is close: level to within a fraction of a decibel from 50 Hz to about 2.5 kHz, then some 3 dB up around 6 kHz and about 4 dB down by 20 kHz. Set against an ear, whose threshold swings by fifty or sixty decibels across the same span, that counts as flat.
 
-![A measured frequency response for a simple microphone. Unlike the schematic red line in the audiogram, this one is real data, but the story is the same: within a decibel or two, the microphone treats every frequency alike.](images/sound-localization-lesson-plan-abed05bc.png){#fig:freqresp}
+![The measured frequency response of an electret condenser microphone — a CUI Devices CMA-4544PF-W, the same class of capsule as the one on the robot's sound sensor. It is not the identical part: Makeblock does not publish which capsule it uses, and the one we can look up differs in its quoted signal-to-noise ratio, though its output impedance and current draw match. The shape is what matters here, and it is the shape every capsule of this kind has: level from 50 Hz to about 2.5 kHz, a gentle rise of about 3 dB near 6 kHz, and a fall of about 4 dB by 20 kHz. Compare the sweep of an ear over the same range. Redrawn by us from the values in the manufacturer's datasheet.](images/sound-localization-frequency-response.png){#fig:freqresp}
 
 You can demonstrate this contrast with an online tone generator, playing tones of different frequencies without changing the volume.
 
@@ -168,13 +197,9 @@ Before the development of radar, approaching airplanes were often detected and l
 
 [How warplanes were spotted before radar | CNN](https://www.cnn.com/style/article/war-sound-locators-before-radar/index.html)
 
-![Two Dutch personal sound locators. Each funnels sound from a wide area into the operator's ears, and each turns on its base so the operator can sweep for the direction the sound is loudest.](images/testing-artificial-pinnae-affed672.png)
+![Two acoustic locators, and the same idea twice over. **Left**, a US Army locator of 1925: four horns collect sound and pipe it down rubber tubes to the ears of two operators, one listening for up-and-down, the other for left-and-right. **Right**, a pair of much larger horns at Bolling Field, Washington, worked by a single operator standing beneath them. In both, the horns gather sound from a wide area and deliver it to a human ear, and the whole frame turns so the operator can sweep until the sound is loudest — which is what tells them the direction. Both photographs are in the public domain.](images/sound-localization-locators-1.jpg)
 
-![Four more locators. Note how many use pairs or quads of horns rather than one: separating the collectors widens the difference between what each ear receives, which is exactly what students are trying to achieve with their own pinnae.](images/testing-artificial-pinnae-06410d6c.png)
-
-![Left, a locator using honeycomb collectors rather than horns. Right, a row of them on wheeled carriages, ready to be moved into position.](images/testing-artificial-pinnae-6587bd75.jpg)
-
-![Left, a head-mounted locator, which is the closest of these to the pinnae students will build. Right, a large locator worked by three operators at once.](images/testing-artificial-pinnae-f4295f63.png)
+![**Left**, a row of Japanese locators on wheeled carriages, each with four horns, being inspected before the Second World War. **Right**, the US Army's T3 locator of 1927, using faceted collectors rather than round horns. Note how many of these use pairs or quads rather than a single collector, and how far apart the collectors are set: separating them widens the difference between what each ear receives, which is exactly what students are trying to achieve with their own pinnae. Both photographs are in the public domain.](images/sound-localization-locators-2.jpg)
 
 All these devices were designed to increase the cues available for sound localization. In this activity, students build their own devices to enhance sound localization.
 
@@ -239,7 +264,7 @@ In this step, students measure the microphones' directionality. Provide the robo
 
 ![One of the sensors close up. The microphone is the small black disc; the rest of the board amplifies and filters its signal.](images/robot-phonotaxis-9b19fbad.jpg)
 
-![The sound sensor.](images/robot-phonotaxis-e133beed.jpg)
+![The same sensor off the robot. Note that there is nothing to adjust on it: the board has no sensitivity control, so the two sensors on a robot cannot be matched by turning anything, which is why the calibration later in this chapter is done in software instead.](images/sound-sensor-photo.jpg)
 
 Next, have students build a setup like the one shown below. Students can place a large sheet of paper or a whiteboard on the floor (as in the example) and draw several compass directions. In the example, angles from -40 to 40 degrees are drawn in 20-degree steps. Place the sound source at an angle of 0° and about 50 cm from the robot. The sound source can be a phone or a speaker.
 
