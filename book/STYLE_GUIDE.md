@@ -1,6 +1,6 @@
 # Style Guide for Biology Meets Engineering Teacher Manual
 
-*Version 1.3 | Last updated: 2026-08-06*
+*Version 1.4 | Last updated: 2026-08-06*
 
 This style guide establishes writing conventions for the Biology Meets Engineering teacher manual. It ensures consistency, clarity, and professionalism across all chapters.
 
@@ -105,7 +105,22 @@ doing the work.
 ## Formatting
 
 ### Headings
-- Use **sentence case** for all headings (only first word and proper nouns capitalized)
+
+**Chapter titles (`#`) use title case. Every heading below them (`##`, `###`) uses sentence case.**
+
+- Chapter titles are names. They are referred to in prose and in cross-references as names, so they
+  are capitalized like names: `# Getting Started with the Robot`, `# Touch and Whiskers`,
+  `# Sound Localization`. Capitalize the principal words; leave articles, coordinating conjunctions,
+  and short prepositions lowercase unless they open the title.
+- When a link's text quotes a chapter title, quote it exactly: `[Block Reference](#block-reference)`.
+  The anchor itself is unaffected by case, so retitling never breaks a link — but the link text will
+  drift out of step, and `check-links.py` reports that.
+- **The fixed lesson sections keep title case too**, because they are the same label in every
+  chapter rather than a sentence: `## Materials`, `## Prerequisites`,
+  `## Investigating / Essential Questions`, `## Educational Standards`, `## Learning Objectives`,
+  `## Introduction`. These are the headings listed in the chapter template near the end of this
+  guide, and the book has always capitalized them.
+- **Every other heading is sentence case** (only first word and proper nouns capitalized)
 - **Do:** `## Pairing the Bluetooth dongle and the robot`
 - **Don't:** `## Pairing The Bluetooth Dongle And The Robot`
 - End headings with **no punctuation** (no periods, colons, or question marks)
@@ -497,7 +512,7 @@ template; add one when there is something to say after the last activity.
 
 Before finalizing a chapter, verify:
 
-- [ ] All headings use sentence case
+- [ ] Chapter titles (`#`) in title case; all headings below them in sentence case
 - [ ] "mBot", "mBlock", "mCore" are correctly capitalized
 - [ ] American English spelling throughout (color, program, license, etc.)
 - [ ] Active voice used consistently
@@ -571,3 +586,7 @@ Before finalizing a chapter, verify:
   UI labels take backticks rather than bold; the chapters use no contractions and the guide now says
   so; and sentence length is guidance rather than a cap. Moved to `book/`, which is where the thing
   it governs lives, and which is inside the tracked whitelist in `.gitignore`.
+- **v1.4** (2026-08-06): Chapter titles take title case; headings below them stay sentence case. The
+  book had drifted both ways — *Color Vision* and *Kinesis and Taxis* in title case, *Sound
+  localization* and *Touch and whiskers* lowercased by an earlier pass — so all sixteen titles and
+  the sixteen cross-references quoting them were brought into line.

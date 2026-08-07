@@ -1,6 +1,6 @@
-# Block reference
+# Block Reference
 
-This chapter lists the programming blocks available for the mBot (mCore) board in mBlock, with what each one does. It is a lookup chapter rather than one to read through. [Programming the robot](#programming-the-robot) introduces the categories and shows how the blocks fit together.
+This chapter lists the programming blocks available for the mBot (mCore) board in mBlock, with what each one does. It is a lookup chapter rather than one to read through. [Programming the Robot](#programming-the-robot) introduces the categories and shows how the blocks fit together.
 
 **What is not listed here:** `Looks` (relevant only if the robot has an add-on LCD display), `My blocks` (custom blocks you define yourself), and the sprite and stage categories that belong to mBlock rather than to the robot. These exist in the palette, but none of the lessons in these materials use them.
 
@@ -22,7 +22,7 @@ A block's shape indicates how it can be used. The shapes are worth recognizing b
 | Shape | Marked here as | Behavior |
 | :--- | :--- | :--- |
 | Stack | *(untagged)* | Does something and passes control to the next block. The default. |
-| Reporter | **Reporter** | Rounded. Returns a value. Cannot be used on its own—it must be dropped into a slot on another block. |
+| Reporter | **Reporter** | Rounded. Returns a value. Cannot be used on its own: it must be dropped into a slot on another block. |
 | Boolean | **Boolean** | Hexagonal. Returns true or false. Drops into the hexagonal slots of `if`, `while`, `wait until`, and the logic operators. |
 | Hat | **Hat** | Rounded top. Starts a script. Goes at the top of a stack, never inside one. |
 
@@ -142,7 +142,7 @@ The ten blocks below are the whole category. There is no gyroscope or accelerome
 
 `timer`
 
-:   **Reporter.** Seconds the robot has been running. The timer starts from zero each time the robot is powered on—not when the program starts—and `reset timer` returns it to zero.
+:   **Reporter.** Seconds the robot has been running. The timer starts from zero each time the robot is powered on (not when the program starts), and `reset timer` returns it to zero.
 
 `reset timer`
 

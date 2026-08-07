@@ -1,9 +1,9 @@
 {
   "edition": "6 August 2026",
-  "fingerprint": "v0.2-14-g9a70343-stale",
+  "fingerprint": "v0.2-15-g9449b81-stale",
   "file_base": "https://github.com/dvanderelst/bme_teacher_resources/raw/main/book/content/",
   "documents": 16,
-  "words": 41800,
+  "words": 42109,
   "figures": 166,
   "links": 184,
   "generated_by": "book/tools/knowledge.py",

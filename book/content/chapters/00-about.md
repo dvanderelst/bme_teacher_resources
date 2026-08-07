@@ -1,8 +1,8 @@
-# About these materials {.unnumbered}
+# About These Materials {.unnumbered}
 
 These are the teacher-facing materials for **Biology Meets Engineering**, a transdisciplinary STEM program developed collaboratively by faculty from the University of Cincinnati's College of Arts and Sciences, College of Engineering, and the School of Education.
 
-The lessons pair animal sensory biology with robotics: students investigate how animals detect and localize stimuli, then build and program mBot robots that perform analogous tasks. The lessons address Next Generation Science Standards (NGSS Lead States, 2013) and International Society for Technology in Education standards (ISTE, 2022); the alignment for each lesson is listed in the *Educational standards* chapter.
+The lessons pair animal sensory biology with robotics: students investigate how animals detect and localize stimuli, then build and program mBot robots that perform analogous tasks. The lessons address Next Generation Science Standards (NGSS Lead States, 2013) and International Society for Technology in Education standards (ISTE, 2022); the alignment for each lesson is listed in the *Educational Standards* chapter.
 
 Supported by the National Science Foundation under ITEST grants DRL 1759150 and DRL 2342578. Any opinions, findings, and conclusions expressed here are those of the authors and do not necessarily reflect the views of the National Science Foundation.
 

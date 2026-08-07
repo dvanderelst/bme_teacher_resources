@@ -1,4 +1,4 @@
-# Getting started with the robot
+# Getting Started with the Robot
 
 This chapter assumes you already have mBlock installed or running in your browser. If not, complete [Installing mBlock](#installing-mblock) first, then return here.
 
@@ -210,4 +210,4 @@ Once complete, the robot works in Live mode again. We do not need to switch betw
 
 ## Next step
 
-Once you can connect to the robot, run the example program in [Running your first program](#running-your-first-program). This program verifies the entire setup (software, connection, and robot) in a couple of minutes. It also introduces the pattern used throughout the lessons for opening programs.
+Once you can connect to the robot, run the example program in [Running Your First Program](#running-your-first-program). This program verifies the entire setup (software, connection, and robot) in a couple of minutes. It also introduces the pattern used throughout the lessons for opening programs.

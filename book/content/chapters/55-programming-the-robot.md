@@ -1,8 +1,8 @@
-# Programming the robot
+# Programming the Robot
 
 > **Tip**
 >
-> This chapter assumes you and your students have mBlock installed or accessible online ([Installing mBlock](#installing-mblock)), can connect to the robot ([Getting started with the robot](#getting-started-with-the-robot)), and have successfully run a test program ([Running your first program](#running-your-first-program)).
+> This chapter assumes you and your students have mBlock installed or accessible online ([Installing mBlock](#installing-mblock)), can connect to the robot ([Getting Started with the Robot](#getting-started-with-the-robot)), and have successfully run a test program ([Running Your First Program](#running-your-first-program)).
 
 This chapter introduces students to programming the mBot robot using mBlock, a visual programming language. Unlike text-based languages, users create programs by manipulating graphical blocks. While often considered simpler, specialized visual languages are widely used in engineering and science, making them compelling alternatives to traditional programming in certain contexts.
 
@@ -24,14 +24,14 @@ This chapter presents four simple programming challenges. Before the challenges,
 
 Algebra I
 
-## Investigating/Essential Questions
+## Investigating / Essential Questions
 
 - How can instructions be written so that a computer understands them?
 - How can a robot be controlled through programming?
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
 
 ## Learning objectives
 
@@ -60,9 +60,9 @@ The interface has four main regions:
 
 ### Useful blocks
 
-The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons. Every block, with what it does and what its dropdowns offer, is listed in the [Block reference](#block-reference).
+The mBlock interface provides many blocks organized into color-coded categories. Below is a brief introduction to the most relevant categories for these lessons. Every block, with what it does and what its dropdowns offer, is listed in the [Block Reference](#block-reference).
 
-1. **Looks** – Only relevant if the robot has an LCD (sold separately). For our purposes, this category is not needed.
+1. **Looks**: only relevant if the robot has an LCD (sold separately). These lessons do not use it.
 2. **Show** – Controls the onboard LEDs and buzzer. Blocks come in two forms: `LED all shows color red` sets the LEDs and continues, while `LED all shows color red for 1 secs` holds for that second then turns them off.
 3. **Action** – Controls the motors. Two forms exist with an important difference: `move forward at power 50 % for 1 secs` moves for a set time then hands control back, while `move forward at power 50 %` starts the motors and immediately proceeds to the next block. Also includes `stop moving`.
 4. **Sensing** – Reads the robot's sensors: onboard light sensor, ultrasonic (sonar) sensor, line follower, button. Blocks for additional sensors (sound, color) are available as extensions.
@@ -90,7 +90,7 @@ Most programs require variables, making this a good time to introduce them.
 
 A variable is a named container holding a value. Think of it as a labeled box: `set count to 0` places a value in the box, `change count by 1` modifies what is inside, and referencing `count` elsewhere means "use whatever value is currently in that box."
 
-Students often do not initially understand why variables are necessary. Explain that sensor readings change constantly: asking the sonar for a distance twice yields two different numbers. To compare the current distance with a previous reading, one value must be stored. This is what the last challenge does—it stores the starting distance in `preferred_distance` while allowing `current_distance` to update. Without a variable, there is nothing to compare against.
+Students often do not initially understand why variables are necessary. Explain that sensor readings change constantly: asking the sonar for a distance twice yields two different numbers. To compare the current distance with a previous reading, one value must be stored. This is what the last challenge does: it stores the starting distance in `preferred_distance` while allowing `current_distance` to update. Without a variable, there is nothing to compare against.
 
 To use a variable, first create it. In mBlock, click the `Variables` menu, then `Make a Variable`. The images below illustrate this process. A window appears where you enter the variable's name. Choose descriptive names connected to the variable's purpose. For this introduction, we create a simple counting program, so we name the variable `count`. After creation, a block with that name appears under the `Variables` menu.
 
@@ -115,7 +115,7 @@ The program sets `count` to zero, then repeatedly increments it by 1, waits a se
 
 > **Tip**
 >
-> You can make as many variables as a program needs. The current value of every one appears on the stage—the white area at the top left, where the panda sits—as in the second figure above. This display is the most useful debugging tool in mBlock, and the next section leans on it heavily.
+> You can make as many variables as a program needs. The current value of every one appears on the stage (the white area at the top left, where the panda sits), as in the second figure above. This display is the most useful debugging tool in mBlock, and the next section leans on it heavily.
 
 ### Advice worth passing on
 
@@ -123,7 +123,7 @@ Two habits matter most for the challenges below, both counter to students' natur
 
 **Test in small pieces** – Students typically build an entire program before first running it, making errors hard to diagnose. Encourage them to run the program as soon as there is anything to test.
 
-In particular, immediately after a program reads a sensor into a variable, run it and monitor that variable on the stage. Is the value in the expected range? Does it change appropriately—does the light reading drop when a hand covers the sensor? Does the distance change when an object moves toward the robot? Two minutes of this testing catches the most common issues: a sensor plugged into the wrong port, or the right port selected in the wrong block. Both problems are invisible in a finished program but obvious in the variable display.
+In particular, immediately after a program reads a sensor into a variable, run it and monitor that variable on the stage. Is the value in the expected range? Does it change appropriately? Does the light reading drop when a hand covers the sensor? Does the distance change when an object moves toward the robot? Two minutes of this testing catches the most common issues: a sensor plugged into the wrong port, or the right port selected in the wrong block. Both problems are invisible in a finished program but obvious in the variable display.
 
 **Slower robots perform better** – Nearly every failed sensor challenge involves a robot moving too fast. A robot that moves slightly, takes a reading, and moves slightly again will reliably find lights, sounds, or walls. One that crosses the room in one burst or spins ninety degrees at a time overshoots and never settles.
 

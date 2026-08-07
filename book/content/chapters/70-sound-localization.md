@@ -1,4 +1,4 @@
-# Sound localization
+# Sound Localization
 
 ## Materials
 
@@ -20,7 +20,7 @@
 
 Students should be familiar with Microsoft Excel or Google Sheets and able to enter data and create and read simple graphs. They should also understand how humans hear sound and have some understanding of algorithmic thinking and the design process.
 
-## Investigating / Essential questions
+## Investigating / Essential Questions
 
 - How do humans localize sound?
 - How does a microphone differ from a human ear?
@@ -29,7 +29,7 @@ Students should be familiar with Microsoft Excel or Google Sheets and able to en
 
 ## Educational standards
 
-The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
 
 ## Introduction
 

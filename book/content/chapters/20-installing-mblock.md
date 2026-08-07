@@ -139,4 +139,4 @@ A few other items appear on Makeblock's download page. For clarity, we do not us
 
 ## Next step
 
-Once mBlock is working, proceed to [Getting started with the robot](#getting-started-with-the-robot). This chapter covers Bluetooth dongle pairing, connecting, Live and Upload modes, and running your first program.
+Once mBlock is working, proceed to [Getting Started with the Robot](#getting-started-with-the-robot). This chapter covers Bluetooth dongle pairing, connecting, Live and Upload modes, and running your first program.

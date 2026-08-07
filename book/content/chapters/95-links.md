@@ -1,4 +1,4 @@
-# All links used in these materials {.unnumbered}
+# All Links Used in These Materials {.unnumbered}
 
 This chapter lists every link that appears in these materials, grouped by chapter. Use this as a quick reference when checking school network access or preparing offline alternatives.
 

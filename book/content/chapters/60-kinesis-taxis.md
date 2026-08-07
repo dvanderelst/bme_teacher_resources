@@ -14,13 +14,13 @@
 
 Students should be comfortable tracking and organizing data, testing and reasoning about hypotheses, and understanding the terms **stimulus** and **response**.
 
-## Investigating/Essential Questions
+## Investigating / Essential Questions
 - How can simulated biological data be used to test hypotheses?
 - What sensory stimuli may identify and guide animal movement to or from its source?
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Running your first program
+# Running Your First Program
 
 Once mBlock is working and you can connect to the robot, run a small example program first. This program verifies the entire setup (software, connection, and robot) in a couple of minutes. It also introduces the pattern used throughout the lessons for opening programs.
 
@@ -42,4 +42,4 @@ The program is simple: it cycles the robot's LED lights between blue and green, 
 
 ![MyFirstProgram: the robot's LEDs alternate between blue and green, one second each, for as long as the program runs.](images/getting-started-draft-40ce24ad.png)
 
-You can now edit the program by adding blocks and re-running it. For more, see [Introduction to Programming](#introduction-to-programming) and [Programming the robot](#programming-the-robot).
+You can now edit the program by adding blocks and re-running it. For more, see [Introduction to Programming](#introduction-to-programming) and [Programming the Robot](#programming-the-robot).

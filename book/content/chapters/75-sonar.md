@@ -31,7 +31,7 @@ What limitations do human-made sensors have compared to the abilities of echoloc
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Educational standards
+# Educational Standards
 
 [Educational standards: Color Vision](#educational-standards-color-vision)
 
