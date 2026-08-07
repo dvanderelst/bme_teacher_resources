@@ -45,10 +45,11 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 - **Do:** "The program calculates the difference"
 - **Don't:** "The difference is calculated by the program"
 
-### Use direct address
-- Use "you" to speak directly to the teacher
-- **Do:** "You must pair each dongle to a specific robot"
-- **Don't:** "Each dongle must be paired to a specific robot" (less direct)
+### Use first-person plural
+- Use "we" to address the reader as a colleague
+- **Do:** "We recommend pairing each dongle to a specific robot"
+- **Don't:** "Each dongle must be paired to a specific robot" (impersonal)
+- **Don't:** "You must pair each dongle to a specific robot" (less collegial)
 
 ### Maintain a professional but approachable tone
 - Friendly and helpful, like a knowledgeable colleague
@@ -405,9 +406,9 @@ Before finalizing a chapter, verify:
 
 - [ ] All headings use sentence case
 - [ ] "mBot", "mBlock", "mCore" are correctly capitalized
-- [ ] "color" not "colour" throughout
+- [ ] American English spelling throughout (color, program, license, etc.)
 - [ ] Active voice used consistently
-- [ ] Direct address ("you") used where appropriate
+- [ ] First-person plural ("we") used where appropriate
 - [ ] Sentences are 25 words or fewer (most)
 - [ ] No em dashes (—) with spaces; use en dashes (–) without spaces for ranges
 - [ ] Oxford comma used in lists
@@ -455,3 +456,4 @@ Before finalizing a chapter, verify:
 
 - **v1.0** (2025): Initial style guide based on editing of chapters 10-65
 - **v1.1** (2025-08-06): Added sections for Hyphens, Possessives, External Content, Units of Measure, and clarified Table capitalization rules based on editing of chapters 93 and 95
+- **v1.2** (2025-08-06): Updated voice preference from direct address ("you") to first-person plural ("we"); clarified American English requirement in proofreading checklist
