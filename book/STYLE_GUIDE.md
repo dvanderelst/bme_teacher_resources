@@ -1,6 +1,6 @@
 # Style Guide for Biology Meets Engineering Teacher Manual
 
-*Version 1.0 | Last updated: 2025*
+*Version 1.3 | Last updated: 2026-08-06*
 
 This style guide establishes writing conventions for the Biology Meets Engineering teacher manual. It ensures consistency, clarity, and professionalism across all chapters.
 
@@ -13,9 +13,10 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 3. [Grammar and Mechanics](#grammar-and-mechanics)
 4. [Formatting](#formatting)
 5. [Terminology](#terminology)
-6. [Punctuation](#punctuation)
-7. [Common Patterns](#common-patterns)
-8. [What to Avoid](#what-to-avoid)
+6. [Facts, Numbers, and Sources](#facts-numbers-and-sources)
+7. [Punctuation](#punctuation)
+8. [Common Patterns](#common-patterns)
+9. [What to Avoid](#what-to-avoid)
 
 ---
 
@@ -45,11 +46,26 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 - **Do:** "The program calculates the difference"
 - **Don't:** "The difference is calculated by the program"
 
-### Use first-person plural
-- Use "we" to address the reader as a colleague
-- **Do:** "We recommend pairing each dongle to a specific robot"
-- **Don't:** "Each dongle must be paired to a specific robot" (impersonal)
-- **Don't:** "You must pair each dongle to a specific robot" (less collegial)
+### "We" is us, "you" is the reader
+
+The two are not interchangeable, and swapping one for the other changes who is
+doing the work.
+
+- **"We"** means the project: the people who wrote the materials, chose the robot, and taught the
+  lessons. Use it for our recommendations, decisions, and experience.
+  - **Do:** "We recommend pairing each dongle to a specific robot"
+  - **Do:** "Our example programs load the extension automatically"
+  - **Do:** "In our tests, Vivaldi failed to connect"
+- **"You"** means the teacher reading the manual. Use it for anything they do, decide, or need to
+  know.
+  - **Do:** "The rest of this chapter covers the parts you need to know"
+  - **Do:** "If you start from scratch, you must add the extension yourself"
+  - **Do:** "Use the power switch as your landmark"
+- **Don't** write "we" for a reader action. "If we prefer not to replace batteries" and "even if we
+  forget the rule" describe the teacher, not us, and read as though the authors are standing at
+  their elbow.
+- **Don't** retreat into the impersonal to dodge the choice: "Each dongle must be paired" hides who
+  is responsible.
 
 ### Maintain a professional but approachable tone
 - Friendly and helpful, like a knowledgeable colleague
@@ -61,18 +77,22 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 ## Grammar and Mechanics
 
 ### Sentence Structure
-- **Target length:** 15-25 words per sentence
-- **Maximum:** Break up sentences longer than 30 words
-- Vary sentence length for rhythm, but keep most sentences concise
+- **Aim for 15–25 words**, and vary the length for rhythm.
+- **A long sentence is not automatically a fault.** The test is whether it carries one idea. Some of
+  the best explanations in these chapters run past 40 words because the thought does not divide, and
+  chopping them into fragments to satisfy a word count makes them harder to read, not easier.
+- **Do** break a sentence that has changed subject halfway through, or that needs re-reading.
 
 ### Break up complex ideas
 - One idea per sentence when possible
 - Use bullet points or numbered lists for multi-part concepts
 - Use parallel structure in lists
 
-### Contraction usage
-- **Use contractions** for a natural, conversational tone: "don't", "can't", "won't", "it's"
-- **Avoid contractions** in formal definitions or when emphasis is needed
+### Contractions
+- **The chapters use none**, and read the better for it: the register is a knowledgeable colleague
+  writing carefully, not chatting. Keep it that way — "do not", "cannot", "it is".
+- This is a change from v1.0, which recommended contractions. The manual never followed that advice,
+  so the guide now follows the manual.
 
 ### Possessives
 - Use apostrophe-s for **possessive singular**: `Gaffer's tape`, `robot's sensors`
@@ -134,17 +154,25 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
   ```
 
 ### Bold and Italics
-- **Bold:** Use for **UI elements**, **button names**, **key terms on first mention**, and **emphasis**
-  - `**mBlock**`, `**Start menu**`, `**Live mode**`
+- **Bold:** Use for **key terms on first mention** and for **emphasis** — the one thing in a
+  paragraph a hurried reader must not miss. Do not bold every component name; a page of bold is a
+  page with no emphasis in it.
+- **UI elements and button names take backticks, not bold.** The chapters already do this almost
+  without exception: `` `Connect` ``, `` `Upload Code` ``, `` `Setting` ``, `` `Live` `` mode. Bold
+  is for our voice; backticks are for words the software puts on the screen.
 - *Italics:* Use for **publication titles**, **emphasis in definitions**, and *less critical emphasis*
   - `_Scratch-like visual programming language_`, *note: this is optional*
 
 ### Code/Technical Elements
-- Use **backticks** for:
-  - Code and block names: `` `when flag clicked` ``, `` `LED all shows color red` ``
+- Use **backticks** for things the reader sees on screen, types, or reads off the hardware:
+  - Block and command names: `` `when flag clicked` ``, `` `LED all shows color red` ``
+  - Buttons, menus, and labels in mBlock: `` `Connect` ``, `` `Upload Code` ``, `` `File > Open from your computer` ``
   - File paths: `` `files/programs/MyFirstProgram.mblock` ``
-  - Technical terms in context: `` `port 1` ``, `` `mCore` ``
   - Variables: `` `count` ``, `` `preferred_distance` ``
+  - Markings printed on the board: `` `M1` ``, `` `IR_T` ``, `` `A0` ``
+- **Do not** backtick ordinary technical nouns. `` `RJ25` `` is wrong: RJ25 is the name of a
+  connector, like USB, not something the reader types. The same goes for mCore, mBot, and port
+  numbers in running prose — the Terminology tables below write them plain, and prose should match.
 - Use **code blocks** (```) for:
   - Multi-line code
   - Program examples
@@ -170,16 +198,38 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 > Do not charge the robot while it runs on the 4 AA batteries.
 ```
 
-### Images
-- Use markdown image syntax: `![Alt text](path/to/image.png)`
-- **Alt text:** Describe the image content clearly and concisely
-- **Do:** `![The mCore in two views](images/mcore-labelled.png)`
-- **Don't:** `![Image](images/mcore.png)` (vague)
-- **Don't:** `![The mCore in two views: Left, as it comes in the robot...](images/mcore.png)` (too long in alt text)
-- Place images **on their own line** with blank lines before and after
-- For captions that are part of the alt text, keep them under 80 characters if possible
+### Images and captions
+
+**The text in `![...]` is the caption, not alt text.** The build runs pandoc with
+`implicit_figures`, so that text is printed under the figure in the PDF and becomes the
+`<figcaption>` in the HTML. A reader sees every word of it.
+
+- **Never shorten a caption to make it "concise alt text".** There is no separate alt text to
+  protect: pandoc uses the same string for both. Shortening deletes content from the page.
+- A caption should carry what the picture cannot say for itself: what to look at, why it matters,
+  and any number, port, or measurement the picture is evidence for.
+  - **Do:** "An RJ25 cable. Both ends are identical, so it cannot be plugged in the wrong way. Two
+    come with the robot, and in the default configuration both are already in use, which is why the
+    materials list asks for a spare per robot."
+  - **Don't:** "RJ25 cable: identical ends, telephone-style connector" (the purchasing implication
+    is gone)
+- **Walk multi-panel figures panel by panel**, using bold markers that match what is drawn on the
+  image: **A**, **B**, **Left**, **Right**, **Top right**. A two-panel figure whose caption does not
+  say which panel is which cannot be read.
+- **Credit borrowed figures in the caption**: the creator, the licence with a link, and — if we
+  changed anything — what we changed. Figures we drew ourselves say so ("Redrawn by us from ...").
+  The licence table in *About these materials* must list the same items.
+- Place images **on their own line** with blank lines before and after.
 
 ### Links
+- **Never hand-edit a cross-reference anchor.** An anchor such as `#adding-color-sensor-extension` is
+  generated from the heading it points at, by lowercasing it and joining the words with hyphens. It
+  is not prose and must not be "corrected" to read better: making it
+  `#adding-the-color-sensor-extension` because the link text says "the" silently breaks the link.
+  If an anchor looks wrong, fix the *heading*, then every link to it.
+- **Run `python3 book/tools/check-links.py` after any editing pass.** It reports broken anchors, and
+  `build.sh` prints them too. Neither the PDF nor the HTML fails on a broken internal link, so
+  nothing else will tell you.
 - Use descriptive link text (avoid "click here" or "this link")
 - **Do:** `[Assemble mBot](https://support.makeblock.com/...)`
 - **Don't:** `[click here](https://support.makeblock.com/...)`
@@ -246,13 +296,55 @@ This style guide establishes writing conventions for the Biology Meets Engineeri
 
 ---
 
+## Facts, numbers, and sources
+
+This manual is used by teachers standing in front of a class, and it feeds a support bot that will
+repeat whatever it says. A wrong number here becomes a robot that behaves oddly for a reason nobody
+can find.
+
+### Every number must be traceable
+- Say where a number came from: a measurement we made, a datasheet, a paper, or an estimate.
+  - **Do:** "Makeblock's datasheet gives the microphone a signal-to-noise ratio of 54 dB, so the
+    floor is 94 − 54 = 40 dB SPL"
+  - **Do:** "Five distances from 42 to 106 cm, ratios 1.29 to 1.33"
+  - **Don't:** "about 36 dB SPL" with no source and no date
+- **Do not carry a number forward because it was already in the text.** The sonar correction sat at
+  1.25 for years; when it was finally re-measured it was 1.30. The off-axis ranges quoted from a beam
+  pattern were wrong by a factor of two until someone measured the plot.
+- Show the arithmetic when it is short. It lets a reader check us, and it teaches.
+
+### Do not fill a gap with a plausible inference
+- If we have not checked something, the manual says so, or says nothing. It never guesses in the
+  manual's own voice.
+  - **Do:** "the `T` and `R` letters are not on the face shown here"
+  - **Don't:** "the letters are on the underside of the board" (nobody had turned one over)
+- This matters twice over because the teacher-support bot fills silences on its own. Asked why the
+  sound sensor needs port 3 or 4, it invented an explanation about digital pins — which happened to
+  be true, but was a guess. Where the prose stops short, write the missing sentence rather than
+  leaving a hole for something else to fill.
+
+### Figures are evidence
+- A figure that supports a claim should show the claim. If it cannot, say so in the caption rather
+  than letting the picture appear to prove something it does not.
+- When a figure and the prose disagree, one of them is wrong. The programs said × 1.3 while their
+  screenshots still said × 1.25 for one commit; that is the kind of thing a teacher notices and
+  loses confidence over.
+
+---
+
 ## Punctuation
 
 ### Em Dashes vs En Dashes
-- **Em dash (—):** Use with spaces around it for parenthetical phrases
-  - **Do:** "The value is below 500 — the threshold for triggering."
-  - Actually, **prefer** to rephrase: "The value is below 500, the threshold for triggering."
-  - Or: "The value is below 500 (the threshold for triggering)."
+- **Em dash (—):** allowed, sparingly, with spaces, for a genuine break in thought or an aside that
+  a comma is too weak to carry. Roughly 60 of them are in the chapters and most are earning their
+  place. A comma or parentheses is often better, so reach for those first — but this is a preference,
+  not a ban.
+  - **Do:** "It does not, and it also works over the browser's direct connection — so a room with no
+    cables can still recover a robot."
+  - **Better, where it fits:** "The value is below 500 (the threshold for triggering)."
+- **Never convert em dashes in bulk.** An em dash is not a long en dash: replacing `—` with `–`
+  leaves the sentence exactly as unrephrased as before, in a narrower dash. If a dash should go, the
+  sentence has to be rewritten by hand.
 - **En dash (–):** Use without spaces for ranges
   - **Do:** "25–100%" (no spaces)
   - **Do:** "500–1000" (no spaces)
@@ -392,11 +484,11 @@ The standards applicable to this lesson are listed in the [Educational standards
 ## Activity: [Name]
 
 [Detailed activity description]
-
-## Conclusion
-
-[Wrap-up and key takeaways]
 ```
+
+No chapter currently ends with a "Conclusion" section, and none needs one: the lessons end with the
+activity, the assessment questions, or the troubleshooting table. Do not add one to satisfy the
+template.
 
 ---
 
@@ -408,14 +500,17 @@ Before finalizing a chapter, verify:
 - [ ] "mBot", "mBlock", "mCore" are correctly capitalized
 - [ ] American English spelling throughout (color, program, license, etc.)
 - [ ] Active voice used consistently
-- [ ] First-person plural ("we") used where appropriate
+- [ ] "We" means the project; "you" means the teacher reading. No reader action written as "we"
 - [ ] Sentences are 25 words or fewer (most)
-- [ ] No em dashes (—) with spaces; use en dashes (–) without spaces for ranges
+- [ ] Em dashes are earning their place (they are allowed); en dashes (–) without spaces for ranges
 - [ ] Oxford comma used in lists
 - [ ] Compound adjectives are hyphenated (3D-printed, Lego-compatible)
 - [ ] Possessives use correct apostrophe forms (Gaffer's, students')
 - [ ] Callouts (Note/Tip/Warning) are properly formatted
-- [ ] Image alt text is descriptive and concise
+- [ ] Captions carry their content: no caption shortened to "alt text", panels named, borrowed
+      figures credited with their licence
+- [ ] `python3 book/tools/check-links.py` reports no broken anchors
+- [ ] Every number added or changed has a stated source
 - [ ] Code and block names use backticks
 - [ ] Links use descriptive text
 - [ ] Tables have consistent punctuation and sentence case in Item column
@@ -424,6 +519,14 @@ Before finalizing a chapter, verify:
 ---
 
 ## Tools for Consistency
+
+> **Warning**
+>
+> Every pattern below changes meaning somewhere. Re-read each hit in context before accepting it.
+> Replacing em dashes globally produced "released under that same ShareAlike license and marked as
+> changed, and, going the other way, those five may be used commercially" — where the dash had been
+> doing real work. Replacing "you" with "we" moved reader actions into the authors' voice across a
+> whole chapter. A find-and-replace pass is a proposal, not a result.
 
 ### Search and Replace Patterns
 
@@ -434,14 +537,13 @@ Before finalizing a chapter, verify:
 | m block | mBlock | Product name |
 | Mbot | mBot | Product name |
 | MBlock | mBlock | Product name |
-| Port 1 | port 1 | Lowercase ports |
-| Port 2 | port 2 | Lowercase ports |
-| Port 3 | port 3 | Lowercase ports |
-| Port 4 | port 4 | Lowercase ports |
+| Port 1 | port 1 | Lowercase ports — but not at the start of a sentence |
+| Port 2 | port 2 | Lowercase ports — but not at the start of a sentence |
+| Port 3 | port 3 | Lowercase ports — but not at the start of a sentence |
+| Port 4 | port 4 | Lowercase ports — but not at the start of a sentence |
 | 3D printed | 3D-printed | Compound adjective |
 | Lego compatible | Lego-compatible | Compound adjective |
 | Gaffers tape | Gaffer's tape | Possessive form |
-| — | – | En dash for ranges |
 |  - | - | Remove extra spaces before list items |
 
 ### Regular Expressions for Cleanup
@@ -457,3 +559,14 @@ Before finalizing a chapter, verify:
 - **v1.0** (2025): Initial style guide based on editing of chapters 10-65
 - **v1.1** (2025-08-06): Added sections for Hyphens, Possessives, External Content, Units of Measure, and clarified Table capitalization rules based on editing of chapters 93 and 95
 - **v1.2** (2025-08-06): Updated voice preference from direct address ("you") to first-person plural ("we"); clarified American English requirement in proofreading checklist
+- **v1.3** (2026-08-06): Corrected v1.2, which had been read as licensing "we" for reader actions
+  as well as ours: "we" is the project, "you" is the teacher. Established that the text in `![...]`
+  is a printed caption and must not be shortened as though it were alt text. Added rules on
+  cross-reference anchors, backtick scope, sourcing every number, not guessing in the manual's
+  voice, and re-reading find-and-replace in context. All five were written after an editing pass
+  broke a link, deleted 1,600 characters of caption, and moved reader actions into our voice.
+  Also settled four rules that contradicted either themselves or the manual: em dashes are allowed
+  and must never be bulk-converted (the `—` → `–` replacement row is deleted, as it fixed nothing);
+  UI labels take backticks rather than bold; the chapters use no contractions and the guide now says
+  so; and sentence length is guidance rather than a cap. Moved to `book/`, which is where the thing
+  it governs lives, and which is inside the tracked whitelist in `.gitignore`.
