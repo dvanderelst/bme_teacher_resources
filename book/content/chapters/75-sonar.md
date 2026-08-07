@@ -31,7 +31,7 @@ What limitations do human-made sensors have compared to the abilities of echoloc
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#standards) chapter.
 
 ## Learning Objectives
 
@@ -50,7 +50,7 @@ This lesson has two parts. In Part 1, your students learn about sonar sensors, a
 
 During Part 2, they build a robot that uses two sensors to avoid obstacles, then design a sonar cane for a blind person that can detect obstacles above the sweep of the cane.
 
-## Introduction to Sonar
+## Introduction to sonar
 
 This part of the lesson introduces sonar in technology and animals. Begin by showing the three short video clips below. The sperm whale and bat videos introduce your students to echolocation. We also include a video of a sonar-based parking sensor.
 
@@ -404,7 +404,7 @@ Add more screws using the holes pointed out in the image below.
 
 #### End result
 
-### Example Program
+### Example program
 
 We provide an example program. The program is linked and displayed below.
 

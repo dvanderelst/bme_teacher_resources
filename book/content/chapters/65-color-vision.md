@@ -28,7 +28,7 @@ Basic biology course, some understanding of algorithmic thinking.
 
 ## Educational Standards
 
-The national and state educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
+The national and state educational standards applicable to this lesson are listed in the [Educational Standards](#standards) chapter.
 
 ## Learning Objectives
 

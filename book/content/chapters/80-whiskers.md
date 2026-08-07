@@ -34,7 +34,7 @@ This lesson is self-contained, but builds most effectively upon [Sonar](#sonar),
 
 ## Educational Standards
 
-The educational standards applicable to this lesson are listed in the [Educational Standards](#educational-standards) chapter.
+The educational standards applicable to this lesson are listed in the [Educational Standards](#standards) chapter.
 
 <!-- TODO: the standards chapter has a Touch and Whiskers section, but it is a placeholder saying the alignment is not written yet. Replace it with the real thing. -->
 
