@@ -80,7 +80,7 @@ Students work in groups of at least three, with each group member wearing goggle
 Each student wearing a particular filter acts as a proxy for one cone type in the human retina. The goggles make them sensitive to a specific wavelength band, mimicking how different cone types have different preferred wavelengths.
 
 The goggles prevent a single student from discriminating colors, analogous to how a single cone cell cannot discriminate colors. A cone cell only detects the amount of light in its specific wavelength band. The retina compares activity across differently tuned cone cells to determine color. Students can do the same: by comparing how much light they see (the brightness of a color), they can collectively identify which color they are viewing.
-### The app
+
 ### The app
 
 Both halves of this activity run in a single app: [colorvisionapp.up.railway.app](https://colorvisionapp.up.railway.app/). It requires no installation — any browser works — and opens to the screen below.
@@ -105,7 +105,7 @@ They should notice that one channel alone is insufficient. The box under the red
 
 Once students have explored, ask them to identify the color of the large rectangle without reading the label. The dropdown, or the up and down arrow keys, changes it. Start with the primaries (red, green, blue) and move on to the secondaries. Each secondary color is a mixture of two primaries, appearing bright to two students and dark to the third.
 
-The table below relates what the three students see through each filter—bright (+) or dark (–)—to the actual color on screen.
+The table below relates what the three students see through each filter, bright (+) or dark (–), to the actual color on screen.
 
 ![The key relating what each pair of goggles sees to the color on screen.](images/color-vision-lesson-plan-f1a76c67.png)
 
@@ -186,7 +186,7 @@ To solve this issue, follow these three steps. First, students run a program tha
 
    [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](files/programs/color_vision_communication.mblock) instead.
 
-2. In mBlock, select **mBot** under the **Devices** tab on the left side of the screen. This displays the robot's code. Do not unplug the cable during this part of the activity.
+2. In mBlock, select **mBot** under the `Devices` tab on the left side of the screen. This displays the robot's code. Do not unplug the cable during this part of the activity.
 
    ![Make sure you select the mBot under the Devices tab to see the code for the robot.](images/color-vision-lesson-plan-a5e7ceb3.png)
 
@@ -289,7 +289,7 @@ You can extend the lesson in several ways:
 
 The blocks for the color sensor are not in mBlock by default; they are added via an extension. Opening one of our programs loads this extension automatically, so this step is only needed when starting a program from scratch.
 
-First, ensure the mBot has been added to mBlock—see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock)—and that it is selected in the **Devices** panel. Extensions are added to a specific device.
+First, ensure the mBot has been added to mBlock (see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock)) and that it is selected in the `Devices` panel. Extensions are added to a specific device.
 
 Then, click the `+` button at the bottom of the block palette, find `color sensor` in the list, and click `Add`.
 

@@ -31,7 +31,7 @@ The educational standards applicable to this lesson are listed in the [Education
 5. Provide examples of biological principles embodied in robots.
 6. Provide examples of how robots are used to test hypotheses about animal behavior.
 
-## Introduction and Motivation
+## Introduction and motivation
 
 Kinesis and taxis are two types of behavioral responses to external stimuli, with distinct characteristics.
 
@@ -77,7 +77,7 @@ An Excel file is also available for easier data recording:
 
 [Data sheets for recording coordinates (.xlsx)](files/Kinesis-Taxis_data_sheets.xlsx)
 
-### Activity 1: Kinesis Under 3 Different Conditions
+### Activity 1: kinesis under three conditions
 
 The first set of exercises demonstrates kinesis under three experimental conditions:
 
@@ -93,7 +93,7 @@ Before data collection, poll students on whether they think Condition 2 or 3 wil
 
 [Rules for Kinesis, all three conditions (.docx)](files/Rules_for_Kinesis.docx)
 
-### Activity 2: Taxis Under 3 Different Conditions
+### Activity 2: taxis under three conditions
 
 The second set of exercises demonstrates taxis under three experimental conditions:
 
@@ -109,11 +109,11 @@ Students determine whether their data supports these hypotheses:
 >
 > **Hypothesis C:** Widely spaced sensors enable faster source localization than narrowly spaced sensors.
 
-## Student Assessment
+## Student assessment
 
 Assess students' understanding with these questions:
 
-1. Are the four mechanisms tested—kinesis, orthokinesis, klinotaxis, and tropotaxis—effective for reaching the stimulus source? Do they differ in effectiveness? Explain.
+1. Are the four mechanisms tested (kinesis, orthokinesis, klinotaxis, and tropotaxis) effective for reaching the stimulus source? Do they differ in effectiveness? Explain.
 2. Does the protocol in section B describe KLINOKINESIS or KLINOTAXIS? Explain.
 3. Does sensor spatial segregation impact stimulus localization? Explain.
 4. What factors from these activities can be applied to robotic design?
