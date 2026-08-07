@@ -1,0 +1,88 @@
+/* Styling for the HTML build. The LaTeX equivalent is preamble.tex.
+ *
+ * Pandoc's stock template sets body { max-width: 36em }, which is a sensible
+ * measure for an essay and too narrow for this document: the block reference,
+ * the standards chapter and the materials tables all have to squeeze, and the
+ * figures -- spectrograms, beam patterns, the multi-panel photographs -- end up
+ * smaller on a wide screen than they are on paper.
+ *
+ * Everything below loads after pandoc's own <style> block and overrides it. */
+
+/* --- the measure ---------------------------------------------------------- */
+
+body {
+  max-width: 48em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* --- figures -------------------------------------------------------------- */
+
+/* Figures sit in the text column, the same width as everything else.
+ *
+ * An earlier version let them bleed outwards into the margin, which is a
+ * magazine trick: it buys a bigger picture at the cost of the page no longer
+ * having a single edge. That reads as restless in a document with 166 figures,
+ * several of them a few paragraphs apart, so the column wins. If you ever want
+ * it back, it was:
+ *
+ *   :root  { --bleed: clamp(0rem, (100vw - 48em - 4rem) / 2, 7rem); }
+ *   figure { margin-left: calc(-1 * var(--bleed));
+ *            margin-right: calc(-1 * var(--bleed));
+ *            width: calc(100% + 2 * var(--bleed)); }
+ */
+figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* The captions here carry real content and are often several sentences, so they
+ * need to be legible -- but they should not be mistaken for body text. */
+figcaption {
+  margin: 0.6rem 0 0;
+  font-size: 0.88em;
+  line-height: 1.45;
+  color: #444;
+  text-align: left;
+}
+
+/* --- tables --------------------------------------------------------------- */
+
+/* Wide tables scroll sideways rather than crushing their columns. */
+table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.35em 0.7em;
+}
+
+/* --- code ----------------------------------------------------------------- */
+
+pre {
+  overflow-x: auto;
+  padding: 0.8em 1em;
+}
+
+/* --- dark mode ------------------------------------------------------------ */
+
+/* The stock template has no dark styling, so a reader with a dark browser theme
+ * gets a white page. This is the minimum that stops it glaring. */
+@media (prefers-color-scheme: dark) {
+  html { background: #14161a; }
+  body { color: #d7dae0; background: #14161a; }
+  a, a:visited { color: #7fb3e8; }
+  figcaption { color: #9aa2ad; }
+  th, td { border-color: #3a3f47; }
+  pre, code { background: #1d2026; }
+}

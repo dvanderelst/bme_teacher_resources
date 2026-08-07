@@ -96,7 +96,16 @@ pandoc "${ARGS[@]}" --pdf-engine=xelatex \
   --include-in-header=render/_version.tex \
   -o render/BmE-teacher-materials.pdf
 echo "--- HTML (single self-contained file) ---"
+# html.css is to the HTML what preamble.tex is to the PDF. --embed-resources
+# inlines it, so the output stays a single file with nothing to fetch.
+#
+# document-css=true is not decoration. Passing --css makes pandoc drop its own
+# base stylesheet -- line height, font stack, table rules, heading spacing --
+# and hand the whole job to ours. Forcing it back on keeps those defaults and
+# layers html.css over them, which is all we want: a wider measure, not a
+# rewritten document.
 pandoc "${ARGS[@]}" --standalone --embed-resources --mathml \
+  --css=html.css -V document-css=true \
   --include-before-body=content/branding/logo.html \
   -o render/BmE-teacher-materials.html
 rm -f render/_version.tex
