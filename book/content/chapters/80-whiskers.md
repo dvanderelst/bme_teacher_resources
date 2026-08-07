@@ -380,7 +380,7 @@ The final comparison deserves emphasis. The robot moves its entire body to bring
 
 **"Whiskers feel at the tip."** The tip makes contact, but the sensing occurs at the follicle where the shaft bends. Consider it as a flexible lever: the tip touches the object, but the base measures the resulting deflection.
 
-**"Better touch sensitivity means feeling things more intensely."** In the two-point discrimination task, better sensitivity means finer spatial resolution—the ability to distinguish two nearby touches as separate. It concerns precision, not strength.
+**"Better touch sensitivity means feeling things more intensely."** In the two-point discrimination task, better sensitivity means finer spatial resolution: the ability to distinguish two nearby touches as separate. It concerns precision, not strength.
 
 **"Tonic means slow to respond."** Slow-adapting describes how long the receptor continues firing, not how quickly it begins. A slow-adapting receptor can respond instantly to initial contact.
 

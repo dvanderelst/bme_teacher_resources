@@ -4,13 +4,13 @@
 
 [Educational standards: Sonar](#educational-standards-sonar)
 
-[Educational standards: Kinesis/Taxis](#educational-standards-kinesis-taxis)
+[Educational standards: Kinesis and Taxis](#educational-standards-kinesis-taxis)
 
 [Educational standards: Sound Localization](#educational-standards-sound-localization)
 
 [Educational standards: Touch and Whiskers](#educational-standards-touch-and-whiskers)
 
-## Educational standards Kinesis Taxis
+## Educational standards: Kinesis and Taxis {#educational-standards-kinesis-taxis}
 
 ### Next Generation Science Standards
 
@@ -52,7 +52,7 @@ Science and Engineering Practices:
 - 1.7 Global Collaborator
     - c. Students contribute constructively to project teams, assuming various roles and responsibilities to work effectively toward a common goal.
 
-### State Specific Educational Standards
+### State-specific educational standards
 
 #### Ohio Science Standards
 
@@ -94,7 +94,7 @@ AP.1.3 Homeostasis B.5.3 Apply concepts of statistics and probability to support
 - S.10.LS.22 Apply concepts of statistics and probability to support explanations that organisms with an advantageous heritable trait tend to increase in proportion to organisms lacking in this trait.
 - S.10.LS.24 Evaluate the evidence supporting claims that changes in environmental conditions may result in: (1) increase in the number of individuals of some species, (2) the emergence of new species over time, and (3) the extinction of other species.
 
-## Educational standards Color Vision
+## Educational standards: Color Vision {#educational-standards-color-vision}
 
 ### Next Generation Science Standards
 
@@ -141,7 +141,7 @@ Science and Engineering Practices:
 - 1.7 Global Collaborator
     - c. Students contribute constructively to project teams, assuming various roles and responsibilities to work effectively toward a common goal.
 
-### State Specific Educational Standards
+### State-specific educational standards
 
 #### Ohio Science Standards
 
@@ -187,7 +187,7 @@ AP.1.3 Homeostasis (of the robot) AP.7.2 Function of the eye
 - S.HS.HAP.13 Apply the structure of the ear and eye to their function/dysfunction in relation to environmental perception.
 - S.HS.ETS.2 Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.
 
-## Educational standards Sound Localization
+## Educational standards: Sound Localization {#educational-standards-sound-localization}
 
 ### Next Generation Science Standards
 
@@ -245,7 +245,7 @@ Science and Engineering Practices:
 - 1.7 Global Collaborator
     - c. Students contribute constructively to project teams, assuming various roles and responsibilities to work effectively toward a common goal.
 
-#### State Specific Educational Standards
+#### State-specific educational standards
 
 ##### Ohio Science Standards
 
@@ -292,7 +292,7 @@ AP.7.3 Special Senses
 - S.HS.HAP.13 Apply the structure of the ear and eye to their function/dysfunction in relation to environmental perception.
 - S.HS.ETS.2 Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.
 
-## Educational standards Sonar
+## Educational standards: Sonar {#educational-standards-sonar}
 
 ### Next Generation Science Standards
 
@@ -350,7 +350,7 @@ Science and Engineering Practices:
 - 1.7 Global Collaborator
     - c. Students contribute constructively to project teams, assuming various roles and responsibilities to work effectively toward a common goal.
 
-## Educational standards Touch and Whiskers
+## Educational standards: Touch and Whiskers {#educational-standards-touch-and-whiskers}
 
 The standards alignment for this lesson has not been written yet. The lesson itself is complete enough to teach, and the four sets above show the shape the entry will take: Next Generation Science Standards, ISTE, and the Ohio, Indiana and West Virginia science standards.
 
