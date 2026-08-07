@@ -23,7 +23,7 @@
 
 ## Prerequisites
 
-You should have knowledge of high school Biology and Algebra 2, or equivalent.
+Students should have high school Biology and Algebra 2, or equivalent.
 
 ## Investigating / Essential Questions
 

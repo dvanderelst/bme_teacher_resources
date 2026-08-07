@@ -36,7 +36,7 @@ Because sound sensors output a continuously varying voltage, they require an ana
 
 ![RJ25 cable: identical ends, telephone-style connector](images/introduction-to-the-robot-rj25-cable.jpg)
 
-The sound and color sensors require an mBlock extension before their blocks appear. Our example programs load the extension automatically. If we start from scratch, we must add it ourselves. See [Adding the sound sensor extension](#adding-the-sound-sensor-extension) and [Adding the color sensor extension](#adding-the-color-sensor-extension).
+The sound and color sensors require an mBlock extension before their blocks appear. Our example programs load the extension automatically. If we start from scratch, we must add it ourselves. See [Adding the sound sensor extension](#adding-the-sound-sensor-extension) and [Adding the color sensor extension](#adding-color-sensor-extension).
 
 ## Switches and onboard sensors
 

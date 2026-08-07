@@ -23,7 +23,7 @@
 
 ## Prerequisites
 
-You should have knowledge of high school Biology and Algebra 2, or equivalent.
+Students should have high school Biology and Algebra 2, or equivalent.
 
 This lesson is self-contained, but builds most effectively upon [Sonar](#sonar), which introduces active sensing in a form students have already encountered, and [Kinesis and Taxis](#kinesis-and-taxis), which provides the vocabulary for the robot behaviors they will implement here.
 
