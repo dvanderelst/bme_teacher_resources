@@ -82,12 +82,12 @@ the phonotaxis section.
       rather than a reference repair: either rename the handout condition, or reword the question to
       describe the protocol instead of citing it.
 
-### 3.3 Loose ends in the Required materials chapter
+### 3.3 Loose ends in the Required Materials chapter
 
 - [ ] *"Add model magic to materials"* — which lesson, and how much per group?
 - [ ] *"Create material list to make external pinnae"* — Sound Localization says "cardboard paper,
       pipe cleaners, tape, etc." in prose. Turning "etc." into a table is a purchasing decision.
-- [ ] **The Required materials chapter has no quantities**, despite its opening sentence promising
+- [ ] **The Required Materials chapter has no quantities**, despite its opening sentence promising
       "the quantity required per student (or group of students)". Some entries say how many inside
       their description; most do not. Either add a column or drop the promise.
 - [ ] The chapter calls the manipulative the **Blue Arrow** and measures in *arrow lengths*; both
@@ -98,14 +98,19 @@ the phonotaxis section.
       regenerating the two `.docx` handouts, and only you know whether those are already printed.
 
 ### 3.4 Loose ends in the prose
-- [ ] *Programming the robot*: your backlog says *"Create programs under 'Programming the robot'"* —
+- [ ] *Programming the Robot*: your backlog says *"Create programs under 'Programming the robot'"* —
       it is the only lesson with no `.mblock` programs
 - [ ] The *Touch and Whiskers* standards section is still a placeholder. It needs the same four blocks
       as the other lessons, written by somebody who knows the standards rather than somebody
       pattern-matching from the other four.
+- [ ] *Sound Localization* has no **Learning Objectives** section. Every other lesson chapter has one,
+      and the chapter template in the style guide lists it among the six fixed sections. Writing them
+      is a teaching decision rather than an editing job, which is why it is here: the lesson covers
+      interaural cues, pinna directionality, calibrating two microphones against each other, and
+      phonotaxis, so there are four candidates already sitting in the chapter.
 - [ ] Minor, and only if it bothers you: *Introduction to Programming* uses "Challenge 1" and
       "Challenge 2" for the two conceptual halves of programming (working out the algorithm, then
-      expressing it), while *Programming the robot* uses "Challenge 1–4" for the four exercises.
+      expressing it), while *Programming the Robot* uses "Challenge 1–4" for the four exercises.
       Self-consistent within each chapter, but the same word carries two meanings across a page turn.
 
 ### 3.5 The bat-and-dolphin directionality figure in *Sonar*
