@@ -1,34 +1,38 @@
 # Block reference
 
-This chapter lists the programming blocks available for the mBot (mCore) board in mBlock, with what each one does. It is a lookup chapter rather than one to read through; [Programming the robot](#programming-the-robot) introduces the categories and shows how the blocks fit together.
+This chapter lists the programming blocks available for the mBot (mCore) board in mBlock, with what each one does. It is a lookup chapter rather than one to read through. [Programming the robot](#programming-the-robot) introduces the categories and shows how the blocks fit together.
 
-**What is not listed here.** `Looks` (relevant only if the robot has an add-on LCD display), `My blocks` (custom blocks you define yourself), and the sprite and stage categories that belong to mBlock rather than to the robot. These exist in the palette, but none of the lessons in these materials use them.
+**What is not listed here:** `Looks` (relevant only if the robot has an add-on LCD display), `My blocks` (custom blocks you define yourself), and the sprite and stage categories that belong to mBlock rather than to the robot. These exist in the palette, but none of the lessons in these materials use them.
 
-**Before any of these blocks appear.** The robot's blocks are only in the palette once the mBot has been added in the devices panel. On a fresh start the device is not there and only the sprite and stage categories are shown. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
+**Before any of these blocks appear:** The robot's blocks are only in the palette once the mBot has been added in the devices panel. On a fresh start the device is not there and only the sprite and stage categories are shown. See [Adding the mBot to mBlock](#adding-the-mbot-to-mblock).
 
-**Extensions.** Two categories require an extension, added with the `+` button at the bottom of the category panel. Opening one of the supplied example programs loads the relevant extension automatically.
+**Extensions:** Two categories require an extension, added with the `+` button at the bottom of the category panel. Opening one of the supplied example programs loads the relevant extension automatically.
 
 | Extension | Adds | Needed for |
 | :--- | :--- | :--- |
-| `color sensor` | Colour Sensor category | Color Vision lesson |
+| `color sensor` | Color Sensor category | Color Vision lesson |
 | `light sound` | Light & Sound category (external sound and light sensors, RGB LED module) | Sound Localization lesson, programming challenge 3 |
 
-**Ports.** Where a block's dropdown restricts which ports it offers, that restriction is noted with the block. For which sensor may be plugged into which port and why, see [Ports and sensor compatibility](#ports-and-sensor-compatibility).
+**Ports:** Where a block's dropdown restricts which ports it offers, that restriction is noted with the block. For which sensor may be plugged into which port and why, see [Ports and sensor compatibility](#ports-and-sensor-compatibility).
 
 ## Block shapes
 
-A block's shape says how it can be used, and the shapes are worth recognising because they determine where a block will and will not snap into place.
+A block's shape indicates how it can be used. The shapes are worth recognizing because they determine where a block will and will not snap into place.
 
-| Shape | Marked here as | Behaviour |
+| Shape | Marked here as | Behavior |
 | :--- | :--- | :--- |
 | Stack | *(untagged)* | Does something and passes control to the next block. The default. |
-| Reporter | **Reporter** | Rounded. Returns a value. Cannot be used on its own — it must be dropped into a slot on another block. |
-| Boolean | **Boolean** | Hexagonal. Returns true or false. Drops into the hexagonal slots of `if`, `while`, `wait until` and the logic operators. |
+| Reporter | **Reporter** | Rounded. Returns a value. Cannot be used on its own—it must be dropped into a slot on another block. |
+| Boolean | **Boolean** | Hexagonal. Returns true or false. Drops into the hexagonal slots of `if`, `while`, `wait until`, and the logic operators. |
 | Hat | **Hat** | Rounded top. Starts a script. Goes at the top of a stack, never inside one. |
 
 Reporter and Boolean blocks are the ones teachers most often try to use alone. A `timer` block sitting by itself in the program area does nothing; it has to go inside something that asks for a value.
 
-In the signatures below, `(n)` is a slot you type a value into (or drop a reporter block into), `[option ▾]` is a dropdown, `[color]` is a colour picker, and `<>` is a hexagonal slot that takes a Boolean block.
+In the signatures below:
+- `(n)` is a slot you type a value into (or drop a reporter block into)
+- `[option ▾]` is a dropdown
+- `[color]` is a color picker
+- `<>` is a hexagonal slot that takes a Boolean block
 
 ---
 
@@ -72,19 +76,19 @@ Controls the two drive motors. There are two forms, and the difference matters: 
 
 ## Show blocks
 
-Controls the two onboard RGB LEDs and the onboard buzzer. The two LEDs are addressed as `left`, `right` or `all`.
+Controls the two onboard RGB LEDs and the onboard buzzer. The two LEDs are addressed as `left`, `right`, or `all`.
 
 `LED [all ▾] shows color [color] for (n) secs`
 
-:   Lights the selected LED(s) in the chosen colour, holds the program for the given time, then switches them off and continues. First dropdown: `all`, `left`, `right`. The colour slot opens a picker with separate colour, saturation and brightness controls.
+:   Lights the selected LED(s) in the chosen color, holds the program for the given time, then switches them off and continues. First dropdown: `all`, `left`, `right`. The color slot opens a picker with separate color, saturation, and brightness controls.
 
 `LED [all ▾] shows color [color]`
 
-:   Sets the selected LED(s) to the chosen colour and continues immediately. The colour stays until something changes it.
+:   Sets the selected LED(s) to the chosen color and continues immediately. The color stays until something changes it.
 
 `turn on [all ▾] light with color red (n) green (n) blue (n)`
 
-:   Sets the selected LED(s) from explicit red, green and blue values (0–255 each) and continues immediately. The form to use when the colour is calculated rather than picked, since the three slots accept reporter blocks. Red 0, green 0, blue 0 switches the LED off.
+:   Sets the selected LED(s) from explicit red, green, and blue values (0–255 each) and continues immediately. The form to use when the color is calculated rather than picked, since the three slots accept reporter blocks. Red 0, green 0, blue 0 switches the LED off.
 
 `play note [C4 ▾] for (n) beats`
 
@@ -94,7 +98,7 @@ Controls the two onboard RGB LEDs and the onboard buzzer. The two LEDs are addre
 
 :   Plays a tone at the given frequency in Hz for the given number of seconds, holding the program for that time.
 
-There is no dedicated "off" block for the LEDs. Set the colour to black in the picker, or use red 0, green 0, blue 0.
+There is no dedicated "off" block for the LEDs. Set the color to black in the picker, or use red 0, green 0, blue 0.
 
 ---
 
@@ -102,7 +106,7 @@ There is no dedicated "off" block for the LEDs. Set the colour to black in the p
 
 The onboard sensors and the sensors in the robot's default configuration. The external sound sensor and the RGB LED module are in the Light & Sound extension.
 
-The ten blocks below are the whole category — there is no gyroscope or accelerometer block for the mBot, and no onboard sensor for one. Makeblock's larger robots have them, so a teacher arriving from an mBot2 or a Ranger will look for tilt and orientation blocks and not find them.
+The ten blocks below are the whole category. There is no gyroscope or accelerometer block for the mBot, and no onboard sensor for one. Makeblock's larger robots have them, so a teacher arriving from an mBot2 or a Ranger will look for tilt and orientation blocks and not find them.
 
 `ultrasonic sensor [port ▾] distance(cm)`
 
@@ -110,7 +114,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `light sensor [on-board ▾] light intensity`
 
-:   **Reporter.** Ambient light level, higher values meaning more light. The onboard sensor reads **0 to 1000**, checked on the robot, which is what makes the threshold of 500 used in the programming challenge a sensible midpoint. Dropdown: `port3`, `port4`, `on-board` — so this block reads an external light sensor as well as the onboard one, and like the sound sensor it is limited to the two analog ports.
+:   **Reporter.** Ambient light level; higher values mean more light. The onboard sensor reads **0 to 1000** (checked on the robot), which is what makes the threshold of 500 used in the programming challenge a sensible midpoint. Dropdown: `port3`, `port4`, `on-board`. So this block reads an external light sensor as well as the onboard one. Like the sound sensor, it is limited to the two analog ports.
 
 `line follower sensor [port ▾] value`
 
@@ -118,7 +122,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `line follower sensor [port ▾] detects [leftside ▾] being [black ▾] ?`
 
-:   **Boolean.** True when the chosen side of the line-follower sensor sees the chosen surface colour. A per-sub-sensor alternative to reading the combined value. Three dropdowns: the port (`port1` to `port4`); which sub-sensor to ask about (`left side`, `right side`, `all`, `none`); and the surface (`black`, `white`). `all` is true only when both sub-sensors see that surface, `none` only when neither does — so `all` + `black` is the same test as a combined value of 0, and `none` + `black` the same as a value of 3.
+:   **Boolean.** True when the chosen side of the line-follower sensor sees the chosen surface color. A per-sub-sensor alternative to reading the combined value. Three dropdowns: the port (`port1` to `port4`); which sub-sensor to ask about (`left side`, `right side`, `all`, `none`); and the surface (`black`, `white`). `all` is true only when both sub-sensors see that surface, `none` only when neither does. So `all` + `black` is the same test as a combined value of 0, and `none` + `black` the same as a value of 3.
 
 `when on-board button [pressed ▾] ?`
 
@@ -138,7 +142,7 @@ The ten blocks below are the whole category — there is no gyroscope or acceler
 
 `timer`
 
-:   **Reporter.** Seconds the robot has been running. The timer starts from zero each time the robot is powered on — not when the program starts — and `reset timer` returns it to zero.
+:   **Reporter.** Seconds the robot has been running. The timer starts from zero each time the robot is powered on—not when the program starts—and `reset timer` returns it to zero.
 
 `reset timer`
 
@@ -150,20 +154,20 @@ The sensor has two sub-sensors that each emit infrared light and detect what com
 
 | Value | Sub-sensor 1 (left) | Sub-sensor 2 (right) | Position | Correction |
 | :--- | :--- | :--- | :--- | :--- |
-| 0 | no signal — over the line | no signal — over the line | both on the line | none |
-| 1 | no signal — over the line | signal — off the line | drifted right | turn left |
-| 2 | signal — off the line | no signal — over the line | drifted left | turn right |
-| 3 | signal — off the line | signal — off the line | line lost | search |
+| 0 | no signal (over the line) | no signal (over the line) | both on the line | none |
+| 1 | no signal (over the line) | signal (off the line) | drifted right | turn left |
+| 2 | signal (off the line) | no signal (over the line) | drifted left | turn right |
+| 3 | signal (off the line) | signal (off the line) | line lost | search |
 
-Note that `0` means *both sub-sensors are on the line*, not that nothing was detected, and `3` means the line has been lost entirely. Students frequently assume the reverse.
+Note that `0` means *both sub-sensors are on the line*, not that nothing was detected. `3` means the line has been lost entirely. Students frequently assume the reverse.
 
-The left and right readings assume the sensor is mounted in the normal orientation, with sub-sensor 1 on the left. The interpretation also assumes the usual track, a dark line on a pale background; on a pale line over a dark background every value inverts.
+The left and right readings assume the sensor is mounted in the normal orientation, with sub-sensor 1 on the left. The interpretation also assumes the usual track: a dark line on a pale background. On a pale line over a dark background, every value inverts.
 
 ---
 
 ## Events blocks
 
-Where a program starts. The choice between the first two is the choice between the robot's two operating modes; see [Live versus Upload mode](#live-versus-upload-mode).
+Where a program starts. The choice between the first two is the choice between the robot's two operating modes. See [Live versus Upload mode](#live-versus-upload-mode).
 
 `when [green flag] clicked`
 
@@ -243,7 +247,7 @@ Where a program starts. The choice between the first two is the choice between t
 
 `stop [all ▾]`
 
-:   Stops running scripts. Dropdown: `all`, `this script`, `other scripts in sprites`. This stops the *program*, not the motors — a robot whose motors were started by a non-timed Action block keeps driving, so pair this with `stop moving`.
+:   Stops running scripts. Dropdown: `all`, `this script`, `other scripts in sprites`. This stops the *program*, not the motors. A robot whose motors were started by a non-timed Action block keeps driving, so pair this with `stop moving`.
 
 ---
 
@@ -343,9 +347,9 @@ Every variable a program creates is displayed on the stage, the white area at th
 
 ---
 
-## Extension: Colour Sensor
+## Extension: Color Sensor
 
-Requires the `color sensor` extension. The colour sensor works in Upload mode only, so programs using it start from `when mBot(mcore) starts up`.
+Requires the `color sensor` extension. The color sensor works in Upload mode only, so programs using it start from `when mBot(mcore) starts up`.
 
 `color sensor [port ▾] [R ▾] value`
 
@@ -353,11 +357,11 @@ Requires the `color sensor` extension. The colour sensor works in Upload mode on
 
 `color sensor [port ▾] detects [white ▾]`
 
-:   **Boolean.** True when the sensor classifies what it sees as the named colour. Dropdown: `white`, `red`, `yellow`, `green`, `blue`, `black`.
+:   **Boolean.** True when the sensor classifies what it sees as the named color. Dropdown: `white`, `red`, `yellow`, `green`, `blue`, `black`.
 
 `color sensor [port ▾] set fill light LED to [on ▾]`
 
-:   Switches the sensor's own white illumination LEDs on or off. Dropdown: `on`, `off`. These LEDs give the surface uniform broad-spectrum light, which is what makes colour discrimination reliable.
+:   Switches the sensor's own white illumination LEDs on or off. Dropdown: `on`, `off`. These LEDs give the surface uniform broad-spectrum light, which is what makes color discrimination reliable.
 
 ---
 
@@ -367,7 +371,7 @@ Requires the `light sound` extension.
 
 `sound sensor [port ▾] loudness`
 
-:   **Reporter.** The current sound level at an external Makeblock sound sensor, higher values meaning louder. Dropdown: ports 3 and 4 only, these being the board's only analog inputs — port 3 carries `A2` and `A3`, port 4 carries `A0` and `A1`, and ports 1 and 2 carry digital pins only (`11`/`12` and `9`/`10`). The board prints this beside each connector.
+:   **Reporter.** The current sound level at an external Makeblock sound sensor; higher values mean louder. Dropdown: ports 3 and 4 only. These are the board's only analog inputs: port 3 carries `A2` and `A3`, port 4 carries `A0` and `A1`, and ports 1 and 2 carry digital pins only (`11`/`12` and `9`/`10`). The board prints this beside each connector.
 
 `light sensor [port ▾] light intensity`
 

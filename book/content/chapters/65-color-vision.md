@@ -105,21 +105,21 @@ They should notice that one channel alone is insufficient. The box under the red
 
 Once students have explored, ask them to identify the color of the large rectangle without reading the label. The dropdown, or the up and down arrow keys, changes it. Start with the primaries (red, green, blue) and move on to the secondaries. Each secondary color is a mixture of two primaries, appearing bright to two students and dark to the third.
 
-The table below relates what the three students see, bright (+) or dark (-), to the actual color on screen.
+The table below relates what the three students see through each filter—bright (+) or dark (–)—to the actual color on screen.
 
 ![The key relating what each pair of goggles sees to the color on screen.](images/color-vision-lesson-plan-f1a76c67.png)
 
-It helps to give students a blank copy to fill in as they work through the trainer:
+Give students a blank copy to fill in as they work through the trainer:
 
 [Color discrimination chart (.docx)](files/Color_Discrimination_Chart.docx)
 
-### Competitive Game
+### Competitive game
 
-After practicing in the trainer, groups play the timed version to reinforce what they have learned and to encourage quick teamwork. Wearing their goggles, they press `START`. Each round displays nine boxes of primary and secondary colors with a color name above them, and the group must select every box of that color.
+After practicing in the trainer, groups play the timed version to reinforce what they have learned and encourage quick teamwork. Wearing their goggles, they press `START`. Each round displays nine boxes of primary and secondary colors with a color name above them, and the group must select every box of that color.
 
 ![A round in progress. The named color is at the top, the ring above it shows the time left, and the group selects every box of that color.](images/color-vision-game.png)
 
-The game runs ten rounds. Each round starts at 100 points and ticks down as an audible clock counts off, so the faster a group finds all the correct boxes, the more points it retains. Selecting a wrong color costs 10 points and speeds up the clock, penalizing mistakes twice. The ten rounds therefore total at most 1000 points, and this total is multiplied by the difficulty setting — Easy ×1.0, Medium ×1.5, Hard ×2.0 — for a maximum of 2000 on Hard.
+The game runs ten rounds. Each round starts at 100 points and ticks down as an audible clock counts off, so the faster a group finds all the correct boxes, the more points it retains. Selecting a wrong color costs 10 points and speeds up the clock, penalizing mistakes twice. The ten rounds therefore total at most 1000 points. This total is then multiplied by the difficulty setting—Easy ×1.0, Medium ×1.5, Hard ×2.0—for a maximum of 2000 on Hard.
 
 At the end, groups enter a team name and submit their score. Encourage them to play more than once and try to beat their previous score.
 
@@ -133,26 +133,26 @@ Submitted scores appear on an instructor dashboard, accessed via the `Instructor
 
 ![The dashboard asks for a password.](images/color-vision-dashboard-login.png)
 
-Write to **Dieter Vanderelst** at [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu) for the password. Once logged in, select the date or dates your class is playing, and the dashboard lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard, encouraging groups to play again to climb the rankings.
+Write to **Dieter Vanderelst** at [vanderdt@ucmail.uc.edu](mailto:vanderdt@ucmail.uc.edu) for the password. Once logged in, select the date or dates for your class. The dashboard then lists every team's score for those days, refreshing every ten seconds or so. Left on a projector, it becomes a live leaderboard that encourages groups to play again and climb the rankings.
 
 ![The dashboard, with team names blurred here. Choose one or more dates on the left, and the scores appear on the right, highest first.](images/color-vision-dashboard-scores.png)
 
 > **Note**
 >
-> Every teacher using the dashboard shares the same one, so you will see other schools' scores alongside your own. Picking your dates filters it to show only your class. Ask groups to invent a team name rather than use their own names, which keeps the board readable and is more fun.
+> Every teacher using the dashboard shares the same one, so you will see other schools' scores alongside your own. Picking your dates filters it to show only your class. Ask groups to invent a team name rather than use their own names. This keeps the board readable and is more fun.
 ## Activity: robot color discrimination
 
 ### Introduction
 
 Students program a robot to follow a bicolored paper path using a color sensor to keep the robot centered. The task is illustrated below.
 
-Students create a path using two different colors of paper (red and green in the example). They then program the robot to stay in the middle by turning left or right based on the color sensor's readings. In the example, the robot turns right when the sensor detects green and left when it detects red.
+Students create a path using two different colors of paper (red and green in the example). They then program the robot to stay in the middle by turning left or right based on the sensor's readings. In the example, the robot turns right when the sensor detects green and left when it detects red.
 
 ![The task. The color sensor points down at the boundary between the two colors, and the robot steers to keep it there.](images/color-vision-lesson-plan-998025db.png)
 
 ### Operation of the color sensor
 
-Students can find detailed [information on the color sensor's operation](https://www.mouser.co.uk/datasheet/2/348/bh1745nuc-e-519994.pdf) online. In brief, the Me color sensor has three light detectors that register the amount of red, green, and blue light. This information can be used to discriminate colors and identify the color of the paper under the robot.
+Students can find detailed [information on the color sensor's operation](https://www.mouser.co.uk/datasheet/2/348/bh1745nuc-e-519994.pdf) online. In brief, the Makeblock color sensor has three light detectors that register the amount of red, green, and blue light. You can use this information to discriminate colors and identify the color of the paper under the robot.
 
 Give students time to install the color sensor instead of the line follower sensor shown in the generic instructions. Caution students not to over-tighten the screws, as the caster wheel rests on some of the electronic components on the sensor board. This can prevent the wheel from moving or damage the components. See below for images of the color sensor installed on the robot.
 
@@ -160,25 +160,19 @@ Give students time to install the color sensor instead of the line follower sens
 
 ![The same sensor seen from underneath, between the two motors. Its two white LEDs light the paper so the reading does not depend on the room lighting.](images/color-vision-lesson-plan-bf6d4571.jpg)
 
-Students also construct a bicolored path using colored paper and tape, with each side a different color as illustrated above. [An example is also shown in the video at the end of this guide](#color-vision).
+Students also construct a bicolored path using colored paper and tape, with each side a different color as illustrated above. [An example is also shown in the video at the end of this chapter](#color-vision).
 
 ### Procedure
 
-The color sensor only works in `Upload` mode. Programs must be uploaded to the robot, over the USB cable or the Bluetooth dongle, and the connection can then be dropped. The instructions below use the cable throughout, because the first step is easier with a connection you can see. The robot then runs the uploaded program autonomously. Every time the robot is switched on, it will run this program without needing computer communication. More information about the robot's operational modes is [available here](#getting-started-with-the-robot).
+The color sensor only works in `Upload` mode. Programs must be uploaded to the robot over the USB cable or the Bluetooth dongle, and the connection can then be dropped. The instructions below use the cable throughout because the first step is easier with a connection you can see. The robot then runs the uploaded program autonomously. Every time you switch the robot on, it will run this program without needing computer communication. More information about the robot's operational modes is [available here](#getting-started-with-the-robot).
 
-The fact that the sensor only works in `Upload` mode makes programming more challenging. The main issue is that sensor values cannot be observed while the program runs without a USB connection. This makes it difficult to identify the correct sensor values to respond to.
+The fact that the sensor only works in `Upload` mode makes programming more challenging. The main issue is that you cannot observe sensor values while the program runs without a USB connection. This makes it difficult to identify the correct sensor values to respond to.
 
-To solve this issue, we will proceed in three steps, which are the three sections that follow. First, students run a program that displays the sensor's current values while the robot is connected to the computer via a USB cable. Second, they interpret those readings to work out a rule that tells the two colors apart. Third, they program the robot using that rule and disconnect the cable, so that from then on the robot follows the track on its own.
-
-> **Tip**
->
-> If you use the programs below, the mBlock software will load an extension that allows you to work with the color sensor. To start programming from scratch, you must add the extension yourself. Click the following link for instructions:
->
-> [Adding color sensor extension](#adding-color-sensor-extension)
+To solve this issue, follow these three steps. First, students run a program that displays the sensor's current values while the robot is connected to the computer via a USB cable. Second, they interpret those readings to work out a rule that tells the two colors apart. Third, they program the robot using that rule and disconnect the cable. From then on, the robot follows the track on its own.
 
 > **Tip**
 >
-> If you use the programs below, the mBlock software will automatically load an extension that allows you to work with the color sensor. To start programming from scratch, you must add the extension yourself. Click the following link for instructions:
+> If you use the programs below, mBlock automatically loads an extension that allows you to work with the color sensor. To start programming from scratch, you must add the extension yourself. Click the following link for instructions:
 >
 > [Adding color sensor extension](#adding-color-sensor-extension)
 
@@ -186,15 +180,15 @@ To solve this issue, we will proceed in three steps, which are the three section
 
 > **Note**
 >
-> Ensure the color sensor is connected to port 2 on the robot.
+> Ensure the color sensor is connected to `port 2` on the robot.
 
 1. Open the program in mBlock, either in the browser or installed version. Either link works, and [Step 1: Open the example program](#step-1-open-the-example-program) explains what to do with each.
 
-    [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](files/programs/color_vision_communication.mblock) instead.
+   [Open the mBlock project](https://planet.mblock.cc/project/3954097). If your school blocks the Makeblock site, [download `color_vision_communication.mblock`](files/programs/color_vision_communication.mblock) instead.
 
-2. In mBlock, select mBot under the Devices tab on the left side of the screen. This displays the robot's code. Do not unplug the cable during this part of the activity.
+2. In mBlock, select **mBot** under the **Devices** tab on the left side of the screen. This displays the robot's code. Do not unplug the cable during this part of the activity.
 
-    ![Make sure you select the mBot under the Devices tab to see the code for the robot.](images/color-vision-lesson-plan-a5e7ceb3.png)
+   ![Make sure you select the mBot under the Devices tab to see the code for the robot.](images/color-vision-lesson-plan-a5e7ceb3.png)
 
 3. Connect to the robot using the USB cable. See [Getting started with the robot](#getting-started-with-the-robot) for USB connection instructions.
 4. Upload the code to the robot by selecting `Upload` mode and clicking `Upload code`.
@@ -203,9 +197,9 @@ To solve this issue, we will proceed in three steps, which are the three section
 
 ![The upload in progress. It takes a few moments, and the robot cannot be used until it finishes.](images/color-vision-lesson-plan-41a422cc.png)
 
-Once uploaded, the robot's white light should flash every second, indicating it is collecting data using the color sensor. Keep the USB cable plugged in. mBlock will display a graph view showing the red, green, and blue light readings from the color sensor. These values also appear on the stage, at the top left of the mBlock window.
+Once uploaded, the robot's white light should flash every second, indicating it is collecting data using the color sensor. Keep the USB cable plugged in. mBlock will display a graph view showing the red, green, and blue light readings from the color sensor. These values also appear on the stage at the top left of the mBlock window.
 
-![mBlock's chart view, showing how much red, green and blue light the sensor is picking up.](images/color-vision-lesson-plan-8d5aeda8.png)
+![mBlock's chart view, showing how much red, green, and blue light the sensor is picking up.](images/color-vision-lesson-plan-8d5aeda8.png)
 
 ![The same three readings on the stage. They are labelled `Panda:` because the variables belong to the panda sprite.](images/color-vision-lesson-plan-d29948b8.png)
 
@@ -213,13 +207,13 @@ With the robot connected to the computer via USB cable, students can now collect
 
 ![Marks drawn across the boundary about 1 cm apart. Here there are seven, from 3 cm into the green to 3 cm into the red.](images/color-vision-lesson-plan-9e9eb54f.png)
 
-Students can now observe how the red, green, and blue values change as the robot is placed and aligned with each mark. For example, in the image below, the robot is aligned with the leftmost marker.
+Students can now observe how the red, green, and blue values change as they place and align the robot with each mark. For example, in the image below, the robot is aligned with the leftmost marker.
 
 ![The robot lined up with one of the marks. The sensor's own lights show which patch of paper it is reading.](images/color-vision-lesson-plan-c1d3a88e.jpg)
 
-The goal is to observe how sensor readings change as the robot moves from one color to the other (here, green to red). Below are example measurements using the setup shown above, including a column showing the difference between red and green values.
+The goal is to observe how sensor readings change as the robot moves from one color to the other (here, green to red). Below are example measurements using the setup shown above. The table includes a column showing the difference between red and green values.
 
-Students can record this in a spreadsheet (the table has six columns and a handful of rows). A spreadsheet has the advantage of automatically plotting the last column, which is what the next step requires.
+Students can record this in a spreadsheet. The table has six columns and a handful of rows. A spreadsheet has the advantage of automatically plotting the last column, which is what the next step requires.
 
 | Marker | Position | Red | Green | Blue | Red – Green |
 | --- | --- | --- | --- | --- | --- |
@@ -231,7 +225,7 @@ Students can record this in a spreadsheet (the table has six columns and a handf
 | 6 | 2 cm | 64 | 14 | 8 | 50 |
 | 7 | 3 cm | 64 | 14 | 7 | 50 |
 
-Note that student values might differ depending on the paper colors used. For each paper, all channels have values greater than 0, indicating that each paper reflects some light from other wavelengths as well.
+Student values might differ depending on the paper colors used. For each paper, all channels have values greater than 0, indicating that each paper reflects some light from other wavelengths as well.
 
 ![The three channels as the sensor crosses the boundary. Red rises and green falls, while blue changes comparatively little.](images/color-vision-lesson-plan-44ef58b4.png)
 
@@ -239,15 +233,15 @@ Now that students have baseline data, they must develop an algorithm to program 
 
 #### Step 2: Interpreting the data
 
-In the example above, the setup uses green paper on the left and red on the right. Here, we derive a rule that keeps the robot on the centerline using the difference between the Red and Green channels.
+In the example above, the setup uses green paper on the left and red on the right. Here we derive a rule that keeps the robot on the centerline using the difference between the red and green channels.
 
 > **Note**
 >
-> In principle, this challenge can also be solved by looking only at the red light amount. As the graph shows, if the robot detects much red light, it is on the red paper; if less, it is on the green paper. However, when students use non-primary paper colors, a single channel may not be sufficient. Moreover, true color vision relies on comparing different color channels (refer to the animal color vision discussion and the color vision games). Therefore, this example uses a comparison between color channels.
+> In principle, this challenge can also be solved by looking only at the red light amount. As the graph shows, if the robot detects much red light, it is on the red paper; if less, it is on the green paper. However, when students use non-primary paper colors, a single channel may not be sufficient. Moreover, true color vision relies on comparing different color channels. Refer to the animal color vision discussion and the color vision games for more details. Therefore, this example uses a comparison between color channels.
 
-Below, we plot the difference between Red and Green as a function of robot position. From this graph, we can derive a rule to keep the robot on the center line.
+Below we plot the difference between red and green as a function of robot position. From this graph, we can derive a rule to keep the robot on the centerline.
 
-![The difference between red and green across the same positions. This is the curve the steering rule is read off: strongly negative on the green, strongly positive on the red, crossing zero near the middle.](images/color-vision-lesson-plan-2a426533.png)
+![The difference between red and green across the same positions. This is the curve the steering rule is read from: strongly negative on the green, strongly positive on the red, crossing zero near the middle.](images/color-vision-lesson-plan-2a426533.png)
 
 A potential rule:
 
@@ -262,7 +256,7 @@ This rule turns the robot right if it detects more green light than red, and vic
 
 Below is a link to a program that implements the rule derived above. Student programs could look similar but should reflect the rules they created.
 
-Students starting from scratch rather than from the example program will need to add the color sensor extension first, described in [Adding color sensor extension](#adding-color-sensor-extension) at the end of this chapter.
+Students starting from scratch rather than from the example program will need to add the color sensor extension first. This is described in [Adding color sensor extension](#adding-color-sensor-extension) at the end of this chapter.
 
 [Open the mBlock project](https://planet.mblock.cc/project/3954308). If your school blocks the Makeblock site, [download `color_vision_motion.mblock`](files/programs/color_vision_motion.mblock) instead.
 
@@ -270,9 +264,9 @@ The program works as follows. The first blocks read the red, green, and blue val
 
 > **Note**
 >
-> Keeping the robot's speed low helps. This gives it more time to measure and respond to color. For example, the sample uses 25% power. This might make it difficult for the robot to start moving. To help, you could give it a small push.
+> Keeping the robot's speed low helps. This gives it more time to measure and respond to color. For example, the sample uses 25% power. This might make it difficult for the robot to start moving. To help, give it a small push.
 
-To run the example program (or a student's program), upload it to the robot. Once uploaded, the USB cable can be disconnected. To change the program, reconnect the USB cable and upload the new version.
+To run the example program (or a student's program), upload it to the robot. Once uploaded, you can disconnect the USB cable. To change the program, reconnect the USB cable and upload the new version.
 
 ![One solution. The three channels are read into variables, the LEDs are set to the color the sensor reports, and the robot turns right or left when the red-minus-green difference passes the thresholds taken from the graph.](images/color-vision-lesson-plan-8649dc81.png)
 
@@ -282,20 +276,20 @@ To run the example program (or a student's program), upload it to the robot. Onc
 
 ### Taking it further
 
-The lesson can be extended in several ways:
+You can extend the lesson in several ways:
 
 1. Construct the track's end and start with a third color. Program the robot to turn 180 degrees when it detects this color to return to the other end of the path.
-2. Switch off the white LEDs on the color sensor. Normally, these LEDs provide uniform, broad-spectrum light, making color discrimination easier. However, consider a real-world scenario where a robot must detect whether the floor is red or yellow under variable or suboptimal lighting. With poor lighting, overhead lamps may not emit sufficient yellow light, so reflected light from the floor will contain little yellow. The sensor will then struggle to distinguish yellow from red. Use the following block to switch off the white LEDs:
+2. Switch off the white LEDs on the color sensor. Normally, these LEDs provide uniform, broad-spectrum light, making color discrimination easier. However, consider a real-world scenario where a robot must detect whether the floor is red or yellow under variable or suboptimal lighting. With poor lighting, overhead lamps may not emit sufficient yellow light. Reflected light from the floor will then contain little yellow, so the sensor will struggle to distinguish yellow from red. Use the following block to switch off the white LEDs:
 
-    ![The block that switches the sensor's white fill LEDs off. Note that the port dropdown reads `port1` in this screenshot; set it to the port the color sensor is actually plugged into, which is port 2 everywhere else in this chapter.](images/color-vision-lesson-plan-5972c66e.png)
+   ![The block that switches the sensor's white fill LEDs off. Note that the port dropdown reads `port1` in this screenshot; set it to the port the color sensor is actually plugged into, which is `port 2` everywhere else in this chapter.](images/color-vision-lesson-plan-5972c66e.png)
 
-3. Use secondary colors such as cyan, yellow, and/or magenta in the path.
+3. Use secondary colors such as cyan, yellow, and magenta in the path.
 
 ## Adding color sensor extension
 
 The blocks for the color sensor are not in mBlock by default; they are added via an extension. Opening one of our programs loads this extension automatically, so this step is only needed when starting a program from scratch.
 
-First, ensure the mBot has been added to mBlock — see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock) — and that it is selected in the `Devices` panel, as extensions are added to a specific device.
+First, ensure the mBot has been added to mBlock—see [Adding the mBot to mBlock](#adding-the-mbot-to-mblock)—and that it is selected in the **Devices** panel. Extensions are added to a specific device.
 
 Then, click the `+` button at the bottom of the block palette, find `color sensor` in the list, and click `Add`.
 
