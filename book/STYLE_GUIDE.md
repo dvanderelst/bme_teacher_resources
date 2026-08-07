@@ -486,9 +486,10 @@ The standards applicable to this lesson are listed in the [Educational standards
 [Detailed activity description]
 ```
 
-No chapter currently ends with a "Conclusion" section, and none needs one: the lessons end with the
-activity, the assessment questions, or the troubleshooting table. Do not add one to satisfy the
-template.
+Only *Introduction to Programming* ends with a `### Conclusion`, and there it earns its place by
+telling the teacher what to discuss after the game. Most lessons end with the activity, the
+assessment questions, or the troubleshooting table instead. Do not add a conclusion to satisfy the
+template; add one when there is something to say after the last activity.
 
 ---
 

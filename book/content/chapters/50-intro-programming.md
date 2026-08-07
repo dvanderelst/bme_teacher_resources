@@ -4,13 +4,13 @@
 
 | Item | Description |
 | :--- | :--- |
-| Printed programming blocks | These are the paper slips used in the Cheese Sandwich Factory game. |
+| Printed programming blocks | The paper slips used in the Cheese Sandwich Factory game, printed from the two templates linked below. They are the only material this game needs: students write a program with the slips, they do not build a sandwich. |
 
 ## What is programming?
 
 The next chapter introduces mBlock, the language used to program the robot. This chapter first introduces programming in the abstract, away from the robot and computer screen.
 
-Programming is telling a machine what to do in a language it accepts. Here, the machine is a robot—essentially a computer with sensors and motors.
+Programming is telling a machine what to do in a language it accepts. Here, the machine is a robot: essentially a computer with sensors and motors.
 
 A **programming language** provides two things: a fixed set of instructions and rules for combining them. The instructions themselves do very little. Almost everything a program accomplishes comes from how they are combined, which is where most of the difficulty lies. In this chapter, the language is a hypothetical one with four instructions. In the next chapter, it will be mBlock.
 
@@ -22,26 +22,28 @@ Before programming the robot, explore the challenges programmers face through th
 
 Discuss this with students. Programmers face two distinct challenges here, worth separating:
 
-- **Challenge 1: Determining how to solve the problem** – What are the main difficulties? What would a solution look like? How can the problem be broken into smaller pieces? The outcome is an **algorithm**: a method that solves the problem, described clearly enough for someone else to follow, but not yet written in any programming language.
-- **Challenge 2: Expressing that algorithm in the language** – The language lacks an "answer the door" instruction. You must construct the desired behavior from the available instructions. This is the implementation problem.
+- **Challenge 1: determining how to solve the problem.** What are the main difficulties? What would a solution look like? How can the problem be broken into smaller pieces? The outcome is an **algorithm**: a method that solves the problem, described clearly enough for someone else to follow, but not yet written in any programming language.
+- **Challenge 2: expressing that algorithm in the language.** The language lacks an "answer the door" instruction. Students must construct the behavior they want from the instructions they have. This is the implementation problem.
 
 Students often assume knowing how to do something means being able to program it. The activity below addresses this misconception: students will find they know perfectly well how to make a cheese sandwich yet still struggle to express it in just four instructions.
 
-## Activity: Cheese Sandwich Factory Game
+## Activity: the Cheese Sandwich Factory game
 
 In this game, students write a program for a hypothetical robot and encounter both challenges. First, they must determine how to build a cheese sandwich at all given an awkward supply of ingredients. Then they must express that solution using only the four commands the robot understands, which requires understanding what each command actually does.
 
 ### Problem description
 
-Imagine you are an engineer hired to write the program controlling a robot arm in a cheese sandwich factory. The image below shows the robot arm can reach three locations labeled 1-3. Your task is to write a program that directs the robot to make complete cheese sandwiches, each consisting of bread, cheese, and bread.
+Present students with the scenario below, which the figure illustrates:
+
+> You are an engineer hired to write the program controlling a robot arm in a cheese sandwich factory. The arm can reach three locations, labeled 1–3. Your task is to write a program that directs the robot to make complete cheese sandwiches, each consisting of bread, cheese, and bread.
 
 ![The Cheese Sandwich Maker game. The arm can reach three places: **1**, the end of a conveyor belt delivering slices of bread and cheese in an order nobody can predict; **2**, the start of a second belt for discarding anything not wanted; **3**, the deck of a truck where the sandwich is assembled. When a sandwich is complete, the truck drives off and an empty one takes its place. A sandwich is bread, then cheese, then bread.](images/introduction-to-programming-factory.png)
 
 The three locations are:
 
-1. **Location 1** – The end of a conveyor belt delivering slices of bread and cheese. **Importantly, the order is random.** You cannot predict whether the next item will be bread or cheese.
-2. **Location 2** – The start of a second conveyor belt leading to additional factory robot arms. Use this to discard unneeded items. For example, if conveyor belt 1 delivers consecutive bread slices, the excess can be dropped onto conveyor belt 2.
-3. **Location 3** – Where sandwiches are assembled. For this game, each truck carries only one sandwich. Whenever a complete sandwich is assembled on the truck, it drives off and another truck takes its place. A complete sandwich consists of cheese between two bread slices.
+1. **Location 1**: the end of a conveyor belt delivering slices of bread and cheese. **Importantly, the order is random.** You cannot predict whether the next item will be bread or cheese.
+2. **Location 2**: the start of a second conveyor belt leading to additional factory robot arms. Use this to discard unneeded items. For example, if conveyor belt 1 delivers consecutive bread slices, the excess can be dropped onto conveyor belt 2.
+3. **Location 3**: where sandwiches are assembled. For this game, each truck carries only one sandwich. Whenever a complete sandwich is assembled on the truck, it drives off and another truck takes its place. A complete sandwich consists of cheese between two bread slices.
 
 The random delivery order is the core of the problem. With predictable deliveries, a fixed list of instructions would suffice. Because deliveries are random, the program must decide what to do as it executes.
 
@@ -61,11 +63,11 @@ The four commands are:
 
 ![`If holds ____ and below ____:` runs the indented instructions beneath it, but only when both conditions match the current situation.](images/introduction-to-programming-8dc64988.png)
 
-Each blank in the `If` command can be filled with: Bread, Cheese, Not Bread, Not Cheese, Any, or Nothing.
+Each blank in the `If` command can be filled with `Bread`, `Cheese`, `Not Bread`, `Not Cheese`, `Any`, or `Nothing`.
 
 Clarify two conventions with the class before they start, as the slips do not show these:
 
-- **What `below` means:** This refers to whatever is on top of the pile at the arm's current location—the item the arm would pick up if it picked up now. At location 3, where sandwiches are built slice by slice, this is the most recently added slice, not the bottom one.
+- **What `below` means:** This refers to whatever is on top of the pile at the arm's current location, meaning the item the arm would pick up if it picked up now. At location 3, where sandwiches are built slice by slice, this is the most recently added slice, not the bottom one.
 - **How far an `If` reaches:** The `If` command controls the indented instructions placed directly beneath it. Establish this convention first, as slips laid out on a desk provide no other indication of which instructions belong to the `If` block.
 
 The `If holds ___ and below ___` command sometimes confuses students. Here are two examples:
@@ -93,7 +95,7 @@ This moves the robot to location 3, then checks whether it is holding cheese wit
 
 > **Tip**
 >
-> If students question the example's realism, reassure them. Many robots come with a specific set of instructions—a specialized programming language for that particular robot. For example, ST Robotics' robot arms use a custom language called RoboForth. Interested students can [consult the RoboForth manual](https://sandstechnology.com/manuals/manual17.htm).
+> If students question the example's realism, reassure them. Many robots come with a specific set of instructions, a specialized programming language for that particular robot. For example, ST Robotics' robot arms use a custom language called RoboForth. Interested students can [consult the RoboForth manual](https://sandstechnology.com/manuals/manual17.htm).
 
 ### Playing the game
 
@@ -107,9 +109,9 @@ If you prefer not to print and cut these yourself, we can send you a pre-printed
 
 Before distributing the slips, have students write down in plain English how they would build a sandwich from a randomly ordered supply. This addresses Challenge 1 independently and prevents the activity from becoming trial and error with the slips. Only then distribute the slips and ask students to translate their plan into instructions.
 
-The printed strips let students "write" a program by arranging and rearranging slips on their desks. Each student or group needs one set of instructions (both front and back sheets). This provides enough slips to construct a cheese sandwich-building program. Clarify that students need not use all slips—only those they require. Allocate sufficient time for them to attempt solving the problem and encourage peer review of each other's work.
+The printed slips let students "write" a program by arranging and rearranging them on their desks. Each student or group needs one set of instructions (both front and back sheets). This provides enough slips to build a program that makes cheese sandwiches. Clarify that students need not use all the slips, only those they require. Allocate sufficient time for them to attempt solving the problem and encourage peer review of each other's work.
 
-### Possible Solution
+### Possible solution
 
 Multiple solutions exist. The only way to verify a student's solution is to step through the program and confirm it builds cheese sandwiches. Here is one solution:
 
@@ -136,9 +138,9 @@ Note that completed sandwiches are driven away, so any bread at location 3 is al
 
 Students have just applied three concepts they will encounter again in mBlock. Name them before moving on.
 
-- **Sequence** – Instructions execute in the order they are placed, one after another. Most of the solution above relies solely on this.
-- **Selection** – `If holds ___ and below ___:` runs certain instructions only in specific situations. This allows the program to handle a conveyor belt delivering items in random order, explaining why a fixed list of instructions could never solve the problem.
-- **Repetition** – The `Go to step nr 1` at the end returns the program to the beginning, causing the entire sequence to repeat indefinitely. Students create a loop here without being explicitly taught the concept.
+- **Sequence**: instructions execute in the order they are placed, one after another. Most of the solution above relies solely on this.
+- **Selection**: `If holds ___ and below ___:` runs certain instructions only in specific situations. This allows the program to handle a conveyor belt delivering items in random order, explaining why a fixed list of instructions could never solve the problem.
+- **Repetition**: the `Go to step nr 1` at the end returns the program to the beginning, causing the entire sequence to repeat indefinitely. Students create a loop here without being explicitly taught the concept.
 
 A fourth, less visible concept: at every moment, the program depends on **what the arm is holding** and **what is on the truck**. Neither appears in the written program, yet every decision depends on both. This is the program's **state**. The flawed example above fails precisely because the first instruction changes the state that the second tests.
 

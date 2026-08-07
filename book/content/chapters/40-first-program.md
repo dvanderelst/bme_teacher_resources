@@ -1,6 +1,6 @@
 # Running your first program
 
-Once mBlock is working and you can connect to the robot, run a small example program first. This program verifies the entire setup—software, connection, and robot—in a couple of minutes. It also introduces the pattern used throughout the lessons for opening programs.
+Once mBlock is working and you can connect to the robot, run a small example program first. This program verifies the entire setup (software, connection, and robot) in a couple of minutes. It also introduces the pattern used throughout the lessons for opening programs.
 
 > **Note**
 >
@@ -16,13 +16,13 @@ Each program is available in two locations: on the mBlock website and as a file 
 
 The two methods differ from this point:
 
-- **From the mBlock website:** The link opens the project page below. Click `Source code`, and the program opens in the online version of mBlock.
+- **From the mBlock website.** The link opens the project page shown below. Click `Source code`, and the program opens in the online version of mBlock.
 
   ![The project page on the mBlock website. Click `Source code` to open the program.](images/getting-started-draft-0e4e97c5.png)
 
   ![The program open in the online version of mBlock.](images/getting-started-draft-390bb096.png)
 
-- **From the downloaded file:** No project page appears. Open mBlock, select `File > Open from your computer`, and choose the downloaded `.mblock` file. The program opens directly.
+- **From the downloaded file.** No project page appears. Open mBlock, select `File > Open from your computer`, and choose the downloaded `.mblock` file. The program opens directly.
 
 In either case, you can save your own copy. Use `File > Save to your computer` to save as an `.mblock` file, and `File > Open from your computer` to reopen it later. Both options work identically in browser and installed versions, so files saved in one open in the other.
 
